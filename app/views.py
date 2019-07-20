@@ -17,15 +17,20 @@ class IndexView(ListView):
     context_object_name = 'fundos'
 
     def get_queryset(self):
+        q_dy = float(0.0)
+        if 'q_dy' in self.request.GET:
+            q_dy = float(str(self.request.GET['q_dy']).replace('_', ''))
         fundos = Fundo.objects.all()
         arr = []
-
         for fundo in fundos:
             new_fund = fundo
+            if float(new_fund.dy) <= q_dy:
+                continue
             new_fund.preco = float(new_fund.preco)
             new_fund.oscilacao_dia = float(new_fund.oscilacao_dia)
-            new_fund.liquidez = float(new_fund.liquidez)
-            new_fund.dy = float(new_fund.dy)
+            new_fund.liquidez = int(new_fund.liquidez)
+
+            new_fund.dy = "{0:.2f}".format(float(new_fund.dy))
             # new_fund.pl = float(new_fund.pl)
             new_fund.rentabilidade_mes = float(new_fund.rentabilidade_mes)
             # new_fund.data_construcao_fundo = datetime.strptime(str(new_fund.data_construcao_fundo), '%d de %B de %Y')
@@ -40,7 +45,7 @@ class IndexView(ListView):
             new_fund.num_ativos = int(new_fund.num_ativos)
             new_fund.num_estados = int(new_fund.num_estados)
             arr.append(new_fund)
-        return fundos
+        return arr
 
     def get(self, request, *args, **kwargs):
         Thread(target=syncFunds).start()

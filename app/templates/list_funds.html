@@ -4,6 +4,28 @@
 {% block content %}
     <div class="row">
         <div class="col-md-12">
+            <form action="{% url 'index' %}" method="get">
+                <div class="box box-primary">
+                    <div class="box-header"></div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <div class="form-group">
+                                    <label>DY: </label>
+                                    <input class="form-control" type="text" name="q_dy" id="q_dy"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button class="btn btn-primary pull-left" type="submit" >Filter</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header">
                     {#                <a href="{% url 'add_chamado' %}" class="btn btn-primary">Adicionar</a>#}
@@ -25,7 +47,7 @@
                                         <th>PATRIMONIO LIQ</th>
                                         <th>RENTABILIDADE (MES)%</th>
                                         <th>DY 12 %</th>
-{#                                        <th>DATA</th>#}
+                                        {#                                        <th>DATA</th>#}
                                         <th>SEGMENTO</th>
                                         <th>NUM COTAS</th>
                                         <th>VI COTA</th>
@@ -67,9 +89,9 @@
                                                 {{ fundo.rentabilidade_mes }}
                                             </td>
                                             <td>{{ fundo.yd_12_p }}</td>
-{#                                            <td>#}
-{#                                                {{ fundo.data_construcao_fundo|date:"d/m/Y" }}#}
-{#                                            </td>#}
+                                            {#                                            <td>#}
+                                            {#                                                {{ fundo.data_construcao_fundo|date:"d/m/Y" }}#}
+                                            {#                                            </td>#}
                                             <td>{{ fundo.segmento }}</td>
                                             <td>
                                                 {{ fundo.num_cotas_emitidas }}
@@ -111,6 +133,7 @@
                 order: [[0, "desc"]]
             });
             $('#fundos').addClass('active');
+            $('[name=q_dy]').inputmask('9.99');
         });
     </script>
 
