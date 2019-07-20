@@ -12,6 +12,6 @@ class IndexView(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
-        Thread(target=mineData).start()
-        # Thread(target=syncFunds).start()
+        # Thread(target=mineData).start()
+        Thread(target=syncFunds).start()
         return super(IndexView, self).get(request, *args, **kwargs)
