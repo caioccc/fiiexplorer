@@ -1,0 +1,1 @@
+web: gunicorn fiiexplorer.wsgi --log-file -
