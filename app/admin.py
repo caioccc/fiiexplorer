@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from app.models import Historico, Fundo
+from app.models import Historico, Fundo, Site
 
 
 class HistoricoInline(admin.TabularInline):
@@ -31,3 +31,4 @@ class HistoricoAdmin(admin.ModelAdmin):
 
 admin.site.register(Fundo, FundoAdmin)
 admin.site.register(Historico, HistoricoAdmin)
+admin.site.register(Site)

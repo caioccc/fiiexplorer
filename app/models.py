@@ -13,6 +13,11 @@ class TimeStamped(models.Model):
     published_at = models.DateTimeField(auto_now=True)
 
 
+class Site(TimeStamped):
+    nome = models.CharField(max_length=300, blank=True, null=True)
+    done = models.BooleanField(default=False)
+
+
 class Fundo(TimeStamped):
     nome = models.CharField(max_length=300, blank=True, null=True)
     sigla = models.CharField(max_length=300, blank=True, null=True)
@@ -33,14 +38,14 @@ class Fundo(TimeStamped):
     segmento = models.CharField(max_length=300, blank=True, null=True)
     prazo_duracao = models.CharField(max_length=300, blank=True, null=True)
     taxa_adm = models.CharField(max_length=300, blank=True, null=True)
-    yd_1 = models.FloatField(max_length=300, blank=True, null=True)
-    yd_3 = models.FloatField(max_length=300, blank=True, null=True)
-    yd_6 = models.FloatField(max_length=300, blank=True, null=True)
-    yd_12 = models.FloatField(max_length=300, blank=True, null=True)
-    yd_1_p = models.FloatField(max_length=300, blank=True, null=True)
-    yd_3_p = models.FloatField(max_length=300, blank=True, null=True)
-    yd_6_p = models.FloatField(max_length=300, blank=True, null=True)
-    yd_12_p = models.FloatField(max_length=300, blank=True, null=True)
+    yd_1 = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_1')
+    yd_3 = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_3')
+    yd_6 = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_6')
+    yd_12 = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_12')
+    yd_1_p = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_1_p')
+    yd_3_p = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_3_p')
+    yd_6_p = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_6_p')
+    yd_12_p = models.FloatField(max_length=300, blank=True, null=True, verbose_name='dy_12_p')
     num_ativos = models.IntegerField(max_length=300, blank=True, null=True)
     num_estados = models.IntegerField(max_length=300, blank=True, null=True)
     url = models.URLField()
