@@ -20,7 +20,7 @@ def syncFunds():
         for fund in funds:
             customreader = readers["fundsexplorer"]()
             customreader.sync(fund)
-            time.sleep(500)
+            time.sleep(20)
         time.sleep(sync_urls_delay)
 
 

@@ -9,16 +9,25 @@
                     <div class="box-header"></div>
                     <div class="box-body">
                         <div class="row">
-                            <div class="col-xs-4">
-                                <div class="form-group">
-                                    <label>DY: </label>
-                                    <input class="form-control" type="text" name="q_dy" id="q_dy"/>
+                            {% for field in fundos.form.visible_fields %}
+                                {% if forloop.first %}
+                                    {% for hidden in fundos.form.hidden_fields %}
+                                        {{ hidden }}
+                                    {% endfor %}
+                                {% endif %}
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label>{{ field.label|capfirst }}:</label>
+                                        {{ field }}
+                                        {{ field.errors.as_ul }}
+                                    </div>
                                 </div>
-                            </div>
+                            {% endfor %}
+
                         </div>
                     </div>
                     <div class="box-footer">
-                        <button class="btn btn-primary pull-left" type="submit" >Filter</button>
+                        <button class="btn btn-primary pull-left" type="submit">Filter</button>
                     </div>
                 </div>
             </form>
@@ -63,7 +72,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for fundo in fundos %}
+                                    {% for fundo in fundos.qs %}
                                         <tr>
                                             <td>
                                                 <a href="{{ fundo.url }}" target="_blank">
@@ -132,6 +141,7 @@
                 responsive: true,
                 order: [[0, "desc"]]
             });
+            $('input').addClass('form-control');
             $('#fundos').addClass('active');
             $('[name=q_dy]').inputmask('9.99');
         });
