@@ -43,7 +43,7 @@ class IndexView(LoginRequiredMixin, TemplateView):
 class FundosListView(LoginRequiredMixin, FormView):
     login_url = '/admin/login'
     template_name = 'list_funds.html'
-    success_url = '/'
+    success_url = '/fundos'
 
     def get_context_data(self, **kwargs):
         fundos = Fundo.objects.all()
