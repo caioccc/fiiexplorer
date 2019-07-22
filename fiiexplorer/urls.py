@@ -22,5 +22,6 @@ from app.views import IndexView
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^admin/login/$', auth_views.login),
-    url(r'^$', IndexView.as_view(), name='index')
+    url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^logout/', auth_views.logout, name='logout')
 ]

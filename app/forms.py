@@ -55,7 +55,7 @@ class FundoFilter(django_filters.FilterSet):
             'num_cotas_emitidas': ['gte'],
             # 'vi_cota': ['lt', 'gt'],
             'tipo_gestao': ['iexact'],
-            'mandato': ['iexact'],
+            'mandato': ['exact'],
             'segmento': ['iexact'],
             'taxa_adm': ['lte'],
             'yd_12_p': ['gte'],
