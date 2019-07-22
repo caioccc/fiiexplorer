@@ -25,11 +25,28 @@ def syncFunds():
         funds = Fundo.objects.all()
         for fund in funds:
             customreader = readers["fundsexplorer"]()
+            logging.debug('---- Fundo Reader:' + fund.sigla)
             customreader.sync(fund)
             settings.count_mined(fund, len(funds))
             time.sleep(5)
         settings.set_mined(0)
         time.sleep(sync_urls_delay)
+
+
+def mineData():
+    while True:
+        sites = Site.objects.filter(done=False)
+        for site in sites:
+            domain = site.nome
+            miner = miners[domain]()
+            logging.debug('INICIOU A BUSCA!')
+            result = miner.mine()
+            if result:
+                site.done = True
+                site.save()
+                logging.debug('FINALIZOU A BUSCA!')
+                time.sleep(60)
+        time.sleep(check_new_minig_requests_delay)
 
 
 class Settings():
@@ -52,6 +69,7 @@ class Settings():
     mined = 0
     running = False
     thread = Thread(target=syncFunds)
+    minerThread = Thread(target=mineData)
 
     def set_running(self, val):
         self.running = val
@@ -71,19 +89,3 @@ class Settings():
             return float(self.mined) / float(total)
         else:
             return float(self.mined) / float(total)
-
-
-def mineData():
-    while True:
-        sites = Site.objects.filter(done=False)
-        for site in sites:
-            domain = site.nome
-            miner = miners[domain]()
-            logging.debug('INICIOU A BUSCA!')
-            result = miner.mine()
-            if result:
-                site.done = True
-                site.save()
-                logging.debug('FINALIZOU A BUSCA!')
-                time.sleep(60)
-        time.sleep(check_new_minig_requests_delay)

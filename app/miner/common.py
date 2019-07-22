@@ -43,6 +43,9 @@ def safe_str(obj):
 
 
 class CommonMiner():
+    def dadoscheckna(self, page, marker_html='', clazz_name=''):
+        return False
+
     def checkna(self, page, limit_list=0, marker_html='', clazz_name=''):
         return False
 
@@ -212,7 +215,7 @@ class Miner(CommonMiner):
                     print('Nao foi possivel abrir a page do fundo: ', str(fund_url))
             return True
         else:
-            print('Nao foi possivel abrir a page site: ', str(url))
+            print('Nao foi possivel abrir a page site: ', str(url_init))
             return False
 
 
@@ -304,7 +307,7 @@ class Reader(CommonMiner):
                                          )
                         hist.save()
                     elif float(ultimo_rendimento) > float(fundo.ultimo_rendimento) or \
-                                    float(ultimo_rendimento) < float(fundo.ultimo_rendimento):
+                            float(ultimo_rendimento) < float(fundo.ultimo_rendimento):
                         fundo.preco = novo_preco
                         fundo.oscilacao_dia = oscilacao_dia,
                         fundo.liquidez = liquidez,

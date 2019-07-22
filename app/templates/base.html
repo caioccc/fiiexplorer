@@ -100,89 +100,89 @@
                             <i class="fa fa-envelope-o"></i>
                             <span class="label label-success">4</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">Você tem 4 mensagens</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- start message -->
-                                        <a href="#">
-                                            <div class="pull-left">
-                                                <img src="http://placehold.it/300x300"
-                                                     class="img-circle"
-                                                     alt="User Image">
-                                            </div>
-                                            <h4>
-                                                <small><i
-                                                        class="fa fa-clock-o"></i> 12/10/19 13:30
-                                                </small>
-                                            </h4>
-                                            <p>Hello!!</p>
-                                        </a>
-                                    </li>
-                                    <!-- end message -->
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">Veja todas as
-                                mensagens</a></li>
-                        </ul>
+{#                        <ul class="dropdown-menu">#}
+{#                            <li class="header">Você tem 4 mensagens</li>#}
+{#                            <li>#}
+{#                                <!-- inner menu: contains the actual data -->#}
+{#                                <ul class="menu">#}
+{#                                    <li><!-- start message -->#}
+{#                                        <a href="#">#}
+{#                                            <div class="pull-left">#}
+{#                                                <img src="http://placehold.it/300x300"#}
+{#                                                     class="img-circle"#}
+{#                                                     alt="User Image">#}
+{#                                            </div>#}
+{#                                            <h4>#}
+{#                                                <small><i#}
+{#                                                        class="fa fa-clock-o"></i> 12/10/19 13:30#}
+{#                                                </small>#}
+{#                                            </h4>#}
+{#                                            <p>Hello!!</p>#}
+{#                                        </a>#}
+{#                                    </li>#}
+{#                                    <!-- end message -->#}
+{#                                </ul>#}
+{#                            </li>#}
+{#                            <li class="footer"><a href="#">Veja todas as#}
+{#                                mensagens</a></li>#}
+{#                        </ul>#}
                     </li>
                     <li class="dropdown notifications-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
                             <span class="label label-warning">5</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">Voce tem 5 itens</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i>
-                                            Item está em andamento.
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">Acompanhar Itens</a></li>
-                        </ul>
+{#                        <ul class="dropdown-menu">#}
+{#                            <li class="header">Voce tem 5 itens</li>#}
+{#                            <li>#}
+{#                                <!-- inner menu: contains the actual data -->#}
+{#                                <ul class="menu">#}
+{#                                    <li>#}
+{#                                        <a href="#">#}
+{#                                            <i class="fa fa-warning text-yellow"></i>#}
+{#                                            Item está em andamento.#}
+{#                                        </a>#}
+{#                                    </li>#}
+{##}
+{#                                </ul>#}
+{#                            </li>#}
+{#                            <li class="footer"><a href="#">Acompanhar Itens</a></li>#}
+{#                        </ul>#}
                     </li>
                     <li class="dropdown tasks-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-flag-o"></i>
                             <span class="label label-danger">3</span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">Você tem 3 notificações</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Mensagem escrita por aqui.
-                                                <small class="pull-right">
-                                                    <label class="label label-info"><i
-                                                            class=""></i>
-                                                        Label Status</label>
-                                                </small>
-                                            </h3>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">Ver Notificações</a>
-                            </li>
-                        </ul>
+{#                        <ul class="dropdown-menu">#}
+{#                            <li class="header">Você tem 3 notificações</li>#}
+{#                            <li>#}
+{#                                <!-- inner menu: contains the actual data -->#}
+{#                                <ul class="menu">#}
+{#                                    <li><!-- Task item -->#}
+{#                                        <a href="#">#}
+{#                                            <h3>#}
+{#                                                Mensagem escrita por aqui.#}
+{#                                                <small class="pull-right">#}
+{#                                                    <label class="label label-info"><i#}
+{#                                                            class=""></i>#}
+{#                                                        Label Status</label>#}
+{#                                                </small>#}
+{#                                            </h3>#}
+{#                                        </a>#}
+{#                                    </li>#}
+{#                                </ul>#}
+{#                            </li>#}
+{#                            <li class="footer">#}
+{#                                <a href="#">Ver Notificações</a>#}
+{#                            </li>#}
+{#                        </ul>#}
                     </li>
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="{% static 'img/300x300.png' %}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">Username</span>
+                            <span class="hidden-xs">{{ user.first_name }}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -191,7 +191,7 @@
                                      alt="User Image">
 
                                 <p>
-                                    <small>Username Nameuser</small>
+                                    <small>{{ user.first_name }}</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -200,7 +200,7 @@
                                 <div class="pull-left">
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Logout</a>
+                                    <a href="{% url 'logout' %}?next=/" class="btn btn-default btn-flat">Logout</a>
                                 </div>
                             </li>
                         </ul>
@@ -220,7 +220,7 @@
                     <img src="{% static 'img/300x300.png' %}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>Username</p>
+                    <p>{{ user.first_name }}</p>
                     {% if user.is_superuser %}
                         {% if running == True %}
                             <div class="checkbox checbox-switch switch-success">

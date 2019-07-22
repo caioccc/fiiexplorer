@@ -66,6 +66,7 @@ class SetOnlineRedirect(LoginRequiredMixin, RedirectView):
         settings.set_running(val)
         if settings.get_running():
             try:
+                settings.minerThread.start()
                 settings.thread.start()
             except (Exception,):
                 logging.error('Thread nao pode ser iniciada novamente')
