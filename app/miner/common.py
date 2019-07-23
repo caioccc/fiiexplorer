@@ -242,7 +242,7 @@ class Reader(CommonMiner):
                 yd_12_p = self.get_yd_12_p(page)
                 num_ativos = self.get_num_ativos(page)
                 num_estados = self.get_num_estados(page)
-                print('ID: ', fundo.id, ', Fundo: ', fundo.sigla)
+                print('ID: ', fundo.id, ', Fundo: ', fundo.sigla, ' URL: ', url)
                 preco_fundo_db = fundo.preco
                 if fundo.historico_set.count() == 0:
                     first_hist = Historico(fund=fundo,
@@ -251,7 +251,7 @@ class Reader(CommonMiner):
                                            liquidez=liquidez,
                                            ultimo_rendimento=ultimo_rendimento,
                                            dy=dy,
-                                           pl=pl,
+                                           pl=fundo.pl,
                                            rentabilidade_mes=rentabilidade_mes,
                                            yd_1=yd_1,
                                            yd_3=yd_3,
@@ -267,23 +267,23 @@ class Reader(CommonMiner):
                     first_hist.save()
                 try:
                     if float(novo_preco) > float(preco_fundo_db) or float(novo_preco) < float(preco_fundo_db):
-                        fundo.preco = novo_preco
-                        fundo.oscilacao_dia = oscilacao_dia,
-                        fundo.liquidez = liquidez,
-                        fundo.ultimo_rendimento = ultimo_rendimento,
-                        fundo.dy = dy,
-                        fundo.pl = pl,
-                        fundo.rentabilidade_mes = rentabilidade_mes,
-                        fundo.yd_1 = yd_1,
-                        fundo.yd_3 = yd_3,
-                        fundo.yd_6 = yd_6,
-                        fundo.yd_12 = yd_12,
-                        fundo.yd_1_p = yd_1_p,
-                        fundo.yd_3_p = yd_3_p,
-                        fundo.yd_6_p = yd_6_p,
-                        fundo.yd_12_p = yd_12_p,
-                        fundo.num_ativos = num_ativos,
-                        fundo.num_estados = num_estados
+                        fundo.preco = float(novo_preco)
+                        fundo.oscilacao_dia = float(oscilacao_dia)
+                        fundo.liquidez = int(liquidez)
+                        fundo.ultimo_rendimento = float(ultimo_rendimento)
+                        fundo.dy = float(dy)
+                        fundo.pl = str(pl)
+                        fundo.rentabilidade_mes = float(rentabilidade_mes)
+                        fundo.yd_1 = float(yd_1)
+                        fundo.yd_3 = float(yd_3)
+                        fundo.yd_6 = float(yd_6)
+                        fundo.yd_12 = float(yd_12)
+                        fundo.yd_1_p = float(yd_1_p)
+                        fundo.yd_3_p = float(yd_3_p)
+                        fundo.yd_6_p = float(yd_6_p)
+                        fundo.yd_12_p = float(yd_12_p)
+                        fundo.num_ativos = int(num_ativos)
+                        fundo.num_estados = int(num_estados)
                         fundo.save()
                         print('CHANGED PRICE: ', fundo.sigla, fundo.preco)
                         hist = Historico(fund=fundo,
@@ -292,7 +292,7 @@ class Reader(CommonMiner):
                                          liquidez=liquidez,
                                          ultimo_rendimento=ultimo_rendimento,
                                          dy=dy,
-                                         pl=pl,
+                                         pl=fundo.pl,
                                          rentabilidade_mes=rentabilidade_mes,
                                          yd_1=yd_1,
                                          yd_3=yd_3,
@@ -309,21 +309,21 @@ class Reader(CommonMiner):
                     elif float(ultimo_rendimento) > float(fundo.ultimo_rendimento) or \
                             float(ultimo_rendimento) < float(fundo.ultimo_rendimento):
                         fundo.preco = novo_preco
-                        fundo.oscilacao_dia = oscilacao_dia,
-                        fundo.liquidez = liquidez,
-                        fundo.ultimo_rendimento = ultimo_rendimento,
-                        fundo.dy = dy,
-                        fundo.pl = pl,
-                        fundo.rentabilidade_mes = rentabilidade_mes,
-                        fundo.yd_1 = yd_1,
-                        fundo.yd_3 = yd_3,
-                        fundo.yd_6 = yd_6,
-                        fundo.yd_12 = yd_12,
-                        fundo.yd_1_p = yd_1_p,
-                        fundo.yd_3_p = yd_3_p,
-                        fundo.yd_6_p = yd_6_p,
-                        fundo.yd_12_p = yd_12_p,
-                        fundo.num_ativos = num_ativos,
+                        fundo.oscilacao_dia = oscilacao_dia
+                        fundo.liquidez = liquidez
+                        fundo.ultimo_rendimento = ultimo_rendimento
+                        fundo.dy = dy
+                        fundo.pl = pl
+                        fundo.rentabilidade_mes = rentabilidade_mes
+                        fundo.yd_1 = yd_1
+                        fundo.yd_3 = yd_3
+                        fundo.yd_6 = yd_6
+                        fundo.yd_12 = yd_12
+                        fundo.yd_1_p = yd_1_p
+                        fundo.yd_3_p = yd_3_p
+                        fundo.yd_6_p = yd_6_p
+                        fundo.yd_12_p = yd_12_p
+                        fundo.num_ativos = num_ativos
                         fundo.num_estados = num_estados
                         fundo.save()
                         print('CHANGED PRICE: ', fundo.sigla, fundo.preco)
@@ -333,7 +333,7 @@ class Reader(CommonMiner):
                                          liquidez=liquidez,
                                          ultimo_rendimento=ultimo_rendimento,
                                          dy=dy,
-                                         pl=pl,
+                                         pl=fundo.pl,
                                          rentabilidade_mes=rentabilidade_mes,
                                          yd_1=yd_1,
                                          yd_3=yd_3,

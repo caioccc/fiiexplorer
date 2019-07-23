@@ -407,3 +407,9 @@ class CustomReader(Reader):
         if (str('N/A').lower() in yd.lower()):
             return '0'
         return yd
+
+    def get_rentabilidade_mes(self, page):
+        rentab = page.find_all('span', {'class': 'indicator-value'})[5]
+        it_format = rentab.text.replace(' ', '').replace('\n', '').replace('.', '') \
+            .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
+        return it_format
