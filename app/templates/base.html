@@ -10,6 +10,8 @@
 
     <!-- Bootstrap 3.3.6 -->
     <link rel="stylesheet" href='{% static 'bootstrap/css/bootstrap.min.css' %}'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.0/css/bootstrap-slider.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     {#    <!-- Ionicons -->#}
@@ -25,15 +27,13 @@
     <link rel="stylesheet" href='{% static 'plugins/datepicker/datepicker3.css' %}'>
     <!-- Daterange picker -->
     <link rel="stylesheet" href='{% static 'plugins/daterangepicker/daterangepicker-bs3.css' %}'>
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href='{% static 'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css' %}'>
 
     <link rel="stylesheet" href="{% static 'css/sweetalert.min.css' %}">
 
+    <link rel="stylesheet" href="http://davidstutz.de/bootstrap-multiselect/dist/css/bootstrap-multiselect.css">
+
     <link rel="stylesheet" type="text/css"
           href="{% static 'css/datatables.min.css' %}"/>
-    {#        <link rel="stylesheet" type="text/css"#}
-    {#              href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.10.3/css/bootstrap-tour.min.css"/>#}
     <link rel="stylesheet" type="text/css" href="{% static 'css/switch.css' %}"/>
     <style>
         #ajuda {
@@ -70,8 +70,12 @@
 </head>
 <body id="body" class="hold-transition skin-black">
 <!-- jQuery 2.2.0 -->
-<script
-        src="{% static 'plugins/jQuery/jQuery-2.2.0.min.js' %}"></script>
+{#<script#}
+{#  src="https://code.jquery.com/jquery-3.4.1.min.js"#}
+{#  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="#}
+{#  crossorigin="anonymous"></script>#}
+<script src="{% static 'plugins/jQuery/jQuery-2.2.0.min.js' %}"></script>
+
 <div class="wrapper">
 
     <header class="main-header">
@@ -100,83 +104,83 @@
                             <i class="fa fa-envelope-o"></i>
                             <span class="label label-success">4</span>
                         </a>
-{#                        <ul class="dropdown-menu">#}
-{#                            <li class="header">Você tem 4 mensagens</li>#}
-{#                            <li>#}
-{#                                <!-- inner menu: contains the actual data -->#}
-{#                                <ul class="menu">#}
-{#                                    <li><!-- start message -->#}
-{#                                        <a href="#">#}
-{#                                            <div class="pull-left">#}
-{#                                                <img src="http://placehold.it/300x300"#}
-{#                                                     class="img-circle"#}
-{#                                                     alt="User Image">#}
-{#                                            </div>#}
-{#                                            <h4>#}
-{#                                                <small><i#}
-{#                                                        class="fa fa-clock-o"></i> 12/10/19 13:30#}
-{#                                                </small>#}
-{#                                            </h4>#}
-{#                                            <p>Hello!!</p>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                    <!-- end message -->#}
-{#                                </ul>#}
-{#                            </li>#}
-{#                            <li class="footer"><a href="#">Veja todas as#}
-{#                                mensagens</a></li>#}
-{#                        </ul>#}
+                        {#                        <ul class="dropdown-menu">#}
+                        {#                            <li class="header">Você tem 4 mensagens</li>#}
+                        {#                            <li>#}
+                        {#                                <!-- inner menu: contains the actual data -->#}
+                        {#                                <ul class="menu">#}
+                        {#                                    <li><!-- start message -->#}
+                        {#                                        <a href="#">#}
+                        {#                                            <div class="pull-left">#}
+                        {#                                                <img src="http://placehold.it/300x300"#}
+                        {#                                                     class="img-circle"#}
+                        {#                                                     alt="User Image">#}
+                        {#                                            </div>#}
+                        {#                                            <h4>#}
+                        {#                                                <small><i#}
+                        {#                                                        class="fa fa-clock-o"></i> 12/10/19 13:30#}
+                        {#                                                </small>#}
+                        {#                                            </h4>#}
+                        {#                                            <p>Hello!!</p>#}
+                        {#                                        </a>#}
+                        {#                                    </li>#}
+                        {#                                    <!-- end message -->#}
+                        {#                                </ul>#}
+                        {#                            </li>#}
+                        {#                            <li class="footer"><a href="#">Veja todas as#}
+                        {#                                mensagens</a></li>#}
+                        {#                        </ul>#}
                     </li>
                     <li class="dropdown notifications-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
                             <span class="label label-warning">5</span>
                         </a>
-{#                        <ul class="dropdown-menu">#}
-{#                            <li class="header">Voce tem 5 itens</li>#}
-{#                            <li>#}
-{#                                <!-- inner menu: contains the actual data -->#}
-{#                                <ul class="menu">#}
-{#                                    <li>#}
-{#                                        <a href="#">#}
-{#                                            <i class="fa fa-warning text-yellow"></i>#}
-{#                                            Item está em andamento.#}
-{#                                        </a>#}
-{#                                    </li>#}
-{##}
-{#                                </ul>#}
-{#                            </li>#}
-{#                            <li class="footer"><a href="#">Acompanhar Itens</a></li>#}
-{#                        </ul>#}
+                        {#                        <ul class="dropdown-menu">#}
+                        {#                            <li class="header">Voce tem 5 itens</li>#}
+                        {#                            <li>#}
+                        {#                                <!-- inner menu: contains the actual data -->#}
+                        {#                                <ul class="menu">#}
+                        {#                                    <li>#}
+                        {#                                        <a href="#">#}
+                        {#                                            <i class="fa fa-warning text-yellow"></i>#}
+                        {#                                            Item está em andamento.#}
+                        {#                                        </a>#}
+                        {#                                    </li>#}
+                        {##}
+                        {#                                </ul>#}
+                        {#                            </li>#}
+                        {#                            <li class="footer"><a href="#">Acompanhar Itens</a></li>#}
+                        {#                        </ul>#}
                     </li>
                     <li class="dropdown tasks-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-flag-o"></i>
                             <span class="label label-danger">3</span>
                         </a>
-{#                        <ul class="dropdown-menu">#}
-{#                            <li class="header">Você tem 3 notificações</li>#}
-{#                            <li>#}
-{#                                <!-- inner menu: contains the actual data -->#}
-{#                                <ul class="menu">#}
-{#                                    <li><!-- Task item -->#}
-{#                                        <a href="#">#}
-{#                                            <h3>#}
-{#                                                Mensagem escrita por aqui.#}
-{#                                                <small class="pull-right">#}
-{#                                                    <label class="label label-info"><i#}
-{#                                                            class=""></i>#}
-{#                                                        Label Status</label>#}
-{#                                                </small>#}
-{#                                            </h3>#}
-{#                                        </a>#}
-{#                                    </li>#}
-{#                                </ul>#}
-{#                            </li>#}
-{#                            <li class="footer">#}
-{#                                <a href="#">Ver Notificações</a>#}
-{#                            </li>#}
-{#                        </ul>#}
+                        {#                        <ul class="dropdown-menu">#}
+                        {#                            <li class="header">Você tem 3 notificações</li>#}
+                        {#                            <li>#}
+                        {#                                <!-- inner menu: contains the actual data -->#}
+                        {#                                <ul class="menu">#}
+                        {#                                    <li><!-- Task item -->#}
+                        {#                                        <a href="#">#}
+                        {#                                            <h3>#}
+                        {#                                                Mensagem escrita por aqui.#}
+                        {#                                                <small class="pull-right">#}
+                        {#                                                    <label class="label label-info"><i#}
+                        {#                                                            class=""></i>#}
+                        {#                                                        Label Status</label>#}
+                        {#                                                </small>#}
+                        {#                                            </h3>#}
+                        {#                                        </a>#}
+                        {#                                    </li>#}
+                        {#                                </ul>#}
+                        {#                            </li>#}
+                        {#                            <li class="footer">#}
+                        {#                                <a href="#">Ver Notificações</a>#}
+                        {#                            </li>#}
+                        {#                        </ul>#}
                     </li>
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
@@ -265,14 +269,14 @@
                         <i class="fa fa-list-alt"></i> <span>Fundos</span>
                     </a>
                 </li>
-                <li id="consultas" class="motorista">
-                    <a href="#">
-                        <i class="fa fa-motorcycle"></i> <span>Consultas</span>
-                    </a>
-                </li>
+{#                <li id="consultas" class="motorista">#}
+{#                    <a href="#">#}
+{#                        <i class="fa fa-motorcycle"></i> <span>Consultas</span>#}
+{#                    </a>#}
+{#                </li>#}
                 <li id="carteira" class="motorista">
                     <a href="#">
-                        <i class="fa fa-sort-amount-asc"></i> <span>Carteira</span>
+                        <i class="fa fa-bank"></i> <span>Carteira</span>
                     </a>
                 </li>
                 <li id="logout" class="motorista">
@@ -308,23 +312,14 @@
 
 <!-- ./wrapper -->
 
-<!-- jQuery UI 1.11.4 -->
-<script src="{% static 'plugins/jQueryUI/jquery-ui.min.js' %}"></script>
-
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-    $.widget.bridge('uibutton', $.ui.button);
-</script>
-
-
 <!-- Bootstrap 3.3.5 -->
 <script src='{% static 'bootstrap/js/bootstrap.min.js' %}'></script>
+
+<script src="{% static 'plugins/bootstrap-slider/bootstrap-slider.js' %}"></script>
 <!-- jQuery Knob Chart -->
 <script src='{% static 'plugins/knob/jquery.knob.js' %}'></script>
 <!-- datepicker -->
 <script src='{% static 'plugins/datepicker/bootstrap-datepicker.js' %}'></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src='{% static 'plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js' %}'></script>
 <!-- Slimscroll -->
 <script src='{% static 'plugins/slimScroll/jquery.slimscroll.min.js' %}'></script>
 <!-- FastClick -->
@@ -345,11 +340,19 @@
 
 <script src="{% static "dist/js/chartReport.js" %}"></script>
 
+<script src="http://davidstutz.de/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+
+
 <div id="notify"></div>
 
 
 <script type="text/javascript">
     $(document).ready(function () {
+        $('.slider').slider({
+            formatter: function (value) {
+                return 'Valor: ' + value;
+            }
+        });
         $('.datepicker').datepicker({
             clearBtn: true,
             format: 'yyyy-mm-dd',

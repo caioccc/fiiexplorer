@@ -41,6 +41,13 @@ INSTALLED_APPS = [
     'django_filters',
 ]
 
+VERBOSE_LOOKUPS = {
+    'exact': '',
+    'iexact': '',
+    'gte': '',
+    'lte': ''
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

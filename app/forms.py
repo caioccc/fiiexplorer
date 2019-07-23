@@ -42,22 +42,53 @@ class FormFundo(ModelForm, BaseForm):
         ]
 
 
+MANDATO_CHOICES = (
+    ('Desenvolvimento para Renda', 'Desenvolvimento para Renda'),
+    ('Desenvolvimento para Venda', 'Desenvolvimento para Venda'),
+    ('Renda', 'Renda'),
+    ('Títulos e Valores Mobiliários', 'Títulos e Valores Mobiliários'),
+    ('Híbrido', 'Híbrido')
+)
+
+GESTAO_CHOICES = (
+    ('Ativa', 'Ativa'),
+    ('Passiva', 'Passiva')
+)
+
+SEGMENTO_CHOICES = (
+    ('Híbrido', 'Híbrido'),
+    ('Hospital', 'Hospital'),
+    ('Hotel', 'Hotel'),
+    ('Lajes Corporativas', 'Lajes Corporativas'),
+    ('Logística', 'Logística'),
+    ('Outros', 'Outros'),
+    ('Residencial', 'Residencial'),
+    ('Shoppings', 'Shoppings'),
+    ('Títulos e Val Mob', 'Títulos e Valores Mobiliários'),
+)
+
+
 class FundoFilter(django_filters.FilterSet):
+    mandato = django_filters.MultipleChoiceFilter(choices=MANDATO_CHOICES, label='Mandato')
+    tipo_gestao = django_filters.MultipleChoiceFilter(choices=GESTAO_CHOICES, label='Tipo de Gestão')
+    preco = django_filters.RangeFilter(label='Preço', )
+    segmento = django_filters.MultipleChoiceFilter(choices=SEGMENTO_CHOICES, label='Segmento')
+
     class Meta:
         model = Fundo
         fields = {
-            'preco': ['lte'],
-            'oscilacao_dia': ['lte', 'gte'],
+            'preco': ['exact'],
+            'oscilacao_dia': ['gte'],
             'liquidez': ['gte'],
             'ultimo_rendimento': ['gte'],
             'dy': ['gte'],
             'rentabilidade_mes': ['gte'],
             'num_cotas_emitidas': ['gte'],
             # 'vi_cota': ['lt', 'gt'],
-            'tipo_gestao': ['iexact'],
+            'tipo_gestao': ['exact'],
             'mandato': ['exact'],
-            'segmento': ['iexact'],
-            'taxa_adm': ['lte'],
+            'segmento': ['exact'],
+            'taxa_adm': ['icontains'],
             'yd_12_p': ['gte'],
             'num_ativos': ['gte'],
             'num_estados': ['gte'],
