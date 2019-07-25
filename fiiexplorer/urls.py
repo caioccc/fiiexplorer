@@ -17,12 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
-from app.views import FundosListView, IndexView, SetOnlineRedirect
+from app.views import FundosListView, IndexView, SetOnlineRedirect, FundoDetailView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^admin/login/$', auth_views.login),
     url(r'^$', IndexView.as_view(), name='index'),
+    url(r'^fundo/(?P<pk>[0-9]+)/$', FundoDetailView.as_view(), name="fundo-view"),
     url(r'^set-online-crawling/', SetOnlineRedirect.as_view(), name='set_online'),
     url(r'^fundos/$', FundosListView.as_view(), name='fundos-list'),
     url(r'^logout/', auth_views.logout, name='logout')

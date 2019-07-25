@@ -3,6 +3,9 @@ import logging
 import time
 from threading import Thread
 
+import requests
+from bs4 import BeautifulSoup
+
 from app.models import Fundo, Site
 from common import sync_urls_delay, check_new_minig_requests_delay
 from app.miner import fundsexplorer

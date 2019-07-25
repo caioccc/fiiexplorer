@@ -8,7 +8,7 @@ from django.contrib.sessions.models import Session
 from django.shortcuts import render
 
 # Create your views here.
-from django.views.generic import ListView, FormView, RedirectView
+from django.views.generic import ListView, FormView, RedirectView, DetailView
 from django.views.generic import TemplateView
 
 from app.forms import FundoFilter
@@ -28,16 +28,21 @@ class IndexView(LoginRequiredMixin, TemplateView):
         fundos = Fundo.objects.all()
         users = User.objects.all()
         settings = Settings.getInstance()
-        mined = settings.get_mined()
         bd = float((len(fundos) + len(users) + len(Historico.objects.all()) + len(Session.objects.all()) + 16)) / float(
             10000)
         kwargs['bd'] = bd
         kwargs['fundos'] = fundos
         kwargs['users'] = users
-        kwargs['mined'] = mined
         kwargs['running'] = settings.get_running()
         print(kwargs['running'])
         return kwargs
+
+
+class FundoDetailView(DetailView):
+    template_name = 'view_fund.html'
+    model = Fundo
+    pk_url_kwarg = 'pk'
+    context_object_name = 'fundo'
 
 
 class FundosListView(LoginRequiredMixin, FormView):

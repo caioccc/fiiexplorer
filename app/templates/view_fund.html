@@ -1,0 +1,254 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load filters %}
+
+{% block content %}
+    <section class="content-header">
+        <h1>Fundos
+            <small>Investigue todas as características do Fundo Imobiliário desejado</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="{% url 'fundos-list' %}"><i class="fa fa-book"></i> Fundos</a></li>
+            <li class="active">{{ fundo.sigla }}</li>
+        </ol>
+        <br/>
+
+
+        <nav class="navbar navbar-default marginT_25">
+            <div class="container-fluid" style="background-color:#FFFFFF; border-radius:5px;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'fundo-view' fundo.pk %}">{{ fundo.sigla }}</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'fundo-view' fundo.pk %}">Resumo</a></li>
+                        <li><a href="https://www.fundsexplorer.com.br/funds/{{ fundo.sigla }}" target="_blank">FundsExplorer</a></li>
+                        <li><a href="https://fiis.com.br/{{ fundo.sigla }}" target="_blank">Fiis.com.br</a></li>
+                        <li><a href="https://www.scanfii.com.br/raio-x/{{ fundo.sigla }}" target="_blank">ScanFii</a></li>
+                        <li><a href="https://www.clubefii.com.br/fiis/{{ fundo.sigla }}" target="_blank">ClubeFii</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </section>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-info"></i> Dados gerais</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Nome</label>
+                        <div class="col-sm-8">{{ fundo.nome }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Sigla</label>
+                        <div class="col-sm-8">{{ fundo.sigla }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Tipo</label>
+                        <div class="col-sm-8">{{ fundo.tipo_gestao }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Segmento</label>
+                        <div class="col-sm-8">{{ fundo.segmento }}</div>
+                    </div>
+
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Público Alvo</label>
+                        <div class="col-sm-8">{{ fundo.publico_alvo }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Mandato</label>
+                        <div class="col-sm-8">{{ fundo.mandato }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Data de Construção do Fundo</label>
+                        <div class="col-sm-8">{{ fundo.data_construcao_fundo }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Prazo de Duração</label>
+                        <div class="col-sm-8">{{ fundo.prazo_duracao }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Número de Ativos</label>
+                        <div class="col-sm-8">{{ fundo.num_ativos }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Número de Estados</label>
+                        <div class="col-sm-8">{{ fundo.num_estados }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="box box-danger">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-usd"></i> Dados Financeiros</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Valor Atual da Cota</label>
+                        <div class="col-sm-8">R$ {{ fundo.preco|floatformat:'2' }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Oscilação do Dia</label>
+                        <div class="col-sm-8 ">
+                            <label class="label
+                        {% if fundo.oscilacao_dia|ispositive %}
+                        label-success
+                        {% else %}
+                        label-danger
+                        {% endif %}
+                                          ">
+                                <i class="
+                        {% if fundo.oscilacao_dia|ispositive %}
+                            fa fa-arrow-up
+                        {% else %}
+                            fa fa-arrow-down
+                        {% endif %}
+                                "></i>
+                                {{ fundo.oscilacao_dia }} %
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Liquidez</label>
+                        <div class="col-sm-8">{{ fundo.liquidez }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Último Rendimento</label>
+                        <div class="col-sm-8">R$ {{ fundo.ultimo_rendimento|floatformat:'2' }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">DY</label>
+                        <div class="col-sm-8">
+                            <label class="label
+                        {% if fundo.dy|ispositive %}
+                        label-success
+                        {% else %}
+                        label-danger
+                        {% endif %}
+                                          ">
+                                <i class="
+                        {% if fundo.dy|ispositive %}
+                            fa fa-arrow-up
+                        {% else %}
+                            fa fa-arrow-down
+                        {% endif %}
+                                "></i>
+                                {{ fundo.dy }} %
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Patrimônio Líquido</label>
+                        <div class="col-sm-8">R$ {{ fundo.pl }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Rentabilidade no Mês</label>
+                        <div class="col-sm-8">
+                            <label class="label
+                        {% if fundo.rentabilidade_mes|ispositive %}
+                        label-success
+                        {% else %}
+                        label-danger
+                        {% endif %}
+                                          ">
+                                <i class="
+                        {% if fundo.rentabilidade_mes|ispositive %}
+                            fa fa-arrow-up
+                        {% else %}
+                            fa fa-arrow-down
+                        {% endif %}
+                                "></i>
+                                {{ fundo.rentabilidade_mes }} %
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Número de Cotas Emitidas</label>
+                        <div class="col-sm-8">{{ fundo.num_cotas_emitidas }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Valor Inicial da Cota</label>
+                        <div class="col-sm-8">R$ {{ fundo.vi_cota|floatformat:'2' }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Taxa de Administração</label>
+                        <div class="col-sm-8">{{ fundo.taxa_adm }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-arrow-circle-o-right"></i> Objetivo</h3>
+                </div>
+                <div class="box-body">
+                    {{ fundo.descricao }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-bar-chart"></i> Performance</h3>
+                </div>
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Proventos</th>
+                                <th>Último</th>
+                                <th>3 meses</th>
+                                <th>6 meses</th>
+                                <th>12 meses</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Retorno por cota</td>
+                                <td>R$ {{ fundo.yd_1|floatformat:'2' }}</td>
+                                <td>R$ {{ fundo.yd_3|floatformat:'2' }}</td>
+                                <td>R$ {{ fundo.yd_6|floatformat:'2' }}</td>
+                                <td>R$ {{ fundo.yd_12|floatformat:'2' }}</td>
+                            </tr>
+                            <tr>
+                                <td>Em relação ao valor de cota atual</td>
+                                <td>{{ fundo.yd_1_p }}%</td>
+                                <td>{{ fundo.yd_3_p }}%</td>
+                                <td>{{ fundo.yd_6_p }}%</td>
+                                <td>{{ fundo.yd_12_p }}%</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fundos').addClass('active');
+        });
+    </script>
+
+{% endblock %}

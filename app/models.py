@@ -28,7 +28,8 @@ class Fundo(TimeStamped):
     ultimo_rendimento = models.FloatField(max_length=300, blank=True, null=True, verbose_name='Último Rendimento (R$)')
     dy = models.FloatField(max_length=300, blank=True, null=True, verbose_name='DY (%)')
     pl = models.CharField(max_length=300, blank=True, null=True, verbose_name='Patrimônio Líquido')
-    rentabilidade_mes = models.FloatField(max_length=300, blank=True, null=True, verbose_name='Rentabilidade no Mês (%)')
+    rentabilidade_mes = models.FloatField(max_length=300, blank=True, null=True,
+                                          verbose_name='Rentabilidade no Mês (%)')
     descricao = models.TextField(blank=True, null=True)
     data_construcao_fundo = models.CharField(max_length=300, blank=True, null=True)
     num_cotas_emitidas = models.IntegerField(max_length=300, blank=True, null=True, verbose_name='Número de Cotas')

@@ -2,10 +2,17 @@
 {% load staticfiles %}
 
 {% block content %}
+    <style>
+        .list_fii_segmento {
+            padding: 0px;
+            margin: 4px 4px;
+            display: inline-block;
+        }
+    </style>
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-lg-3 col-xs-6">
+                <div class="col-lg-4 col-xs-12">
                     <!-- small box -->
                     <div class="small-box bg-aqua">
                         <div class="inner">
@@ -14,28 +21,14 @@
                             <p>Fundos em Acompanhamento</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-bag"></i>
+                            <i class="ion ion-arrow-graph-up-right"></i>
                         </div>
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-xs-6">
+                <div class="col-lg-4 col-xs-12">
                     <!-- small box -->
                     <div class="small-box bg-green">
-                        <div class="inner">
-                            <h3>{{ mined }}<sup style="font-size: 20px">%</sup></h3>
-
-                            <p>dos Fundos atualizados hoje.</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-xs-6">
-                    <!-- small box -->
-                    <div class="small-box bg-yellow">
                         <div class="inner">
                             <h3>{{ users|length }}</h3>
 
@@ -47,7 +40,7 @@
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-xs-6">
+                <div class="col-lg-4 col-xs-12">
                     <!-- small box -->
                     <div class="small-box bg-red">
                         <div class="inner">
@@ -66,12 +59,28 @@
     </div>
     <div class="row">
         <div class="col-md-12">
+            <div class="box box-success">
+                <div class="box-header">
+                    <h3 class="box-title">FIIs por Segmentos</h3>
+                </div>
+                <div class="box-body">
+                    {% regroup fundos|dictsort:"segmento" by segmento as fundos_list %}
+                    {% for segmento in fundos_list %}
+                        <div class="box-header with-border" style="padding:5px;">
+                            <h4 class="box-title">{{ segmento.grouper }}</h4>
+                        </div>
+                        {% for fundo in segmento.list %}
+                            <h5 class="list_fii_segmento"><a href="{% url 'fundo-view' fundo.pk %}">{{ fundo.sigla }}</a></h5> |
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript">
-    $(document).ready(function () {
-        $('#index').addClass('active');
-    })
+        $(document).ready(function () {
+            $('#index').addClass('active');
+        })
     </script>
 
 {% endblock %}

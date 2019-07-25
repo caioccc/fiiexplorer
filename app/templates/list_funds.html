@@ -209,7 +209,7 @@
                                     {% for fundo in fundos.qs %}
                                         <tr>
                                             <td>
-                                                <a href="{{ fundo.url }}" target="_blank">
+                                                <a href="{% url 'fundo-view' fundo.pk %}" target="_blank">
                                                     {{ fundo.sigla }}
                                                 </a>
                                             </td>
