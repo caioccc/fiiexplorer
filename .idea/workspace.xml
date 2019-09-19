@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0a81b68-c1f8-4f50-af7a-806ecacebb90.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0a81b68-c1f8-4f50-af7a-806ecacebb90/storage.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0a81b68-c1f8-4f50-af7a-806ecacebb90/storage_v2/_src_/schema/.UokAAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/miner_fiis.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/miner_fiis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/view_fund.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view_fund.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templatetags/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+            <state relative-caret-position="475">
+              <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -64,12 +70,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/view_fund.html">
+        <entry file="file://$PROJECT_DIR$/app/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="104" selection-start-line="38" selection-start-column="104" selection-end-line="38" selection-end-column="104" />
+            <state relative-caret-position="44">
+              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
               <folding>
-                <element signature="e#557#609#0#HTML" expanded="true" />
+                <element signature="e#47#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,56 +84,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4522">
-              <caret line="266" column="45" selection-start-line="266" selection-start-column="45" selection-end-line="266" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/miner/explorer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-              <folding>
-                <element signature="e#15#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="271" column="55" lean-forward="true" selection-start-line="271" selection-start-column="44" selection-end-line="271" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/miner/miner_fiis.py">
+        <entry file="file://$PROJECT_DIR$/app/templates/view_fund.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            <state relative-caret-position="641">
+              <caret line="302" column="82" selection-start-line="302" selection-start-column="82" selection-end-line="302" selection-end-column="82" />
               <folding>
-                <element signature="e#25#40#0" expanded="true" />
+                <element signature="e#11070#12599#0#HTML" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/miner/common.py">
+        <entry file="file://$PROJECT_DIR$/fiiexplorer/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="371">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
-                <element signature="e#15#29#0" expanded="true" />
-                <element signature="e#242#540#0" />
-                <element signature="e#577#818#0" />
-                <element signature="e#844#1038#0" />
+                <element signature="e#645#677#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templatetags/filters.py">
+        <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="405">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
+              <folding>
+                <element signature="e#15#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,26 +129,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/list_funds.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3587">
+            <state relative-caret-position="231">
               <caret line="211" column="85" selection-start-line="211" selection-start-column="85" selection-end-line="211" selection-end-column="85" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/app/templates/list_funds_best.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://7f258a22-10b5-41b9-80c0-c76827c6debd/schema/main/table/app_fundo">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="ff06cedb-6ceb-496d-b548-b710dacf16d8">
-              <filtering />
+            <state relative-caret-position="133">
+              <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -181,7 +166,12 @@
       <find>User</find>
       <find>uibu</find>
       <find>consu</find>
+      <find>.order_by:</find>
     </findStrings>
+    <replaceStrings>
+      <replace>|dictsort:</replace>
+      <replace>.all|dictsort:</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -198,18 +188,19 @@
         <option value="$PROJECT_DIR$/app/miner/common.py" />
         <option value="$PROJECT_DIR$/app/forms.py" />
         <option value="$PROJECT_DIR$/fiiexplorer/settings.py" />
-        <option value="$PROJECT_DIR$/app/admin.py" />
-        <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/miner/explorer.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/fiiexplorer/urls.py" />
-        <option value="$PROJECT_DIR$/app/templatetags/filters.py" />
-        <option value="$PROJECT_DIR$/app/templates/base.html" />
-        <option value="$PROJECT_DIR$/app/templates/view_fund.html" />
         <option value="$PROJECT_DIR$/app/templates/list_funds.html" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/templates/index.html" />
+        <option value="$PROJECT_DIR$/app/admin.py" />
         <option value="$PROJECT_DIR$/app/miner/miner_fiis.py" />
+        <option value="$PROJECT_DIR$/app/templates/view_fund.html" />
+        <option value="$PROJECT_DIR$/app/templatetags/filters.py" />
+        <option value="$PROJECT_DIR$/app/models.py" />
+        <option value="$PROJECT_DIR$/fiiexplorer/urls.py" />
+        <option value="$PROJECT_DIR$/app/templates/base.html" />
+        <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/list_funds_best.html" />
       </list>
     </option>
   </component>
@@ -224,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -263,7 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,13 +273,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Caio\Documents\fiiexplorer\app\templates" />
       <recent name="C:\Users\Caio\Documents\fiiexplorer\app" />
       <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,34 +373,35 @@
       <workItem from="1563797091215" duration="1416000" />
       <workItem from="1563798571535" duration="48597000" />
       <workItem from="1567015702933" duration="17000" />
-      <workItem from="1568739049320" duration="1252000" />
+      <workItem from="1568739049320" duration="1386000" />
+      <workItem from="1568813352316" duration="14237000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51282000" />
+    <option name="totallyTimeSpent" value="65653000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.118336886" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.11940298" />
       <window_info id="Structure" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="2" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49840087" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4978678" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.49946696" weight="0.39869988" />
+      <window_info anchor="bottom" id="Find" order="5" sideWeight="0.4989339" weight="0.32936078" />
+      <window_info anchor="bottom" id="Debug" order="6" sideWeight="0.4978678" visible="true" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="9" />
       <window_info anchor="bottom" id="Database Console" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.50159913" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.39869988" />
       <window_info anchor="right" id="Database" order="0" visible="true" weight="0.2857143" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -421,21 +413,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fiiexplorer/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f0a81b68-c1f8-4f50-af7a-806ecacebb90/console.sql" />
     <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/-762174762/__builtin__.py" />
     <entry file="dbDummy://dbtable:/ab1f9865/f0a81b68-c1f8-4f50-af7a-806ecacebb90/app_fundo" />
     <entry file="file://$PROJECT_DIR$/static/dist/js/app.min.js">
@@ -481,13 +458,6 @@
     </entry>
     <entry file="das://f0a81b68-c1f8-4f50-af7a-806ecacebb90/schema/&amp;empty;@#1/table/django_session" />
     <entry file="das://f0a81b68-c1f8-4f50-af7a-806ecacebb90/schema/&amp;empty;@#1/table/django_migrations" />
-    <entry file="file://$USER_HOME$/.conda/envs/delivery/Lib/site-packages/django/views/generic/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="188" column="11" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://f0a81b68-c1f8-4f50-af7a-806ecacebb90/schema/&amp;empty;@#1/table/app_historico" />
     <entry file="das://f0a81b68-c1f8-4f50-af7a-806ecacebb90/schema/&amp;empty;@#1/table/app_fundo" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7f258a22-10b5-41b9-80c0-c76827c6debd/console.sql">
@@ -585,26 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="66" column="23" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-          <folding>
-            <element signature="e#47#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/miner/fundsexplorer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1769">
@@ -633,56 +583,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fiiexplorer/urls.py">
+    <entry file="file://$PROJECT_DIR$/app/miner/explorer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="79" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+        <state relative-caret-position="272">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
-            <element signature="e#645#677#0" expanded="true" />
+            <element signature="e#15#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="e#15#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/view_fund.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="104" selection-start-line="38" selection-start-column="104" selection-end-line="38" selection-end-column="104" />
-          <folding>
-            <element signature="e#557#609#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4522">
-          <caret line="266" column="45" selection-start-line="266" selection-start-column="45" selection-end-line="266" selection-end-column="45" />
+    <entry file="das://7f258a22-10b5-41b9-80c0-c76827c6debd/schema/main/table/app_fundo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="645d8ba8-7d4c-4d88-a6a6-4264661b6dd0">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/miner/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="-102">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#15#29#0" expanded="true" />
@@ -693,50 +615,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templatetags/filters.py">
+    <entry file="file://$USER_HOME$/.conda/envs/delivery/Lib/site-packages/bs4/element.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="193">
+          <caret line="955" selection-start-line="955" selection-end-line="955" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/list_funds.html">
+    <entry file="file://$USER_HOME$/.conda/envs/delivery/Lib/site-packages/django/views/generic/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3587">
-          <caret line="211" column="85" selection-start-line="211" selection-start-column="85" selection-end-line="211" selection-end-column="85" />
+        <state relative-caret-position="176">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7f258a22-10b5-41b9-80c0-c76827c6debd/schema/main/table/app_fundo">
+    <entry file="das://7f258a22-10b5-41b9-80c0-c76827c6debd/schema/main/table/app_infofundo">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="ff06cedb-6ceb-496d-b548-b710dacf16d8">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/miner/explorer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="e#15#29#0" expanded="true" />
-          </folding>
+        <state projectRestartId="645d8ba8-7d4c-4d88-a6a6-4264661b6dd0">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/miner/miner_fiis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="254">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
-            <element signature="e#25#40#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+          <folding>
+            <element signature="e#47#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templatetags/filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="89" column="16" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="e#15#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/list_funds.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="211" column="85" selection-start-line="211" selection-start-column="85" selection-end-line="211" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fiiexplorer/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="e#645#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="271" column="55" lean-forward="true" selection-start-line="271" selection-start-column="44" selection-end-line="271" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/list_funds_best.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="111" column="30" selection-start-line="111" selection-start-column="30" selection-end-line="111" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/view_fund.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="302" column="82" selection-start-line="302" selection-start-column="82" selection-end-line="302" selection-end-column="82" />
+          <folding>
+            <element signature="e#11070#12599#0#HTML" />
           </folding>
         </state>
       </provider>

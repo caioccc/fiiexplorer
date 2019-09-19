@@ -84,3 +84,13 @@ class Historico(TimeStamped):
 
     def __unicode__(self):
         return "%s" % self.fund
+
+
+class InfoFundo(TimeStamped):
+    fund = models.ForeignKey(Fundo, blank=True, null=True, on_delete=models.CASCADE)
+    dy = models.CharField(max_length=300, blank=True, null=True)
+    data_pay = models.CharField(max_length=300, blank=True, null=True)
+    rend = models.CharField(max_length=300, blank=True, null=True)
+    data_base = models.CharField(max_length=300, blank=True, null=True)
+    close = models.CharField(max_length=300, blank=True, null=True)
+    rend_cota_mes = models.CharField(max_length=300, blank=True, null=True)

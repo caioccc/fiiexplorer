@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.sessions.models import Session
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.views.generic import ListView, FormView, RedirectView, DetailView
@@ -13,7 +13,8 @@ from django.views.generic import TemplateView
 
 from app.forms import FundoFilter
 from app.miner.explorer import syncFunds, mineData, Settings
-from app.models import Fundo, Historico
+from app.miner.miner_fiis import get_info_fii
+from app.models import Fundo, Historico, InfoFundo
 
 import logging
 
@@ -45,6 +46,30 @@ class FundoDetailView(DetailView):
     context_object_name = 'fundo'
 
 
+class GetInfoFundos(TemplateView):
+    template_name = 'index.html'
+
+    def get(self, request, *args, **kwargs):
+        InfoFundo.objects.all().delete()
+        fundos = Fundo.objects.all()
+        for fundo in fundos:
+            if len(fundo.infofundo_set.all()) == 0:
+                print('Fundo: ' + fundo.sigla)
+                dy, data_pay, data_base, close, rend, rend_cota_mes = get_info_fii(fundo.sigla)
+                if len(dy) == len(data_pay) and len(close) == len(rend) and len(rend_cota_mes) == len(dy):
+                    for i in range(0, len(dy)):
+                        info = InfoFundo()
+                        info.fund = fundo
+                        info.dy = dy[i]
+                        info.data_pay = data_pay[i]
+                        info.data_base = data_base[i]
+                        info.close = close[i]
+                        info.rend = rend[i]
+                        info.rend_cota_mes = rend_cota_mes[i]
+                        info.save()
+        return redirect('/')
+
+
 class FundosListView(LoginRequiredMixin, FormView):
     login_url = '/admin/login'
     template_name = 'list_funds.html'
@@ -58,6 +83,41 @@ class FundosListView(LoginRequiredMixin, FormView):
 
     def get(self, request, *args, **kwargs):
         return super(FundosListView, self).get(request, *args, **kwargs)
+
+
+class FilterFundoSelect(LoginRequiredMixin, TemplateView):
+    template_name = 'list_funds_best.html'
+
+    def calc_rent_cota_total(self, fundo):
+        infos = fundo.infofundo_set.all()
+        if len(infos) > 0:
+            vf = float(infos[0].close)
+            vi = float(infos[len(infos) - 1].close)
+            rent = ((vf / vi) - 1) * 100
+            return rent
+        else:
+            return -1
+
+    def mount_dict(self, fundos):
+        dic = {}
+        for fundo in fundos:
+            dic[fundo.pk] = self.calc_rent_cota_total(fundo=fundo)
+        ordered = sorted(dic.iteritems(), key=lambda x: x[1])
+        return ordered
+
+    def get_context_data(self, **kwargs):
+        qs = 10
+        if 'qs' in self.request.GET:
+            qs = int(self.request.GET['qs'])
+        print('QS: ' + str(qs))
+        fundos = Fundo.objects.all()
+        ordered = self.mount_dict(fundos)
+        pks = [x[0] for x in ordered if float(x[1]) > qs]
+        kwargs['fundos'] = fundos.filter(pk__in=pks)
+        return kwargs
+
+    def get(self, request, *args, **kwargs):
+        return super(FilterFundoSelect, self).get(request, *args, **kwargs)
 
 
 class SetOnlineRedirect(LoginRequiredMixin, RedirectView):

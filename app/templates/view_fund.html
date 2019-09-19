@@ -33,10 +33,14 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{% url 'fundo-view' fundo.pk %}">Resumo</a></li>
-                        <li><a href="https://www.fundsexplorer.com.br/funds/{{ fundo.sigla }}" target="_blank">FundsExplorer</a></li>
+                        <li><a href="https://www.fundsexplorer.com.br/funds/{{ fundo.sigla }}"
+                               target="_blank">FundsExplorer</a>
+                        </li>
                         <li><a href="https://fiis.com.br/{{ fundo.sigla }}" target="_blank">Fiis.com.br</a></li>
-                        <li><a href="https://www.scanfii.com.br/raio-x/{{ fundo.sigla }}" target="_blank">ScanFii</a></li>
-                        <li><a href="https://www.clubefii.com.br/fiis/{{ fundo.sigla }}" target="_blank">ClubeFii</a></li>
+                        <li><a href="https://www.scanfii.com.br/raio-x/{{ fundo.sigla }}" target="_blank">ScanFii</a>
+                        </li>
+                        <li><a href="https://www.clubefii.com.br/fiis/{{ fundo.sigla }}" target="_blank">ClubeFii</a>
+                        </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -210,34 +214,98 @@
                     <h3 class="box-title"><i class="fa fa-bar-chart"></i> Performance</h3>
                 </div>
                 <div class="box-body">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th>Proventos</th>
-                                <th>Último</th>
-                                <th>3 meses</th>
-                                <th>6 meses</th>
-                                <th>12 meses</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Retorno por cota</td>
-                                <td>R$ {{ fundo.yd_1|floatformat:'2' }}</td>
-                                <td>R$ {{ fundo.yd_3|floatformat:'2' }}</td>
-                                <td>R$ {{ fundo.yd_6|floatformat:'2' }}</td>
-                                <td>R$ {{ fundo.yd_12|floatformat:'2' }}</td>
-                            </tr>
-                            <tr>
-                                <td>Em relação ao valor de cota atual</td>
-                                <td>{{ fundo.yd_1_p }}%</td>
-                                <td>{{ fundo.yd_3_p }}%</td>
-                                <td>{{ fundo.yd_6_p }}%</td>
-                                <td>{{ fundo.yd_12_p }}%</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Proventos</th>
+                                        <th>Último</th>
+                                        <th>3 meses</th>
+                                        <th>6 meses</th>
+                                        <th>12 meses</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Retorno por cota</td>
+                                        <td>R$ {{ fundo.yd_1|floatformat:'2' }}</td>
+                                        <td>R$ {{ fundo.yd_3|floatformat:'2' }}</td>
+                                        <td>R$ {{ fundo.yd_6|floatformat:'2' }}</td>
+                                        <td>R$ {{ fundo.yd_12|floatformat:'2' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Em relação ao valor de cota atual</td>
+                                        <td>{{ fundo.yd_1_p }}%</td>
+                                        <td>{{ fundo.yd_3_p }}%</td>
+                                        <td>{{ fundo.yd_6_p }}%</td>
+                                        <td>{{ fundo.yd_12_p }}%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <label class="title">Informativo ao longo do tempo</label>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>x</th>
+                                        {% for fun in fundo.infofundo_set.all %}
+                                            <th>{{ fun.data_base }}</th>
+                                        {% endfor %}
+                                        <th>Median</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>DY</td>
+                                        {% for inf in fundo.infofundo_set.all %}
+                                            <td>R$ {{ inf.dy }}</td>
+                                        {% endfor %}
+                                        <td>R$ {{ fundo.infofundo_set.all|calc_median_dy }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>%</td>
+                                        {% for info in fundo.infofundo_set.all %}
+                                            <td>{{ info.rend }} %</td>
+                                        {% endfor %}
+                                        <td>{{ fundo.infofundo_set.all|calc_median_rend }} %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data Pay</td>
+                                        {% for infof in fundo.infofundo_set.all %}
+                                            <td>{{ infof.data_pay }}</td>
+                                        {% endfor %}
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Close</td>
+                                        {% for infofundo in fundo.infofundo_set.all %}
+                                            <td>R$ {{ infofundo.close }}</td>
+                                        {% endfor %}
+                                        <td>R$ {{ fundo.infofundo_set.all|calc_median_close }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Osc Mês</td>
+                                        {% for infofundof in fundo.infofundo_set.all %}
+                                            <td>{{ infofundof.rend_cota_mes }} %</td>
+                                        {% endfor %}
+                                        <td>{{ fundo.infofundo_set.all|calc_median_osc }} %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Var Cota Total</td>
+                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_year }} %</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

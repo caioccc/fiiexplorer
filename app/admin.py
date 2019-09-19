@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from app.models import Historico, Fundo, Site
+from app.models import Historico, Fundo, Site, InfoFundo
 
 
 class HistoricoInline(admin.TabularInline):
@@ -29,6 +29,13 @@ class HistoricoAdmin(admin.ModelAdmin):
     list_display = ('fund', 'id', 'preco', 'oscilacao_dia', 'liquidez', 'ultimo_rendimento', 'dy')
 
 
+class InfoFundoAdmin(admin.ModelAdmin):
+    list_filter = ('fund', 'data_pay',)
+    search_fields = ['data_pay']
+    list_display = ('fund', 'id', 'dy', 'rend', 'data_pay', 'data_base', 'close', 'rend_cota_mes')
+
+
 admin.site.register(Fundo, FundoAdmin)
 admin.site.register(Historico, HistoricoAdmin)
 admin.site.register(Site)
+admin.site.register(InfoFundo, InfoFundoAdmin)
