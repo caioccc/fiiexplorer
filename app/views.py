@@ -50,23 +50,11 @@ class GetInfoFundos(TemplateView):
     template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
-        InfoFundo.objects.all().delete()
-        fundos = Fundo.objects.all()
-        for fundo in fundos:
-            if len(fundo.infofundo_set.all()) == 0:
-                print('Fundo: ' + fundo.sigla)
-                dy, data_pay, data_base, close, rend, rend_cota_mes = get_info_fii(fundo.sigla)
-                if len(dy) == len(data_pay) and len(close) == len(rend) and len(rend_cota_mes) == len(dy):
-                    for i in range(0, len(dy)):
-                        info = InfoFundo()
-                        info.fund = fundo
-                        info.dy = dy[i]
-                        info.data_pay = data_pay[i]
-                        info.data_base = data_base[i]
-                        info.close = close[i]
-                        info.rend = rend[i]
-                        info.rend_cota_mes = rend_cota_mes[i]
-                        info.save()
+        settings = Settings.getInstance()
+        try:
+            settings.infosThread.start()
+        except (Exception,):
+            logging.error('Thread nao pode ser iniciada novamente')
         return redirect('/')
 
 

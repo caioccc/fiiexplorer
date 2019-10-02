@@ -159,22 +159,32 @@ class CommonMiner():
 
 
 class Miner(CommonMiner):
+    def check_fundo_exists(self, fund):
+        fundos = Fundo.objects.filter(sigla=fund)
+        if len(fundos) > 0:
+            return True
+        return False
+
     def mine(self):
         url_init = 'https://www.fundsexplorer.com.br/funds'
         site_initial = self.get_page_bs4(url_init)
         if site_initial:
             funds = self.get_funds(site_initial)
+            print('Total of Funds: ' + str(len(funds)))
             for fund in funds:
+                if self.check_fundo_exists(fund):
+                    print('Fundo ja existe: ', fund)
+                    continue
                 fund_url = url_init + '/' + fund
                 page_fund = self.get_page_bs4(fund_url)
                 if page_fund:
                     print('Fundo: ', fund)
+                    if self.checkna(page_fund, 7, 'span', 'indicator-value'):
+                        continue
                     nome = self.get_nome(page_fund)
                     sigla = self.get_sigla(page_fund)
                     preco = self.get_preco(page_fund)
                     oscilacao_dia = self.get_oscilacao_dia(page_fund)
-                    if self.checkna(page_fund, 7, 'span', 'indicator-value'):
-                        continue
                     liquidez = self.get_liquidez(page_fund)
                     ultimo_rendimento = self.get_ultimo_rendimento(page_fund)
                     dy = self.get_dy(page_fund)

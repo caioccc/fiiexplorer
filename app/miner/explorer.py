@@ -6,7 +6,8 @@ from threading import Thread
 import requests
 from bs4 import BeautifulSoup
 
-from app.models import Fundo, Site
+from app.miner.miner_fiis import get_info_fii
+from app.models import Fundo, Site, InfoFundo
 from common import sync_urls_delay, check_new_minig_requests_delay
 from app.miner import fundsexplorer
 
@@ -34,6 +35,28 @@ def syncFunds():
             time.sleep(5)
         settings.set_mined(0)
         time.sleep(sync_urls_delay)
+
+
+def getInfos():
+    InfoFundo.objects.all().delete()
+    fundos = Fundo.objects.all()
+    for fundo in fundos:
+        if len(fundo.infofundo_set.all()) == 0:
+            print('Buscando ... Info Fundo: ' + fundo.sigla)
+            dy, data_pay, data_base, close, rend, rend_cota_mes = get_info_fii(fundo.sigla)
+            if len(dy) == len(data_pay) and len(close) == len(rend) and len(rend_cota_mes) == len(dy):
+                for i in range(0, len(dy)):
+                    info = InfoFundo()
+                    info.fund = fundo
+                    info.dy = dy[i]
+                    info.data_pay = data_pay[i]
+                    info.data_base = data_base[i]
+                    info.close = close[i]
+                    info.rend = rend[i]
+                    info.rend_cota_mes = rend_cota_mes[i]
+                    info.save()
+                print('Saved info to: ', fundo.sigla)
+        time.sleep(1)
 
 
 def mineData():
@@ -73,6 +96,7 @@ class Settings():
     running = False
     thread = Thread(target=syncFunds)
     minerThread = Thread(target=mineData)
+    infosThread = Thread(target=getInfos)
 
     def set_running(self, val):
         self.running = val

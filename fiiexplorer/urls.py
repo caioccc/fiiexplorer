@@ -27,6 +27,6 @@ urlpatterns = [
     url(r'^set-online-crawling/', SetOnlineRedirect.as_view(), name='set_online'),
     url(r'^fundos/$', FundosListView.as_view(), name='fundos-list'),
     url(r'^logout/', auth_views.logout, name='logout'),
-    url(r'^infos/$', GetInfoFundos.as_view(), name='infos'),
+    url(r'^get-infos/$', GetInfoFundos.as_view(), name='infos'),
     url(r'^filter-bests/$', FilterFundoSelect.as_view(), name='filter-bests')
 ]

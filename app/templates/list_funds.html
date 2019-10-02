@@ -190,6 +190,8 @@
                                         <th>PATRIMONIO LIQ</th>
                                         <th>RENTABILIDADE (MES)%</th>
                                         <th>DY 12 %</th>
+                                        <th>DY 6 %</th>
+                                        <th>DY 3 %</th>
                                         {#                                        <th>DATA</th>#}
                                         <th>SEGMENTO</th>
                                         <th>NUM COTAS</th>
@@ -214,25 +216,27 @@
                                                 </a>
                                             </td>
                                             <td>
-                                                {{ fundo.preco }}
+                                                {{ fundo.preco|show_formated_float }}
                                             </td>
                                             <td>
-                                                {{ fundo.oscilacao_dia }}
+                                                {{ fundo.oscilacao_dia|show_formated_float }}
                                             </td>
                                             <td>
                                                 {{ fundo.liquidez }}
                                             </td>
-                                            <td>{{ fundo.ultimo_rendimento }}</td>
+                                            <td>{{ fundo.ultimo_rendimento|show_formated_float }}</td>
                                             <td>
-                                                {{ fundo.dy }}
+                                                {{ fundo.dy|show_formated_float }}
                                             </td>
                                             <td>
                                                 {{ fundo.pl }}
                                             </td>
                                             <td>
-                                                {{ fundo.rentabilidade_mes }}
+                                                {{ fundo.rentabilidade_mes|show_formated_float }}
                                             </td>
-                                            <td>{{ fundo.yd_12_p }}</td>
+                                            <td>{{ fundo.yd_12_p|show_formated_float }}</td>
+                                            <td>{{ fundo.yd_6_p|show_formated_float }}</td>
+                                            <td>{{ fundo.yd_3_p|show_formated_float }}</td>
                                             {#                                            <td>#}
                                             {#                                                {{ fundo.data_construcao_fundo|date:"d/m/Y" }}#}
                                             {#                                            </td>#}

@@ -252,10 +252,10 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table class="table table-bordered table-striped">
                                     <thead>
                                     <tr>
-                                        <th>x</th>
+                                        <th><b>x</b></th>
                                         {% for fun in fundo.infofundo_set.all %}
                                             <th>{{ fun.data_base }}</th>
                                         {% endfor %}
@@ -264,43 +264,94 @@
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>DY</td>
+                                        <td><b>DY</b></td>
                                         {% for inf in fundo.infofundo_set.all %}
                                             <td>R$ {{ inf.dy }}</td>
                                         {% endfor %}
                                         <td>R$ {{ fundo.infofundo_set.all|calc_median_dy }}</td>
                                     </tr>
                                     <tr>
-                                        <td>%</td>
+                                        <td><b>%</b></td>
                                         {% for info in fundo.infofundo_set.all %}
                                             <td>{{ info.rend }} %</td>
                                         {% endfor %}
                                         <td>{{ fundo.infofundo_set.all|calc_median_rend }} %</td>
                                     </tr>
                                     <tr>
-                                        <td>Data Pay</td>
+                                        <td><b>Data Pay</b></td>
                                         {% for infof in fundo.infofundo_set.all %}
                                             <td>{{ infof.data_pay }}</td>
                                         {% endfor %}
                                         <td>-</td>
                                     </tr>
                                     <tr>
-                                        <td>Close</td>
+                                        <td><b>Close</b></td>
                                         {% for infofundo in fundo.infofundo_set.all %}
-                                            <td>R$ {{ infofundo.close }}</td>
+                                            <td>R$ {{ infofundo.close|show_formated_float }}</td>
                                         {% endfor %}
-                                        <td>R$ {{ fundo.infofundo_set.all|calc_median_close }}</td>
+                                        <td>R$ {{ fundo.infofundo_set.all|calc_median_close|show_formated_float }}</td>
                                     </tr>
                                     <tr>
-                                        <td>Osc Mês</td>
+                                        <td><b>Osc Mês</b></td>
                                         {% for infofundof in fundo.infofundo_set.all %}
-                                            <td>{{ infofundof.rend_cota_mes }} %</td>
+                                            <td>{{ infofundof.rend_cota_mes|show_formated_float }} %
+                                                {% if  infofundof.rend_cota_mes|ispositive %}
+                                                    <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
+                                                {% else %}
+                                                    <i class="fa fa-arrow-down" style="color: red"></i>
+                                                {% endif %}
+                                            </td>
                                         {% endfor %}
-                                        <td>{{ fundo.infofundo_set.all|calc_median_osc }} %</td>
+                                        <td>{{ fundo.infofundo_set.all|calc_median_osc|show_formated_float }} %
+                                            {% if  fundo.infofundo_set.all|calc_median_osc|ispositive %}
+                                                <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
+                                            {% else %}
+                                                <i class="fa fa-arrow-down" style="color: red"></i>
+                                            {% endif %}
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>Var Cota Total</td>
-                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_year }} %</td>
+                                        <td><b>Var Cota 12M</b></td>
+                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:12|show_formated_float }}
+                                            %
+                                            {% if  fundo.infofundo_set.all|calc_var_cota_by_month:12|ispositive %}
+                                                <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
+                                            {% else %}
+                                                <i class="fa fa-arrow-down" style="color: red"></i>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Var Cota 6M</b></td>
+                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:6|show_formated_float }}
+                                            %
+                                            {% if  fundo.infofundo_set.all|calc_var_cota_by_month:6|ispositive %}
+                                                <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
+                                            {% else %}
+                                                <i class="fa fa-arrow-down" style="color: red"></i>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Var Cota 3M</b></td>
+                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:3|show_formated_float }}
+                                            %
+                                            {% if  fundo.infofundo_set.all|calc_var_cota_by_month:3|ispositive %}
+                                                <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
+                                            {% else %}
+                                                <i class="fa fa-arrow-down" style="color: red"></i>
+                                            {% endif %}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Var Cota Total</b></td>
+                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_year|show_formated_float }}%
+                                            {% if  fundo.infofundo_set.all|calc_var_cota_year|ispositive %}
+                                                <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
+                                            {% else %}
+                                                <i class="fa fa-arrow-down" style="color: red"></i>
+                                            {% endif %}
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>

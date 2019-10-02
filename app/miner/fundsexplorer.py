@@ -42,29 +42,29 @@ class CustomMiner(Miner):
     def get_oscilacao_dia(self, page):
         osc = page.find('span', {'class': 'percentage'}).text. \
             replace(' ', '').replace('%', '').replace('.', '').replace(',', '.').replace('\n', '')
-        return osc
+        return round(float(osc), 2)
 
     def get_num_cotas_emitidas(self, page):
         cot = page.find_all('span', {'class': 'description'})[2].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace(' ', '').replace('.', '')
         if (str('N/A').lower() in cot.lower()):
             return '0'
-        return cot
+        return round(float(cot), 2)
 
     def get_yd_6(self, page):
         yd = page.find_all('td')[3].text.replace('R$ ', '').replace('.', '').replace(',', '.')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_taxa_adm(self, page):
-        tx = page.find_all('span', {'class': 'description'})[11].text.strip()
+        tx = page.find_all('span', {'class': 'description'})[13].text.strip()
         if (str('N/A').lower() in tx.lower()):
             return '0'
         return tx
 
     def get_prazo_duracao(self, page):
-        pra = page.find_all('span', {'class': 'description'})[10].text.replace('\n', '').replace('\n', ''). \
+        pra = page.find_all('span', {'class': 'description'})[12].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return pra
 
@@ -80,13 +80,13 @@ class CustomMiner(Miner):
         yd = page.find_all('td')[8].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_yd_1_p(self, page):
         yd = page.find_all('td')[7].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_nome(self, page):
         nome = page.find('h2', {'class': 'section-subtitle'}).text
@@ -109,16 +109,16 @@ class CustomMiner(Miner):
             .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
         if (str('N/A').lower() in it_format.lower()):
             return '0'
-        return it_format
+        return round(float(it_format), 2)
 
     def get_yd_1(self, page):
         yd = page.find_all('td')[1].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_segmento(self, page):
-        seg = page.find_all('span', {'class': 'description'})[9].text.replace('\n', '').replace('\n', ''). \
+        seg = page.find_all('span', {'class': 'description'})[11].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return seg
 
@@ -130,7 +130,7 @@ class CustomMiner(Miner):
         return desc
 
     def get_publico_alvo(self, page):
-        pub = page.find_all('span', {'class': 'description'})[7].text.replace('\n', '').replace('\n', ''). \
+        pub = page.find_all('span', {'class': 'description'})[9].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return pub
 
@@ -144,15 +144,15 @@ class CustomMiner(Miner):
         preco = page.find('span', {'class': 'price'}).text. \
             replace(' ', '').replace('R$', '').replace('R$ ', ''). \
             replace('.', '').replace(',', '.').replace('\n', '')
-        return preco
+        return round(float(preco), 2)
 
     def get_tipo_gestao(self, page):
-        gestao = page.find_all('span', {'class': 'description'})[5].text.replace('\n', '').replace('\n', ''). \
+        gestao = page.find_all('span', {'class': 'description'})[8].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace(' ', '').replace('.', '').strip()
         return gestao
 
     def get_mandato(self, page):
-        pub = page.find_all('span', {'class': 'description'})[8].text.replace('\n', '').replace('\n', ''). \
+        pub = page.find_all('span', {'class': 'description'})[10].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return pub
 
@@ -171,19 +171,19 @@ class CustomMiner(Miner):
         ult = page.find_all('span', {'class': 'indicator-value'})[1]
         it_format = ult.text.replace(' ', '').replace('\n', '').replace('.', '') \
             .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
-        return it_format
+        return round(float(it_format), 2)
 
     def get_yd_6_p(self, page):
         yd = page.find_all('td')[9].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_yd_3(self, page):
         yd = page.find_all('td')[2].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_sigla(self, page):
         sigla = page.find('h1', {'class': 'section-title'}).text
@@ -193,19 +193,19 @@ class CustomMiner(Miner):
         yd = page.find_all('td')[4].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_yd_12_p(self, page):
         yd = page.find_all('td')[10].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_rentabilidade_mes(self, page):
         rentab = page.find_all('span', {'class': 'indicator-value'})[5]
         it_format = rentab.text.replace(' ', '').replace('\n', '').replace('.', '') \
             .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
-        return it_format
+        return round(float(it_format), 2)
 
 
 class CustomReader(Reader):
@@ -249,29 +249,29 @@ class CustomReader(Reader):
     def get_oscilacao_dia(self, page):
         osc = page.find('span', {'class': 'percentage'}).text. \
             replace(' ', '').replace('%', '').replace('.', '').replace(',', '.').replace('\n', '')
-        return osc
+        return round(float(osc), 2)
 
     def get_num_cotas_emitidas(self, page):
         cot = page.find_all('span', {'class': 'description'})[2].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace(' ', '').replace('.', '')
         if (str('N/A').lower() in cot.lower()):
             return '0'
-        return cot
+        return round(float(cot), 2)
 
     def get_yd_6(self, page):
         yd = page.find_all('td')[3].text.replace('R$ ', '').replace('.', '').replace(',', '.')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_taxa_adm(self, page):
-        tx = page.find_all('span', {'class': 'description'})[11].text.strip()
+        tx = page.find_all('span', {'class': 'description'})[13].text.strip()
         if (str('N/A').lower() in tx.lower()):
             return '0'
         return tx
 
     def get_prazo_duracao(self, page):
-        pra = page.find_all('span', {'class': 'description'})[10].text.replace('\n', '').replace('\n', ''). \
+        pra = page.find_all('span', {'class': 'description'})[12].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return pra
 
@@ -287,13 +287,13 @@ class CustomReader(Reader):
         yd = page.find_all('td')[8].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_yd_1_p(self, page):
         yd = page.find_all('td')[7].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_nome(self, page):
         nome = page.find('h2', {'class': 'section-subtitle'}).text
@@ -316,16 +316,16 @@ class CustomReader(Reader):
             .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
         if (str('N/A').lower() in it_format.lower()):
             return '0'
-        return it_format
+        return round(float(it_format), 2)
 
     def get_yd_1(self, page):
         yd = page.find_all('td')[1].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_segmento(self, page):
-        seg = page.find_all('span', {'class': 'description'})[9].text.replace('\n', '').replace('\n', ''). \
+        seg = page.find_all('span', {'class': 'description'})[11].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return seg
 
@@ -337,7 +337,7 @@ class CustomReader(Reader):
         return desc
 
     def get_publico_alvo(self, page):
-        pub = page.find_all('span', {'class': 'description'})[7].text.replace('\n', '').replace('\n', ''). \
+        pub = page.find_all('span', {'class': 'description'})[9].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return pub
 
@@ -351,15 +351,15 @@ class CustomReader(Reader):
         preco = page.find('span', {'class': 'price'}).text. \
             replace(' ', '').replace('R$', '').replace('R$ ', ''). \
             replace('.', '').replace(',', '.').replace('\n', '')
-        return preco
+        return round(float(preco), 2)
 
     def get_tipo_gestao(self, page):
-        gestao = page.find_all('span', {'class': 'description'})[5].text.replace('\n', '').replace('\n', ''). \
+        gestao = page.find_all('span', {'class': 'description'})[8].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace(' ', '').replace('.', '').strip()
         return gestao
 
     def get_mandato(self, page):
-        pub = page.find_all('span', {'class': 'description'})[8].text.replace('\n', '').replace('\n', ''). \
+        pub = page.find_all('span', {'class': 'description'})[10].text.replace('\n', '').replace('\n', ''). \
             replace('R$ ', '').replace('R$', '').replace(',', '.').replace('.', '').strip()
         return pub
 
@@ -378,19 +378,19 @@ class CustomReader(Reader):
         ult = page.find_all('span', {'class': 'indicator-value'})[1]
         it_format = ult.text.replace(' ', '').replace('\n', '').replace('.', '') \
             .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
-        return it_format
+        return round(float(it_format), 2)
 
     def get_yd_6_p(self, page):
         yd = page.find_all('td')[9].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_yd_3(self, page):
         yd = page.find_all('td')[2].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_sigla(self, page):
         sigla = page.find('h1', {'class': 'section-title'}).text
@@ -400,16 +400,16 @@ class CustomReader(Reader):
         yd = page.find_all('td')[4].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_yd_12_p(self, page):
         yd = page.find_all('td')[10].text.replace('R$ ', '').replace('.', '').replace(',', '.').replace('%', '')
         if (str('N/A').lower() in yd.lower()):
             return '0'
-        return yd
+        return round(float(yd), 2)
 
     def get_rentabilidade_mes(self, page):
         rentab = page.find_all('span', {'class': 'indicator-value'})[5]
         it_format = rentab.text.replace(' ', '').replace('\n', '').replace('.', '') \
             .replace('R$', '').replace('R$ ', '').replace('%', '').replace(',', '.')
-        return it_format
+        return round(float(it_format), 2)

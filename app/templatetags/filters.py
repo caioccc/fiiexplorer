@@ -23,8 +23,19 @@ def ispositive(text):
 @register.filter
 def calc_var_cota_year(list):
     try:
-        vf = list[1]
+        vf = list[0]
         vi = list[len(list) - 1]
+        res = ((float(vf.close) / float(vi.close)) - 1) * 100
+        return res
+    except (Exception,):
+        return 0
+
+
+@register.filter
+def calc_var_cota_by_month(list, month):
+    try:
+        vf = list[0]
+        vi = list[int(month)]
         res = ((float(vf.close) / float(vi.close)) - 1) * 100
         return res
     except (Exception,):
@@ -88,3 +99,9 @@ def calc_median_osc(list):
         return float("{0:.2f}".format(avg))
     except (Exception,):
         return 0
+
+
+@register.filter
+def show_formated_float(numb):
+    numb = round(float(numb), 2)
+    return '%.2f' % numb
