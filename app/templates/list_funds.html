@@ -189,9 +189,12 @@
                                         <th>DY %</th>
                                         <th>PATRIMONIO LIQ</th>
                                         <th>RENTABILIDADE (MES)%</th>
-                                        <th>DY 12 %</th>
-                                        <th>DY 6 %</th>
-                                        <th>DY 3 %</th>
+                                        <th title="% Proventos nos ultimos 12 meses">DY 12 %</th>
+                                        <th title="% Proventos nos ultimos 6 meses">DY 6 %</th>
+                                        <th title="% Proventos nos ultimos 3 meses">DY 3 %</th>
+                                        <th title="Variação da Cota nos ultimos 12 meses">VC 12 %</th>
+                                        <th title="Variação da Cota nos ultimos 6 meses">VC 6 %</th>
+                                        <th title="Variação da Cota nos ultimos 3 meses">VC 3 %</th>
                                         {#                                        <th>DATA</th>#}
                                         <th>SEGMENTO</th>
                                         <th>NUM COTAS</th>
@@ -237,6 +240,10 @@
                                             <td>{{ fundo.yd_12_p|show_formated_float }}</td>
                                             <td>{{ fundo.yd_6_p|show_formated_float }}</td>
                                             <td>{{ fundo.yd_3_p|show_formated_float }}</td>
+
+                                            <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:12|show_formated_float }}</td>
+                                            <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:6|show_formated_float }}</td>
+                                            <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:3|show_formated_float }}</td>
                                             {#                                            <td>#}
                                             {#                                                {{ fundo.data_construcao_fundo|date:"d/m/Y" }}#}
                                             {#                                            </td>#}
