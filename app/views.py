@@ -14,7 +14,7 @@ from django.views.generic import TemplateView
 from app.forms import FundoFilter
 from app.miner.explorer import syncFunds, mineData, Settings
 from app.miner.miner_fiis import get_info_fii
-from app.models import Fundo, Historico, InfoFundo
+from app.models import Fundo, Historico, InfoFundo, Carteira
 
 import logging
 
@@ -124,3 +124,16 @@ class SetOnlineRedirect(LoginRequiredMixin, RedirectView):
             except (Exception,):
                 logging.error('Thread nao pode ser iniciada novamente')
         return super(SetOnlineRedirect, self).get(request, *args, **kwargs)
+
+
+class CarteiraList(ListView):
+    template_name = 'carteiras_list.html'
+    model = Carteira
+    ordering = '-created_at'
+    context_object_name = 'carteiras'
+
+
+class ViewCarteira(DetailView):
+    template_name = 'view_carteira.html'
+    model = Carteira
+    context_object_name = 'carteira'

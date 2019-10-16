@@ -105,3 +105,141 @@ def calc_median_osc(list):
 def show_formated_float(numb):
     numb = round(float(numb), 2)
     return '%.2f' % numb
+
+
+def get_osc_by_month_fut(fundo, month):
+    lista = fundo.infofundo_set.all()
+    arr = []
+    if len(lista) >= 12:
+        lista = lista[:12]
+        for i in lista:
+            arr.append(i.rend_cota_mes)
+    arr = arr[::-1]
+    return arr[month]
+
+
+def get_dy_percent_by_month_fut(fundo, month):
+    lista = fundo.infofundo_set.all()
+    arr = []
+    if len(lista) >= 12:
+        lista = lista[:12]
+        for i in lista:
+            arr.append(i.rend)
+    arr = arr[::-1]
+    return arr[month]
+
+
+def calc_value_by_percent(val_total, percent):
+    return float(val_total) * float(float(percent) / 100)
+
+
+@register.filter
+def make_map(fundo):
+    mapa = []
+    lista = fundo.infofundo_set.all()
+    if len(lista) >= 12:
+        lista = lista[:12]
+        next = lista[0].close
+        for i in range(0, len(lista)):
+            percent_dy = get_dy_percent_by_month_fut(fundo, i)
+            osc = get_osc_by_month_fut(fundo, i)
+            mapa.append([next, osc, percent_dy,
+                         str(calc_value_by_percent(next, percent_dy))])
+            next = str(((float(osc) / 100) + 1) * float(next))
+    else:
+        print('Existe menos de 12 registros para o fundo: ', fundo.sigla)
+    return mapa
+
+
+def val_total_fundo_investido(fundo, qtd=1):
+    mapa = make_map(fundo)
+    soma = 0
+    for i in range(len(mapa)):
+        soma = float(soma) + (float(mapa[i][0]) * float(qtd))
+    return soma
+
+
+@register.filter
+def valor_total_investido(carteira):
+    soma = 0
+    for itemfundo in carteira.itemfundo_set.all():
+        val_total_investido_fundo = val_total_fundo_investido(itemfundo.fundo, itemfundo.qtd)
+        soma = float(soma) + float(val_total_investido_fundo)
+    return soma
+
+
+@register.filter
+def valorizacao_patrimonial_carteira(carteira):
+    valores_totais_fundos = 0
+    for itemfundo in carteira.itemfundo_set.all():
+        mapa_fundo = make_map(itemfundo.fundo)
+        xclose11 = mapa_fundo[-1][0]
+        valor_total_fundo_atual = float(xclose11) * (float(itemfundo.qtd) * float(12))
+        valores_totais_fundos = float(valores_totais_fundos) + valor_total_fundo_atual
+    return valores_totais_fundos
+
+
+@register.filter
+def rendimentos_totais_carteira(carteira):
+    soma_dy = 0
+    for itemfundo in carteira.itemfundo_set.all():
+        mapa_fundo = make_map(itemfundo.fundo)
+        for i in range(len(mapa_fundo)):
+            soma_dy = float(soma_dy) + (float(mapa_fundo[i][3]) * (float(itemfundo.qtd) * float(i + 1)))
+    return soma_dy
+
+
+@register.filter
+def montante_final_carteira(carteira):
+    valorizacao = valorizacao_patrimonial_carteira(carteira)
+    rend = rendimentos_totais_carteira(carteira)
+    return float(valorizacao) + float(rend)
+
+
+@register.filter()
+def ranger(min=3):
+    return range(1, min + 1)
+
+
+@register.filter()
+def get_valor_investido(carteira, month):
+    val_investido = 0
+    for itemfundo in carteira.itemfundo_set.all():
+        mapa_fundo = make_map(itemfundo.fundo)[:(month)]
+        for i in range(len(mapa_fundo)):
+            val_investido = float(val_investido) + float(float(mapa_fundo[i][0]) * float(itemfundo.qtd))
+    return val_investido
+
+
+@register.filter()
+def get_valor_patrimonial(carteira, month):
+    vp = 0
+    for itemfundo in carteira.itemfundo_set.all():
+        mapa_fundo = make_map(itemfundo.fundo)[:(month)]
+        vp = float(vp) + (float(mapa_fundo[month - 1][0]) * (float(itemfundo.qtd) * float(month)))
+    return vp
+
+
+@register.filter()
+def get_rendimento_month(carteira, month):
+    rend = 0
+    for itemfundo in carteira.itemfundo_set.all():
+        mapa_fundo = make_map(itemfundo.fundo)[:(month)]
+        rend = float(rend) + (float(mapa_fundo[month - 1][3]) * (float(itemfundo.qtd) * float(month)))
+    return rend
+
+
+@register.filter()
+def get_rendimento(carteira, month):
+    suma = float(0)
+    if month > 1:
+        for i in range(month):
+            suma += get_rendimento_month(carteira, month-i)
+        return suma
+    else:
+        return get_rendimento_month(carteira, month)
+
+
+@register.filter()
+def get_montante_final(carteira, month):
+    return get_valor_patrimonial(carteira, month) + get_rendimento(carteira, month)

@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 from app.miner.miner_fiis import get_info_fii
 from app.models import Fundo, Site, InfoFundo
-from common import sync_urls_delay, check_new_minig_requests_delay
+from app.miner.common import sync_urls_delay, check_new_minig_requests_delay
 from app.miner import fundsexplorer
 
 readers = {

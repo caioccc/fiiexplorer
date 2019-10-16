@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from app.models import Historico, Fundo, Site, InfoFundo
+from app.models import Historico, Fundo, Site, InfoFundo, ItemFundo, Carteira
 
 
 class HistoricoInline(admin.TabularInline):
@@ -35,7 +35,27 @@ class InfoFundoAdmin(admin.ModelAdmin):
     list_display = ('fund', 'id', 'dy', 'rend', 'data_pay', 'data_base', 'close', 'rend_cota_mes')
 
 
+class ItemFundoInline(admin.TabularInline):
+    model = ItemFundo
+
+
+class ItemFundoAdmin(admin.ModelAdmin):
+    list_filter = ('carteira',)
+    search_fields = ['fundo', 'carteira']
+    list_display = ('carteira', 'id', 'fundo', 'qtd',)
+
+
+class CarteiraAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'id', 'qtd_fundos')
+    inlines = [ItemFundoInline, ]
+
+    def qtd_fundos(self, obj):
+        return len(obj.itemfundo_set.all())
+
+
 admin.site.register(Fundo, FundoAdmin)
 admin.site.register(Historico, HistoricoAdmin)
 admin.site.register(Site)
 admin.site.register(InfoFundo, InfoFundoAdmin)
+admin.site.register(ItemFundo, ItemFundoAdmin)
+admin.site.register(Carteira, CarteiraAdmin)

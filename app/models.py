@@ -94,3 +94,25 @@ class InfoFundo(TimeStamped):
     data_base = models.CharField(max_length=300, blank=True, null=True)
     close = models.CharField(max_length=300, blank=True, null=True)
     rend_cota_mes = models.CharField(max_length=300, blank=True, null=True)
+
+
+class Carteira(TimeStamped):
+    nome = models.CharField(max_length=300, blank=True, null=True)
+
+    def __str__(self):
+        return "%s" % self.nome
+
+    def __unicode__(self):
+        return "%s" % self.nome
+
+
+class ItemFundo(TimeStamped):
+    carteira = models.ForeignKey(Carteira, blank=True, null=True, on_delete=models.CASCADE)
+    qtd = models.IntegerField(blank=True, null=True)
+    fundo = models.ForeignKey(Fundo, blank=True, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "%s" % self.fundo
+
+    def __unicode__(self):
+        return "%s" % self.fundo
