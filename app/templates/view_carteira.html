@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load filters %}
+
+{% block content %}
+    <section class="content-header">
+        <h1>Carteiras
+            <small>{{ carteira.nome }}</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="{% url 'index' %}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">{{ carteira.nome }}</li>
+        </ol>
+        <br/>
+    </section>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-warning">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-info"></i> Dados gerais</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Nome</label>
+                        <div class="col-sm-8">{{ carteira.nome }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Fundos</label>
+                        <div class="col-sm-8">{{ carteira.itemfundo_set.all|length }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Valor Total Aplicado</label>
+                        <div class="col-sm-8">R$ {{ carteira|valor_total_investido|show_formated_float }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Rendimentos 12 meses</label>
+                        <div class="col-sm-8">R$ {{ carteira|rendimentos_totais_carteira|show_formated_float }}</div>
+                    </div>
+
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Valorização Patrimonial
+                            Carteira</label>
+                        <div class="col-sm-8">
+                            R$ {{ carteira|valorizacao_patrimonial_carteira|show_formated_float }}</div>
+                    </div>
+                    <div class="row">
+                        <label for="nome" class="col-sm-4 control-label text-right">Montante Final</label>
+                        <div class="col-sm-8">R$ {{ carteira|montante_final_carteira|show_formated_float }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="box box-success">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-bar-chart"></i> Performance</h3>
+                </div>
+                <div class="box-body">
+                    {#                    <div class="row">#}
+                    {#                        <div class="col-xs-12">#}
+                    {#                            <div class="table-responsive">#}
+                    {#                                <table class="table">#}
+                    {#                                    <thead>#}
+                    {#                                    <tr>#}
+                    {#                                        <th>Proventos</th>#}
+                    {#                                        <th>Último</th>#}
+                    {#                                        <th>3 meses</th>#}
+                    {#                                        <th>6 meses</th>#}
+                    {#                                        <th>12 meses</th>#}
+                    {#                                    </tr>#}
+                    {#                                    </thead>#}
+                    {#                                    <tbody>#}
+                    {#                                    <tr>#}
+                    {#                                        <td>Retorno por cota</td>#}
+                    {#                                        <td>R$ {{ carteira.yd_1|floatformat:'2' }}</td>#}
+                    {#                                        <td>R$ {{ carteira.yd_3|floatformat:'2' }}</td>#}
+                    {#                                        <td>R$ {{ carteira.yd_6|floatformat:'2' }}</td>#}
+                    {#                                        <td>R$ {{ carteira.yd_12|floatformat:'2' }}</td>#}
+                    {#                                    </tr>#}
+                    {#                                    <tr>#}
+                    {#                                        <td>Em relação ao valor de cota atual</td>#}
+                    {#                                        <td>{{ carteira.yd_1_p }}%</td>#}
+                    {#                                        <td>{{ carteira.yd_3_p }}%</td>#}
+                    {#                                        <td>{{ carteira.yd_6_p }}%</td>#}
+                    {#                                        <td>{{ carteira.yd_12_p }}%</td>#}
+                    {#                                    </tr>#}
+                    {#                                    </tbody>#}
+                    {#                                </table>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                    </div>#}
+                    {#                    <hr/>#}
+                    <label class="title">Informativo ao longo do tempo</label>
+                    <div class="row">
+                        {% for itemfundo in carteira.itemfundo_set.all %}
+                            <hr/>
+                            <div class="col-xs-12">
+                                <label>Fundo: {{ itemfundo.fundo }} QTD: {{ itemfundo.qtd }}</label>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th><b>x</b></th>
+                                            {% for value in 12|ranger %}
+                                                <th>{{ value }}</th>
+                                            {% endfor %}
+                                            <th>Median</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td><b>Close</b></td>
+                                            {% for inf in itemfundo.fundo|make_map %}
+                                                <td>R$ {{ inf.0|show_formated_float }}</td>
+                                            {% endfor %}
+                                            <td>R$</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Osc</b></td>
+                                            {% for inf in itemfundo.fundo|make_map %}
+                                                <td>{{ inf.1|show_formated_float }}%</td>
+                                            {% endfor %}
+                                            <td>%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>%DY</b></td>
+                                            {% for inf in itemfundo.fundo|make_map %}
+                                                <td>{{ inf.2|show_formated_float }}%</td>
+                                            {% endfor %}
+                                            <td>%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>DY</b></td>
+                                            {% for inf in itemfundo.fundo|make_map %}
+                                                <td>R$ {{ inf.3|show_formated_float }}</td>
+                                            {% endfor %}
+                                            <td>R$</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <hr/>
+                        <div class="col-xs-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th><b>x</b></th>
+                                        {% for value in 12|ranger %}
+                                            <th>{{ value }}</th>
+                                        {% endfor %}
+                                        <th>Median</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><b>VI</b></td>
+                                        {% for i in 12|ranger %}
+                                            <td>R$ {{ carteira|get_valor_investido:i|show_formated_float }}</td>
+                                        {% endfor %}
+                                        <td>R$</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>VP</b></td>
+                                        {% for i in 12|ranger %}
+                                            <td>R$ {{ carteira|get_valor_patrimonial:i|show_formated_float }}</td>
+                                        {% endfor %}
+                                        <td>R$</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Rend</b></td>
+                                        {% for i in 12|ranger %}
+                                            <td>R$ {{ carteira|get_rendimento:i|show_formated_float }}  (R$ {{ carteira|get_rendimento_month:i|show_formated_float }})</td>
+                                        {% endfor %}
+                                        <td>R$</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>MF</b></td>
+                                        {% for i in 12|ranger %}
+                                            <td>R$ {{ carteira|get_montante_final:i|show_formated_float }} </td>
+                                        {% endfor %}
+                                        <td>R$</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#carteira').addClass('active');
+        });
+    </script>
+
+{% endblock %}

@@ -1,24 +1,166 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load filters %}
 
 {% block content %}
+    {#    <style>#}
+    {#        .multiselect-container > li > a > label {#}
+    {#            padding: 4px 20px 3px 20px;#}
+    {#        }#}
+    {#    </style>#}
     <div class="row">
         <div class="col-md-12">
-            <form action="{% url 'index' %}" method="get">
-                <div class="box box-primary">
-                    <div class="box-header"></div>
+            <form action="{% url 'fundos-list' %}" method="get">
+                <div class="box box-warning">
+                    <div class="box-header">
+                        <h3 class="box-title">Filtro de Dados</h3>
+                    </div>
                     <div class="box-body">
                         <div class="row">
                             <div class="col-xs-4">
-                                <div class="form-group">
-                                    <label>DY: </label>
-                                    <input class="form-control" type="text" name="q_dy" id="q_dy"/>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.mandato.label|remove_text|capfirst }}:</label>
+                                            <p>{{ fundos.form.mandato }}</p>
+                                            {{ fundos.form.mandato.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.tipo_gestao.label|remove_text|capfirst }}:</label>
+                                            <p>{{ fundos.form.tipo_gestao }}</p>
+                                            {{ fundos.form.tipo_gestao.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.segmento.label|remove_text|capfirst }}:</label>
+                                            <p>{{ fundos.form.segmento }}</p>
+                                            {{ fundos.form.segmento.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.preco.label|remove_text|capfirst }}:</label>&nbsp;&nbsp;&nbsp;
+                                            {{ fundos.form.preco }}
+                                            {{ fundos.form.preco.errors.as_ul }}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="col-xs-4">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.num_ativos__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.num_ativos__gte }}
+                                            {{ fundos.form.num_ativos__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.num_estados__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.num_estados__gte }}
+                                            {{ fundos.form.num_estados__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.num_cotas_emitidas__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.num_cotas_emitidas__gte }}
+                                            {{ fundos.form.num_cotas_emitidas__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.liquidez__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.liquidez__gte }}
+                                            {{ fundos.form.liquidez__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.taxa_adm__icontains.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.taxa_adm__icontains }}
+                                            {{ fundos.form.taxa_adm__icontains.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.oscilacao_dia__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.oscilacao_dia__gte }}
+                                            {{ fundos.form.oscilacao_dia__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.ultimo_rendimento__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.ultimo_rendimento__gte }}
+                                            {{ fundos.form.ultimo_rendimento__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.rentabilidade_mes__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.rentabilidade_mes__gte }}
+                                            {{ fundos.form.rentabilidade_mes__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.dy__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.dy__gte }}
+                                            {{ fundos.form.dy__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label>{{ fundos.form.yd_12_p__gte.label|remove_text|capfirst }}:</label>
+                                            {{ fundos.form.yd_12_p__gte }}
+                                            {{ fundos.form.yd_12_p__gte.errors.as_ul }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="box-footer">
-                        <button class="btn btn-primary pull-left" type="submit" >Filter</button>
+                        <button class="btn btn-primary btn-large pull-right" type="submit">Filter</button>
+                        <button class="btn btn-default btn-large pull-left reset">Reset</button>
                     </div>
                 </div>
             </form>
@@ -43,10 +185,16 @@
                                         <th>PREÇO</th>
                                         <th>OSCILAÇÃO (DIA)%</th>
                                         <th>LIQUIDEZ</th>
+                                        <th>ULTIMO RENDIMENTO R$</th>
                                         <th>DY %</th>
                                         <th>PATRIMONIO LIQ</th>
                                         <th>RENTABILIDADE (MES)%</th>
-                                        <th>DY 12 %</th>
+                                        <th title="% Proventos nos ultimos 12 meses">DY 12 %</th>
+                                        <th title="% Proventos nos ultimos 6 meses">DY 6 %</th>
+                                        <th title="% Proventos nos ultimos 3 meses">DY 3 %</th>
+                                        <th title="Variação da Cota nos ultimos 12 meses">VC 12 %</th>
+                                        <th title="Variação da Cota nos ultimos 6 meses">VC 6 %</th>
+                                        <th title="Variação da Cota nos ultimos 3 meses">VC 3 %</th>
                                         {#                                        <th>DATA</th>#}
                                         <th>SEGMENTO</th>
                                         <th>NUM COTAS</th>
@@ -63,32 +211,39 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {% for fundo in fundos %}
+                                    {% for fundo in fundos.qs %}
                                         <tr>
                                             <td>
-                                                <a href="{{ fundo.url }}" target="_blank">
+                                                <a href="{% url 'fundo-view' fundo.pk %}" target="_blank">
                                                     {{ fundo.sigla }}
                                                 </a>
                                             </td>
                                             <td>
-                                                {{ fundo.preco }}
+                                                {{ fundo.preco|show_formated_float }}
                                             </td>
                                             <td>
-                                                {{ fundo.oscilacao_dia }}
+                                                {{ fundo.oscilacao_dia|show_formated_float }}
                                             </td>
                                             <td>
                                                 {{ fundo.liquidez }}
                                             </td>
+                                            <td>{{ fundo.ultimo_rendimento|show_formated_float }}</td>
                                             <td>
-                                                {{ fundo.dy }}
+                                                {{ fundo.dy|show_formated_float }}
                                             </td>
                                             <td>
                                                 {{ fundo.pl }}
                                             </td>
                                             <td>
-                                                {{ fundo.rentabilidade_mes }}
+                                                {{ fundo.rentabilidade_mes|show_formated_float }}
                                             </td>
-                                            <td>{{ fundo.yd_12_p }}</td>
+                                            <td>{{ fundo.yd_12_p|show_formated_float }}</td>
+                                            <td>{{ fundo.yd_6_p|show_formated_float }}</td>
+                                            <td>{{ fundo.yd_3_p|show_formated_float }}</td>
+
+                                            <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:12|show_formated_float }}</td>
+                                            <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:6|show_formated_float }}</td>
+                                            <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:3|show_formated_float }}</td>
                                             {#                                            <td>#}
                                             {#                                                {{ fundo.data_construcao_fundo|date:"d/m/Y" }}#}
                                             {#                                            </td>#}
@@ -126,14 +281,33 @@
             </div>
         </div>
     </div>
+
+
     <script type="text/javascript">
+
         $(document).ready(function () {
+            $('[name="preco_0"]').attr('placeholder', 'Min');
+            $('[name="preco_1"]').attr('placeholder', 'Max');
+            $('.reset').click(function () {
+                $('input').val('');
+            });
+
             $('#table').DataTable({
                 responsive: true,
                 order: [[0, "desc"]]
             });
+            $('select, input').addClass('form-control');
             $('#fundos').addClass('active');
-            $('[name=q_dy]').inputmask('9.99');
+
+            $('[name="mandato"]').multiselect({
+                includeSelectAllOption: true
+            });
+            $('[name="tipo_gestao"]').multiselect({
+                includeSelectAllOption: true
+            });
+            $('[name="segmento"]').multiselect({
+                includeSelectAllOption: true
+            });
         });
     </script>
 
