@@ -27,10 +27,14 @@
                                         <th>NOME</th>
                                         <th>CRIADO EM</th>
                                         <th>QTD FUNDOS</th>
+                                        <th>FUNDOS</th>
+                                        <th>VAL MENSAL</th>
                                         <th>VALOR TOTAL INVESTIDO</th>
                                         <th>VPA</th>
+                                        <th>%VI/VPA</th>
                                         <th>DY 12</th>
                                         <th>MONTANTE FINAL</th>
+                                        <th>%VI/MF</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -53,16 +57,28 @@
                                                 {{ carteira.itemfundo_set.all|length }}
                                             </td>
                                             <td>
-                                               R$ {{ carteira|valor_total_investido|show_formated_float }}
+                                                {{ carteira|get_fundos_apply }}
                                             </td>
                                             <td>
-                                               R$ {{ carteira|valorizacao_patrimonial_carteira|show_formated_float }}
+                                                {{ carteira|get_apply_month|show_formated_float }}
                                             </td>
                                             <td>
-                                               R$ {{ carteira|rendimentos_totais_carteira|show_formated_float }}
+                                                R$ {{ carteira|valor_total_investido|show_formated_float }}
                                             </td>
                                             <td>
-                                               R$ {{ carteira|montante_final_carteira|show_formated_float }}
+                                                R$ {{ carteira|valorizacao_patrimonial_carteira|show_formated_float }}
+                                            </td>
+                                            <td>
+                                                % {{ carteira|percent_v_vpa|show_formated_float }}
+                                            </td>
+                                            <td>
+                                                R$ {{ carteira|rendimentos_totais_carteira|show_formated_float }}
+                                            </td>
+                                            <td>
+                                                R$ {{ carteira|montante_final_carteira|show_formated_float }}
+                                            </td>
+                                            <td>
+                                                % {{ carteira|percent_v_mf|show_formated_float }}
                                             </td>
 
                                         </tr>

@@ -173,9 +173,10 @@ def valorizacao_patrimonial_carteira(carteira):
     valores_totais_fundos = 0
     for itemfundo in carteira.itemfundo_set.all():
         mapa_fundo = make_map(itemfundo.fundo)
-        xclose11 = mapa_fundo[-1][0]
-        valor_total_fundo_atual = float(xclose11) * (float(itemfundo.qtd) * float(12))
-        valores_totais_fundos = float(valores_totais_fundos) + valor_total_fundo_atual
+        if len(mapa_fundo) > 0:
+            xclose11 = mapa_fundo[-1][0]
+            valor_total_fundo_atual = float(xclose11) * (float(itemfundo.qtd) * float(12))
+            valores_totais_fundos = float(valores_totais_fundos) + valor_total_fundo_atual
     return valores_totais_fundos
 
 
@@ -216,7 +217,8 @@ def get_valor_patrimonial(carteira, month):
     vp = 0
     for itemfundo in carteira.itemfundo_set.all():
         mapa_fundo = make_map(itemfundo.fundo)[:(month)]
-        vp = float(vp) + (float(mapa_fundo[month - 1][0]) * (float(itemfundo.qtd) * float(month)))
+        if len(mapa_fundo) > 0:
+            vp = float(vp) + (float(mapa_fundo[month - 1][0]) * (float(itemfundo.qtd) * float(month)))
     return vp
 
 
@@ -225,7 +227,8 @@ def get_rendimento_month(carteira, month):
     rend = 0
     for itemfundo in carteira.itemfundo_set.all():
         mapa_fundo = make_map(itemfundo.fundo)[:(month)]
-        rend = float(rend) + (float(mapa_fundo[month - 1][3]) * (float(itemfundo.qtd) * float(month)))
+        if len(mapa_fundo) > 0:
+            rend = float(rend) + (float(mapa_fundo[month - 1][3]) * (float(itemfundo.qtd) * float(month)))
     return rend
 
 
@@ -234,7 +237,7 @@ def get_rendimento(carteira, month):
     suma = float(0)
     if month > 1:
         for i in range(month):
-            suma += get_rendimento_month(carteira, month-i)
+            suma += get_rendimento_month(carteira, month - i)
         return suma
     else:
         return get_rendimento_month(carteira, month)
@@ -243,3 +246,31 @@ def get_rendimento(carteira, month):
 @register.filter()
 def get_montante_final(carteira, month):
     return get_valor_patrimonial(carteira, month) + get_rendimento(carteira, month)
+
+
+@register.filter()
+def get_apply_month(carteira):
+    sum = float(0)
+    for itemfundo in carteira.itemfundo_set.all():
+        sum += (float(itemfundo.fundo.preco) * float(itemfundo.qtd))
+    return sum
+
+
+@register.filter()
+def get_fundos_apply(carteira):
+    fundos = u''
+    for itemfundo in carteira.itemfundo_set.all():
+        fundos += itemfundo.fundo.sigla + u'-' + str(itemfundo.qtd) + u','
+    return fundos
+
+
+@register.filter()
+def percent_v_vpa(carteira):
+    return ((float(valorizacao_patrimonial_carteira(carteira)) / float(valor_total_investido(carteira))) - float(
+        1)) * float(100)
+
+
+@register.filter()
+def percent_v_mf(carteira):
+    return ((float(montante_final_carteira(carteira)) / float(valor_total_investido(carteira))) - float(
+        1)) * float(100)
