@@ -167,7 +167,18 @@ def get_all(request):
                 'num_cotas_emitidas': fundo.num_cotas_emitidas,
                 'valor_inicial_cota': fundo.vi_cota,
                 'taxa_administracao': fundo.taxa_adm,
-                'performance': get_info_fii(fundo.sigla)}
+                'performance': [
+                    {
+                        'data_base': info.data_base,
+                        'data_pagamento': info.data_pay,
+                        'valor_cota_fechamento': float(info.close),
+                        'dy': float(info.dy),
+                        'valor_provento': float(info.rend),
+                        'oscilacao_valor_cota_em_relacao_ao_mes_anterior': float(info.rend_cota_mes)
+                    } for info in InfoFundo.objects.filter(fund=fundo)
+                ]
+
+            }
             ]
         except (Exception,):
             data = {}
@@ -194,7 +205,14 @@ def get_all(request):
             'valor_inicial_cota': fundo.vi_cota,
             'taxa_administracao': fundo.taxa_adm,
             'performance': [
-                [info.data_base, info.data_pay, float(info.close), float(info.dy), float(info.rend), float(info.rend_cota_mes)] for info in InfoFundo.objects.filter(fund=fundo)
+                {
+                    'data_base': info.data_base,
+                    'data_pagamento': info.data_pay,
+                    'valor_cota_fechamento': float(info.close),
+                    'dy': float(info.dy),
+                    'valor_provento': float(info.rend),
+                    'oscilacao_valor_cota_em_relacao_ao_mes_anterior': float(info.rend_cota_mes)
+                } for info in InfoFundo.objects.filter(fund=fundo)
             ]
 
         } for fundo in Fundo.objects.all()]
