@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from app.views import FundosListView, IndexView, SetOnlineRedirect, FundoDetailView, GetInfoFundos, FilterFundoSelect, \
-    CarteiraList, ViewCarteira
+    CarteiraList, ViewCarteira, get_all
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^filter-bests/$', FilterFundoSelect.as_view(), name='filter-bests'),
     url(r'^carteiras/$', CarteiraList.as_view(), name='carteiras-list'),
     url(r'^carteiras/(?P<pk>[0-9]+)/$', ViewCarteira.as_view(), name="carteira-view"),
+    url(r'^api/$', get_all, name="get-all"),
 ]

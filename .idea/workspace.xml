@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +58,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1440" />
-    <option name="height" value="780" />
   </component>
   <component name="ProjectId" id="1eom2wzsvaCibHxcBKrMKDzVqlk" />
   <component name="ProjectViewState">
@@ -182,7 +178,7 @@
       <workItem from="1571152740597" duration="25000" />
       <workItem from="1571227628150" duration="19910000" />
       <workItem from="1594996122470" duration="9680000" />
-      <workItem from="1595007691827" duration="524000" />
+      <workItem from="1595007691827" duration="4330000" />
     </task>
     <servers />
   </component>

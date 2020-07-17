@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from threading import Thread
 
@@ -5,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.contrib.sessions.models import Session
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
@@ -137,3 +139,64 @@ class ViewCarteira(DetailView):
     template_name = 'view_carteira.html'
     model = Carteira
     context_object_name = 'carteira'
+
+
+def get_all(request):
+    if 'sigla' in request.GET:
+        sigla = request.GET['sigla']
+        try:
+            fundo = Fundo.objects.get(sigla=sigla)
+            data = [{
+                'nome': fundo.nome,
+                'sigla': fundo.sigla,
+                'cnpj': fundo.tipo_gestao,
+                'segmento': fundo.segmento,
+                'publico': fundo.publico_alvo,
+                'mandato': fundo.mandato,
+                'data_construcao': fundo.data_construcao_fundo,
+                'duracao': fundo.prazo_duracao,
+                'num_ativos': fundo.num_ativos,
+                'num_estados': fundo.num_estados,
+                'valor_atual_cota': fundo.preco,
+                'oscilacao_dia': fundo.oscilacao_dia,
+                'liquidez': fundo.liquidez,
+                'ultimo_rendimento': fundo.ultimo_rendimento,
+                'dy': fundo.dy,
+                'patrimonio_liquido': fundo.pl,
+                'rentabilidade_mes': fundo.rentabilidade_mes,
+                'num_cotas_emitidas': fundo.num_cotas_emitidas,
+                'valor_inicial_cota': fundo.vi_cota,
+                'taxa_administracao': fundo.taxa_adm,
+                'performance': get_info_fii(fundo.sigla)}
+            ]
+        except (Exception,):
+            data = {}
+    else:
+        data = [{
+            'nome': fundo.nome,
+            'sigla': fundo.sigla,
+            'cnpj': fundo.tipo_gestao,
+            'segmento': fundo.segmento,
+            'publico': fundo.publico_alvo,
+            'mandato': fundo.mandato,
+            'data_construcao': fundo.data_construcao_fundo,
+            'duracao': fundo.prazo_duracao,
+            'num_ativos': fundo.num_ativos,
+            'num_estados': fundo.num_estados,
+            'valor_atual_cota': fundo.preco,
+            'oscilacao_dia': fundo.oscilacao_dia,
+            'liquidez': fundo.liquidez,
+            'ultimo_rendimento': fundo.ultimo_rendimento,
+            'dy': fundo.dy,
+            'patrimonio_liquido': fundo.pl,
+            'rentabilidade_mes': fundo.rentabilidade_mes,
+            'num_cotas_emitidas': fundo.num_cotas_emitidas,
+            'valor_inicial_cota': fundo.vi_cota,
+            'taxa_administracao': fundo.taxa_adm,
+            'performance': [
+                [info.data_base, info.data_pay, float(info.close), float(info.dy), float(info.rend), float(info.rend_cota_mes)] for info in InfoFundo.objects.filter(fund=fundo)
+            ]
+
+        } for fundo in Fundo.objects.all()]
+
+    return JsonResponse(json.loads(json.dumps(data)), safe=False)
