@@ -103,8 +103,11 @@ def calc_median_osc(list):
 
 @register.filter
 def show_formated_float(numb):
-    numb = round(float(numb), 2)
-    return '%.2f' % numb
+    if numb:
+        numb = round(float(numb), 2)
+        return '%.2f' % numb
+    else:
+        return None
 
 
 def get_osc_by_month_fut(fundo, month):

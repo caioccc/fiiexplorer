@@ -312,9 +312,9 @@
                                     </tr>
                                     <tr>
                                         <td><b>Var Cota 12M</b></td>
-                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:12|show_formated_float }}
+                                        <td>{{ fundo.infofundo_set.all|calc_var_cota_by_month:9|show_formated_float }}
                                             %
-                                            {% if  fundo.infofundo_set.all|calc_var_cota_by_month:12|ispositive %}
+                                            {% if  fundo.infofundo_set.all|calc_var_cota_by_month:9|ispositive %}
                                                 <i class="fa fa-arrow-up" style="color: #0f9d58"></i>
                                             {% else %}
                                                 <i class="fa fa-arrow-down" style="color: red"></i>

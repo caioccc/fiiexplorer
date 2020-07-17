@@ -89,7 +89,7 @@ class CustomMiner(Miner):
         return round(float(yd), 2)
 
     def get_nome(self, page):
-        nome = page.find('h2', {'class': 'section-subtitle'}).text
+        nome = page.find('h3', {'class': 'section-subtitle'}).text
         return nome
 
     def get_num_ativos(self, page):

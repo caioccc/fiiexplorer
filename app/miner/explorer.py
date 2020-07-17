@@ -43,17 +43,17 @@ def getInfos():
     for fundo in fundos:
         if len(fundo.infofundo_set.all()) == 0:
             print('Buscando ... Info Fundo: ' + fundo.sigla)
-            dy, data_pay, data_base, close, rend, rend_cota_mes = get_info_fii(fundo.sigla)
-            if len(dy) == len(data_pay) and len(close) == len(rend) and len(rend_cota_mes) == len(dy):
-                for i in range(0, len(dy)):
+            table = get_info_fii(fundo.sigla)
+            if table:
+                for i in range(0, len(table)):
                     info = InfoFundo()
                     info.fund = fundo
-                    info.dy = dy[i]
-                    info.data_pay = data_pay[i]
-                    info.data_base = data_base[i]
-                    info.close = close[i]
-                    info.rend = rend[i]
-                    info.rend_cota_mes = rend_cota_mes[i]
+                    info.dy = table[i][3]
+                    info.data_pay = table[i][1]
+                    info.data_base = table[i][0]
+                    info.close = table[i][2]
+                    info.rend = table[i][4]
+                    info.rend_cota_mes = table[i][5]
                     info.save()
                 print('Saved info to: ', fundo.sigla)
         time.sleep(1)
