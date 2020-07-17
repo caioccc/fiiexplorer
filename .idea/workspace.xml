@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f258a22-10b5-41b9-80c0-c76827c6debd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f258a22-10b5-41b9-80c0-c76827c6debd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fiiexplorer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fiiexplorer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/fundsexplorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/fundsexplorer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/miner_fiis.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/miner_fiis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/view_fund.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view_fund.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templatetags/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/list_funds.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/list_funds.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,6 +183,7 @@
       <workItem from="1571152740597" duration="25000" />
       <workItem from="1571227628150" duration="19910000" />
       <workItem from="1594996122470" duration="9680000" />
+      <workItem from="1595007691827" duration="368000" />
     </task>
     <servers />
   </component>
