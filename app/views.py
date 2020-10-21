@@ -1,220 +1,77 @@
 import json
-from datetime import datetime
-from threading import Thread
-
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth.models import User
-from django.contrib.sessions.models import Session
-from django.http import JsonResponse
-from django.shortcuts import render, redirect
-
-# Create your views here.
-from django.views.generic import ListView, FormView, RedirectView, DetailView
-from django.views.generic import TemplateView
-
-from app.forms import FundoFilter
-from app.miner.explorer import syncFunds, mineData, Settings
-from app.miner.miner_fiis import get_info_fii
-from app.models import Fundo, Historico, InfoFundo, Carteira
-
 import logging
+
+import requests
+from bs4 import BeautifulSoup
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
+# Create your views here.
+from django.shortcuts import redirect
+from django.views.generic import ListView, DetailView
+
+from app.models import Channel, Link
 
 logging.basicConfig(level=logging.DEBUG)
 
 
-class IndexView(LoginRequiredMixin, TemplateView):
+def collect_sites(request):
+    Channel.objects.all().delete()
+    Link.objects.all().delete()
+    url_default = 'https://multicanais.com/aovivo/assistir-tv-online-gratis-hd-24h/page/'
+    for i in range(1, 4):
+        temp_url = url_default + str(i)
+        req = requests.get(temp_url)
+        if req.status_code == 200:
+            page = BeautifulSoup(req.text, 'html.parser')
+            divs_entries = page.find_all(attrs={"class": "entry-image"})
+            if len(divs_entries) > 0:
+                for div in divs_entries:
+                    atag = div.find('a')
+                    href = atag['href']
+                    title = atag['title']
+                    img_url = atag.find('img')['data-lazy-src']
+                    other_req = requests.get(href)
+                    if other_req.status_code == 200:
+                        second_page = BeautifulSoup(other_req.text, 'html.parser')
+                        div_links = second_page.find('div', attrs={'class': 'links'})
+                        if div_links:
+                            atags = div_links.find_all("a")
+                            if len(atags) > 0:
+                                ids = []
+                                for a in atags:
+                                    data_id = a['data-id']
+                                    if 'http' in str(data_id):
+                                        ids.append(str(data_id))
+                                if len(ids) > 0:
+                                    ch = Channel()
+                                    ch.title = title
+                                    ch.img_url = img_url
+                                    ch.save()
+                                    for id_url in ids:
+                                        link = Link()
+                                        link.url = id_url
+                                        link.channel = ch
+                                        link.save()
+    return redirect('/')
+
+
+class IndexView(LoginRequiredMixin, ListView):
     template_name = 'index.html'
+    model = Channel
     login_url = '/admin/login'
-
-    def get_context_data(self, **kwargs):
-        fundos = Fundo.objects.all()
-        users = User.objects.all()
-        settings = Settings.getInstance()
-        bd = float((len(fundos) + len(users) + len(Historico.objects.all()) + len(Session.objects.all()) + 16)) / float(
-            10000)
-        kwargs['bd'] = bd
-        kwargs['fundos'] = fundos
-        kwargs['users'] = users
-        kwargs['running'] = settings.get_running()
-        print(kwargs['running'])
-        return kwargs
+    context_object_name = 'canais'
 
 
-class FundoDetailView(DetailView):
-    template_name = 'view_fund.html'
-    model = Fundo
+class ViewChannel(LoginRequiredMixin, DetailView):
+    template_name = 'view-channel.html'
+    model = Channel
     pk_url_kwarg = 'pk'
-    context_object_name = 'fundo'
-
-
-class GetInfoFundos(TemplateView):
-    template_name = 'index.html'
-
-    def get(self, request, *args, **kwargs):
-        settings = Settings.getInstance()
-        try:
-            settings.infosThread.start()
-        except (Exception,):
-            logging.error('Thread nao pode ser iniciada novamente')
-        return redirect('/')
-
-
-class FundosListView(LoginRequiredMixin, FormView):
     login_url = '/admin/login'
-    template_name = 'list_funds.html'
-    success_url = '/fundos/'
-
-    def get_context_data(self, **kwargs):
-        fundos = Fundo.objects.all()
-        fundo_filter = FundoFilter(self.request.GET, queryset=fundos)
-        kwargs['fundos'] = fundo_filter
-        return kwargs
-
-    def get(self, request, *args, **kwargs):
-        return super(FundosListView, self).get(request, *args, **kwargs)
+    context_object_name = 'canal'
 
 
-class FilterFundoSelect(LoginRequiredMixin, TemplateView):
-    template_name = 'list_funds_best.html'
-
-    def calc_rent_cota_total(self, fundo):
-        infos = fundo.infofundo_set.all()
-        if len(infos) > 0:
-            vf = float(infos[0].close)
-            vi = float(infos[len(infos) - 1].close)
-            rent = ((vf / vi) - 1) * 100
-            return rent
-        else:
-            return -1
-
-    def mount_dict(self, fundos):
-        dic = {}
-        for fundo in fundos:
-            dic[fundo.pk] = self.calc_rent_cota_total(fundo=fundo)
-        ordered = sorted(dic.iteritems(), key=lambda x: x[1])
-        return ordered
-
-    def get_context_data(self, **kwargs):
-        qs = 10
-        if 'qs' in self.request.GET:
-            qs = int(self.request.GET['qs'])
-        print('QS: ' + str(qs))
-        fundos = Fundo.objects.all()
-        ordered = self.mount_dict(fundos)
-        pks = [x[0] for x in ordered if float(x[1]) > qs]
-        kwargs['fundos'] = fundos.filter(pk__in=pks)
-        return kwargs
-
-    def get(self, request, *args, **kwargs):
-        return super(FilterFundoSelect, self).get(request, *args, **kwargs)
-
-
-class SetOnlineRedirect(LoginRequiredMixin, RedirectView):
-    url = '/'
+class ViewLink(LoginRequiredMixin, DetailView):
+    template_name = 'view-link.html'
+    model = Link
     login_url = '/admin/login'
-
-    def get(self, request, *args, **kwargs):
-        settings = Settings.getInstance()
-        val = not settings.get_running()
-        print('set val', val)
-        settings.set_running(val)
-        if settings.get_running():
-            try:
-                settings.minerThread.start()
-                settings.thread.start()
-            except (Exception,):
-                logging.error('Thread nao pode ser iniciada novamente')
-        return super(SetOnlineRedirect, self).get(request, *args, **kwargs)
-
-
-class CarteiraList(ListView):
-    template_name = 'carteiras_list.html'
-    model = Carteira
-    ordering = '-created_at'
-    context_object_name = 'carteiras'
-
-
-class ViewCarteira(DetailView):
-    template_name = 'view_carteira.html'
-    model = Carteira
-    context_object_name = 'carteira'
-
-
-def get_all(request):
-    if 'sigla' in request.GET:
-        sigla = request.GET['sigla']
-        try:
-            fundo = Fundo.objects.get(sigla=sigla)
-            data = [{
-                'nome': fundo.nome,
-                'sigla': fundo.sigla,
-                'cnpj': fundo.tipo_gestao,
-                'segmento': fundo.segmento,
-                'publico': fundo.publico_alvo,
-                'mandato': fundo.mandato,
-                'data_construcao': fundo.data_construcao_fundo,
-                'duracao': fundo.prazo_duracao,
-                'num_ativos': fundo.num_ativos,
-                'num_estados': fundo.num_estados,
-                'valor_atual_cota': fundo.preco,
-                'oscilacao_dia': fundo.oscilacao_dia,
-                'liquidez': fundo.liquidez,
-                'ultimo_rendimento': fundo.ultimo_rendimento,
-                'dy': fundo.dy,
-                'patrimonio_liquido': fundo.pl,
-                'rentabilidade_mes': fundo.rentabilidade_mes,
-                'num_cotas_emitidas': fundo.num_cotas_emitidas,
-                'valor_inicial_cota': fundo.vi_cota,
-                'taxa_administracao': fundo.taxa_adm,
-                'performance': [
-                    {
-                        'data_base': info.data_base,
-                        'data_pagamento': info.data_pay,
-                        'valor_cota_fechamento': float(info.close),
-                        'dy': float(info.dy),
-                        'valor_provento': float(info.rend),
-                        'oscilacao_valor_cota_em_relacao_ao_mes_anterior': float(info.rend_cota_mes)
-                    } for info in InfoFundo.objects.filter(fund=fundo)
-                ]
-
-            }
-            ]
-        except (Exception,):
-            data = {}
-    else:
-        data = [{
-            'nome': fundo.nome,
-            'sigla': fundo.sigla,
-            'cnpj': fundo.tipo_gestao,
-            'segmento': fundo.segmento,
-            'publico': fundo.publico_alvo,
-            'mandato': fundo.mandato,
-            'data_construcao': fundo.data_construcao_fundo,
-            'duracao': fundo.prazo_duracao,
-            'num_ativos': fundo.num_ativos,
-            'num_estados': fundo.num_estados,
-            'valor_atual_cota': fundo.preco,
-            'oscilacao_dia': fundo.oscilacao_dia,
-            'liquidez': fundo.liquidez,
-            'ultimo_rendimento': fundo.ultimo_rendimento,
-            'dy': fundo.dy,
-            'patrimonio_liquido': fundo.pl,
-            'rentabilidade_mes': fundo.rentabilidade_mes,
-            'num_cotas_emitidas': fundo.num_cotas_emitidas,
-            'valor_inicial_cota': fundo.vi_cota,
-            'taxa_administracao': fundo.taxa_adm,
-            'performance': [
-                {
-                    'data_base': info.data_base,
-                    'data_pagamento': info.data_pay,
-                    'valor_cota_fechamento': float(info.close),
-                    'dy': float(info.dy),
-                    'valor_provento': float(info.rend),
-                    'oscilacao_valor_cota_em_relacao_ao_mes_anterior': float(info.rend_cota_mes)
-                } for info in InfoFundo.objects.filter(fund=fundo)
-            ]
-
-        } for fundo in Fundo.objects.all()]
-
-    return JsonResponse(json.loads(json.dumps(data)), safe=False)
+    context_object_name = 'link'

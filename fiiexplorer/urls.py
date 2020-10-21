@@ -13,24 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
 from django.contrib import admin
+from django.urls import path
 from django.contrib.auth import views as auth_views
-
-from app.views import FundosListView, IndexView, SetOnlineRedirect, FundoDetailView, GetInfoFundos, FilterFundoSelect, \
-    CarteiraList, ViewCarteira, get_all
+from app.views import IndexView, collect_sites, ViewChannel, ViewLink
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^admin/login/$', auth_views.login),
-    url(r'^$', IndexView.as_view(), name='index'),
-    url(r'^fundo/(?P<pk>[0-9]+)/$', FundoDetailView.as_view(), name="fundo-view"),
-    url(r'^set-online-crawling/', SetOnlineRedirect.as_view(), name='set_online'),
-    url(r'^fundos/$', FundosListView.as_view(), name='fundos-list'),
-    url(r'^logout/', auth_views.logout, name='logout'),
-    url(r'^get-infos/$', GetInfoFundos.as_view(), name='infos'),
-    url(r'^filter-bests/$', FilterFundoSelect.as_view(), name='filter-bests'),
-    url(r'^carteiras/$', CarteiraList.as_view(), name='carteiras-list'),
-    url(r'^carteiras/(?P<pk>[0-9]+)/$', ViewCarteira.as_view(), name="carteira-view"),
-    url(r'^api/$', get_all, name="get-all"),
+    path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='index'),
+    path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
+    path('view-link/<int:pk>', ViewLink.as_view(), name='view-link'),
+    path('collect/', collect_sites, name='collect'),
+    path('logout/', auth_views.logout_then_login, name='logout'),
 ]

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load filters %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                {% for link in canal.link_set.all %}
+                    <div class="col-sm-4">
+                        <a href="{% url 'view-link' link.pk %}"
+                           class="btn btn-primary btn-large">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' %}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+    </script>
+
+
+{% endblock %}
