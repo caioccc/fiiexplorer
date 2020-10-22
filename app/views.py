@@ -55,23 +55,25 @@ def collect_sites(request):
     return redirect('/')
 
 
-class IndexView(LoginRequiredMixin, ListView):
+class IndexView(ListView):
     template_name = 'index.html'
     model = Channel
-    login_url = '/admin/login'
     context_object_name = 'canais'
 
+    def get_queryset(self):
+        if 'q' in self.request.GET:
+            return Channel.objects.filter(title__icontains=self.request.GET['q'])
+        return Channel.objects.all()
 
-class ViewChannel(LoginRequiredMixin, DetailView):
+
+class ViewChannel(DetailView):
     template_name = 'view-channel.html'
     model = Channel
     pk_url_kwarg = 'pk'
-    login_url = '/admin/login'
     context_object_name = 'canal'
 
 
-class ViewLink(LoginRequiredMixin, DetailView):
+class ViewLink(DetailView):
     template_name = 'view-link.html'
     model = Link
-    login_url = '/admin/login'
     context_object_name = 'link'

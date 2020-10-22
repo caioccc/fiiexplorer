@@ -68,7 +68,7 @@
 
 
 </head>
-<body id="body" class="hold-transition skin-black">
+<body id="body" class="sidebar-collapse sidebar-mini hold-transition skin-black">
 <!-- jQuery 2.2.0 -->
 {#<script#}
 {#  src="https://code.jquery.com/jquery-3.4.1.min.js"#}
@@ -83,9 +83,9 @@
         <a href="{% url 'index' %}" id="back_logo" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <!--<span>Focus Delivery</span>-->
-            <span id="logo_1"><b>Channel </b>Explorer</span>
+            <span id="logo_1"></span>
 
-            <span id="logo_2"><b>Channel </b>Explorer</span>
+            <span id="logo_2"></span>
 
             <!-- logo for regular state and mobile devices -->
             <!--<span class="logo-lg"><b>Focus </b>Delivery</span>-->
@@ -98,119 +98,6 @@
             </a>
 
             <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                        {#                        <ul class="dropdown-menu">#}
-                        {#                            <li class="header">Você tem 4 mensagens</li>#}
-                        {#                            <li>#}
-                        {#                                <!-- inner menu: contains the actual data -->#}
-                        {#                                <ul class="menu">#}
-                        {#                                    <li><!-- start message -->#}
-                        {#                                        <a href="#">#}
-                        {#                                            <div class="pull-left">#}
-                        {#                                                <img src="http://placehold.it/300x300"#}
-                        {#                                                     class="img-circle"#}
-                        {#                                                     alt="User Image">#}
-                        {#                                            </div>#}
-                        {#                                            <h4>#}
-                        {#                                                <small><i#}
-                        {#                                                        class="fa fa-clock-o"></i> 12/10/19 13:30#}
-                        {#                                                </small>#}
-                        {#                                            </h4>#}
-                        {#                                            <p>Hello!!</p>#}
-                        {#                                        </a>#}
-                        {#                                    </li>#}
-                        {#                                    <!-- end message -->#}
-                        {#                                </ul>#}
-                        {#                            </li>#}
-                        {#                            <li class="footer"><a href="#">Veja todas as#}
-                        {#                                mensagens</a></li>#}
-                        {#                        </ul>#}
-                    </li>
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">5</span>
-                        </a>
-                        {#                        <ul class="dropdown-menu">#}
-                        {#                            <li class="header">Voce tem 5 itens</li>#}
-                        {#                            <li>#}
-                        {#                                <!-- inner menu: contains the actual data -->#}
-                        {#                                <ul class="menu">#}
-                        {#                                    <li>#}
-                        {#                                        <a href="#">#}
-                        {#                                            <i class="fa fa-warning text-yellow"></i>#}
-                        {#                                            Item está em andamento.#}
-                        {#                                        </a>#}
-                        {#                                    </li>#}
-                        {##}
-                        {#                                </ul>#}
-                        {#                            </li>#}
-                        {#                            <li class="footer"><a href="#">Acompanhar Itens</a></li>#}
-                        {#                        </ul>#}
-                    </li>
-                    <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag-o"></i>
-                            <span class="label label-danger">3</span>
-                        </a>
-                        {#                        <ul class="dropdown-menu">#}
-                        {#                            <li class="header">Você tem 3 notificações</li>#}
-                        {#                            <li>#}
-                        {#                                <!-- inner menu: contains the actual data -->#}
-                        {#                                <ul class="menu">#}
-                        {#                                    <li><!-- Task item -->#}
-                        {#                                        <a href="#">#}
-                        {#                                            <h3>#}
-                        {#                                                Mensagem escrita por aqui.#}
-                        {#                                                <small class="pull-right">#}
-                        {#                                                    <label class="label label-info"><i#}
-                        {#                                                            class=""></i>#}
-                        {#                                                        Label Status</label>#}
-                        {#                                                </small>#}
-                        {#                                            </h3>#}
-                        {#                                        </a>#}
-                        {#                                    </li>#}
-                        {#                                </ul>#}
-                        {#                            </li>#}
-                        {#                            <li class="footer">#}
-                        {#                                <a href="#">Ver Notificações</a>#}
-                        {#                            </li>#}
-                        {#                        </ul>#}
-                    </li>
-                    <!-- User Account: style can be found in dropdown.less -->
-                    <li class="dropdown user user-menu">
-                        <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{% static 'img/300x300.png' %}" class="user-image" alt="User Image">
-                            <span class="hidden-xs">{{ user.first_name }}</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- User image -->
-                            <li class="user-header">
-                                <img src="{% static 'img/300x300.png' %}" class="user-image"
-                                     alt="User Image">
-
-                                <p>
-                                    <small>{{ user.first_name }}</small>
-                                </p>
-                            </li>
-                            <!-- Menu Body -->
-                            <!-- Menu Footer-->
-                            <li class="user-footer">
-                                <div class="pull-left">
-                                </div>
-                                <div class="pull-right">
-                                    <a href="{% url 'logout' %}?next=/" class="btn btn-default btn-flat">Logout</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Control Sidebar Toggle Button -->
-                </ul>
             </div>
         </nav>
     </header>
@@ -294,7 +181,7 @@
     <!-- /.content-wrapper -->
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>&copy; FII EXPLORER</b>
+            <b>&copy; Channel Explorer</b>
         </div>
     </footer>
 </div>

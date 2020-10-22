@@ -10,6 +10,31 @@
         }
     </style>
     <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-default">
+                <div class="box-header">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form action="{% url 'index' %}" method="get" class="form-inline">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <input type="text" class="form-control" id="q" name="q"
+                                               placeholder="Buscar...">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-md-12">
             <div class="box box-primary">
                 <!-- form start -->
@@ -17,22 +42,14 @@
                     <div class="row">
                         {% for canal in canais %}
 
-                            <div class="col-xs-6 col-sm-4">
-                                <div class="box box-default">
+                            <div class=" text-center col-xs-12 col-sm-4 col-md-3">
+                                <div class="box box-default" style="border-top: None;">
                                     <!-- /.box-header -->
                                     <div class="box-body">
                                         <a href="{% url 'view-channel' canal.pk %}">
                                             <img src="{{ canal.img_url }}"
-
-                                                 class="thumbnail img-responsive"/>
+                                                 class="img-responsive img-thumbnail"/>
                                         </a>
-                                    </div>
-                                    <div class="box-footer">
-                                        <p class="text-center">
-                                            <a href="{% url 'view-channel' canal.pk %}">
-                                                {{ canal.title|truncatechars:50 }}
-                                            </a>
-                                        </p>
                                     </div>
                                     <!-- /.box-body -->
                                 </div>
