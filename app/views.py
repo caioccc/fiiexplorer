@@ -1,15 +1,12 @@
-import json
 import logging
 
 import requests
 from bs4 import BeautifulSoup
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import JsonResponse
 # Create your views here.
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView
 
-from app.models import Channel, Link
+from app.models import Channel, Link, Type
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -17,9 +14,23 @@ logging.basicConfig(level=logging.DEBUG)
 def collect_sites(request):
     Channel.objects.all().delete()
     Link.objects.all().delete()
+    Type.objects.all().delete()
     url_default = 'https://multicanais.com/aovivo/assistir-tv-online-gratis-hd-24h/page/'
-    for i in range(1, 4):
-        temp_url = url_default + str(i)
+    url_esportes = 'https://multicanais.com/aovivo/eventos-esportivos-online/page/'
+    type1 = Type()
+    type1.save()
+    type2 = Type()
+    type2.name = 'Esportes'
+    type2.save()
+    extract_channels_multicanais(url_default, 3, type1)
+    extract_channels_multicanais(url_esportes, 2, type2)
+    return redirect('/')
+
+
+def extract_channels_multicanais(url, pages, type):
+    pages = pages + 1
+    for i in range(1, pages):
+        temp_url = url + str(i)
         req = requests.get(temp_url)
         if req.status_code == 200:
             page = BeautifulSoup(req.text, 'html.parser')
@@ -46,24 +57,35 @@ def collect_sites(request):
                                     ch = Channel()
                                     ch.title = title
                                     ch.img_url = img_url
+                                    ch.type = type
                                     ch.save()
                                     for id_url in ids:
                                         link = Link()
                                         link.url = id_url
                                         link.channel = ch
                                         link.save()
-    return redirect('/')
 
 
-class IndexView(ListView):
+class CanaisView(ListView):
     template_name = 'index.html'
     model = Channel
     context_object_name = 'canais'
 
     def get_queryset(self):
         if 'q' in self.request.GET:
-            return Channel.objects.filter(title__icontains=self.request.GET['q'])
-        return Channel.objects.all()
+            return Channel.objects.filter(title__icontains=self.request.GET['q'], type__name__icontains='Canais')
+        return Channel.objects.filter(type__name__icontains='Canais')
+
+
+class JogosView(ListView):
+    template_name = 'index.html'
+    model = Channel
+    context_object_name = 'canais'
+
+    def get_queryset(self):
+        if 'q' in self.request.GET:
+            return Channel.objects.filter(title__icontains=self.request.GET['q'], type__name__icontains='Esportes')
+        return Channel.objects.filter(type__name__icontains='Esportes')
 
 
 class ViewChannel(DetailView):

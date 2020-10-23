@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from app.views import IndexView, collect_sites, ViewChannel, ViewLink
+from app.views import CanaisView, collect_sites, ViewChannel, ViewLink, JogosView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', IndexView.as_view(), name='index'),
+    path('', CanaisView.as_view(), name='index'),
+    path('jogos/', JogosView.as_view(), name='jogos'),
     path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
     path('view-link/<int:pk>', ViewLink.as_view(), name='view-link'),
     path('collect/', collect_sites, name='collect'),

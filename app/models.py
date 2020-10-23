@@ -14,9 +14,20 @@ class TimeStamped(models.Model):
     published_at = models.DateTimeField(auto_now=True)
 
 
+class Type(TimeStamped):
+    name = models.CharField(max_length=255, blank=True, null=True, default='Canais')
+
+    def __str__(self):
+        return "%s" % self.name
+
+    def __unicode__(self):
+        return "%s" % self.name
+
+
 class Channel(TimeStamped):
     title = models.CharField(max_length=255, blank=True, null=True)
     img_url = models.URLField(blank=True, null=True)
+    type = models.ForeignKey(Type, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return "%s" % self.title
