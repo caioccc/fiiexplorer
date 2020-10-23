@@ -11,7 +11,7 @@ from app.models import Channel, Link, Type
 logging.basicConfig(level=logging.DEBUG)
 
 
-def collect_sites(request):
+def collect_canais(request):
     Channel.objects.all().delete()
     Link.objects.all().delete()
     Type.objects.all().delete()
@@ -25,6 +25,18 @@ def collect_sites(request):
     extract_channels_multicanais(url_default, 3, type1)
     extract_channels_multicanais(url_esportes, 2, type2)
     return redirect('/')
+
+
+def collect_jogos(request):
+    Channel.objects.filter(type__name__icontains='Esportes').delete()
+    Link.objects.filter(channel__type__name__icontains='Esportes').delete()
+    Type.objects.filter(name__icontains='Esportes').delete()
+    url_esportes = 'https://multicanais.com/aovivo/eventos-esportivos-online/page/'
+    type2 = Type()
+    type2.name = 'Esportes'
+    type2.save()
+    extract_channels_multicanais(url_esportes, 2, type2)
+    return redirect('/jogos')
 
 
 def extract_channels_multicanais(url, pages, type):
@@ -81,6 +93,10 @@ class JogosView(ListView):
     template_name = 'index.html'
     model = Channel
     context_object_name = 'canais'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        kwargs['jogos'] = True
+        return super(JogosView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
         if 'q' in self.request.GET:
