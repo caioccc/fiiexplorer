@@ -21,10 +21,10 @@ from app.views import CanaisView, collect_canais, ViewChannel, ViewLink, JogosVi
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', CanaisView.as_view(), name='index'),
-    path('jogos/', JogosView.as_view(), name='jogos'),
+    path('sports/', JogosView.as_view(), name='sports'),
     path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
     path('view-link/<int:pk>', ViewLink.as_view(), name='view-link'),
     path('collect/', collect_canais, name='collect'),
-    path('collect-jogos/', collect_jogos, name='collect-jogos'),
+    path('collect-sports/', collect_jogos, name='collect-sports'),
     path('logout/', auth_views.logout_then_login, name='logout'),
 ]

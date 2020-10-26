@@ -3,6 +3,7 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 # Create your views here.
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView
 
@@ -78,8 +79,9 @@ def extract_channels_multicanais(url, pages, type):
                                         link.save()
 
 
-class CanaisView(ListView):
+class CanaisView(LoginRequiredMixin, ListView):
     template_name = 'index.html'
+    login_url = '/admin/login/'
     model = Channel
     context_object_name = 'canais'
 
@@ -89,8 +91,9 @@ class CanaisView(ListView):
         return Channel.objects.filter(type__name__icontains='Canais')
 
 
-class JogosView(ListView):
+class JogosView(LoginRequiredMixin, ListView):
     template_name = 'index.html'
+    login_url = '/admin/login/'
     model = Channel
     context_object_name = 'canais'
 
@@ -104,14 +107,16 @@ class JogosView(ListView):
         return Channel.objects.filter(type__name__icontains='Esportes')
 
 
-class ViewChannel(DetailView):
+class ViewChannel(LoginRequiredMixin, DetailView):
     template_name = 'view-channel.html'
+    login_url = '/admin/login/'
     model = Channel
     pk_url_kwarg = 'pk'
     context_object_name = 'canal'
 
 
-class ViewLink(DetailView):
+class ViewLink(LoginRequiredMixin, DetailView):
     template_name = 'view-link.html'
+    login_url = '/admin/login/'
     model = Link
     context_object_name = 'link'
