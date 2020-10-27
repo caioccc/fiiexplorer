@@ -15,7 +15,7 @@
                 <div class="box-header">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form action="{% url 'index' %}" method="get" class="form-inline">
+                            <form action="#" method="get" class="form-inline">
                                 <div class="form-group">
                                     <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
                                     <div class="input-group">
@@ -38,6 +38,21 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box box-primary">
+                <div class="box box-header">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            {% if site == 'topcanais' %}
+                                <a href="{% url 'collect' %}" class="btn btn-primary">
+                                    <i class="fa fa-rocket"></i> <span>Collect Channels</span>
+                                </a>
+                            {% else %}
+                                <a href="{% url 'collect-canaismax' %}" class="btn btn-primary">
+                                    <i class="fa fa-rocket"></i> <span>Collect Channels</span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
                 <!-- form start -->
                 <div class="box-body">
                     <div class="row">
@@ -49,7 +64,15 @@
                                     <div class="box-body">
                                         <a href="{% url 'view-channel' canal.pk %}">
                                             <img src="{{ canal.img_url }}"
-                                                 class="img-responsive img-thumbnail"/>
+                                                 class="img-responsive img-thumbnail"
+                                                 style="
+                                                         {% if site == 'topcanais' %}
+
+                                                         {% else %}
+                                                             background-color: #1a2226;
+                                                         {% endif %}
+                                                         "
+                                            />
                                         </a>
                                     </div>
                                     <!-- /.box-body -->

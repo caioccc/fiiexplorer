@@ -14,8 +14,25 @@ class TimeStamped(models.Model):
     published_at = models.DateTimeField(auto_now=True)
 
 
-class Type(TimeStamped):
-    name = models.CharField(max_length=255, blank=True, null=True, default='Canais')
+class Site(TimeStamped):
+    name = models.CharField(max_length=255, blank=True, null=True, default='topcanais')
+    url = models.URLField(blank=True, null=True, default='https://topcanais.com/')
+    done = models.BooleanField(default=False)
+
+    def __str__(self):
+        return "%s" % self.name
+
+    def __unicode__(self):
+        return "%s" % self.name
+
+
+class CategoryChannel(TimeStamped):
+    name = models.CharField(max_length=255, blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
+    path = models.CharField(max_length=255, blank=True, null=True)
+    site = models.ForeignKey(Site, blank=True, null=True, on_delete=models.CASCADE)
+    pages = models.IntegerField(blank=True, null=True, default=1)
+    css_selector = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.name
@@ -27,7 +44,7 @@ class Type(TimeStamped):
 class Channel(TimeStamped):
     title = models.CharField(max_length=255, blank=True, null=True)
     img_url = models.URLField(blank=True, null=True)
-    type = models.ForeignKey(Type, blank=True, null=True, on_delete=models.CASCADE)
+    category = models.ForeignKey(CategoryChannel, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return "%s" % self.title

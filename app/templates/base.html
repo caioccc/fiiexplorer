@@ -80,7 +80,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="{% url 'index' %}" id="back_logo" class="logo">
+        <a href="{% url 'topcanais' %}" id="back_logo" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <!--<span>Focus Delivery</span>-->
             <span id="logo_1"></span>
@@ -119,29 +119,15 @@
             <ul class="sidebar-menu">
                 <li class="header">MENU</li>
                 <li id="index" class="index">
-                    <a href="{% url 'index' %}">
-                        <i class="fa fa-dashboard"></i> <span>Canais</span>
+                    <a href="{% url 'topcanais' %}">
+                        <i class="fa fa-building"></i> <span>Top Canais</span>
                     </a>
                 </li>
                 <li id="index" class="index">
-                    <a href="{% url 'sports' %}">
-                        <i class="fa fa-soccer-ball-o"></i> <span>Jogos ao vivo</span>
+                    <a href="{% url 'canaismax' %}">
+                        <i class="fa fa-tv"></i> <span>Canais Max</span>
                     </a>
                 </li>
-                {% if jogos %}
-                    <li id="carteira" class="collect">
-                        <a href="{% url 'collect-sports' %}">
-                            <i class="fa fa-rocket"></i> <span>Collect Sports</span>
-                        </a>
-                    </li>
-                {% else %}
-                    <li id="carteira" class="collect">
-                        <a href="{% url 'collect' %}">
-                            <i class="fa fa-rocket"></i> <span>Collect Channels</span>
-                        </a>
-                    </li>
-                {% endif %}
-
                 <li id="logout" class="logout">
                     <a href="{% url 'logout' %}?next=/">
                         <i class="fa fa-sign-out"></i> <span>Sair</span>

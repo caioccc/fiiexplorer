@@ -16,15 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from app.views import CanaisView, collect_canais, ViewChannel, ViewLink, JogosView, collect_jogos
+from app.views import TopCanaisView, ViewChannel, ViewLink, JogosView, template_multi, \
+    CanaisMaxView, CollectTopCanais, CollectCanaisMax
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CanaisView.as_view(), name='index'),
-    path('sports/', JogosView.as_view(), name='sports'),
+    path('', TopCanaisView.as_view(), name='topcanais'),
+    path('canaismax/', CanaisMaxView.as_view(), name='canaismax'),
     path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
     path('view-link/<int:pk>', ViewLink.as_view(), name='view-link'),
-    path('collect/', collect_canais, name='collect'),
-    path('collect-sports/', collect_jogos, name='collect-sports'),
+    path('collect/', CollectTopCanais.as_view(), name='collect'),
+    path('collect-canaismax/', CollectCanaisMax.as_view(), name='collect-canaismax'),
     path('logout/', auth_views.logout_then_login, name='logout'),
+
+    path('template/<int:pk>', template_multi, name='template')
 ]
