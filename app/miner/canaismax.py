@@ -55,7 +55,7 @@ class CustomMiner(Miner):
                                                 ids.append(data_id)
                                     if len(ids) > 0:
                                         ch = Channel()
-                                        ch.title = title
+                                        ch.title = (title[:230] + '..') if len(title) > 75 else title
                                         ch.img_url = img_url
                                         ch.category = category
                                         ch.save()

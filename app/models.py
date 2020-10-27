@@ -43,7 +43,7 @@ class CategoryChannel(TimeStamped):
 
 class Channel(TimeStamped):
     title = models.CharField(max_length=255, blank=True, null=True)
-    img_url = models.URLField(blank=True, null=True)
+    img_url = models.TextField(blank=True, null=True)
     category = models.ForeignKey(CategoryChannel, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -54,7 +54,7 @@ class Channel(TimeStamped):
 
 
 class Link(TimeStamped):
-    url = models.URLField(blank=True, null=True)
+    url = models.TextField(blank=True, null=True)
     channel = models.ForeignKey(Channel, on_delete=models.CASCADE)
 
     def __str__(self):
