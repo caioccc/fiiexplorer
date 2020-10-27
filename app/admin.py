@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from app.models import Channel, Link, Site, CategoryChannel
+from app.models import Channel, Link, Site, CategoryChannel, Url, Filme
 
 
 class CategoryInline(admin.TabularInline):
@@ -18,3 +18,5 @@ admin.site.register(Channel)
 admin.site.register(Link)
 admin.site.register(CategoryChannel)
 admin.site.register(Site, SiteAdmin)
+admin.site.register(Filme)
+admin.site.register(Url)

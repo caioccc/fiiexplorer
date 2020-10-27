@@ -10,10 +10,21 @@ from django.shortcuts import redirect
 from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, TemplateView
 
-from app.miner.explorer import mineTopCanais, mineCanaisMax
-from app.models import Channel, Link, Site
+from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes
+from app.models import Channel, Link, Site, Filme
 
 logging.basicConfig(level=logging.DEBUG)
+
+
+class CollectFilmes(TemplateView):
+    template_name = 'index.html'
+
+    def get(self, request, *args, **kwargs):
+        site = Site.objects.get(name='filmes')
+        site.done = False
+        site.save()
+        Thread(target=mineFilmes).start()
+        return redirect('/filmes')
 
 
 class CollectTopCanais(TemplateView):
@@ -35,7 +46,23 @@ class CollectCanaisMax(TemplateView):
         site.done = False
         site.save()
         Thread(target=mineCanaisMax).start()
-        return redirect('/')
+        return redirect('/canaismax')
+
+
+class FilmesView(LoginRequiredMixin, ListView):
+    template_name = 'index.html'
+    login_url = '/admin/login/'
+    model = Channel
+    context_object_name = 'canais'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        kwargs['site'] = 'filmes'
+        return super(FilmesView, self).get_context_data(object_list=object_list, **kwargs)
+
+    def get_queryset(self):
+        if 'q' in self.request.GET:
+            return Filme.objects.filter(title__icontains=self.request.GET['q'])
+        return Filme.objects.all()
 
 
 class TopCanaisView(LoginRequiredMixin, ListView):
@@ -68,6 +95,18 @@ class JogosView(LoginRequiredMixin, ListView):
         if 'q' in self.request.GET:
             return Channel.objects.filter(title__icontains=self.request.GET['q'])
         return Channel.objects.all()
+
+
+class ViewFilm(LoginRequiredMixin, DetailView):
+    template_name = 'view-channel.html'
+    login_url = '/admin/login/'
+    model = Filme
+    pk_url_kwarg = 'pk'
+    context_object_name = 'canal'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        kwargs['site'] = 'filmes'
+        return super(ViewFilm, self).get_context_data(object_list=object_list, **kwargs)
 
 
 class ViewChannel(LoginRequiredMixin, DetailView):

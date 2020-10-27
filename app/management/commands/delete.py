@@ -11,6 +11,8 @@ class Command(BaseCommand):
             CategoryChannel.objects.all().delete()
             Channel.objects.all().delete()
             Link.objects.all().delete()
+            Filme.objects.all().delete()
+            Url.objects.all().delete()
             users = User.objects.all().delete()
         except (Exception,):
             raise CommandError('Erro ao deletar Models')

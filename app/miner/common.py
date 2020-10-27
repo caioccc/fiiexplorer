@@ -48,6 +48,10 @@ class Miner(CommonMiner):
                 if str(url).endswith('/'):
                     return url + 'pag/' + str(i)
                 return str(url) + '/pag/' + str(i)
+        elif canal == 'filmes':
+            if str(url).endswith('/'):
+                return url + 'pag/' + str(i)
+            return str(url) + '/pag/' + str(i)
 
     def mine(self):
         try:
