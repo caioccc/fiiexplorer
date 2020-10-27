@@ -37,22 +37,7 @@ class CustomMiner(Miner):
                                     for a in atags:
                                         if a.has_attr('data-link'):
                                             data_id = str(a['data-link'])
-                                            if 'op=' in data_id:
-                                                third_page_temp = self.get_page_bs4(data_id)
-                                                if third_page_temp:
-                                                    div_buttons = third_page_temp.find('div',
-                                                                                       attrs={
-                                                                                           'class': 'buttons-quality'})
-                                                    if div_buttons:
-                                                        novos_links = div_buttons.find_all('a')
-                                                        if len(novos_links) > 0:
-                                                            for alinks_temp in novos_links:
-                                                                if alinks_temp.has_attr('href'):
-                                                                    alink_temp_url = str(alinks_temp['href'])
-                                                                    ids.append(alink_temp_url)
-                                            else:
-                                                print('normal', title)
-                                                ids.append(data_id)
+                                            ids.append(data_id)
                                     if len(ids) > 0:
                                         ch = Channel()
                                         ch.title = title
