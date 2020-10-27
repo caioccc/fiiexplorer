@@ -48,7 +48,8 @@ class CustomMiner(Miner):
                                                             for alinks_temp in novos_links:
                                                                 if alinks_temp.has_attr('href'):
                                                                     print('duplo op', title)
-                                                                    ids.append(str(alinks_temp['href']))
+                                                                    alink_temp_url = str(alinks_temp['href'])
+                                                                    ids.append(alink_temp_url)
                                             else:
                                                 print('normal', title)
                                                 ids.append(data_id)
