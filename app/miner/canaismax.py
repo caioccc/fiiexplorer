@@ -66,9 +66,12 @@ class CustomMiner(Miner):
                                             link.save()
 
     def mine(self):
-        Channel.objects.filter(category__site__name='canaismax').delete()
-        Link.objects.filter(channel__category__site__name='canaismax').delete()
-        site = Site.objects.get(name='canaismax')
-        for category in site.categorychannel_set.all():
-            self.extract(category)
-        return True
+        try:
+            Channel.objects.filter(category__site__name='canaismax').delete()
+            Link.objects.filter(channel__category__site__name='canaismax').delete()
+            site = Site.objects.get(name='canaismax')
+            for category in site.categorychannel_set.all():
+                self.extract(category)
+            return True
+        except (Exception,):
+            return False
