@@ -11,6 +11,7 @@ class CustomMiner(Miner):
             page = self.get_page_bs4(temp_url)
             if page:
                 divs_entries = page.select('div.item>div.bloco-canal')
+                print('total_canais', len(divs_entries))
                 if len(divs_entries) > 0:
                     for div in divs_entries:
                         atag = div.find('a')
@@ -47,7 +48,6 @@ class CustomMiner(Miner):
                                                         if len(novos_links) > 0:
                                                             for alinks_temp in novos_links:
                                                                 if alinks_temp.has_attr('href'):
-                                                                    print('duplo op', title)
                                                                     alink_temp_url = str(alinks_temp['href'])
                                                                     ids.append(alink_temp_url)
                                             else:
