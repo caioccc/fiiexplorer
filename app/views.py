@@ -125,22 +125,23 @@ class ViewChannel(LoginRequiredMixin, DetailView):
         return super(ViewChannel, self).get_context_data(object_list=object_list, **kwargs)
 
     def insert_context_data(self, **kwargs):
-        channel_id = self.get_object().channel_id
-        url = 'https://canaismax.com/api/canal/' + channel_id + '/' + str(get_date_now())
-        req = requests.get(url)
-        now = round(datetime.datetime.now().timestamp())
-        if req.status_code == 200:
-            dic_complete = req.json()
-            p_atual = None
-            for program in dic_complete:
-                if (int(program['inicio']) <= now) and (int(program['fim']) > now):
-                    p_atual = program
-            p_next = None
-            for program in dic_complete:
-                if p_atual['fim'] == program['inicio']:
-                    p_next = program
-            kwargs['program_1'] = p_atual
-            kwargs['program_2'] = p_next
+        if self.get_object().channel_id:
+            channel_id = self.get_object().channel_id
+            url = 'https://canaismax.com/api/canal/' + channel_id + '/' + str(get_date_now())
+            req = requests.get(url)
+            now = round(datetime.datetime.now().timestamp())
+            if req.status_code == 200:
+                dic_complete = req.json()
+                p_atual = None
+                for program in dic_complete:
+                    if (int(program['inicio']) <= now) and (int(program['fim']) > now):
+                        p_atual = program
+                p_next = None
+                for program in dic_complete:
+                    if p_atual['fim'] == program['inicio']:
+                        p_next = program
+                kwargs['program_1'] = p_atual
+                kwargs['program_2'] = p_next
         return kwargs
 
 
