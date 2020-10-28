@@ -30,6 +30,7 @@ class CustomMiner(Miner):
                         second_page = self.get_page_bs4(href)
                         if second_page:
                             div_links = second_page.find_all('a', attrs={'class': 'cativ'})
+                            channel_id = self.get_channel_id(str(second_page.select('script')[-1].contents[0]))
                             if div_links:
                                 atags = div_links
                                 if len(atags) > 0:
@@ -58,6 +59,7 @@ class CustomMiner(Miner):
                                         ch.title = (title[:230] + '..') if len(title) > 75 else title
                                         ch.img_url = img_url
                                         ch.category = category
+                                        ch.channel_id = channel_id
                                         ch.save()
                                         for id_url in ids:
                                             link = Link()
@@ -66,12 +68,21 @@ class CustomMiner(Miner):
                                             link.save()
 
     def mine(self):
-        try:
-            Channel.objects.filter(category__site__name='canaismax').delete()
-            Link.objects.filter(channel__category__site__name='canaismax').delete()
-            site = Site.objects.get(name='canaismax')
-            for category in site.categorychannel_set.all():
-                self.extract(category)
-            return True
-        except (Exception,):
-            return False
+        # try:
+        Channel.objects.filter(category__site__name='canaismax').delete()
+        Link.objects.filter(channel__category__site__name='canaismax').delete()
+        site = Site.objects.get(name='canaismax')
+        for category in site.categorychannel_set.all():
+            self.extract(category)
+        return True
+        # except (Exception,):
+        #     return False
+
+    def get_channel_id(self, string_script):
+        api_url = 'https://canaismax.com/api/canal/'
+        if api_url in string_script:
+            ind = string_script.index(api_url) + len(api_url)
+            ind_bar = ind + 24
+            id = string_script[ind:ind_bar]
+            return id
+        return ''

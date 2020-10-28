@@ -1,23 +1,34 @@
+import datetime
+import json
 import logging
 from threading import Thread
 
-import requests
-from bs4 import BeautifulSoup
 # Create your views here.
+import requests
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import redirect
-from django.views.decorators.http import require_http_methods
 from django.views.generic import ListView, DetailView, TemplateView
 
-from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes
-from app.models import Channel, Link, Site, Filme
+from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries
+from app.models import Channel, Site, Filme, Serie
 
 logging.basicConfig(level=logging.DEBUG)
 
 
+class CollectSeries(TemplateView):
+    template_name = 'series.html'
+
+    def get(self, request, *args, **kwargs):
+        site = Site.objects.get(name='series')
+        site.done = False
+        site.save()
+        Thread(target=mineSeries).start()
+        return redirect('/series')
+
+
 class CollectFilmes(TemplateView):
-    template_name = 'index.html'
+    template_name = 'filmes.html'
 
     def get(self, request, *args, **kwargs):
         site = Site.objects.get(name='filmes')
@@ -28,7 +39,7 @@ class CollectFilmes(TemplateView):
 
 
 class CollectTopCanais(TemplateView):
-    template_name = 'index.html'
+    template_name = 'topcanais.html'
 
     def get(self, request, *args, **kwargs):
         site = Site.objects.get(name='topcanais')
@@ -39,7 +50,7 @@ class CollectTopCanais(TemplateView):
 
 
 class CollectCanaisMax(TemplateView):
-    template_name = 'index.html'
+    template_name = 'canaismax.html'
 
     def get(self, request, *args, **kwargs):
         site = Site.objects.get(name='canaismax')
@@ -49,14 +60,25 @@ class CollectCanaisMax(TemplateView):
         return redirect('/canaismax')
 
 
-class FilmesView(LoginRequiredMixin, ListView):
-    template_name = 'index.html'
+class SeriesView(LoginRequiredMixin, ListView):
+    template_name = 'series.html'
     login_url = '/admin/login/'
-    model = Channel
-    context_object_name = 'canais'
+    model = Serie
+    context_object_name = 'series'
+
+    def get_queryset(self):
+        if 'q' in self.request.GET:
+            return Serie.objects.filter(title__icontains=self.request.GET['q'])
+        return Serie.objects.all()
+
+
+class FilmesView(LoginRequiredMixin, ListView):
+    template_name = 'filmes.html'
+    login_url = '/admin/login/'
+    model = Filme
+    context_object_name = 'filmes'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['site'] = 'filmes'
         return super(FilmesView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
@@ -66,13 +88,12 @@ class FilmesView(LoginRequiredMixin, ListView):
 
 
 class TopCanaisView(LoginRequiredMixin, ListView):
-    template_name = 'index.html'
+    template_name = 'topcanais.html'
     login_url = '/admin/login/'
     model = Channel
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['site'] = 'topcanais'
         return super(TopCanaisView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
@@ -81,31 +102,14 @@ class TopCanaisView(LoginRequiredMixin, ListView):
         return Channel.objects.filter(category__site__name='topcanais')
 
 
-class JogosView(LoginRequiredMixin, ListView):
-    template_name = 'index.html'
-    login_url = '/admin/login/'
-    model = Channel
-    context_object_name = 'canais'
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['jogos'] = True
-        return super(JogosView, self).get_context_data(object_list=object_list, **kwargs)
-
-    def get_queryset(self):
-        if 'q' in self.request.GET:
-            return Channel.objects.filter(title__icontains=self.request.GET['q'])
-        return Channel.objects.all()
-
-
 class ViewFilm(LoginRequiredMixin, DetailView):
-    template_name = 'view-channel.html'
+    template_name = 'view-filme.html'
     login_url = '/admin/login/'
     model = Filme
     pk_url_kwarg = 'pk'
-    context_object_name = 'canal'
+    context_object_name = 'filme'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['site'] = 'filmes'
         return super(ViewFilm, self).get_context_data(object_list=object_list, **kwargs)
 
 
@@ -116,22 +120,45 @@ class ViewChannel(LoginRequiredMixin, DetailView):
     pk_url_kwarg = 'pk'
     context_object_name = 'canal'
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        kwargs = self.insert_context_data(**kwargs)
+        return super(ViewChannel, self).get_context_data(object_list=object_list, **kwargs)
 
-class ViewLink(LoginRequiredMixin, DetailView):
-    template_name = 'view-link.html'
+    def insert_context_data(self, **kwargs):
+        channel_id = self.get_object().channel_id
+        url = 'https://canaismax.com/api/canal/' + channel_id + '/' + str(get_date_now())
+        req = requests.get(url)
+        now = round(datetime.datetime.now().timestamp())
+        if req.status_code == 200:
+            dic_complete = req.json()
+            p_atual = None
+            for program in dic_complete:
+                if (int(program['inicio']) <= now) and (int(program['fim']) > now):
+                    p_atual = program
+            p_next = None
+            for program in dic_complete:
+                if p_atual['fim'] == program['inicio']:
+                    p_next = program
+            kwargs['program_1'] = p_atual
+            kwargs['program_2'] = p_next
+        return kwargs
+
+
+class ViewSerie(LoginRequiredMixin, DetailView):
+    template_name = 'view-serie.html'
     login_url = '/admin/login/'
-    model = Link
-    context_object_name = 'link'
+    model = Serie
+    pk_url_kwarg = 'pk'
+    context_object_name = 'serie'
 
 
 class CanaisMaxView(LoginRequiredMixin, ListView):
-    template_name = 'index.html'
+    template_name = 'canaismax.html'
     login_url = '/admin/login/'
     model = Channel
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['site'] = 'canaismax'
         return super(CanaisMaxView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
@@ -141,12 +168,8 @@ class CanaisMaxView(LoginRequiredMixin, ListView):
         return Channel.objects.filter(category__site__name='canaismax')
 
 
-@require_http_methods(["GET"])
-def template_multi(request, pk):
-    ch = Channel.objects.get(pk=pk)
-    req = requests.get(ch.link_set.first().url)
-    if req.status_code == 200:
-        page = BeautifulSoup(req.text, 'html.parser')
-        print(page)
-    html_text = req.text
-    return HttpResponse(html_text)
+def get_date_now():
+    now = datetime.datetime.now()
+    month = str("0") + str(now.month) if now.month < 10 else now.month
+    day = now.day
+    return '%s-%s-%s' % (now.year, month, day)

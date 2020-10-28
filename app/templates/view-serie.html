@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load filters %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="javascript:window.history.back()"
+               class="btn btn-default">Voltar</a>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-xs-3">
+            <img src="{{ serie.img_url }}" class="img-thumbnail img-responsive"/>
+        </div>
+        <div class="col-xs-9">
+            <h1 class=""><b>{{ serie.title }}</b></h1>
+            <h3>{{ serie.duracao }}</h3>
+            <h3>{{ serie.ano }}</h3>
+            <h3>{{ serie.temporadas }} temporadas</h3>
+            <h3>{{ serie.episodios }}</h3>
+            <h3>{{ serie.sinopse }}</h3>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                {% for temporada in serie.temporada_set.all %}
+                    <div class="col-xs-12">
+                        <div class="box box-default collapsed-box">
+                            <div class="box-header">
+                                <div class="box-title">
+                                    Temporada {{ temporada.num_seq }}
+                                </div>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                                            class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="box-body">
+                                <table class="table table-striped">
+                                    {% for episodio in temporada.episodio_set.all %}
+                                        <tr>
+                                            <td>{{ episodio.type }}</td>
+                                            <td>{{ episodio.title }}</td>
+                                            <td>
+                                                {% for link in episodio.linkserie_set.all %}
+                                                    <a href="{{ link.url }}" target="_blank"
+                                                       class="btn btn-primary">
+                                                        Link
+                                                    </a>
+
+                                                {% endfor %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+
+{% endblock %}

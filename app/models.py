@@ -45,6 +45,7 @@ class Channel(TimeStamped):
     title = models.CharField(max_length=255, blank=True, null=True)
     img_url = models.TextField(blank=True, null=True)
     category = models.ForeignKey(CategoryChannel, blank=True, null=True, on_delete=models.CASCADE)
+    channel_id = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.title
@@ -70,6 +71,8 @@ class Filme(TimeStamped):
     img_url = models.TextField(blank=True, null=True)
     ano = models.CharField(max_length=255, blank=True, null=True)
     sinopse = models.TextField(blank=True, null=True)
+    imdb = models.TextField(blank=True, null=True)
+    tipo = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.title
@@ -89,3 +92,56 @@ class Url(TimeStamped):
 
     def __unicode__(self):
         return "%s" % self.url
+
+
+class Serie(TimeStamped):
+    title = models.TextField(blank=True, null=True)
+    imdb = models.TextField(blank=True, null=True)
+    tipo = models.TextField(blank=True, null=True)
+    img_url = models.TextField(blank=True, null=True)
+    temporadas = models.TextField(blank=True, null=True)
+    sinopse = models.TextField(blank=True, null=True)
+    episodios = models.TextField(blank=True, null=True)
+    duracao = models.TextField(blank=True, null=True)
+    ano = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return "%s" % self.title
+
+    def __unicode__(self):
+        return "%s" % self.title
+
+
+class Temporada(TimeStamped):
+    serie = models.ForeignKey(Serie, blank=True, null=True, on_delete=models.CASCADE)
+    num_seq = models.CharField(max_length=255, blank=True, null=True)
+
+    def __str__(self):
+        return "%s %s" % (self.serie, self.num_seq)
+
+    def __unicode__(self):
+        return "%s %s" % (self.serie, self.num_seq)
+
+
+class Episodio(TimeStamped):
+    temporada = models.ForeignKey(Temporada, blank=True, null=True, on_delete=models.CASCADE)
+    type = models.TextField(blank=True, null=True)
+    img_url = models.TextField(blank=True, null=True)
+    title = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return "%s %s" % (self.temporada.serie, self.type)
+
+    def __unicode__(self):
+        return "%s %s" % (self.temporada.serie, self.type)
+
+
+class LinkSerie(TimeStamped):
+    url = models.TextField(blank=True, null=True)
+    episodio = models.ForeignKey(Episodio, blank=True, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "%s" % self.episodio
+
+    def __unicode__(self):
+        return "%s" % self.episodio

@@ -62,6 +62,18 @@ class Command(BaseCommand):
             cat31.pages = 48
             cat31.save()
 
+            site4 = Site()
+            site4.name = 'series'
+            site4.url = 'https://canaismax.com/'
+            site4.save()
+            cat41 = CategoryChannel()
+            cat41.name = 'series'
+            cat41.url = 'https://canaismax.com/series'
+            cat41.path = 'series/'
+            cat41.site = site4
+            cat41.pages = 26
+            cat41.save()
+
         except (Exception,):
             raise CommandError('Erro ao inicializar Models')
         self.stdout.write(self.style.SUCCESS('Successfully created sites and categories'))

@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from app.views import TopCanaisView, ViewChannel, ViewLink, JogosView, template_multi, \
-    CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, FilmesView, ViewFilm
+from app.views import TopCanaisView, ViewChannel, CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, \
+    FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,12 +25,14 @@ urlpatterns = [
     path('canaismax/', CanaisMaxView.as_view(), name='canaismax'),
     path('view-film/<int:pk>', ViewFilm.as_view(), name='view-film'),
     path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
-    path('view-link/<int:pk>', ViewLink.as_view(), name='view-link'),
+    path('view-serie/<int:pk>', ViewSerie.as_view(), name='view-serie'),
     path('collect-filmes/', CollectFilmes.as_view(), name='collect-filmes'),
     path('filmes/', FilmesView.as_view(), name='filmes'),
     path('collect/', CollectTopCanais.as_view(), name='collect'),
     path('collect-canaismax/', CollectCanaisMax.as_view(), name='collect-canaismax'),
     path('logout/', auth_views.logout_then_login, name='logout'),
 
-    path('template/<int:pk>', template_multi, name='template')
+    path('series/', SeriesView.as_view(), name='series'),
+    path('collect-series/', CollectSeries.as_view(), name='collect-series'),
+
 ]
