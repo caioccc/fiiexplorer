@@ -68,15 +68,15 @@ class CustomMiner(Miner):
                                             link.save()
 
     def mine(self):
-        # try:
-        Channel.objects.filter(category__site__name='canaismax').delete()
-        Link.objects.filter(channel__category__site__name='canaismax').delete()
-        site = Site.objects.get(name='canaismax')
-        for category in site.categorychannel_set.all():
-            self.extract(category)
-        return True
-        # except (Exception,):
-        #     return False
+        try:
+            Channel.objects.filter(category__site__name='canaismax').delete()
+            Link.objects.filter(channel__category__site__name='canaismax').delete()
+            site = Site.objects.get(name='canaismax')
+            for category in site.categorychannel_set.all():
+                self.extract(category)
+            return True
+        except (Exception,):
+            return False
 
     def get_channel_id(self, string_script):
         api_url = 'https://canaismax.com/api/canal/'
