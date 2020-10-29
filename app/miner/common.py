@@ -1,7 +1,7 @@
 # coding=utf-8
 import logging
-import requests
-from bs4 import BeautifulSoup
+
+from app.utils import get_page_bs4
 
 sync_urls_delay = 30
 check_new_minig_requests_delay = 86400
@@ -21,16 +21,7 @@ def dict_gen(curs):
             yield dict(itertools.izip(field_names, row))
 
 
-class CommonMiner():
-    def get_page_bs4(self, url):
-        req = requests.get(url)
-        if req.status_code == 200:
-            page = BeautifulSoup(req.text, 'html.parser')
-            return page
-        return None
-
-
-class Miner(CommonMiner):
+class Miner():
     URL = ''
 
     def extract(self, category):
@@ -57,10 +48,4 @@ class Miner(CommonMiner):
                 return str(url)
 
     def mine(self):
-        try:
-            page = self.get_page_bs4(self.URL)
-            if page:
-                return True
-            return False
-        except (Exception,):
-            return False
+        pass

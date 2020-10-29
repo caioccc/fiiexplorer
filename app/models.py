@@ -46,6 +46,7 @@ class Channel(TimeStamped):
     img_url = models.TextField(blank=True, null=True)
     category = models.ForeignKey(CategoryChannel, blank=True, null=True, on_delete=models.CASCADE)
     channel_id = models.CharField(max_length=255, blank=True, null=True)
+    url_site = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.title
@@ -73,6 +74,8 @@ class Filme(TimeStamped):
     sinopse = models.TextField(blank=True, null=True)
     imdb = models.TextField(blank=True, null=True)
     tipo = models.TextField(blank=True, null=True)
+    url_site = models.TextField(blank=True, null=True)
+
 
     def __str__(self):
         return "%s" % self.title
@@ -104,6 +107,7 @@ class Serie(TimeStamped):
     episodios = models.TextField(blank=True, null=True)
     duracao = models.TextField(blank=True, null=True)
     ano = models.TextField(blank=True, null=True)
+    url_site = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.title

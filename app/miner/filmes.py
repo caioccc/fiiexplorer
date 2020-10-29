@@ -11,7 +11,7 @@ class CustomMiner(Miner):
             page = self.get_page_bs4(temp_url)
             if page:
                 divs_entries = page.select('div.item')
-                print('total_canais', len(divs_entries))
+                print('total_filmes_na_page', len(divs_entries))
                 if len(divs_entries) > 0:
                     for div in divs_entries:
                         atag = div.find('a')
@@ -49,9 +49,9 @@ class CustomMiner(Miner):
                                             ids.append(url_data_id)
                                     if len(ids) > 0:
                                         self.save_filme(ano, category, duracao, ids, imdb, img_url, sinopse, tipo,
-                                                        title)
+                                                        title, href)
 
-    def save_filme(self, ano, category, duracao, ids, imdb, img_url, sinopse, tipo, title):
+    def save_filme(self, ano, category, duracao, ids, imdb, img_url, sinopse, tipo, title, href):
         ch = Filme()
         ch.ano = ano
         ch.sinopse = sinopse
@@ -61,6 +61,7 @@ class CustomMiner(Miner):
         ch.category = category
         ch.imdb = imdb
         ch.tipo = tipo
+        ch.url_site = str(href)
         ch.save()
         for id_url in ids:
             link = Url()

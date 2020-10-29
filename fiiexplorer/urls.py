@@ -17,22 +17,24 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from app.views import TopCanaisView, ViewChannel, CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, \
-    FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie
+    FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie, CollectSerie, CollectCanal, get_json
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TopCanaisView.as_view(), name='topcanais'),
     path('canaismax/', CanaisMaxView.as_view(), name='canaismax'),
+    path('filmes/', FilmesView.as_view(), name='filmes'),
+    path('series/', SeriesView.as_view(), name='series'),
     path('view-film/<int:pk>', ViewFilm.as_view(), name='view-film'),
     path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
     path('view-serie/<int:pk>', ViewSerie.as_view(), name='view-serie'),
     path('collect-filmes/', CollectFilmes.as_view(), name='collect-filmes'),
-    path('filmes/', FilmesView.as_view(), name='filmes'),
     path('collect/', CollectTopCanais.as_view(), name='collect'),
     path('collect-canaismax/', CollectCanaisMax.as_view(), name='collect-canaismax'),
+    path('collect-series/', CollectSeries.as_view(), name='collect-series'),
+    path('collect-serie/<int:pk>', CollectSerie.as_view(), name='collect-serie'),
+    path('collect-canal/<int:pk>', CollectCanal.as_view(), name='collect-canal'),
     path('logout/', auth_views.logout_then_login, name='logout'),
 
-    path('series/', SeriesView.as_view(), name='series'),
-    path('collect-series/', CollectSeries.as_view(), name='collect-series'),
-
+    path('get-json/', get_json, name='get-json'),
 ]

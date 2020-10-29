@@ -1,0 +1,126 @@
+.product-holder {
+    position: relative;
+    display: block;
+}
+
+.plus-image {
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+
+.carousel {
+    margin-bottom: 0;
+    padding: 0 40px 30px 40px;
+}
+
+/* The controlsy */
+.carousel-control {
+    left: -12px;
+    height: 40px;
+    width: 40px;
+    background: none repeat scroll 0 0 #222222;
+    border: 4px solid #FFFFFF;
+    border-radius: 23px 23px 23px 23px;
+    margin-top: 90px;
+}
+
+.carousel-control.right {
+    right: -12px;
+}
+
+/* The indicators */
+.carousel-indicators {
+    right: 50%;
+    top: auto;
+    bottom: -10px;
+    margin-right: -19px;
+}
+
+/* The colour of the indicators */
+.carousel-indicators li {
+    background: #cecece;
+}
+
+.carousel-indicators .active {
+    background: #428bca;
+}
+
+.item a {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+}
+
+.item-channel .info-channel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.item-channel .info-channel img {
+    max-height: 100px;
+    max-width: 100px;
+    display: block;
+    float: left;
+    width: auto !important;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 0 0 5px 0;
+    padding: 5px;
+    transition: .2s all linear;
+}
+
+.item-channel .img-prog-channel {
+    padding: 0;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.item-channel .info-prog-channel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    display: -webkit-box;
+    background-color: rgba(0, 0, 0, .7);
+    text-shadow: 1px 1px 2px #000;
+}
+
+.item-channel .info-prog-channel b {
+    display: -webkit-box;
+    width: 100%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: orange;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.item-channel .info-prog-channel div {
+    display: -webkit-box;
+    width: 100%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

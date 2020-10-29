@@ -4,9 +4,15 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-6">
             <a href="javascript:window.history.back()"
                class="btn btn-default">Voltar</a>
+        </div>
+        <div class="col-xs-6">
+            {% if not canal.category.site.name == 'topcanais' %}
+                <a href="{% url 'collect-canal' canal.pk %}"
+                   class="btn btn-warning pull-right">Update</a>
+            {% endif %}
         </div>
     </div>
     <br/>

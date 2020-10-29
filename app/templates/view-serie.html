@@ -4,9 +4,13 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-xs-12">
-            <a href="javascript:window.history.back()"
+        <div class="col-xs-6">
+            <a href="{% url 'series' %}"
                class="btn btn-default">Voltar</a>
+        </div>
+        <div class="col-xs-6">
+            <a href="{% url 'collect-serie' serie.pk %}"
+               class="btn btn-warning pull-right">Update</a>
         </div>
     </div>
     <br/>

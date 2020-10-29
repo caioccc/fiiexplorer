@@ -1,5 +1,4 @@
 import datetime
-import json
 import logging
 from threading import Thread
 
@@ -10,10 +9,34 @@ from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, TemplateView
 
-from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries
-from app.models import Channel, Site, Filme, Serie
+from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk
+from app.models import Channel, Site, Filme, Serie, Temporada
 
 logging.basicConfig(level=logging.DEBUG)
+
+
+class CollectCanal(DetailView):
+    template_name = 'index.html'
+    model = Channel
+
+    def get(self, request, *args, **kwargs):
+        canal = self.get_object()
+        canal.link_set.all().delete()
+        Thread(target=mineCanalPk, kwargs=dict(pk=canal.pk)).start()
+        return redirect('/view-channel/' + str(canal.pk))
+
+
+class CollectSerie(DetailView):
+    template_name = 'series.html'
+    model = Serie
+
+    def get(self, request, *args, **kwargs):
+        serie = self.get_object()
+        for temp in Temporada.objects.filter(serie=serie):
+            temp.episodio_set.all().delete()
+        serie.temporada_set.all().delete()
+        Thread(target=mineSeriePk, kwargs=dict(pk=serie.pk)).start()
+        return redirect('/view-serie/' + str(serie.pk))
 
 
 class CollectSeries(TemplateView):
@@ -94,6 +117,10 @@ class TopCanaisView(LoginRequiredMixin, ListView):
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        json = request_json()
+        kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
+        kwargs['num_pages'] = len(json)/4
+        kwargs['total_items'] = len(json)
         return super(TopCanaisView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
@@ -160,6 +187,10 @@ class CanaisMaxView(LoginRequiredMixin, ListView):
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        json = request_json()
+        kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
+        kwargs['num_pages'] = len(json) / 4
+        kwargs['total_items'] = len(json)
         return super(CanaisMaxView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
@@ -174,3 +205,17 @@ def get_date_now():
     month = str("0") + str(now.month) if now.month < 10 else now.month
     day = now.day
     return '%s-%s-%s' % (now.year, month, day)
+
+
+def request_json():
+    api_url = 'https://canaismax.com/api/programacao'
+    req = requests.get(api_url)
+    if req.status_code == 200:
+        json = req.json()
+        return json
+    return None
+
+
+def get_json(request):
+    json = request_json()
+    return JsonResponse(json, safe=False)

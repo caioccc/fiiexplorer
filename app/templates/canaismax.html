@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
+{% load filters %}
 {% block content %}
     <style>
         .list_fii_segmento {
@@ -31,6 +31,100 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-default">
+        <div class="box-header">
+            <label class="box-title">
+                Programação Ao Vivo
+            </label>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="Carousel" class="carousel slide" data-ride="carousel">
+
+                        <ol class="carousel-indicators">
+                            {% for page in json %}
+                                <li data-target="#Carousel" data-slide-to="{{ forloop.counter0 }}"
+                                    {% if forloop.counter0 == 0 %}class="active"{% endif %}></li>
+                            {% endfor %}
+                        </ol>
+
+                        <!-- Carousel items -->
+
+                        <div class="carousel-inner">
+                            {% for page in json %}
+                                <div class="item {% if forloop.counter0 == 0 %}active{% endif %}">
+                                    <div class="row">
+                                        {% for item in page %}
+                                            <div class="col-sm-3">
+                                                <div class="item-channel item item-cnl"
+                                                     data-id="{{ item.canalid }}">
+                                                    <a href="#">
+                                                        <div class="info-channel">
+                                                            <img class="owl-lazy"
+                                                                 data-src="{{ item.canal.logoBrancoUrl }}"
+                                                                 alt="{{ item.slug }}"
+                                                                 src="{{ item.canal.logoBrancoUrl|get_image }}"
+                                                                 style="opacity: 1;"/>
+                                                        </div>
+                                                        <div class="img-prog-channel">
+                                                            <img class="owl-lazy"
+                                                                 data-src="{{ item.imagemUrl }}"
+                                                                 alt="{{ item.slug }}"
+                                                                 src="{{ item.imagemUrl|get_image }}"
+                                                                 style="opacity: 1;"/>
+                                                        </div>
+                                                        <div class="info-prog-channel"><b>{{ item.canal.nome }}</b>
+                                                            <div class="prog-atu-pass">{{ item.titulo }}</div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+
+                                    </div><!--.row-->
+                                </div><!--.item-->
+                            {% endfor %}
+
+                        </div><!--.carousel-inner-->
+                        <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                        <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $('#Carousel').carousel({
+                            interval: 5000
+                        })
+                    });
+
+                    setTimeout(attCanais, 5000);
+
+                    function attCanais() {
+
+                        $.ajax({
+                            method: "GET",
+                            url: "{% url 'get-json' %}"
+                        })
+                            .done(function (dados) {
+                                $(dados).each(function (index, data) {
+                                    //console.log(index, data);
+                                    //$(".item-cnl[data-id='" + data.canal._id + "'] .prog-atu-pass").html(data.titulo);
+                                    //$(".item-cnl[data-id='" + data.canal._id + "'] a").attr('href', 'https://canaismax.com/' + data.slug);
+                                    //$(".item-cnl[data-id='" + data.canal._id + "'] .img-prog-channel img").attr("data-src", data.imagemUrl);
+                                    //if ($(".item-cnl[data-id='" + data.canal._id + "'] .img-prog-channel img").attr("src")) {
+                                    //    $(".item-cnl[data-id='" + data.canal._id + "'] .img-prog-channel img").attr("src", data.imagemUrl);
+                                    //}
+                                });
+                                setTimeout(attCanais, 5000);
+                            });
+
+                    }
+                </script>
             </div>
         </div>
     </div>

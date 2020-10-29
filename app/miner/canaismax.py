@@ -1,4 +1,5 @@
 from app.miner.common import Miner
+from app.utils import get_page_bs4, save_link_channel, get_channel_id, get_img_url, make_ids
 from app.models import Channel, Link, Site
 
 
@@ -8,7 +9,7 @@ class CustomMiner(Miner):
         pages = int(category.pages) + 1
         for i in range(1, pages):
             temp_url = self.get_page_url(category.url, 'canaismax', i)
-            page = self.get_page_bs4(temp_url)
+            page = get_page_bs4(temp_url)
             if page:
                 divs_entries = page.select('div.item>div.bloco-canal')
                 print('total_canais', len(divs_entries))
@@ -21,51 +22,25 @@ class CustomMiner(Miner):
                             title = img_tag['title']
                         else:
                             title = ''
-                        if img_tag.has_attr('src'):
-                            img_url = img_tag['src']
-                        elif img_tag.has_attr('data-src'):
-                            img_url = img_tag['data-src']
-                        else:
-                            img_url = ''
-                        second_page = self.get_page_bs4(href)
+                        img_url = get_img_url(img_tag)
+                        second_page = get_page_bs4(href)
                         if second_page:
                             div_links = second_page.find_all('a', attrs={'class': 'cativ'})
-                            channel_id = self.get_channel_id(str(second_page.select('script')[-1].contents[0]))
+                            channel_id = get_channel_id(str(second_page.select('script')[-1].contents[0]))
                             if div_links:
                                 atags = div_links
                                 if len(atags) > 0:
-                                    ids = []
-                                    for a in atags:
-                                        if a.has_attr('data-link'):
-                                            data_id = str(a['data-link'])
-                                            if 'op=' in data_id:
-                                                third_page_temp = self.get_page_bs4(data_id)
-                                                if third_page_temp:
-                                                    div_buttons = third_page_temp.find('div',
-                                                                                       attrs={
-                                                                                           'class': 'buttons-quality'})
-                                                    if div_buttons:
-                                                        novos_links = div_buttons.find_all('a')
-                                                        if len(novos_links) > 0:
-                                                            for alinks_temp in novos_links:
-                                                                if alinks_temp.has_attr('href'):
-                                                                    alink_temp_url = str(alinks_temp['href'])
-                                                                    ids.append(alink_temp_url)
-                                            else:
-                                                print('normal', title)
-                                                ids.append(data_id)
+                                    ids = make_ids(atags)
                                     if len(ids) > 0:
                                         ch = Channel()
                                         ch.title = (title[:230] + '..') if len(title) > 75 else title
                                         ch.img_url = img_url
                                         ch.category = category
                                         ch.channel_id = channel_id
+                                        ch.url_site = str(href)
                                         ch.save()
                                         for id_url in ids:
-                                            link = Link()
-                                            link.url = id_url
-                                            link.channel = ch
-                                            link.save()
+                                            save_link_channel(ch, id_url)
 
     def mine(self):
         try:
@@ -78,11 +53,4 @@ class CustomMiner(Miner):
         except (Exception,):
             return False
 
-    def get_channel_id(self, string_script):
-        api_url = 'https://canaismax.com/api/canal/'
-        if api_url in string_script:
-            ind = string_script.index(api_url) + len(api_url)
-            ind_bar = ind + 24
-            id = string_script[ind:ind_bar]
-            return id
-        return ''
+

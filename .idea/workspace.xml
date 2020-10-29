@@ -20,8 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/stylesh.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/canaismax.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/canaismax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/filmes.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/filmes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/series.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/series.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/topcanais.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/topcanais.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/canaismax.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/canaismax.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/topcanais.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/topcanais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/view-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/view-serie.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-serie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templatetags/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +54,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -69,15 +86,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
+      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
       <recent name="C:\Users\Caio\Documents\fiiexplorer\app\templates" />
       <recent name="C:\Users\Caio\Documents\fiiexplorer\app" />
       <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\static" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,7 +201,8 @@
       <workItem from="1603733367499" duration="6953000" />
       <workItem from="1603792779642" duration="28332000" />
       <workItem from="1603894622313" duration="24820000" />
-      <workItem from="1603923808498" duration="749000" />
+      <workItem from="1603923808498" duration="1437000" />
+      <workItem from="1603973235807" duration="13720000" />
     </task>
     <servers />
   </component>
@@ -215,22 +234,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="786" y="219" width="490" height="507" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1603922294796" />
-    <state width="1323" height="218" key="GridCell.Tab.0.bottom" timestamp="1603923644907">
+    <state width="1323" height="193" key="GridCell.Tab.0.bottom" timestamp="1603990239895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="218" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603923644907" />
-    <state width="1323" height="218" key="GridCell.Tab.0.center" timestamp="1603923644907">
+    <state width="1323" height="193" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603990239895" />
+    <state width="1323" height="193" key="GridCell.Tab.0.center" timestamp="1603990239895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="218" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603923644907" />
-    <state width="1323" height="218" key="GridCell.Tab.0.left" timestamp="1603923644907">
+    <state width="1323" height="193" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603990239895" />
+    <state width="1323" height="193" key="GridCell.Tab.0.left" timestamp="1603990239894">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="218" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603923644907" />
-    <state width="1323" height="218" key="GridCell.Tab.0.right" timestamp="1603923644907">
+    <state width="1323" height="193" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603990239894" />
+    <state width="1323" height="193" key="GridCell.Tab.0.right" timestamp="1603990239895">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="218" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603923644907" />
+    <state width="1323" height="193" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603990239895" />
     <state width="1323" height="218" key="GridCell.Tab.1.bottom" timestamp="1603923644908">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -263,10 +282,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1603920131766" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603896330941">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603991157144">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603896330941" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603991157144" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

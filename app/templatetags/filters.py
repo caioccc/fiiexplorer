@@ -2,6 +2,8 @@ import datetime
 
 from django import template
 
+from app.views import request_json
+
 register = template.Library()
 
 
@@ -11,6 +13,22 @@ def remove_text(text):
         return text
     except (Exception,):
         return ''
+
+
+@register.filter(name='times')
+def times(number):
+    if number:
+        return range(int(number))
+    return None
+
+
+@register.filter
+def get_image(url):
+    url = str(url)
+    if url.startswith('/'):
+        return 'https://canaismax.com' + url
+    else:
+        return url
 
 
 @register.filter
