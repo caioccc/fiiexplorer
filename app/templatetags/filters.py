@@ -23,6 +23,17 @@ def times(number):
 
 
 @register.filter
+def get_text_type(link):
+    uri = str(link.m3u8)
+    if 'sd/' in uri:
+        return 'SD'
+    elif 'hd/' in uri:
+        return 'HD'
+    else:
+        return ''
+
+
+@register.filter
 def get_image(url):
     url = str(url)
     if url.startswith('/'):
