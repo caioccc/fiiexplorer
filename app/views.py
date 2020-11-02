@@ -285,17 +285,15 @@ def generate_m3u(request, pk_canal):
             arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
             arr_tss = re.findall("([^\s]+.ts)", page_str)
             if len(arr_tss) > 0:
-                pass
-                # for i in range(len(arr_tss)):
-                #     site_url = 'http://tvsala.herokuapp.com/'
-                #     page_str = page_str.replace(arr_strings[i],
-                #                                 site_url + 'ts?key=' + str(arr_strings[i]))
+                for i in range(len(arr_tss)):
+                    site_url = 'http://tvsala.herokuapp.com/'
+                    page_str = page_str.replace(arr_strings[i],
+                                                site_url + 'ts?key=' + str(arr_strings[i]))
             elif len(arr_strings_without_http)>0:
-                pass
-                # for i in range(len(arr_strings_without_http)):
-                #     site_url = 'http://tvsala.herokuapp.com/'
-                #     page_str = page_str.replace(arr_strings[i],
-                #                                 site_url + 'ts?key=' + str(arr_strings[i]))
+                for i in range(len(arr_strings_without_http)):
+                    site_url = 'http://tvsala.herokuapp.com/'
+                    page_str = page_str.replace(arr_strings[i],
+                                                site_url + 'ts?key=' + str(arr_strings[i]))
             else:
                 pass
         return HttpResponse(
@@ -315,10 +313,11 @@ def get_other_m3u(request):
         page = BeautifulSoup(req.text, 'html.parser')
         page_str = str(page.contents[0])
         arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
-        for i in range(len(arr_strings)):
-            site_url = 'http://tvsala.herokuapp.com/'
-            page_str = page_str.replace(arr_strings[i],
-                                        site_url + 'ts?key=' + str(arr_strings[i]))
+        if len(arr_strings) > 0:
+            for i in range(len(arr_strings)):
+                site_url = 'http://tvsala.herokuapp.com/'
+                page_str = page_str.replace(arr_strings[i],
+                                            site_url + 'ts?key=' + str(arr_strings[i]))
         return HttpResponse(
             content=page_str,
             status=req.status_code,
