@@ -1,3 +1,5 @@
+import re
+
 from app.miner.common import Miner
 from app.utils import get_page_bs4, save_link_channel, get_channel_id, get_img_url, make_ids
 from app.models import Channel, Link, Site
@@ -12,7 +14,6 @@ class CustomMiner(Miner):
             page = get_page_bs4(temp_url)
             if page:
                 divs_entries = page.select('div.item>div.bloco-canal')
-                print('total_canais', len(divs_entries))
                 if len(divs_entries) > 0:
                     for div in divs_entries:
                         atag = div.find('a')
@@ -43,14 +44,9 @@ class CustomMiner(Miner):
                                             save_link_channel(ch, id_url)
 
     def mine(self):
-        try:
-            Channel.objects.filter(category__site__name='canaismax').delete()
-            Link.objects.filter(channel__category__site__name='canaismax').delete()
-            site = Site.objects.get(name='canaismax')
-            for category in site.categorychannel_set.all():
-                self.extract(category)
-            return True
-        except (Exception,):
-            return False
-
-
+        Channel.objects.filter(category__site__name='canaismax').delete()
+        Link.objects.filter(channel__category__site__name='canaismax').delete()
+        site = Site.objects.get(name='canaismax')
+        for category in site.categorychannel_set.all():
+            self.extract(category)
+        return True

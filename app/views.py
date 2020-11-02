@@ -1,16 +1,19 @@
 import datetime
 import logging
+import re
 from threading import Thread
 
 # Create your views here.
 import requests
+from bs4 import BeautifulSoup
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, TemplateView
 
 from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk
 from app.models import Channel, Site, Filme, Serie, Temporada
+from app.utils import get_page_bs4, get_headers
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -119,7 +122,7 @@ class TopCanaisView(LoginRequiredMixin, ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         json = request_json()
         kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
-        kwargs['num_pages'] = len(json)/4
+        kwargs['num_pages'] = len(json) / 4
         kwargs['total_items'] = len(json)
         return super(TopCanaisView, self).get_context_data(object_list=object_list, **kwargs)
 
@@ -154,7 +157,8 @@ class ViewChannel(LoginRequiredMixin, DetailView):
     def insert_context_data(self, **kwargs):
         if self.get_object().channel_id:
             channel_id = self.get_object().channel_id
-            url = 'https://canaismax.com/api/canal/' + channel_id + '/' + str(get_date_now())
+            today_date = get_date_now()
+            url = 'https://canaismax.com/api/canal/' + channel_id + '/' + str(today_date)
             req = requests.get(url)
             now = round(datetime.datetime.now().timestamp())
             if req.status_code == 200:
@@ -196,14 +200,15 @@ class CanaisMaxView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         if 'q' in self.request.GET:
             return Channel.objects.filter(title__icontains=self.request.GET['q'],
-                                          category__site__name='canaismax')
-        return Channel.objects.filter(category__site__name='canaismax')
+                                          category__site__name='canaismax',
+                                          link__m3u8__icontains='.m3u8').distinct()
+        return Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct()
 
 
 def get_date_now():
     now = datetime.datetime.now()
     month = str("0") + str(now.month) if now.month < 10 else now.month
-    day = now.day
+    day = str("0") + str(now.day) if now.day < 10 else now.day
     return '%s-%s-%s' % (now.year, month, day)
 
 
@@ -219,3 +224,105 @@ def request_json():
 def get_json(request):
     json = request_json()
     return JsonResponse(json, safe=False)
+
+
+def get_ts(request):
+    key = request.GET['key']
+    headers = get_headers()
+    print(key)
+    try:
+        req = requests.get(url=key, stream=True, timeout=60, headers=headers)
+        if req.status_code == 200:
+            return HttpResponse(
+                content=req.content,
+                status=req.status_code,
+                content_type=req.headers['Content-Type']
+            )
+        else:
+            return HttpResponseNotFound("hello")
+    except (Exception,):
+        return HttpResponseNotFound("hello")
+
+
+def check_m3u8_req(uri):
+    try:
+        headers = get_headers()
+        print(uri)
+        req = requests.get(uri, headers=headers)
+        if req.status_code == 200:
+            size = 0
+            for chunk in req.iter_content(256):
+                size += len(chunk)
+                if size > 4096:
+                    return True
+        return False
+    except (Exception,):
+        print('Break ao checar m3u8')
+        return False
+
+
+def generate_m3u(request, pk_canal):
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
+    canal = Channel.objects.get(pk=pk_canal)
+    links = canal.link_set.all()
+    li = links.first()
+    for link in links:
+        if link.m3u8 and link.m3u8 != '':
+            if check_m3u8_req(link.m3u8):
+                li = link
+                break
+    req = requests.get(url=li.m3u8, headers=headers)
+    if req.status_code == 200:
+        page = BeautifulSoup(req.text, 'html.parser')
+        page_str = str(page.contents[0])
+        arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
+        if len(arr_strings) > 0:
+            for i in range(len(arr_strings)):
+                site_url = 'http://localhost:8000/'
+                page_str = page_str.replace(arr_strings[i],
+                                            site_url + 'ts?key=' + str(arr_strings[i]))
+        else:
+            arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
+            arr_tss = re.findall("([^\s]+.ts)", page_str)
+            if len(arr_tss) > 0:
+                pass
+                # for i in range(len(arr_tss)):
+                #     site_url = 'http://localhost:8000/'
+                #     page_str = page_str.replace(arr_strings[i],
+                #                                 site_url + 'ts?key=' + str(arr_strings[i]))
+            elif len(arr_strings_without_http)>0:
+                pass
+                # for i in range(len(arr_strings_without_http)):
+                #     site_url = 'http://localhost:8000/'
+                #     page_str = page_str.replace(arr_strings[i],
+                #                                 site_url + 'ts?key=' + str(arr_strings[i]))
+            else:
+                pass
+        return HttpResponse(
+            content=page_str,
+            status=req.status_code,
+            content_type=req.headers['Content-Type']
+        )
+    else:
+        return HttpResponseNotFound("hello")
+
+
+def get_other_m3u(request):
+    uri_m3u8 = request.GET['uri']
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
+    req = requests.get(url=uri_m3u8, headers=headers)
+    if req.status_code == 200:
+        page = BeautifulSoup(req.text, 'html.parser')
+        page_str = str(page.contents[0])
+        arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
+        for i in range(len(arr_strings)):
+            site_url = 'http://localhost:8000/'
+            page_str = page_str.replace(arr_strings[i],
+                                        site_url + 'ts?key=' + str(arr_strings[i]))
+        return HttpResponse(
+            content=page_str,
+            status=req.status_code,
+            content_type=req.headers['Content-Type']
+        )
+    else:
+        return HttpResponseNotFound("hello")

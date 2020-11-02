@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from app.views import TopCanaisView, ViewChannel, CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, \
-    FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie, CollectSerie, CollectCanal, get_json
+    FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie, CollectSerie, CollectCanal, get_json, generate_m3u, \
+    get_ts, get_other_m3u
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TopCanaisView.as_view(), name='topcanais'),
+    path('', CanaisMaxView.as_view(), name='index'),
+    path('topcanais/', TopCanaisView.as_view(), name='topcanais'),
     path('canaismax/', CanaisMaxView.as_view(), name='canaismax'),
     path('filmes/', FilmesView.as_view(), name='filmes'),
     path('series/', SeriesView.as_view(), name='series'),
@@ -37,4 +39,8 @@ urlpatterns = [
     path('logout/', auth_views.logout_then_login, name='logout'),
 
     path('get-json/', get_json, name='get-json'),
+    path('api/<int:pk_canal>/playlist.m3u8', generate_m3u, name='generate-m3u'),
+    path('ts', get_ts, name='get-ts'),
+    path('api/other/playlist.m3u8', get_other_m3u, name='get-other-m3u'),
+
 ]

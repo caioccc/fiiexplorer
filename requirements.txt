@@ -7,3 +7,4 @@ psycopg2-binary
 whitenoise==2.0.6
 django-ckeditor==5.0.3
 pyimgur
+git+https://github.com/globocom/m3u8

@@ -58,6 +58,7 @@ class Channel(TimeStamped):
 class Link(TimeStamped):
     url = models.TextField(blank=True, null=True)
     channel = models.ForeignKey(Channel, on_delete=models.CASCADE)
+    m3u8 = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.url
@@ -75,7 +76,6 @@ class Filme(TimeStamped):
     imdb = models.TextField(blank=True, null=True)
     tipo = models.TextField(blank=True, null=True)
     url_site = models.TextField(blank=True, null=True)
-
 
     def __str__(self):
         return "%s" % self.title
