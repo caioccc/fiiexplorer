@@ -1,0 +1,245 @@
+#EXTM3U
+#EXTINF:1, tvg-id="1 - Assistir Globo Rio ao vivo" tvg-name="Assistir Globo Rio ao vivo - 1" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="",Assistir Globo Rio ao vivo
+http://tvsala.herokuapp.com/api/1/playlist.m3u8
+#EXTINF:2, tvg-id="2 - Assistir Globo SP ao vivo" tvg-name="Assistir Globo SP ao vivo - 2" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="",Assistir Globo SP ao vivo
+http://tvsala.herokuapp.com/api/2/playlist.m3u8
+#EXTINF:3, tvg-id="3 - Assistir Band HD ao vivo" tvg-name="Assistir Band HD ao vivo - 3" tvg-logo="https://cdn.canaismax.com/assistir-band-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTcwMjJmOWZlOGRmMDM3ZjY2Y2U0NGI3MGU1NzU1NDkucG5n" group-title="",Assistir Band HD ao vivo
+http://tvsala.herokuapp.com/api/3/playlist.m3u8
+#EXTINF:4, tvg-id="4 - Assistir A Fazenda 2020 ao vivo" tvg-name="Assistir A Fazenda 2020 ao vivo - 4" tvg-logo="https://cdn.canaismax.com/assistir-a-fazenda-2020-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM4ZTllMjhjYTdkMWVkNWRjYzQ2YTI0MTU3NmUwNjIucG5n" group-title="",Assistir A Fazenda 2020 ao vivo
+http://tvsala.herokuapp.com/api/4/playlist.m3u8
+#EXTINF:5, tvg-id="5 - Assistir UFC 198 ao vivo" tvg-name="Assistir UFC 198 ao vivo - 5" tvg-logo="https://cdn.canaismax.com/assistir-ufc-198-anderson-silva-x-uriah-hall-ao-vivo-hd-combate/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGQxNDYzNzI5NTFlYzk0MWNlZGVkMjM2MjlhOWE5NmMuanBlZw==" group-title="",Assistir UFC 198 ao vivo
+http://tvsala.herokuapp.com/api/5/playlist.m3u8
+#EXTINF:6, tvg-id="6 - Assistir Rede Record ao vivo" tvg-name="Assistir Rede Record ao vivo - 6" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Assistir Rede Record ao vivo
+http://tvsala.herokuapp.com/api/6/playlist.m3u8
+#EXTINF:7, tvg-id="7 - Assistir SBT HD ao vivo" tvg-name="Assistir SBT HD ao vivo - 7" tvg-logo="https://cdn.canaismax.com/assistir-sbt-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTZkZDdjMTg1YmZlNjQ0OGM1NTBmOTg2NDlmMzI0ZWYucG5n" group-title="",Assistir SBT HD ao vivo
+http://tvsala.herokuapp.com/api/7/playlist.m3u8
+#EXTINF:8, tvg-id="8 - Assistir Viva ao vivo" tvg-name="Assistir Viva ao vivo - 8" tvg-logo="https://cdn.canaismax.com/assistir-canal-viva-ao-vivo-24-online-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTk5NDBhNDE5ZDMwMzJhOTkxZDE3YTY1YTg2NTdlZTAucG5n" group-title="",Assistir Viva ao vivo
+http://tvsala.herokuapp.com/api/8/playlist.m3u8
+#EXTINF:9, tvg-id="9 - Assistir MTV ao vivo" tvg-name="Assistir MTV ao vivo - 9" tvg-logo="https://cdn.canaismax.com/assistir-mtv-gratis-em-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzczMTczMGVhMmQ3NjVhYjY0ZTFkNjkzYjc0ZmE5M2MucG5n" group-title="",Assistir MTV ao vivo
+http://tvsala.herokuapp.com/api/9/playlist.m3u8
+#EXTINF:10, tvg-id="10 - Assistir FOX Premium 1 HD ao vivo" tvg-name="Assistir FOX Premium 1 HD ao vivo - 10" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmU0ODI3ZTZlZTVjOWZjYzk4YTY2NmRiMmY2M2IxYzMucG5n" group-title="",Assistir FOX Premium 1 HD ao vivo
+http://tvsala.herokuapp.com/api/10/playlist.m3u8
+#EXTINF:11, tvg-id="11 - Assistir Fox Sports ao vivo" tvg-name="Assistir Fox Sports ao vivo - 11" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTQ1OTg1YWJhNTAyZGRiNGUwMTAwMTZhNzk5ZWU1ZGEucG5n" group-title="",Assistir Fox Sports ao vivo
+http://tvsala.herokuapp.com/api/11/playlist.m3u8
+#EXTINF:12, tvg-id="12 - Assistir Fox Sports 2 ao vivo" tvg-name="Assistir Fox Sports 2 ao vivo - 12" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-2-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmIwZDk0NzgxMzMyNzcxMzVlODE2ZWRmOTMyNTUxNzAucG5n" group-title="",Assistir Fox Sports 2 ao vivo
+http://tvsala.herokuapp.com/api/12/playlist.m3u8
+#EXTINF:13, tvg-id="13 - Assistir ESPN Brasil HD ao vivo" tvg-name="Assistir ESPN Brasil HD ao vivo - 13" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="",Assistir ESPN Brasil HD ao vivo
+http://tvsala.herokuapp.com/api/13/playlist.m3u8
+#EXTINF:14, tvg-id="14 - Assistir DAZN ao vivo" tvg-name="Assistir DAZN ao vivo - 14" tvg-logo="https://cdn.canaismax.com/assistir-dazn-ao-vivo-canal-dazn-hd-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGUzNzg3ZDNkZjI5OTQ0NTFkMzBhZGZjMzYwZTdlYjUucG5n" group-title="",Assistir DAZN ao vivo
+http://tvsala.herokuapp.com/api/14/playlist.m3u8
+#EXTINF:15, tvg-id="15 - Assistir Multishow HD ao vivo" tvg-name="Assistir Multishow HD ao vivo - 15" tvg-logo="https://cdn.canaismax.com/assistir-multishow-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM1NDM4OWVkZTc1OTBiNjliOTBmMjlhYTNiZjQ2NDcucG5n" group-title="",Assistir Multishow HD ao vivo
+http://tvsala.herokuapp.com/api/15/playlist.m3u8
+#EXTINF:16, tvg-id="16 - Assistir UFC 253 ao vivo" tvg-name="Assistir UFC 253 ao vivo - 16" tvg-logo="https://cdn.canaismax.com/assistir-israel-adesanya-x-paulo-borrachinha-ao-vivo-pelo-ufc-253-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTg0Y2EyOWNlYzY2ZTI4YmU3OTViZWZjNGIxOWRkZDYuanBlZw==" group-title="",Assistir UFC 253 ao vivo
+http://tvsala.herokuapp.com/api/16/playlist.m3u8
+#EXTINF:17, tvg-id="17 - Assistir RedeTV! ao vivo" tvg-name="Assistir RedeTV! ao vivo - 17" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="",Assistir RedeTV! ao vivo
+http://tvsala.herokuapp.com/api/17/playlist.m3u8
+#EXTINF:18, tvg-id="18 - Assistir SporTV HD ao vivo" tvg-name="Assistir SporTV HD ao vivo - 18" tvg-logo="https://cdn.canaismax.com/assistir-sportv-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjE4Y2FmOGM1NGIzNDI2YmYxMjdhYWFkZDIxMWM2MjAucG5n" group-title="",Assistir SporTV HD ao vivo
+http://tvsala.herokuapp.com/api/18/playlist.m3u8
+#EXTINF:19, tvg-id="19 - Assistir SporTV2 HD ao vivo" tvg-name="Assistir SporTV2 HD ao vivo - 19" tvg-logo="https://cdn.canaismax.com/assistir-sportv-2-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWE4YmRhMjJjNzE3Mjc0ZjgyMTEzN2VhYjA5YzA3YjYucG5n" group-title="",Assistir SporTV2 HD ao vivo
+http://tvsala.herokuapp.com/api/19/playlist.m3u8
+#EXTINF:20, tvg-id="20 - Assistir SporTV3 HD ao vivo" tvg-name="Assistir SporTV3 HD ao vivo - 20" tvg-logo="https://cdn.canaismax.com/assistir-sportv-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2NkNWJkZTA2MmExOWUwNDRjYmVlYjU5MGM4ZDMzNjUucG5n" group-title="",Assistir SporTV3 HD ao vivo
+http://tvsala.herokuapp.com/api/20/playlist.m3u8
+#EXTINF:21, tvg-id="21 - Assistir Combate ao vivo" tvg-name="Assistir Combate ao vivo - 21" tvg-logo="https://cdn.canaismax.com/assistir-canal-ufc-combate-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWQwZjE3ZDNlNWQ4MTUxNjg1M2Y3ZDdlNjU4NDdiZGUucG5n" group-title="",Assistir Combate ao vivo
+http://tvsala.herokuapp.com/api/21/playlist.m3u8
+#EXTINF:23, tvg-id="23 - Assistir ESPN ao vivo" tvg-name="Assistir ESPN ao vivo - 23" tvg-logo="https://cdn.canaismax.com/assistir-espn-vivo-online-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjcyYTQ2NTEyODcxMGQ3Njc4MTRjMzY0NzBhM2FiM2MucG5n" group-title="",Assistir ESPN ao vivo
+http://tvsala.herokuapp.com/api/23/playlist.m3u8
+#EXTINF:24, tvg-id="24 - Assistir ESPN 2 HD ao vivo" tvg-name="Assistir ESPN 2 HD ao vivo - 24" tvg-logo="https://cdn.canaismax.com/assistir-espn-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTYzYzQ0ZTM2YmMwZmM3MzQ1ZWZiNTAyZTJjYjZkZWUucG5n" group-title="",Assistir ESPN 2 HD ao vivo
+http://tvsala.herokuapp.com/api/24/playlist.m3u8
+#EXTINF:25, tvg-id="25 - Assistir Espn Extra ao vivo" tvg-name="Assistir Espn Extra ao vivo - 25" tvg-logo="https://cdn.canaismax.com/assistir-espn-extra-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODY1YjU1ZDA0Mzk3YWJkZDYyNTY2NGU3YTliMGI0YTcucG5n" group-title="",Assistir Espn Extra ao vivo
+http://tvsala.herokuapp.com/api/25/playlist.m3u8
+#EXTINF:26, tvg-id="26 - Assistir Globo Nordeste ao vivo" tvg-name="Assistir Globo Nordeste ao vivo - 26" tvg-logo="https://cdn.canaismax.com/assistir-globo-nordeste-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Y2ZGY4MmNlMWQxMzU0ZTZhZDRlYjQzNmQ1NmNjYzYucG5n" group-title="",Assistir Globo Nordeste ao vivo
+http://tvsala.herokuapp.com/api/26/playlist.m3u8
+#EXTINF:27, tvg-id="27 - Assistir Globo MG ao vivo" tvg-name="Assistir Globo MG ao vivo - 27" tvg-logo="https://cdn.canaismax.com/assistir-globo-minas-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjFiM2NhMDhiNTI0MzY4ODk4YTQzZTZmNTM4YTY3YjYucG5n" group-title="",Assistir Globo MG ao vivo
+http://tvsala.herokuapp.com/api/27/playlist.m3u8
+#EXTINF:28, tvg-id="28 - Assistir TLC ao vivo" tvg-name="Assistir TLC ao vivo - 28" tvg-logo="https://cdn.canaismax.com/assistir-tlc-ao-vivo-gratis-em-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5MmFhN2Q2ZDhmYjUyYzgzODAzZGEyNDllYzU2NTIucG5n" group-title="",Assistir TLC ao vivo
+http://tvsala.herokuapp.com/api/28/playlist.m3u8
+#EXTINF:29, tvg-id="29 - Assistir Discovery Home & Health HD ao vivo" tvg-name="Assistir Discovery Home & Health HD ao vivo - 29" tvg-logo="https://cdn.canaismax.com/assistir-discovery-home-and-health-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTcwODc5ODhhODczYjNmMGQ2ZjlhMTc5ZTQzMTVhODQucG5n" group-title="",Assistir Discovery Home & Health HD ao vivo
+http://tvsala.herokuapp.com/api/29/playlist.m3u8
+#EXTINF:30, tvg-id="30 - Assistir GNT HD ao vivo" tvg-name="Assistir GNT HD ao vivo - 30" tvg-logo="https://cdn.canaismax.com/assistir-gnt-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZlNTcxZDllZDU3ODg5MWMzZjBmOWFmMzI0MWE0OTIucG5n" group-title="",Assistir GNT HD ao vivo
+http://tvsala.herokuapp.com/api/30/playlist.m3u8
+#EXTINF:31, tvg-id="31 - Assistir Globo News ao vivo" tvg-name="Assistir Globo News ao vivo - 31" tvg-logo="https://cdn.canaismax.com/assistir-globonews-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjI5MTZhMjczNmEyODc2ZDk3ZWY1NzBlZjA1ZDdkZmYucG5n" group-title="",Assistir Globo News ao vivo
+http://tvsala.herokuapp.com/api/31/playlist.m3u8
+#EXTINF:32, tvg-id="32 - Assistir Universal TV HD ao vivo" tvg-name="Assistir Universal TV HD ao vivo - 32" tvg-logo="https://cdn.canaismax.com/assistir-universal-tv-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDExYmNjMjJhZDQ1YzI2MDE5NDQ4MWM0N2E1MzY5YzkucG5n" group-title="",Assistir Universal TV HD ao vivo
+http://tvsala.herokuapp.com/api/32/playlist.m3u8
+#EXTINF:33, tvg-id="33 - Assistir Warner HD ao vivo" tvg-name="Assistir Warner HD ao vivo - 33" tvg-logo="https://cdn.canaismax.com/assistir-warner-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWUwNGVjZjZkMjNlZjY3MzVhNjE5YjU0ZTllYWQxZGMucG5n" group-title="",Assistir Warner HD ao vivo
+http://tvsala.herokuapp.com/api/33/playlist.m3u8
+#EXTINF:34, tvg-id="34 - Assistir Sony Channel HD ao vivo" tvg-name="Assistir Sony Channel HD ao vivo - 34" tvg-logo="https://cdn.canaismax.com/assistir-canal-sony-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY4ZDYyNmFkZjI1YTI3MTUyZTZkNDNjNDAzMzRkMWMucG5n" group-title="",Assistir Sony Channel HD ao vivo
+http://tvsala.herokuapp.com/api/34/playlist.m3u8
+#EXTINF:35, tvg-id="35 - Assistir Fox HD ao vivo" tvg-name="Assistir Fox HD ao vivo - 35" tvg-logo="https://cdn.canaismax.com/assistir-fox-hd-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIxYjk4NGFiYWE3MTM4MjgxMzE3MjgzNTRlNjFkMmUucG5n" group-title="",Assistir Fox HD ao vivo
+http://tvsala.herokuapp.com/api/35/playlist.m3u8
+#EXTINF:36, tvg-id="36 - Assistir Megapix HD ao vivo" tvg-name="Assistir Megapix HD ao vivo - 36" tvg-logo="https://cdn.canaismax.com/assistir-megapix-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGU4MDBjYWI3OTA1MzMwMWQ1ODllY2NhYmI3MzAwMjIucG5n" group-title="",Assistir Megapix HD ao vivo
+http://tvsala.herokuapp.com/api/36/playlist.m3u8
+#EXTINF:37, tvg-id="37 - Assistir TNT HD ao vivo" tvg-name="Assistir TNT HD ao vivo - 37" tvg-logo="https://cdn.canaismax.com/assistir-canal-tnt-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmEwN2MzNDM0MTViNzZiZjMwMmZkYmVhMzk3NDI4ZWQucG5n" group-title="",Assistir TNT HD ao vivo
+http://tvsala.herokuapp.com/api/37/playlist.m3u8
+#EXTINF:38, tvg-id="38 - Assistir Cinemax HD ao vivo" tvg-name="Assistir Cinemax HD ao vivo - 38" tvg-logo="https://cdn.canaismax.com/assistir-cinemax-hd-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE4MTRkMjRkODFlYWFiMmQxMGRiMTk0YWU3YjhiYTcucG5n" group-title="",Assistir Cinemax HD ao vivo
+http://tvsala.herokuapp.com/api/38/playlist.m3u8
+#EXTINF:39, tvg-id="39 - Assistir HBO ao vivo" tvg-name="Assistir HBO ao vivo - 39" tvg-logo="https://cdn.canaismax.com/assistir-hbo-ao-vivo-hd-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE3NmQzZjliNDBhY2VhYjAwYTdlYTY1ZDRmODU2ODcucG5n" group-title="",Assistir HBO ao vivo
+http://tvsala.herokuapp.com/api/39/playlist.m3u8
+#EXTINF:40, tvg-id="40 - Assistir HBO2 HD ao vivo" tvg-name="Assistir HBO2 HD ao vivo - 40" tvg-logo="https://cdn.canaismax.com/assistir-hbo-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTRiOWI1NGI3YzQ5MjNkYTNjMGYzNTM3YmFmODk0ZDIucG5n" group-title="",Assistir HBO2 HD ao vivo
+http://tvsala.herokuapp.com/api/40/playlist.m3u8
+#EXTINF:41, tvg-id="41 - Assistir HBO Plus HD ao vivo" tvg-name="Assistir HBO Plus HD ao vivo - 41" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-hd-ao-vivo-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTg0MWI1YTRmMDAyYzQ0OGIwNGY2ZWM2MTM4ZDY1MzMucG5n" group-title="",Assistir HBO Plus HD ao vivo
+http://tvsala.herokuapp.com/api/41/playlist.m3u8
+#EXTINF:42, tvg-id="42 - Assistir HBO Plus ao vivo" tvg-name="Assistir HBO Plus ao vivo - 42" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-ao-vivo-24-horas-online-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTg1NjI4YzY3NmFjNDdjNTg3MmQyNDhhM2RkYjZmOGEucG5n" group-title="",Assistir HBO Plus ao vivo
+http://tvsala.herokuapp.com/api/42/playlist.m3u8
+#EXTINF:43, tvg-id="43 - Assistir HBO Family ao vivo" tvg-name="Assistir HBO Family ao vivo - 43" tvg-logo="https://cdn.canaismax.com/assistir-hbo-family-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDlkZWE4YWM0NjgyYTNmMzRmZTQxYmMwZjI4MzJhNDYucG5n" group-title="",Assistir HBO Family ao vivo
+http://tvsala.herokuapp.com/api/43/playlist.m3u8
+#EXTINF:44, tvg-id="44 - Assistir HBO Signature HD ao vivo" tvg-name="Assistir HBO Signature HD ao vivo - 44" tvg-logo="https://cdn.canaismax.com/assistir-hbo-signature-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTNhYWRjMDkxMDM0OGZjZjQzZGVmOTQ4NGU1ZjBmYzQucG5n" group-title="",Assistir HBO Signature HD ao vivo
+http://tvsala.herokuapp.com/api/44/playlist.m3u8
+#EXTINF:45, tvg-id="45 - Assistir HBO Mundi ao vivo" tvg-name="Assistir HBO Mundi ao vivo - 45" tvg-logo="https://cdn.canaismax.com/assistir-hbo-mundi-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTdhNjA2MDlkMzYwNzFkMjI1ZWFlNDIxNTE3NzM5MDEucG5n" group-title="",Assistir HBO Mundi ao vivo
+http://tvsala.herokuapp.com/api/45/playlist.m3u8
+#EXTINF:46, tvg-id="46 - Assistir HBO Xtreme ao vivo" tvg-name="Assistir HBO Xtreme ao vivo - 46" tvg-logo="https://cdn.canaismax.com/assistir-hbo-xtreme-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGUwNTExNGQ3ZjBiY2RiYzZiNTM3MjE5ZTQyZjJmN2IucG5n" group-title="",Assistir HBO Xtreme ao vivo
+http://tvsala.herokuapp.com/api/46/playlist.m3u8
+#EXTINF:47, tvg-id="47 - Assistir MaxPrime ao vivo" tvg-name="Assistir MaxPrime ao vivo - 47" tvg-logo="https://cdn.canaismax.com/assistir-maxprime-ao-vivo-em-hd-sem-travar/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjBkZGQyMDNlYTQzZGExNGJkODcwNzNkYTNjYWY2OTkucG5n" group-title="",Assistir MaxPrime ao vivo
+http://tvsala.herokuapp.com/api/47/playlist.m3u8
+#EXTINF:48, tvg-id="48 - Assistir HBO Pop ao vivo" tvg-name="Assistir HBO Pop ao vivo - 48" tvg-logo="https://cdn.canaismax.com/assistir-hbo-pop-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2M0ZjBjZTM3ZjMyNTBmNDY4NGNjNDkyMjFkNGU0MTkucG5n" group-title="",Assistir HBO Pop ao vivo
+http://tvsala.herokuapp.com/api/48/playlist.m3u8
+#EXTINF:49, tvg-id="49 - Assistir Telecine Premium HD ao vivo" tvg-name="Assistir Telecine Premium HD ao vivo - 49" tvg-logo="https://cdn.canaismax.com/assistir-telecine-premium-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYzOWJkMTc5NTI2NzQ3MGQ4ZDhkZmQ1OTdkZjBhZGYucG5n" group-title="",Assistir Telecine Premium HD ao vivo
+http://tvsala.herokuapp.com/api/49/playlist.m3u8
+#EXTINF:50, tvg-id="50 - Assistir Telecine Action HD ao vivo" tvg-name="Assistir Telecine Action HD ao vivo - 50" tvg-logo="https://cdn.canaismax.com/assistir-telecine-action-ao-vivo-24-hora-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWMzNThhMmIwNjFmYTViODkzY2VhNTQzZGY4YWRjMWEucG5n" group-title="",Assistir Telecine Action HD ao vivo
+http://tvsala.herokuapp.com/api/50/playlist.m3u8
+#EXTINF:51, tvg-id="51 - Assistir Telecine Touch HD ao vivo" tvg-name="Assistir Telecine Touch HD ao vivo - 51" tvg-logo="https://cdn.canaismax.com/assistir-telecine-touch-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODk5YjVmNWYwOGEwYjc2NTllY2Q3ZGRiZWZkNjk3ODUucG5n" group-title="",Assistir Telecine Touch HD ao vivo
+http://tvsala.herokuapp.com/api/51/playlist.m3u8
+#EXTINF:52, tvg-id="52 - Assistir Telecine Fun HD ao vivo" tvg-name="Assistir Telecine Fun HD ao vivo - 52" tvg-logo="https://cdn.canaismax.com/assistir-telecine-fun-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNhMTc5ZmJiZWRhMDc3ZTU2ZGRhN2NjZDEzYjgzNmIucG5n" group-title="",Assistir Telecine Fun HD ao vivo
+http://tvsala.herokuapp.com/api/52/playlist.m3u8
+#EXTINF:53, tvg-id="53 - Assistir Telecine Pipoca HD ao vivo" tvg-name="Assistir Telecine Pipoca HD ao vivo - 53" tvg-logo="https://cdn.canaismax.com/assistir-telecine-pipoca-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzUxNmJiMzk2ODY3ZTJjYmU0MTJkOTJmM2EwMTY0OTYucG5n" group-title="",Assistir Telecine Pipoca HD ao vivo
+http://tvsala.herokuapp.com/api/53/playlist.m3u8
+#EXTINF:54, tvg-id="54 - Assistir Telecine Cult HD ao vivo" tvg-name="Assistir Telecine Cult HD ao vivo - 54" tvg-logo="https://cdn.canaismax.com/assistir-telecine-cult-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDk2NGJlY2FhMGNiZWFlMDBiMmI1N2MyOGY4MTVjZDIucG5n" group-title="",Assistir Telecine Cult HD ao vivo
+http://tvsala.herokuapp.com/api/54/playlist.m3u8
+#EXTINF:55, tvg-id="55 - Assistir Canal Brasil ao vivo" tvg-name="Assistir Canal Brasil ao vivo - 55" tvg-logo="https://cdn.canaismax.com/assistir-canal-brasil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5OTBjZjI2NzQzZjI1NzY2MThhNDExMjE3ZTQyMTQucG5n" group-title="",Assistir Canal Brasil ao vivo
+http://tvsala.herokuapp.com/api/55/playlist.m3u8
+#EXTINF:56, tvg-id="56 - Assistir TCM ao vivo" tvg-name="Assistir TCM ao vivo - 56" tvg-logo="https://cdn.canaismax.com/assistir-tcm-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM0YjRmYmFlODg4MDk4NjliYTkwMTNlZGYxMmFmOTQucG5n" group-title="",Assistir TCM ao vivo
+http://tvsala.herokuapp.com/api/56/playlist.m3u8
+#EXTINF:57, tvg-id="57 - Assistir Space HD ao vivo" tvg-name="Assistir Space HD ao vivo - 57" tvg-logo="https://cdn.canaismax.com/assistir-canal-space-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjUzMTE0YTNmYzBiN2JkMWU2MjkwMjc4YTgxN2NkYTgucG5n" group-title="",Assistir Space HD ao vivo
+http://tvsala.herokuapp.com/api/57/playlist.m3u8
+#EXTINF:58, tvg-id="58 - Assistir AXN HD ao vivo" tvg-name="Assistir AXN HD ao vivo - 58" tvg-logo="https://cdn.canaismax.com/assistir-canal-axn-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIyYjY5MmRhZmJjMGM2Yzk2ZTk5MTIwYWZhMWQwYzgucG5n" group-title="",Assistir AXN HD ao vivo
+http://tvsala.herokuapp.com/api/58/playlist.m3u8
+#EXTINF:59, tvg-id="59 - Assistir Investigação Discovery ao vivo" tvg-name="Assistir Investigação Discovery ao vivo - 59" tvg-logo="https://cdn.canaismax.com/assistir-investigacao-discovery-ao-vivo-discovery-id-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzNlYzNhMzQ1MDViMzNhNjM0YTZiZWY2NTUwNjViOWMucG5n" group-title="",Assistir Investigação Discovery ao vivo
+http://tvsala.herokuapp.com/api/59/playlist.m3u8
+#EXTINF:60, tvg-id="60 - Assistir FX HD ao vivo" tvg-name="Assistir FX HD ao vivo - 60" tvg-logo="https://cdn.canaismax.com/assistir-fx-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmFmMzA5MzYwNWJhNjgyZjQwZDgxOGJhNzA3ODZhY2MucG5n" group-title="",Assistir FX HD ao vivo
+http://tvsala.herokuapp.com/api/60/playlist.m3u8
+#EXTINF:61, tvg-id="61 - Assistir A&E ao vivo" tvg-name="Assistir A&E ao vivo - 61" tvg-logo="https://cdn.canaismax.com/assistir-ae-hd-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTYzZDEyNjg3MzRmYjQ3ZDI1NzBhMmNkZjRkMTBlNDUucG5n" group-title="",Assistir A&E ao vivo
+http://tvsala.herokuapp.com/api/61/playlist.m3u8
+#EXTINF:62, tvg-id="62 - Assistir Lifetime ao vivo" tvg-name="Assistir Lifetime ao vivo - 62" tvg-logo="https://cdn.canaismax.com/assistir-lifetime-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDYzMDlkZDVmZTFlNDMzNWQ0YjAzYjIyMTA5NmY3YzQucG5n" group-title="",Assistir Lifetime ao vivo
+http://tvsala.herokuapp.com/api/62/playlist.m3u8
+#EXTINF:63, tvg-id="63 - Assistir Studio Universal ao vivo" tvg-name="Assistir Studio Universal ao vivo - 63" tvg-logo="https://cdn.canaismax.com/assistir-studio-universal-online-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2I2Yjg2ZmEzMTE2ZDFiY2ZhOTg0ZTY1Yzg2ZDNjMzIucG5n" group-title="",Assistir Studio Universal ao vivo
+http://tvsala.herokuapp.com/api/63/playlist.m3u8
+#EXTINF:64, tvg-id="64 - Assistir Curta! ao vivo" tvg-name="Assistir Curta! ao vivo - 64" tvg-logo="https://cdn.canaismax.com/assistir-curta-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTVhNTI4YWYwOWYwNjExNTMwZjcwNGI2NjFiNTZkMDcucG5n" group-title="",Assistir Curta! ao vivo
+http://tvsala.herokuapp.com/api/64/playlist.m3u8
+#EXTINF:65, tvg-id="65 - Assistir Syfy ao vivo" tvg-name="Assistir Syfy ao vivo - 65" tvg-logo="https://cdn.canaismax.com/assistir-syfy-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTMxNTM5NWVhOGE0MmI3ZmRiM2M4ZmY5ZjRkYzAxODAucG5n" group-title="",Assistir Syfy ao vivo
+http://tvsala.herokuapp.com/api/65/playlist.m3u8
+#EXTINF:66, tvg-id="66 - Assistir FOX Premium 2 HD ao vivo" tvg-name="Assistir FOX Premium 2 HD ao vivo - 66" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-2-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNWE1YmQ2ZmI3ZjJlNjBlZmVhYTdiNjlkMzYzZjNhYWUucG5n" group-title="",Assistir FOX Premium 2 HD ao vivo
+http://tvsala.herokuapp.com/api/66/playlist.m3u8
+#EXTINF:67, tvg-id="67 - Assistir Prime Box Brazil ao vivo" tvg-name="Assistir Prime Box Brazil ao vivo - 67" tvg-logo="https://cdn.canaismax.com/assistir-prime-box-brazil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYTk0OGYxYTM2M2Q4MTFmZDczNjUyOWRmNWZmY2UxYWIucG5n" group-title="",Assistir Prime Box Brazil ao vivo
+http://tvsala.herokuapp.com/api/67/playlist.m3u8
+#EXTINF:68, tvg-id="68 - Assistir Discovery Channel HD ao vivo" tvg-name="Assistir Discovery Channel HD ao vivo - 68" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="",Assistir Discovery Channel HD ao vivo
+http://tvsala.herokuapp.com/api/68/playlist.m3u8
+#EXTINF:69, tvg-id="69 - Assistir Animal Planet ao vivo" tvg-name="Assistir Animal Planet ao vivo - 69" tvg-logo="https://cdn.canaismax.com/assistir-animal-planet-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZiZGVhYjQyODZjOWExMDBiYjAwMzYyYjE4YTYwZDYucG5n" group-title="",Assistir Animal Planet ao vivo
+http://tvsala.herokuapp.com/api/69/playlist.m3u8
+#EXTINF:70, tvg-id="70 - Assistir National Geographic HD ao vivo" tvg-name="Assistir National Geographic HD ao vivo - 70" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGVlMjViNzI0YTRiYTVlZmJmZDZkMDdlYjU5MWMxNzkucG5n" group-title="",Assistir National Geographic HD ao vivo
+http://tvsala.herokuapp.com/api/70/playlist.m3u8
+#EXTINF:71, tvg-id="71 - Assistir National Geographic Wild HD ao vivo" tvg-name="Assistir National Geographic Wild HD ao vivo - 71" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-wild-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmM0MDljODUxZjVmOTljNzRjYzY2NzdjOGZhZjcyYjEucG5n" group-title="",Assistir National Geographic Wild HD ao vivo
+http://tvsala.herokuapp.com/api/71/playlist.m3u8
+#EXTINF:72, tvg-id="72 - Assistir Discovery Civilization ao vivo" tvg-name="Assistir Discovery Civilization ao vivo - 72" tvg-logo="https://cdn.canaismax.com/assistir-discovery-civilization-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODlkNGMwMGNjMGFiYzY1Mzk4MjU4MGRmZjhhMTM1MzAucG5n" group-title="",Assistir Discovery Civilization ao vivo
+http://tvsala.herokuapp.com/api/72/playlist.m3u8
+#EXTINF:73, tvg-id="73 - Assistir Discovery Science ao vivo" tvg-name="Assistir Discovery Science ao vivo - 73" tvg-logo="https://cdn.canaismax.com/assistir-discovery-science-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2NhMzE5NmZlNmU1MmNjMzM0NDMyZDJjZDM3YjdmNjQucG5n" group-title="",Assistir Discovery Science ao vivo
+http://tvsala.herokuapp.com/api/73/playlist.m3u8
+#EXTINF:74, tvg-id="74 - Assistir Discovery Theater HD ao vivo" tvg-name="Assistir Discovery Theater HD ao vivo - 74" tvg-logo="https://cdn.canaismax.com/assistir-discovery-theater-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTVhMjc2YzUyNjE3MmViMDIzNjQwZjI2NTFmNDY5NzUucG5n" group-title="",Assistir Discovery Theater HD ao vivo
+http://tvsala.herokuapp.com/api/74/playlist.m3u8
+#EXTINF:75, tvg-id="75 - Assistir History HD ao vivo" tvg-name="Assistir History HD ao vivo - 75" tvg-logo="https://cdn.canaismax.com/assistir-history-channel-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDM3ZDhkZTc4ZDJjNjFlNmVkNGZhMDFjNDNiMDJkOGMucG5n" group-title="",Assistir History HD ao vivo
+http://tvsala.herokuapp.com/api/75/playlist.m3u8
+#EXTINF:76, tvg-id="76 - Assistir History 2 ao vivo" tvg-name="Assistir History 2 ao vivo - 76" tvg-logo="https://cdn.canaismax.com/assistir-history-2-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzgwNzM0NzBjNTU2YjEyZmUxNTQ5OTgzYTNiMTRhNWMucG5n" group-title="",Assistir History 2 ao vivo
+http://tvsala.herokuapp.com/api/76/playlist.m3u8
+#EXTINF:77, tvg-id="77 - Assistir Gloob HD ao vivo" tvg-name="Assistir Gloob HD ao vivo - 77" tvg-logo="https://cdn.canaismax.com/assistir-gloob-hd-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTczYjg5NTEwZjVjMTY5NTQ1ZjVlNjY5Mjg3ZWZiMTEucG5n" group-title="",Assistir Gloob HD ao vivo
+http://tvsala.herokuapp.com/api/77/playlist.m3u8
+#EXTINF:78, tvg-id="78 - Assistir Discovery Kids ao vivo" tvg-name="Assistir Discovery Kids ao vivo - 78" tvg-logo="https://cdn.canaismax.com/assistir-discovery-kids-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOWE0OGJhMTIyNzk4Y2ZiMjk4ZDJjZjc4ZDE1OGM5YzkucG5n" group-title="",Assistir Discovery Kids ao vivo
+http://tvsala.herokuapp.com/api/78/playlist.m3u8
+#EXTINF:79, tvg-id="79 - Assistir Cartoon Network ao vivo" tvg-name="Assistir Cartoon Network ao vivo - 79" tvg-logo="https://cdn.canaismax.com/assistir-cartoon-network-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDI0Nzk5NjBhNTk0YTAxODlmMWYyZTgyNTVmMjQ0OTEucG5n" group-title="",Assistir Cartoon Network ao vivo
+http://tvsala.herokuapp.com/api/79/playlist.m3u8
+#EXTINF:80, tvg-id="80 - Assistir Gloobinho ao vivo" tvg-name="Assistir Gloobinho ao vivo - 80" tvg-logo="https://cdn.canaismax.com/assistir-gloobinho-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjk3NTZlNzJkYWQxMDViYmU5ZDlmMmFjYmE5OTViMDQucG5n" group-title="",Assistir Gloobinho ao vivo
+http://tvsala.herokuapp.com/api/80/playlist.m3u8
+#EXTINF:81, tvg-id="81 - Assistir Disney XD ao vivo" tvg-name="Assistir Disney XD ao vivo - 81" tvg-logo="https://cdn.canaismax.com/assistir-disney-xd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWNhYzQwODU0YWUwZGM2MTMyMzg3MDNkNDdjOGM5MmYucG5n" group-title="",Assistir Disney XD ao vivo
+http://tvsala.herokuapp.com/api/81/playlist.m3u8
+#EXTINF:82, tvg-id="82 - Assistir Disney Junior ao vivo" tvg-name="Assistir Disney Junior ao vivo - 82" tvg-logo="https://cdn.canaismax.com/assistir-disney-junior-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTMzYzk3ODA0NDQyOGViYTIzYTU4Mzk2OTNjYjA2ZmIucG5n" group-title="",Assistir Disney Junior ao vivo
+http://tvsala.herokuapp.com/api/82/playlist.m3u8
+#EXTINF:83, tvg-id="83 - Assistir Nickelodeon HD ao vivo" tvg-name="Assistir Nickelodeon HD ao vivo - 83" tvg-logo="https://cdn.canaismax.com/assistir-nickelodeon-nick-ao-vivo-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTM3MThhMmM5N2IyMDljNzg1YzFkNGUxNDIzMGE0ZTMucG5n" group-title="",Assistir Nickelodeon HD ao vivo
+http://tvsala.herokuapp.com/api/83/playlist.m3u8
+#EXTINF:84, tvg-id="84 - Assistir Nick Jr. ao vivo" tvg-name="Assistir Nick Jr. ao vivo - 84" tvg-logo="https://cdn.canaismax.com/assistir-nick-jr-ao-vivo-hd-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmNmOGIyMzA3NTY0MmNlY2UyNGI5MWIyMjg3ZDUwMDYucG5n" group-title="",Assistir Nick Jr. ao vivo
+http://tvsala.herokuapp.com/api/84/playlist.m3u8
+#EXTINF:85, tvg-id="85 - Assistir Disney Channel HD ao vivo" tvg-name="Assistir Disney Channel HD ao vivo - 85" tvg-logo="https://cdn.canaismax.com/assistir-disney-channel-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGE2ZTk5OGE4YzRkMTIxYjI2NDQzODk2YTJmNDYyMjYucG5n" group-title="",Assistir Disney Channel HD ao vivo
+http://tvsala.herokuapp.com/api/85/playlist.m3u8
+#EXTINF:86, tvg-id="86 - Assistir BABY TV ao vivo" tvg-name="Assistir BABY TV ao vivo - 86" tvg-logo="https://cdn.canaismax.com/assistir-baby-tv-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGZjMTcxOGY1ZTZlZTJiNjEyNDNiOGQ3MGQ2N2YzZGEucG5n" group-title="",Assistir BABY TV ao vivo
+http://tvsala.herokuapp.com/api/86/playlist.m3u8
+#EXTINF:87, tvg-id="87 - Assistir TV Rá Tim Bum! ao vivo" tvg-name="Assistir TV Rá Tim Bum! ao vivo - 87" tvg-logo="https://cdn.canaismax.com/assistir-tv-ra-tim-bum-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjE4ZmI4NThkNTlkMTczYjI4NjE4MDIxMDQ1ZWZkM2MucG5n" group-title="",Assistir TV Rá Tim Bum! ao vivo
+http://tvsala.herokuapp.com/api/87/playlist.m3u8
+#EXTINF:88, tvg-id="88 - Assistir Tooncast ao vivo" tvg-name="Assistir Tooncast ao vivo - 88" tvg-logo="https://cdn.canaismax.com/assistir-tooncast-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWQ3M2U2ODMzNzk0MjQwNWYxMDk1NzgwYzJhMjFlMjcucG5n" group-title="",Assistir Tooncast ao vivo
+http://tvsala.herokuapp.com/api/88/playlist.m3u8
+#EXTINF:89, tvg-id="89 - Assistir Boomerang ao vivo" tvg-name="Assistir Boomerang ao vivo - 89" tvg-logo="https://cdn.canaismax.com/assistir-boomerang-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzMzNjAyMDFjMDBmNzY2MjEzZWNkYjlmNGZmN2RiZjUucG5n" group-title="",Assistir Boomerang ao vivo
+http://tvsala.herokuapp.com/api/89/playlist.m3u8
+#EXTINF:90, tvg-id="90 - Assistir Nat Geo Kids HD ao vivo" tvg-name="Assistir Nat Geo Kids HD ao vivo - 90" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-kids-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDZlOTcwOTM1YjgyYzRkN2I4MmE4ZjZlMTcwNjNlNDEucG5n" group-title="",Assistir Nat Geo Kids HD ao vivo
+http://tvsala.herokuapp.com/api/90/playlist.m3u8
+#EXTINF:91, tvg-id="91 - Assistir Mais Globosat HD ao vivo" tvg-name="Assistir Mais Globosat HD ao vivo - 91" tvg-logo="https://cdn.canaismax.com/assistir-mais-globosat-hd-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjNjM2FjNGQ0YWNkNGRlMzI0YjVjYzhhNDQ2MzE1ZGIucG5n" group-title="",Assistir Mais Globosat HD ao vivo
+http://tvsala.herokuapp.com/api/91/playlist.m3u8
+#EXTINF:92, tvg-id="92 - Assistir BIS HD ao vivo" tvg-name="Assistir BIS HD ao vivo - 92" tvg-logo="https://cdn.canaismax.com/assistir-bis-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGQwZTk2NDhmYjgyMWQwMjA1NGE2NmViODc2ZGI2ZmEucG5n" group-title="",Assistir BIS HD ao vivo
+http://tvsala.herokuapp.com/api/92/playlist.m3u8
+#EXTINF:93, tvg-id="93 - Assistir truTV HD ao vivo" tvg-name="Assistir truTV HD ao vivo - 93" tvg-logo="https://cdn.canaismax.com/assistir-trutv-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Q4NDE1OGJhYzE4NDc4OTVkODBiMmI1MDRjMjgyMWIucG5n" group-title="",Assistir truTV HD ao vivo
+http://tvsala.herokuapp.com/api/93/playlist.m3u8
+#EXTINF:94, tvg-id="94 - Assistir E! ao vivo" tvg-name="Assistir E! ao vivo - 94" tvg-logo="https://cdn.canaismax.com/assistir-canal-e-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmRkZWMzODg2MzljY2UzMjVmMWJlYTk4MjMwYTBmM2YucG5n" group-title="",Assistir E! ao vivo
+http://tvsala.herokuapp.com/api/94/playlist.m3u8
+#EXTINF:95, tvg-id="95 - Assistir Paramount Channel ao vivo" tvg-name="Assistir Paramount Channel ao vivo - 95" tvg-logo="https://cdn.canaismax.com/assistir-paramount-channel-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2U4MzEwNGUwMWE5OWJiOTc0NjIzNGZjNjkwYjJlNzYucG5n" group-title="",Assistir Paramount Channel ao vivo
+http://tvsala.herokuapp.com/api/95/playlist.m3u8
+#EXTINF:96, tvg-id="96 - Assistir Comedy Central ao vivo" tvg-name="Assistir Comedy Central ao vivo - 96" tvg-logo="https://cdn.canaismax.com/assistir-comedy-central-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmRiMDc4YmJhODRhZTRlNjE1ODEwZGFjMGEwNjA0YzIucG5n" group-title="",Assistir Comedy Central ao vivo
+http://tvsala.herokuapp.com/api/96/playlist.m3u8
+#EXTINF:97, tvg-id="97 - Assistir I.SAT ao vivo" tvg-name="Assistir I.SAT ao vivo - 97" tvg-logo="https://cdn.canaismax.com/assistir-isat-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjc0MjIzNjJmMGVmM2U5NjJlYTM4ODA5YTI2NWJkYTAucG5n" group-title="",Assistir I.SAT ao vivo
+http://tvsala.herokuapp.com/api/97/playlist.m3u8
+#EXTINF:98, tvg-id="98 - Assistir TNT Séries ao vivo" tvg-name="Assistir TNT Séries ao vivo - 98" tvg-logo="https://cdn.canaismax.com/assistir-tnt-series-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzljZWE4YjE5NjU0NmM2MWNhM2Y5OGZlNjkxNTdhZDAucG5n" group-title="",Assistir TNT Séries ao vivo
+http://tvsala.herokuapp.com/api/98/playlist.m3u8
+#EXTINF:99, tvg-id="99 - Assistir Fox Life ao vivo" tvg-name="Assistir Fox Life ao vivo - 99" tvg-logo="https://cdn.canaismax.com/assistir-fox-life-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGJhNzg3OWQ1ZDE1MzQxMmM1NWZmYzA0NzI4NTY2MzcucG5n" group-title="",Assistir Fox Life ao vivo
+http://tvsala.herokuapp.com/api/99/playlist.m3u8
+#EXTINF:100, tvg-id="100 - Assistir TBS HD ao vivo" tvg-name="Assistir TBS HD ao vivo - 100" tvg-logo="https://cdn.canaismax.com/assistir-tbs-hd-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjU4MTdmN2QyM2U0Njc1MjJmM2NhN2E4NzhhNDUzYmMucG5n" group-title="",Assistir TBS HD ao vivo
+http://tvsala.herokuapp.com/api/100/playlist.m3u8
+#EXTINF:101, tvg-id="101 - Assistir Discovery World HD ao vivo" tvg-name="Assistir Discovery World HD ao vivo - 101" tvg-logo="https://cdn.canaismax.com/assistir-discovery-world-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM5ZDBmMzYxZDczNzcwNWQ2NjMzZDQzM2Q0NWJmNTUucG5n" group-title="",Assistir Discovery World HD ao vivo
+http://tvsala.herokuapp.com/api/101/playlist.m3u8
+#EXTINF:102, tvg-id="102 - Assistir Arte 1 ao vivo" tvg-name="Assistir Arte 1 ao vivo - 102" tvg-logo="https://cdn.canaismax.com/assistir-arte-1-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY5Yjg0MTg0YWJhMmI3OGIwZjZmYTkwZWQ1YmJiNGEucG5n" group-title="",Assistir Arte 1 ao vivo
+http://tvsala.herokuapp.com/api/102/playlist.m3u8
+#EXTINF:103, tvg-id="103 - Assistir Off ao vivo" tvg-name="Assistir Off ao vivo - 103" tvg-logo="https://cdn.canaismax.com/assistir-canal-off-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWQ4ZDE2NGFlNThmMTMxYWFjMTMyMjc4ZDAyMDBmOGMucG5n" group-title="",Assistir Off ao vivo
+http://tvsala.herokuapp.com/api/103/playlist.m3u8
+#EXTINF:104, tvg-id="104 - Assistir WooHoo ao vivo" tvg-name="Assistir WooHoo ao vivo - 104" tvg-logo="https://cdn.canaismax.com/assistir-woohoo-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGIzZjQyMmU5MGYxY2JiNWRmOGY5ZDU1ZDczODBkOGUucG5n" group-title="",Assistir WooHoo ao vivo
+http://tvsala.herokuapp.com/api/104/playlist.m3u8
+#EXTINF:105, tvg-id="105 - Assistir Discovery Turbo ao vivo" tvg-name="Assistir Discovery Turbo ao vivo - 105" tvg-logo="https://cdn.canaismax.com/assistir-discovery-turbo-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYxODIyYmUxYzEyYWVlYTcxNTUyOGU0OWJlY2ZjNzAucG5n" group-title="",Assistir Discovery Turbo ao vivo
+http://tvsala.herokuapp.com/api/105/playlist.m3u8
+#EXTINF:106, tvg-id="106 - Assistir Band Sports HD ao vivo" tvg-name="Assistir Band Sports HD ao vivo - 106" tvg-logo="https://cdn.canaismax.com/assistir-band-sports-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODljODJhYzdiNDgxOTBkNDJjMjAyMDU3Yjk5YjM1NGIucG5n" group-title="",Assistir Band Sports HD ao vivo
+http://tvsala.herokuapp.com/api/106/playlist.m3u8
+#EXTINF:107, tvg-id="107 - Assistir FishTV ao vivo" tvg-name="Assistir FishTV ao vivo - 107" tvg-logo="https://cdn.canaismax.com/assistir-fishtv-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZmRjN2JiMDM0OTNmZDEzOTIxYmE1NzUwYTg0NjI5OTAucG5n" group-title="",Assistir FishTV ao vivo
+http://tvsala.herokuapp.com/api/107/playlist.m3u8
+#EXTINF:108, tvg-id="108 - Assistir Globo Rede Bahia ao vivo" tvg-name="Assistir Globo Rede Bahia ao vivo - 108" tvg-logo="https://cdn.canaismax.com/assistir-globo-rede-bahia-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzZhNjhmNzE2MTNiNjg0NjhhZWE2YmRhZWYwODE1MDIucG5n" group-title="",Assistir Globo Rede Bahia ao vivo
+http://tvsala.herokuapp.com/api/108/playlist.m3u8
+#EXTINF:109, tvg-id="109 - Assistir BBB ao vivo" tvg-name="Assistir BBB ao vivo - 109" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",Assistir BBB ao vivo
+http://tvsala.herokuapp.com/api/109/playlist.m3u8
+#EXTINF:110, tvg-id="110 - Assistir Premiere Clubes HD ao vivo" tvg-name="Assistir Premiere Clubes HD ao vivo - 110" tvg-logo="https://cdn.canaismax.com/assistir-premiere-clubes-hd-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDU5MzMxMmMyODJiNDM0MmY1OWIxYzU0YjI1YzQyNmIucG5n" group-title="",Assistir Premiere Clubes HD ao vivo
+http://tvsala.herokuapp.com/api/110/playlist.m3u8
+#EXTINF:111, tvg-id="111 - Assistir Premiere 2 HD ao vivo" tvg-name="Assistir Premiere 2 HD ao vivo - 111" tvg-logo="https://cdn.canaismax.com/assistir-premiere-2-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGYwMmRmN2IyYWVkY2E5YTRhNTVjNjUxNzhkM2IwMTMucG5n" group-title="",Assistir Premiere 2 HD ao vivo
+http://tvsala.herokuapp.com/api/111/playlist.m3u8
+#EXTINF:112, tvg-id="112 - Assistir Premiere 3 HD ao vivo" tvg-name="Assistir Premiere 3 HD ao vivo - 112" tvg-logo="https://cdn.canaismax.com/assistir-premiere-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2ZiOWViNzM3OGFlM2M5ZWFjY2ZiMDkyZTkyMWM0MTkucG5n" group-title="",Assistir Premiere 3 HD ao vivo
+http://tvsala.herokuapp.com/api/112/playlist.m3u8
+#EXTINF:113, tvg-id="113 - Assistir Premiere 4 ao vivo" tvg-name="Assistir Premiere 4 ao vivo - 113" tvg-logo="https://cdn.canaismax.com/assistir-premiere-4-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGM5ZDA4NzVhYmU5Yjg3NzYzNThiNjczMGRhOGMzYWEucG5n" group-title="",Assistir Premiere 4 ao vivo
+http://tvsala.herokuapp.com/api/113/playlist.m3u8
+#EXTINF:114, tvg-id="114 - Assistir Premiere 5 HD ao vivo" tvg-name="Assistir Premiere 5 HD ao vivo - 114" tvg-logo="https://cdn.canaismax.com/assistir-premiere-5-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTE3ZWQ4ODAyYmE4NGRjNzRmOGQwZGUxY2M1Y2JiZmEucG5n" group-title="",Assistir Premiere 5 HD ao vivo
+http://tvsala.herokuapp.com/api/114/playlist.m3u8
+#EXTINF:115, tvg-id="115 - Assistir Premiere 6 ao vivo" tvg-name="Assistir Premiere 6 ao vivo - 115" tvg-logo="https://cdn.canaismax.com/assistir-premiere-6-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGVmM2VkOTg0NDgyMzFiNmIzYzM2MTQyYjczOTI2OTQucG5n" group-title="",Assistir Premiere 6 ao vivo
+http://tvsala.herokuapp.com/api/115/playlist.m3u8
+#EXTINF:116, tvg-id="116 - Assistir Premiere 7 ao vivo" tvg-name="Assistir Premiere 7 ao vivo - 116" tvg-logo="https://cdn.canaismax.com/assistir-premiere-7-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWRiY2U0MTVhZGJmZDgxNGQ5NmQxYjVkYTRmMDY4ZGMucG5n" group-title="",Assistir Premiere 7 ao vivo
+http://tvsala.herokuapp.com/api/116/playlist.m3u8
+#EXTINF:119, tvg-id="119 - Assistir Record News ao vivo" tvg-name="Assistir Record News ao vivo - 119" tvg-logo="https://cdn.canaismax.com/assistir-record-news-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzkwZDljN2MxODI2MDc0YWJhODQyZGYzMTMwYmU2MDQucG5n" group-title="",Assistir Record News ao vivo
+http://tvsala.herokuapp.com/api/119/playlist.m3u8
+#EXTINF:120, tvg-id="120 - Assistir MasterChef 14/07/2020 ao vivo" tvg-name="Assistir MasterChef 14/07/2020 ao vivo - 120" tvg-logo="https://cdn.canaismax.com/assistir-masterchef-14072020-ao-vivo-estreia-online-band/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGY0YjMxZTc4NTg4MmIwZTFkY2Y2MzdhMmIzNWYwMTgucG5n" group-title="",Assistir MasterChef 14/07/2020 ao vivo
+http://tvsala.herokuapp.com/api/120/playlist.m3u8
+#EXTINF:121, tvg-id="121 - Assistir Futura ao vivo" tvg-name="Assistir Futura ao vivo - 121" tvg-logo="https://cdn.canaismax.com/assistir-futura-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmQyMzM2MmJmNWQ1MmQyYTA1YTU3OWNlNzcxMmYxMzYucG5n" group-title="",Assistir Futura ao vivo
+http://tvsala.herokuapp.com/api/121/playlist.m3u8
+#EXTINF:122, tvg-id="122 - Assistir CNT Rio ao vivo" tvg-name="Assistir CNT Rio ao vivo - 122" tvg-logo="https://cdn.canaismax.com/cnt-rio/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYTcyMjJmMTA4ZjMwY2Y5ZWViM2NiM2RlYWRiOTA1YzgucG5n" group-title="",Assistir CNT Rio ao vivo
+http://tvsala.herokuapp.com/api/122/playlist.m3u8
+#EXTINF:123, tvg-id="123 - Assistir TVE ao vivo" tvg-name="Assistir TVE ao vivo - 123" tvg-logo="https://cdn.canaismax.com/assistir-tve-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDM0NDg3YWU0ZWNmZDQ1NDNiZjdmYWY3MzYyNzY3ZTUucG5n" group-title="",Assistir TVE ao vivo
+http://tvsala.herokuapp.com/api/123/playlist.m3u8
+#EXTINF:124, tvg-id="124 - Assistir CNN En Español ao vivo" tvg-name="Assistir CNN En Español ao vivo - 124" tvg-logo="https://cdn.canaismax.com/cnn-en-espanol/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmMyNjEzNGI3MDllZjZjNDlmM2QyYzEyMzk3MmNlY2QucG5n" group-title="",Assistir CNN En Español ao vivo
+http://tvsala.herokuapp.com/api/124/playlist.m3u8
+#EXTINF:125, tvg-id="125 - Assistir Band News HD ao vivo" tvg-name="Assistir Band News HD ao vivo - 125" tvg-logo="https://cdn.canaismax.com/assistir-band-news-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWY5MDNjYmQ2MDhkMjJmZjJkYjE0NzBmN2YyYzdlOTkucG5n" group-title="",Assistir Band News HD ao vivo
+http://tvsala.herokuapp.com/api/125/playlist.m3u8

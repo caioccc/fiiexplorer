@@ -355,3 +355,43 @@ def get_other_m3u(request):
             return HttpResponseNotFound("hello")
     except (Exception,):
         return HttpResponseNotFound("hello")
+
+
+def generate_lista(request):
+    f = open("lista.m3u8", "a")
+    f.truncate(0)
+    f.write("#EXTM3U\n")
+    for ch in Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct():
+        custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(ch.id,
+                                                                                                                 ch.id,
+                                                                                                                 ch.title,
+                                                                                                                 ch.title,
+                                                                                                                 ch.id,
+                                                                                                                 ch.img_url,
+                                                                                                                 '',
+                                                                                                                 ch.title,
+                                                                                                                 custom_m3u8))
+
+    fsock = open("lista.m3u8", "rb")
+    return HttpResponse(fsock, content_type='text')
+
+
+def get_lista_gen(request):
+    f = open("lista.m3u8", "a")
+    f.truncate(0)
+    f.write("#EXTM3U\n")
+    for ch in Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct():
+        custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(ch.id,
+                                                                                                                 ch.id,
+                                                                                                                 ch.title,
+                                                                                                                 ch.title,
+                                                                                                                 ch.id,
+                                                                                                                 ch.img_url,
+                                                                                                                 '',
+                                                                                                                 ch.title,
+                                                                                                                 custom_m3u8))
+
+    fsock = open("lista.m3u8", "rb")
+    return HttpResponse(fsock, content_type='text')

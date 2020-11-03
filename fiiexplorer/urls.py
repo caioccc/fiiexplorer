@@ -18,7 +18,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from app.views import TopCanaisView, ViewChannel, CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, \
     FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie, CollectSerie, CollectCanal, get_json, generate_m3u, \
-    get_ts, get_other_m3u
+    get_ts, get_other_m3u, generate_lista, get_lista_gen
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,5 +42,7 @@ urlpatterns = [
     path('api/<int:pk_canal>/playlist.m3u8', generate_m3u, name='generate-m3u'),
     path('ts', get_ts, name='get-ts'),
     path('api/other/playlist.m3u8', get_other_m3u, name='get-other-m3u'),
+    path('generate-list', generate_lista, name='generate-list'),
+    path('lista.m3u8', get_lista_gen, name='get-lista-gen'),
 
 ]
