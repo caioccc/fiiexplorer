@@ -14,6 +14,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk
 from app.models import Channel, Site, Filme, Serie, Temporada
 from app.utils import get_page_bs4, get_headers
+from fiiexplorer.settings import SITE_URL
 
 logging.basicConfig(level=logging.DEBUG)
 
@@ -152,6 +153,7 @@ class ViewChannel(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         kwargs = self.insert_context_data(**kwargs)
+        kwargs['SITE_URL'] = SITE_URL
         return super(ViewChannel, self).get_context_data(object_list=object_list, **kwargs)
 
     def insert_context_data(self, **kwargs):
@@ -227,7 +229,7 @@ def get_json(request):
 
 
 def get_ts(request):
-    key = request.GET['key']
+    key = request.GET['link']
     headers = get_headers()
     print(key)
     try:
@@ -247,7 +249,6 @@ def get_ts(request):
 def check_m3u8_req(uri):
     try:
         headers = get_headers()
-        print(uri)
         req = requests.get(uri, headers=headers)
         if req.status_code == 200:
             size = 0
@@ -266,62 +267,91 @@ def generate_m3u(request, pk_canal):
     canal = Channel.objects.get(pk=pk_canal)
     links = canal.link_set.all()
     li = links.first()
-    for link in links:
-        if link.m3u8 and link.m3u8 != '':
-            if check_m3u8_req(link.m3u8):
-                li = link
-                break
-    req = requests.get(url=li.m3u8, headers=headers)
-    if req.status_code == 200:
-        page = BeautifulSoup(req.text, 'html.parser')
-        page_str = str(page.contents[0])
-        arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
-        if len(arr_strings) > 0:
-            for i in range(len(arr_strings)):
-                site_url = 'http://tvsala.herokuapp.com/'
-                page_str = page_str.replace(arr_strings[i],
-                                            site_url + 'ts?key=' + str(arr_strings[i]))
-        else:
-            arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
+    try:
+        req = requests.get(url=li.m3u8, headers=headers)
+        if req.status_code == 200:
+            page = BeautifulSoup(req.text, 'html.parser')
+            page_str = str(page.contents[0])
+            arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
             arr_tss = re.findall("([^\s]+.ts)", page_str)
-            if len(arr_tss) > 0:
-                for i in range(len(arr_tss)):
-                    site_url = 'http://tvsala.herokuapp.com/'
+            if len(arr_strings) > 0 and len(arr_tss) > 0:
+                for i in range(len(arr_strings)):
                     page_str = page_str.replace(arr_strings[i],
-                                                site_url + 'ts?key=' + str(arr_strings[i]))
-            elif len(arr_strings_without_http)>0:
-                for i in range(len(arr_strings_without_http)):
-                    site_url = 'http://tvsala.herokuapp.com/'
-                    page_str = page_str.replace(arr_strings[i],
-                                                site_url + 'ts?key=' + str(arr_strings[i]))
+                                                SITE_URL + 'ts?link=' + str(arr_strings[i]))
             else:
-                pass
-        return HttpResponse(
-            content=page_str,
-            status=req.status_code,
-            content_type=req.headers['Content-Type']
-        )
-    else:
+                arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
+                arr_tss = re.findall("([^\s]+.ts)", page_str)
+                if len(arr_tss) > 0:
+                    pass
+                    # for i in range(len(arr_tss)):
+                    #     page_str = page_str.replace(arr_strings[i],
+                    #                                 SITE_URL + 'ts?key=' + str(arr_strings[i]))
+                elif len(arr_strings_without_http) > 0:
+                    for i in range(len(arr_strings_without_http)):
+                        playlist_index = str(li.m3u8).index('playlist.m3u8')
+                        new_uri = str(li.m3u8)[:playlist_index] + str(arr_strings_without_http[i])
+                        page_str = page_str.replace(arr_strings_without_http[i],
+                                                    SITE_URL + 'api/other/playlist.m3u8?uri=' + str(new_uri))
+                else:
+                    pass
+            return HttpResponse(
+                content=page_str,
+                status=req.status_code,
+                content_type=req.headers['Content-Type']
+            )
+        else:
+            return HttpResponseNotFound("hello")
+    except (Exception,):
         return HttpResponseNotFound("hello")
+
+
+def remove_iv(array_uri):
+    for i in range(len(array_uri)):
+        if '",IV' in str(array_uri[i]):
+            index_iv = str(array_uri[i]).index('",IV=')
+            if index_iv >= 0:
+                array_uri[i] = str(array_uri[i])[:index_iv]
+    return array_uri
 
 
 def get_other_m3u(request):
     uri_m3u8 = request.GET['uri']
     headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
-    req = requests.get(url=uri_m3u8, headers=headers)
-    if req.status_code == 200:
-        page = BeautifulSoup(req.text, 'html.parser')
-        page_str = str(page.contents[0])
-        arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
-        if len(arr_strings) > 0:
-            for i in range(len(arr_strings)):
-                site_url = 'http://tvsala.herokuapp.com/'
-                page_str = page_str.replace(arr_strings[i],
-                                            site_url + 'ts?key=' + str(arr_strings[i]))
-        return HttpResponse(
-            content=page_str,
-            status=req.status_code,
-            content_type=req.headers['Content-Type']
-        )
-    else:
+    try:
+        req = requests.get(url=uri_m3u8, headers=headers)
+        if req.status_code == 200:
+            page = BeautifulSoup(req.text, 'html.parser')
+            page_str = str(page.contents[0])
+            arr_strings = remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))
+            if len(arr_strings) > 0:
+                for i in range(len(arr_strings)):
+                    if not 'key?id=' in str(arr_strings[i]):
+                        page_str = page_str.replace(arr_strings[i],
+                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
+                for uri_ts_coded in arr_strings:
+                    if 'key?id=' in str(uri_ts_coded):
+                        page_str = page_str.replace(uri_ts_coded,
+                                                    SITE_URL + 'ts?link=' + str(uri_ts_coded))
+                        break
+            else:
+                arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
+                arr_tss = re.findall("([^\s]+.ts)", page_str)
+                if len(arr_tss) > 0:
+                    for i in range(len(arr_tss)):
+                        page_str = page_str.replace(arr_strings[i],
+                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
+                elif len(arr_strings_without_http) > 0:
+                    for i in range(len(arr_strings_without_http)):
+                        page_str = page_str.replace(arr_strings[i],
+                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
+                else:
+                    pass
+            return HttpResponse(
+                content=page_str,
+                status=req.status_code,
+                content_type=req.headers['Content-Type']
+            )
+        else:
+            return HttpResponseNotFound("hello")
+    except (Exception,):
         return HttpResponseNotFound("hello")

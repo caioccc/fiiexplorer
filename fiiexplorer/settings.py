@@ -24,7 +24,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = '@v=&5vscb6n__paxj#moh#6ze%*_viw+op7w_!=im6kvrr%d)x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -130,3 +130,8 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+if DEBUG:
+    SITE_URL = 'http://localhost:8000/'
+else:
+    SITE_URL = 'http://tvsala.herokuapp.com/'

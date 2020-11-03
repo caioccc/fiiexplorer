@@ -219,7 +219,7 @@
     <script>
         var player = new Clappr.Player({
             parentId: "#Player",
-            source: "http://tvsala.herokuapp.com/api/{{ canal.pk }}/playlist.m3u8",
+            source: "{{ SITE_URL }}"+"api/{{ canal.pk }}/playlist.m3u8",
             width: '100%',
             height: "340px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
@@ -239,7 +239,7 @@
                 var uri = window.location.origin + $(this).data('m3u8');
                 console.log(uri);
                 player.configure({
-                    source: uri,
+                    source: uri
                 });
             });
         });
