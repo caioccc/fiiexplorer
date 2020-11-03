@@ -3,9 +3,15 @@
 {% load filters %}
 
 {% block content %}
-
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js">s</script>
+    <link rel="stylesheet" href='{% static 'css/style-view-channel.css' %}'/>
+    <script src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <script src='//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@latest/dist/hlsjs-playback.min.js'></script>
+    <script type="text/javascript"
+            src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
 
 
     <div class="row">
@@ -34,127 +40,6 @@
     {% if program_1 %}
         <div class="row">
             <div class="col-xs-12">
-                <style>
-                    .bottom-box {
-                        position: relative;
-                        height: 79px;
-                    }
-
-                    .bottom-box .nowProg {
-                        float: left;
-                        width: 140px;
-                        position: relative;
-                        height: 79px;
-                    }
-
-                    .bottom-box .nowProg span.nameprog {
-                        font-size: 14px;
-                        width: 140px;
-                        position: absolute;
-                        left: 150px;
-                        text-align: left;
-                        top: 10px;
-                        font-weight: 700;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1;
-                        -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-
-                    .bottom-box .nowProg span.hourprog {
-                        font-size: 14px;
-                        width: 140px;
-                        position: absolute;
-                        left: 150px;
-                        text-align: left;
-                        bottom: 10px;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1;
-                        -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                    }
-
-                    .bottom-box .nowProg img {
-                        display: block;
-                        width: 100%;
-                        border-radius: 10px;
-                    }
-
-                    .bottom-box .timeline {
-                        position: absolute;
-                        left: 150px;
-                        right: 150px;
-                        top: 50%;
-                        transform: translate(0, -50%);
-                        height: 6px;
-                        background-color: #000;
-                        border: 1px solid #333;
-                        border-radius: 10px;
-                    }
-
-                    .bottom-box .timeline .progress {
-                        background-color: #ffa032;
-                        height: 6px;
-                        border-radius: 10px;
-                        transition: .2s all linear;
-                    }
-
-                    .bottom-box .timeline .pointer-progress {
-                        background-color: #900;
-                        border: #dd4b39 4px solid;
-                        border-radius: 50px;
-                        width: 14px;
-                        height: 14px;
-                        position: absolute;
-                        transition: .2s all linear;
-                        top: -4px;
-                        transform: translate(-7px, 0)
-                    }
-
-                    .bottom-box .nextProg {
-                        float: right;
-                        width: 140px;
-                        position: relative;
-                        height: 79px
-                    }
-
-                    .bottom-box .nextProg span.nameprog {
-                        font-size: 14px;
-                        width: 140px;
-                        position: absolute;
-                        right: 150px;
-                        text-align: right;
-                        top: 10px;
-                        font-weight: 700;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1;
-                        -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
-                        overflow: hidden
-                    }
-
-                    .bottom-box .nextProg span.hourprog {
-                        font-size: 14px;
-                        width: 140px;
-                        position: absolute;
-                        right: 150px;
-                        text-align: right;
-                        bottom: 10px;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1;
-                        -webkit-box-orient: vertical;
-                        text-overflow: ellipsis;
-                        overflow: hidden
-                    }
-
-                    .bottom-box .nextProg img {
-                        display: block;
-                        width: 100%;
-                        border-radius: 10px
-                    }
-                </style>
                 <section class="bottom-box">
                     <section class="nowProg">
                         <span class="nameprog">{{ program_1.titulo }}</span>
@@ -219,13 +104,75 @@
     <script>
         var player = new Clappr.Player({
             parentId: "#Player",
-            source: "{{ SITE_URL }}"+"api/{{ canal.pk }}/playlist.m3u8",
+            source: "{{ SITE_URL }}" + "api/{{ canal.pk }}/playlist.m3u8",
             width: '100%',
             height: "340px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
-            autoPlay: true
+            autoPlay: false,
+            language: 'pt-BR',
+            plugins: [HlsjsPlayback, ChromecastPlugin, LevelSelector, ClapprNerdStats, ClapprStats],
+            clapprNerdStats: {
+                // Optional: provide multiple combination of keyboard shortcuts to show/hide the statistics.
+                // For reference, visit: https://github.com/ccampbell/mousetrap.
+                // Default: ['command+shift+s', 'ctrl+shift+s']
+                shortcut: ['command+shift+s', 'ctrl+shift+s'],
+
+                // Optional: position of the icon to show/hide the statistics.
+                // Values: 'top-right', 'top-left', 'bottom-right', 'bottom-left', 'none'
+                // Default: 'top-right'
+                iconPosition: 'top-right'
+            },
+            levelSelectorConfig: {
+                title: 'Quality',
+                labels: {
+                    2: 'High', // 500kbps
+                    1: 'Med', // 240kbps
+                    0: 'Low', // 120kbps
+                },
+                labelCallback: function (playbackLevel, customLabel) {
+                    return customLabel + playbackLevel.level.height + 'p'; // High 720p
+                }
+            },
+            playback: {
+                preload: 'auto',
+                hlsjsConfig: {
+                    maxBufferLength: 120,
+                    maxMaxBufferLength: 1000,
+                    maxBufferSize: 180 * 1000 * 1000,
+                    maxBufferHole: 0.8
+                }
+            },
+            chromecast: {
+                appId: '9DFB77C0',
+                media: {
+                    type: ChromecastPlugin.None,
+                    title: 'Awesome Hot Air Balloon Slackline',
+                    subtitle: 'You won\'t get much closer to Skylining than this!'
+                }
+            },
+            clapprStats: {
+                // optional: time in miliseconds for each report.
+                runEach: 5 * 1000,
+                // optional: callback function.
+                onReport: (metrics) => {
+                    console.log(JSON.stringify(metrics));
+                },
+                // Fire PERCENTAGE_EVENT when video complete some percentage.
+                onCompletion: [10, 20, 55, 100],
+                // optional: provide an img uri hosted at the same place as your farm
+                // or near of it prefferable 1x1px, without caching.
+                uriToMeasureLatency: "{% static 'img/focus.png' %}",
+                // optional: provide some assets uris hosted at the same place as your farm
+                // or near of it prefferable in an uncompressible file format, without caching.
+                urisToMeasureBandwidth: [
+                    {url: "{% static 'img/photogrid.jpg' %}", timeout: 3000}
+                ],
+                // optional: number of reports between two consecutive bandwidth tests.
+                runBandwidthTestEvery: 10
+            }
         });
-        player.on(Clappr.Events.PLAYER_STOP, playerStop);
+
+        //player.on(Clappr.Events.PLAYER_STOP, playerStop);
 
         function playerStop() {
             location.reload();

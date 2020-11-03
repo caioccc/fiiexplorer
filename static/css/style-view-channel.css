@@ -1,0 +1,119 @@
+.bottom-box {
+    position: relative;
+    height: 79px;
+}
+
+.bottom-box .nowProg {
+    float: left;
+    width: 140px;
+    position: relative;
+    height: 79px;
+}
+
+.bottom-box .nowProg span.nameprog {
+    font-size: 14px;
+    width: 140px;
+    position: absolute;
+    left: 150px;
+    text-align: left;
+    top: 10px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bottom-box .nowProg span.hourprog {
+    font-size: 14px;
+    width: 140px;
+    position: absolute;
+    left: 150px;
+    text-align: left;
+    bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bottom-box .nowProg img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.bottom-box .timeline {
+    position: absolute;
+    left: 150px;
+    right: 150px;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 6px;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.bottom-box .timeline .progress {
+    background-color: #ffa032;
+    height: 6px;
+    border-radius: 10px;
+    transition: .2s all linear;
+}
+
+.bottom-box .timeline .pointer-progress {
+    background-color: #900;
+    border: #dd4b39 4px solid;
+    border-radius: 50px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    transition: .2s all linear;
+    top: -4px;
+    transform: translate(-7px, 0)
+}
+
+.bottom-box .nextProg {
+    float: right;
+    width: 140px;
+    position: relative;
+    height: 79px
+}
+
+.bottom-box .nextProg span.nameprog {
+    font-size: 14px;
+    width: 140px;
+    position: absolute;
+    right: 150px;
+    text-align: right;
+    top: 10px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.bottom-box .nextProg span.hourprog {
+    font-size: 14px;
+    width: 140px;
+    position: absolute;
+    right: 150px;
+    text-align: right;
+    bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.bottom-box .nextProg img {
+    display: block;
+    width: 100%;
+    border-radius: 10px
+}
