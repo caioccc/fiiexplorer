@@ -1,245 +1,573 @@
 #EXTM3U
-#EXTINF:1, tvg-id="1 - Assistir Globo Rio ao vivo" tvg-name="Assistir Globo Rio ao vivo - 1" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="",Assistir Globo Rio ao vivo
-http://tvsala.herokuapp.com/api/1/playlist.m3u8
-#EXTINF:2, tvg-id="2 - Assistir Globo SP ao vivo" tvg-name="Assistir Globo SP ao vivo - 2" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="",Assistir Globo SP ao vivo
-http://tvsala.herokuapp.com/api/2/playlist.m3u8
-#EXTINF:3, tvg-id="3 - Assistir Band HD ao vivo" tvg-name="Assistir Band HD ao vivo - 3" tvg-logo="https://cdn.canaismax.com/assistir-band-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTcwMjJmOWZlOGRmMDM3ZjY2Y2U0NGI3MGU1NzU1NDkucG5n" group-title="",Assistir Band HD ao vivo
-http://tvsala.herokuapp.com/api/3/playlist.m3u8
-#EXTINF:4, tvg-id="4 - Assistir A Fazenda 2020 ao vivo" tvg-name="Assistir A Fazenda 2020 ao vivo - 4" tvg-logo="https://cdn.canaismax.com/assistir-a-fazenda-2020-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM4ZTllMjhjYTdkMWVkNWRjYzQ2YTI0MTU3NmUwNjIucG5n" group-title="",Assistir A Fazenda 2020 ao vivo
-http://tvsala.herokuapp.com/api/4/playlist.m3u8
-#EXTINF:5, tvg-id="5 - Assistir UFC 198 ao vivo" tvg-name="Assistir UFC 198 ao vivo - 5" tvg-logo="https://cdn.canaismax.com/assistir-ufc-198-anderson-silva-x-uriah-hall-ao-vivo-hd-combate/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGQxNDYzNzI5NTFlYzk0MWNlZGVkMjM2MjlhOWE5NmMuanBlZw==" group-title="",Assistir UFC 198 ao vivo
-http://tvsala.herokuapp.com/api/5/playlist.m3u8
-#EXTINF:6, tvg-id="6 - Assistir Rede Record ao vivo" tvg-name="Assistir Rede Record ao vivo - 6" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Assistir Rede Record ao vivo
-http://tvsala.herokuapp.com/api/6/playlist.m3u8
-#EXTINF:7, tvg-id="7 - Assistir SBT HD ao vivo" tvg-name="Assistir SBT HD ao vivo - 7" tvg-logo="https://cdn.canaismax.com/assistir-sbt-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTZkZDdjMTg1YmZlNjQ0OGM1NTBmOTg2NDlmMzI0ZWYucG5n" group-title="",Assistir SBT HD ao vivo
-http://tvsala.herokuapp.com/api/7/playlist.m3u8
-#EXTINF:8, tvg-id="8 - Assistir Viva ao vivo" tvg-name="Assistir Viva ao vivo - 8" tvg-logo="https://cdn.canaismax.com/assistir-canal-viva-ao-vivo-24-online-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTk5NDBhNDE5ZDMwMzJhOTkxZDE3YTY1YTg2NTdlZTAucG5n" group-title="",Assistir Viva ao vivo
-http://tvsala.herokuapp.com/api/8/playlist.m3u8
-#EXTINF:9, tvg-id="9 - Assistir MTV ao vivo" tvg-name="Assistir MTV ao vivo - 9" tvg-logo="https://cdn.canaismax.com/assistir-mtv-gratis-em-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzczMTczMGVhMmQ3NjVhYjY0ZTFkNjkzYjc0ZmE5M2MucG5n" group-title="",Assistir MTV ao vivo
-http://tvsala.herokuapp.com/api/9/playlist.m3u8
-#EXTINF:10, tvg-id="10 - Assistir FOX Premium 1 HD ao vivo" tvg-name="Assistir FOX Premium 1 HD ao vivo - 10" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmU0ODI3ZTZlZTVjOWZjYzk4YTY2NmRiMmY2M2IxYzMucG5n" group-title="",Assistir FOX Premium 1 HD ao vivo
-http://tvsala.herokuapp.com/api/10/playlist.m3u8
-#EXTINF:11, tvg-id="11 - Assistir Fox Sports ao vivo" tvg-name="Assistir Fox Sports ao vivo - 11" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTQ1OTg1YWJhNTAyZGRiNGUwMTAwMTZhNzk5ZWU1ZGEucG5n" group-title="",Assistir Fox Sports ao vivo
-http://tvsala.herokuapp.com/api/11/playlist.m3u8
-#EXTINF:12, tvg-id="12 - Assistir Fox Sports 2 ao vivo" tvg-name="Assistir Fox Sports 2 ao vivo - 12" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-2-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmIwZDk0NzgxMzMyNzcxMzVlODE2ZWRmOTMyNTUxNzAucG5n" group-title="",Assistir Fox Sports 2 ao vivo
-http://tvsala.herokuapp.com/api/12/playlist.m3u8
-#EXTINF:13, tvg-id="13 - Assistir ESPN Brasil HD ao vivo" tvg-name="Assistir ESPN Brasil HD ao vivo - 13" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="",Assistir ESPN Brasil HD ao vivo
-http://tvsala.herokuapp.com/api/13/playlist.m3u8
-#EXTINF:14, tvg-id="14 - Assistir DAZN ao vivo" tvg-name="Assistir DAZN ao vivo - 14" tvg-logo="https://cdn.canaismax.com/assistir-dazn-ao-vivo-canal-dazn-hd-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGUzNzg3ZDNkZjI5OTQ0NTFkMzBhZGZjMzYwZTdlYjUucG5n" group-title="",Assistir DAZN ao vivo
-http://tvsala.herokuapp.com/api/14/playlist.m3u8
-#EXTINF:15, tvg-id="15 - Assistir Multishow HD ao vivo" tvg-name="Assistir Multishow HD ao vivo - 15" tvg-logo="https://cdn.canaismax.com/assistir-multishow-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM1NDM4OWVkZTc1OTBiNjliOTBmMjlhYTNiZjQ2NDcucG5n" group-title="",Assistir Multishow HD ao vivo
-http://tvsala.herokuapp.com/api/15/playlist.m3u8
-#EXTINF:16, tvg-id="16 - Assistir UFC 253 ao vivo" tvg-name="Assistir UFC 253 ao vivo - 16" tvg-logo="https://cdn.canaismax.com/assistir-israel-adesanya-x-paulo-borrachinha-ao-vivo-pelo-ufc-253-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTg0Y2EyOWNlYzY2ZTI4YmU3OTViZWZjNGIxOWRkZDYuanBlZw==" group-title="",Assistir UFC 253 ao vivo
-http://tvsala.herokuapp.com/api/16/playlist.m3u8
-#EXTINF:17, tvg-id="17 - Assistir RedeTV! ao vivo" tvg-name="Assistir RedeTV! ao vivo - 17" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="",Assistir RedeTV! ao vivo
-http://tvsala.herokuapp.com/api/17/playlist.m3u8
-#EXTINF:18, tvg-id="18 - Assistir SporTV HD ao vivo" tvg-name="Assistir SporTV HD ao vivo - 18" tvg-logo="https://cdn.canaismax.com/assistir-sportv-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjE4Y2FmOGM1NGIzNDI2YmYxMjdhYWFkZDIxMWM2MjAucG5n" group-title="",Assistir SporTV HD ao vivo
-http://tvsala.herokuapp.com/api/18/playlist.m3u8
-#EXTINF:19, tvg-id="19 - Assistir SporTV2 HD ao vivo" tvg-name="Assistir SporTV2 HD ao vivo - 19" tvg-logo="https://cdn.canaismax.com/assistir-sportv-2-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWE4YmRhMjJjNzE3Mjc0ZjgyMTEzN2VhYjA5YzA3YjYucG5n" group-title="",Assistir SporTV2 HD ao vivo
-http://tvsala.herokuapp.com/api/19/playlist.m3u8
-#EXTINF:20, tvg-id="20 - Assistir SporTV3 HD ao vivo" tvg-name="Assistir SporTV3 HD ao vivo - 20" tvg-logo="https://cdn.canaismax.com/assistir-sportv-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2NkNWJkZTA2MmExOWUwNDRjYmVlYjU5MGM4ZDMzNjUucG5n" group-title="",Assistir SporTV3 HD ao vivo
-http://tvsala.herokuapp.com/api/20/playlist.m3u8
-#EXTINF:21, tvg-id="21 - Assistir Combate ao vivo" tvg-name="Assistir Combate ao vivo - 21" tvg-logo="https://cdn.canaismax.com/assistir-canal-ufc-combate-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWQwZjE3ZDNlNWQ4MTUxNjg1M2Y3ZDdlNjU4NDdiZGUucG5n" group-title="",Assistir Combate ao vivo
-http://tvsala.herokuapp.com/api/21/playlist.m3u8
-#EXTINF:23, tvg-id="23 - Assistir ESPN ao vivo" tvg-name="Assistir ESPN ao vivo - 23" tvg-logo="https://cdn.canaismax.com/assistir-espn-vivo-online-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjcyYTQ2NTEyODcxMGQ3Njc4MTRjMzY0NzBhM2FiM2MucG5n" group-title="",Assistir ESPN ao vivo
-http://tvsala.herokuapp.com/api/23/playlist.m3u8
-#EXTINF:24, tvg-id="24 - Assistir ESPN 2 HD ao vivo" tvg-name="Assistir ESPN 2 HD ao vivo - 24" tvg-logo="https://cdn.canaismax.com/assistir-espn-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTYzYzQ0ZTM2YmMwZmM3MzQ1ZWZiNTAyZTJjYjZkZWUucG5n" group-title="",Assistir ESPN 2 HD ao vivo
-http://tvsala.herokuapp.com/api/24/playlist.m3u8
-#EXTINF:25, tvg-id="25 - Assistir Espn Extra ao vivo" tvg-name="Assistir Espn Extra ao vivo - 25" tvg-logo="https://cdn.canaismax.com/assistir-espn-extra-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODY1YjU1ZDA0Mzk3YWJkZDYyNTY2NGU3YTliMGI0YTcucG5n" group-title="",Assistir Espn Extra ao vivo
-http://tvsala.herokuapp.com/api/25/playlist.m3u8
-#EXTINF:26, tvg-id="26 - Assistir Globo Nordeste ao vivo" tvg-name="Assistir Globo Nordeste ao vivo - 26" tvg-logo="https://cdn.canaismax.com/assistir-globo-nordeste-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Y2ZGY4MmNlMWQxMzU0ZTZhZDRlYjQzNmQ1NmNjYzYucG5n" group-title="",Assistir Globo Nordeste ao vivo
-http://tvsala.herokuapp.com/api/26/playlist.m3u8
-#EXTINF:27, tvg-id="27 - Assistir Globo MG ao vivo" tvg-name="Assistir Globo MG ao vivo - 27" tvg-logo="https://cdn.canaismax.com/assistir-globo-minas-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjFiM2NhMDhiNTI0MzY4ODk4YTQzZTZmNTM4YTY3YjYucG5n" group-title="",Assistir Globo MG ao vivo
-http://tvsala.herokuapp.com/api/27/playlist.m3u8
-#EXTINF:28, tvg-id="28 - Assistir TLC ao vivo" tvg-name="Assistir TLC ao vivo - 28" tvg-logo="https://cdn.canaismax.com/assistir-tlc-ao-vivo-gratis-em-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5MmFhN2Q2ZDhmYjUyYzgzODAzZGEyNDllYzU2NTIucG5n" group-title="",Assistir TLC ao vivo
-http://tvsala.herokuapp.com/api/28/playlist.m3u8
-#EXTINF:29, tvg-id="29 - Assistir Discovery Home & Health HD ao vivo" tvg-name="Assistir Discovery Home & Health HD ao vivo - 29" tvg-logo="https://cdn.canaismax.com/assistir-discovery-home-and-health-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTcwODc5ODhhODczYjNmMGQ2ZjlhMTc5ZTQzMTVhODQucG5n" group-title="",Assistir Discovery Home & Health HD ao vivo
-http://tvsala.herokuapp.com/api/29/playlist.m3u8
-#EXTINF:30, tvg-id="30 - Assistir GNT HD ao vivo" tvg-name="Assistir GNT HD ao vivo - 30" tvg-logo="https://cdn.canaismax.com/assistir-gnt-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZlNTcxZDllZDU3ODg5MWMzZjBmOWFmMzI0MWE0OTIucG5n" group-title="",Assistir GNT HD ao vivo
-http://tvsala.herokuapp.com/api/30/playlist.m3u8
-#EXTINF:31, tvg-id="31 - Assistir Globo News ao vivo" tvg-name="Assistir Globo News ao vivo - 31" tvg-logo="https://cdn.canaismax.com/assistir-globonews-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjI5MTZhMjczNmEyODc2ZDk3ZWY1NzBlZjA1ZDdkZmYucG5n" group-title="",Assistir Globo News ao vivo
-http://tvsala.herokuapp.com/api/31/playlist.m3u8
-#EXTINF:32, tvg-id="32 - Assistir Universal TV HD ao vivo" tvg-name="Assistir Universal TV HD ao vivo - 32" tvg-logo="https://cdn.canaismax.com/assistir-universal-tv-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDExYmNjMjJhZDQ1YzI2MDE5NDQ4MWM0N2E1MzY5YzkucG5n" group-title="",Assistir Universal TV HD ao vivo
-http://tvsala.herokuapp.com/api/32/playlist.m3u8
-#EXTINF:33, tvg-id="33 - Assistir Warner HD ao vivo" tvg-name="Assistir Warner HD ao vivo - 33" tvg-logo="https://cdn.canaismax.com/assistir-warner-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWUwNGVjZjZkMjNlZjY3MzVhNjE5YjU0ZTllYWQxZGMucG5n" group-title="",Assistir Warner HD ao vivo
-http://tvsala.herokuapp.com/api/33/playlist.m3u8
-#EXTINF:34, tvg-id="34 - Assistir Sony Channel HD ao vivo" tvg-name="Assistir Sony Channel HD ao vivo - 34" tvg-logo="https://cdn.canaismax.com/assistir-canal-sony-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY4ZDYyNmFkZjI1YTI3MTUyZTZkNDNjNDAzMzRkMWMucG5n" group-title="",Assistir Sony Channel HD ao vivo
-http://tvsala.herokuapp.com/api/34/playlist.m3u8
-#EXTINF:35, tvg-id="35 - Assistir Fox HD ao vivo" tvg-name="Assistir Fox HD ao vivo - 35" tvg-logo="https://cdn.canaismax.com/assistir-fox-hd-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIxYjk4NGFiYWE3MTM4MjgxMzE3MjgzNTRlNjFkMmUucG5n" group-title="",Assistir Fox HD ao vivo
-http://tvsala.herokuapp.com/api/35/playlist.m3u8
-#EXTINF:36, tvg-id="36 - Assistir Megapix HD ao vivo" tvg-name="Assistir Megapix HD ao vivo - 36" tvg-logo="https://cdn.canaismax.com/assistir-megapix-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGU4MDBjYWI3OTA1MzMwMWQ1ODllY2NhYmI3MzAwMjIucG5n" group-title="",Assistir Megapix HD ao vivo
-http://tvsala.herokuapp.com/api/36/playlist.m3u8
-#EXTINF:37, tvg-id="37 - Assistir TNT HD ao vivo" tvg-name="Assistir TNT HD ao vivo - 37" tvg-logo="https://cdn.canaismax.com/assistir-canal-tnt-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmEwN2MzNDM0MTViNzZiZjMwMmZkYmVhMzk3NDI4ZWQucG5n" group-title="",Assistir TNT HD ao vivo
-http://tvsala.herokuapp.com/api/37/playlist.m3u8
-#EXTINF:38, tvg-id="38 - Assistir Cinemax HD ao vivo" tvg-name="Assistir Cinemax HD ao vivo - 38" tvg-logo="https://cdn.canaismax.com/assistir-cinemax-hd-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE4MTRkMjRkODFlYWFiMmQxMGRiMTk0YWU3YjhiYTcucG5n" group-title="",Assistir Cinemax HD ao vivo
-http://tvsala.herokuapp.com/api/38/playlist.m3u8
-#EXTINF:39, tvg-id="39 - Assistir HBO ao vivo" tvg-name="Assistir HBO ao vivo - 39" tvg-logo="https://cdn.canaismax.com/assistir-hbo-ao-vivo-hd-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE3NmQzZjliNDBhY2VhYjAwYTdlYTY1ZDRmODU2ODcucG5n" group-title="",Assistir HBO ao vivo
-http://tvsala.herokuapp.com/api/39/playlist.m3u8
-#EXTINF:40, tvg-id="40 - Assistir HBO2 HD ao vivo" tvg-name="Assistir HBO2 HD ao vivo - 40" tvg-logo="https://cdn.canaismax.com/assistir-hbo-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTRiOWI1NGI3YzQ5MjNkYTNjMGYzNTM3YmFmODk0ZDIucG5n" group-title="",Assistir HBO2 HD ao vivo
-http://tvsala.herokuapp.com/api/40/playlist.m3u8
-#EXTINF:41, tvg-id="41 - Assistir HBO Plus HD ao vivo" tvg-name="Assistir HBO Plus HD ao vivo - 41" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-hd-ao-vivo-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTg0MWI1YTRmMDAyYzQ0OGIwNGY2ZWM2MTM4ZDY1MzMucG5n" group-title="",Assistir HBO Plus HD ao vivo
-http://tvsala.herokuapp.com/api/41/playlist.m3u8
-#EXTINF:42, tvg-id="42 - Assistir HBO Plus ao vivo" tvg-name="Assistir HBO Plus ao vivo - 42" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-ao-vivo-24-horas-online-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTg1NjI4YzY3NmFjNDdjNTg3MmQyNDhhM2RkYjZmOGEucG5n" group-title="",Assistir HBO Plus ao vivo
-http://tvsala.herokuapp.com/api/42/playlist.m3u8
-#EXTINF:43, tvg-id="43 - Assistir HBO Family ao vivo" tvg-name="Assistir HBO Family ao vivo - 43" tvg-logo="https://cdn.canaismax.com/assistir-hbo-family-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDlkZWE4YWM0NjgyYTNmMzRmZTQxYmMwZjI4MzJhNDYucG5n" group-title="",Assistir HBO Family ao vivo
-http://tvsala.herokuapp.com/api/43/playlist.m3u8
-#EXTINF:44, tvg-id="44 - Assistir HBO Signature HD ao vivo" tvg-name="Assistir HBO Signature HD ao vivo - 44" tvg-logo="https://cdn.canaismax.com/assistir-hbo-signature-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTNhYWRjMDkxMDM0OGZjZjQzZGVmOTQ4NGU1ZjBmYzQucG5n" group-title="",Assistir HBO Signature HD ao vivo
-http://tvsala.herokuapp.com/api/44/playlist.m3u8
-#EXTINF:45, tvg-id="45 - Assistir HBO Mundi ao vivo" tvg-name="Assistir HBO Mundi ao vivo - 45" tvg-logo="https://cdn.canaismax.com/assistir-hbo-mundi-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTdhNjA2MDlkMzYwNzFkMjI1ZWFlNDIxNTE3NzM5MDEucG5n" group-title="",Assistir HBO Mundi ao vivo
-http://tvsala.herokuapp.com/api/45/playlist.m3u8
-#EXTINF:46, tvg-id="46 - Assistir HBO Xtreme ao vivo" tvg-name="Assistir HBO Xtreme ao vivo - 46" tvg-logo="https://cdn.canaismax.com/assistir-hbo-xtreme-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGUwNTExNGQ3ZjBiY2RiYzZiNTM3MjE5ZTQyZjJmN2IucG5n" group-title="",Assistir HBO Xtreme ao vivo
-http://tvsala.herokuapp.com/api/46/playlist.m3u8
-#EXTINF:47, tvg-id="47 - Assistir MaxPrime ao vivo" tvg-name="Assistir MaxPrime ao vivo - 47" tvg-logo="https://cdn.canaismax.com/assistir-maxprime-ao-vivo-em-hd-sem-travar/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjBkZGQyMDNlYTQzZGExNGJkODcwNzNkYTNjYWY2OTkucG5n" group-title="",Assistir MaxPrime ao vivo
-http://tvsala.herokuapp.com/api/47/playlist.m3u8
-#EXTINF:48, tvg-id="48 - Assistir HBO Pop ao vivo" tvg-name="Assistir HBO Pop ao vivo - 48" tvg-logo="https://cdn.canaismax.com/assistir-hbo-pop-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2M0ZjBjZTM3ZjMyNTBmNDY4NGNjNDkyMjFkNGU0MTkucG5n" group-title="",Assistir HBO Pop ao vivo
-http://tvsala.herokuapp.com/api/48/playlist.m3u8
-#EXTINF:49, tvg-id="49 - Assistir Telecine Premium HD ao vivo" tvg-name="Assistir Telecine Premium HD ao vivo - 49" tvg-logo="https://cdn.canaismax.com/assistir-telecine-premium-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYzOWJkMTc5NTI2NzQ3MGQ4ZDhkZmQ1OTdkZjBhZGYucG5n" group-title="",Assistir Telecine Premium HD ao vivo
-http://tvsala.herokuapp.com/api/49/playlist.m3u8
-#EXTINF:50, tvg-id="50 - Assistir Telecine Action HD ao vivo" tvg-name="Assistir Telecine Action HD ao vivo - 50" tvg-logo="https://cdn.canaismax.com/assistir-telecine-action-ao-vivo-24-hora-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWMzNThhMmIwNjFmYTViODkzY2VhNTQzZGY4YWRjMWEucG5n" group-title="",Assistir Telecine Action HD ao vivo
-http://tvsala.herokuapp.com/api/50/playlist.m3u8
-#EXTINF:51, tvg-id="51 - Assistir Telecine Touch HD ao vivo" tvg-name="Assistir Telecine Touch HD ao vivo - 51" tvg-logo="https://cdn.canaismax.com/assistir-telecine-touch-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODk5YjVmNWYwOGEwYjc2NTllY2Q3ZGRiZWZkNjk3ODUucG5n" group-title="",Assistir Telecine Touch HD ao vivo
-http://tvsala.herokuapp.com/api/51/playlist.m3u8
-#EXTINF:52, tvg-id="52 - Assistir Telecine Fun HD ao vivo" tvg-name="Assistir Telecine Fun HD ao vivo - 52" tvg-logo="https://cdn.canaismax.com/assistir-telecine-fun-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNhMTc5ZmJiZWRhMDc3ZTU2ZGRhN2NjZDEzYjgzNmIucG5n" group-title="",Assistir Telecine Fun HD ao vivo
-http://tvsala.herokuapp.com/api/52/playlist.m3u8
-#EXTINF:53, tvg-id="53 - Assistir Telecine Pipoca HD ao vivo" tvg-name="Assistir Telecine Pipoca HD ao vivo - 53" tvg-logo="https://cdn.canaismax.com/assistir-telecine-pipoca-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzUxNmJiMzk2ODY3ZTJjYmU0MTJkOTJmM2EwMTY0OTYucG5n" group-title="",Assistir Telecine Pipoca HD ao vivo
-http://tvsala.herokuapp.com/api/53/playlist.m3u8
-#EXTINF:54, tvg-id="54 - Assistir Telecine Cult HD ao vivo" tvg-name="Assistir Telecine Cult HD ao vivo - 54" tvg-logo="https://cdn.canaismax.com/assistir-telecine-cult-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDk2NGJlY2FhMGNiZWFlMDBiMmI1N2MyOGY4MTVjZDIucG5n" group-title="",Assistir Telecine Cult HD ao vivo
-http://tvsala.herokuapp.com/api/54/playlist.m3u8
-#EXTINF:55, tvg-id="55 - Assistir Canal Brasil ao vivo" tvg-name="Assistir Canal Brasil ao vivo - 55" tvg-logo="https://cdn.canaismax.com/assistir-canal-brasil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5OTBjZjI2NzQzZjI1NzY2MThhNDExMjE3ZTQyMTQucG5n" group-title="",Assistir Canal Brasil ao vivo
-http://tvsala.herokuapp.com/api/55/playlist.m3u8
-#EXTINF:56, tvg-id="56 - Assistir TCM ao vivo" tvg-name="Assistir TCM ao vivo - 56" tvg-logo="https://cdn.canaismax.com/assistir-tcm-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM0YjRmYmFlODg4MDk4NjliYTkwMTNlZGYxMmFmOTQucG5n" group-title="",Assistir TCM ao vivo
-http://tvsala.herokuapp.com/api/56/playlist.m3u8
-#EXTINF:57, tvg-id="57 - Assistir Space HD ao vivo" tvg-name="Assistir Space HD ao vivo - 57" tvg-logo="https://cdn.canaismax.com/assistir-canal-space-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjUzMTE0YTNmYzBiN2JkMWU2MjkwMjc4YTgxN2NkYTgucG5n" group-title="",Assistir Space HD ao vivo
-http://tvsala.herokuapp.com/api/57/playlist.m3u8
-#EXTINF:58, tvg-id="58 - Assistir AXN HD ao vivo" tvg-name="Assistir AXN HD ao vivo - 58" tvg-logo="https://cdn.canaismax.com/assistir-canal-axn-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIyYjY5MmRhZmJjMGM2Yzk2ZTk5MTIwYWZhMWQwYzgucG5n" group-title="",Assistir AXN HD ao vivo
-http://tvsala.herokuapp.com/api/58/playlist.m3u8
-#EXTINF:59, tvg-id="59 - Assistir Investigação Discovery ao vivo" tvg-name="Assistir Investigação Discovery ao vivo - 59" tvg-logo="https://cdn.canaismax.com/assistir-investigacao-discovery-ao-vivo-discovery-id-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzNlYzNhMzQ1MDViMzNhNjM0YTZiZWY2NTUwNjViOWMucG5n" group-title="",Assistir Investigação Discovery ao vivo
-http://tvsala.herokuapp.com/api/59/playlist.m3u8
-#EXTINF:60, tvg-id="60 - Assistir FX HD ao vivo" tvg-name="Assistir FX HD ao vivo - 60" tvg-logo="https://cdn.canaismax.com/assistir-fx-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmFmMzA5MzYwNWJhNjgyZjQwZDgxOGJhNzA3ODZhY2MucG5n" group-title="",Assistir FX HD ao vivo
-http://tvsala.herokuapp.com/api/60/playlist.m3u8
-#EXTINF:61, tvg-id="61 - Assistir A&E ao vivo" tvg-name="Assistir A&E ao vivo - 61" tvg-logo="https://cdn.canaismax.com/assistir-ae-hd-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTYzZDEyNjg3MzRmYjQ3ZDI1NzBhMmNkZjRkMTBlNDUucG5n" group-title="",Assistir A&E ao vivo
-http://tvsala.herokuapp.com/api/61/playlist.m3u8
-#EXTINF:62, tvg-id="62 - Assistir Lifetime ao vivo" tvg-name="Assistir Lifetime ao vivo - 62" tvg-logo="https://cdn.canaismax.com/assistir-lifetime-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDYzMDlkZDVmZTFlNDMzNWQ0YjAzYjIyMTA5NmY3YzQucG5n" group-title="",Assistir Lifetime ao vivo
-http://tvsala.herokuapp.com/api/62/playlist.m3u8
-#EXTINF:63, tvg-id="63 - Assistir Studio Universal ao vivo" tvg-name="Assistir Studio Universal ao vivo - 63" tvg-logo="https://cdn.canaismax.com/assistir-studio-universal-online-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2I2Yjg2ZmEzMTE2ZDFiY2ZhOTg0ZTY1Yzg2ZDNjMzIucG5n" group-title="",Assistir Studio Universal ao vivo
-http://tvsala.herokuapp.com/api/63/playlist.m3u8
-#EXTINF:64, tvg-id="64 - Assistir Curta! ao vivo" tvg-name="Assistir Curta! ao vivo - 64" tvg-logo="https://cdn.canaismax.com/assistir-curta-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTVhNTI4YWYwOWYwNjExNTMwZjcwNGI2NjFiNTZkMDcucG5n" group-title="",Assistir Curta! ao vivo
-http://tvsala.herokuapp.com/api/64/playlist.m3u8
-#EXTINF:65, tvg-id="65 - Assistir Syfy ao vivo" tvg-name="Assistir Syfy ao vivo - 65" tvg-logo="https://cdn.canaismax.com/assistir-syfy-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTMxNTM5NWVhOGE0MmI3ZmRiM2M4ZmY5ZjRkYzAxODAucG5n" group-title="",Assistir Syfy ao vivo
-http://tvsala.herokuapp.com/api/65/playlist.m3u8
-#EXTINF:66, tvg-id="66 - Assistir FOX Premium 2 HD ao vivo" tvg-name="Assistir FOX Premium 2 HD ao vivo - 66" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-2-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNWE1YmQ2ZmI3ZjJlNjBlZmVhYTdiNjlkMzYzZjNhYWUucG5n" group-title="",Assistir FOX Premium 2 HD ao vivo
-http://tvsala.herokuapp.com/api/66/playlist.m3u8
-#EXTINF:67, tvg-id="67 - Assistir Prime Box Brazil ao vivo" tvg-name="Assistir Prime Box Brazil ao vivo - 67" tvg-logo="https://cdn.canaismax.com/assistir-prime-box-brazil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYTk0OGYxYTM2M2Q4MTFmZDczNjUyOWRmNWZmY2UxYWIucG5n" group-title="",Assistir Prime Box Brazil ao vivo
-http://tvsala.herokuapp.com/api/67/playlist.m3u8
-#EXTINF:68, tvg-id="68 - Assistir Discovery Channel HD ao vivo" tvg-name="Assistir Discovery Channel HD ao vivo - 68" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="",Assistir Discovery Channel HD ao vivo
-http://tvsala.herokuapp.com/api/68/playlist.m3u8
-#EXTINF:69, tvg-id="69 - Assistir Animal Planet ao vivo" tvg-name="Assistir Animal Planet ao vivo - 69" tvg-logo="https://cdn.canaismax.com/assistir-animal-planet-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZiZGVhYjQyODZjOWExMDBiYjAwMzYyYjE4YTYwZDYucG5n" group-title="",Assistir Animal Planet ao vivo
-http://tvsala.herokuapp.com/api/69/playlist.m3u8
-#EXTINF:70, tvg-id="70 - Assistir National Geographic HD ao vivo" tvg-name="Assistir National Geographic HD ao vivo - 70" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGVlMjViNzI0YTRiYTVlZmJmZDZkMDdlYjU5MWMxNzkucG5n" group-title="",Assistir National Geographic HD ao vivo
-http://tvsala.herokuapp.com/api/70/playlist.m3u8
-#EXTINF:71, tvg-id="71 - Assistir National Geographic Wild HD ao vivo" tvg-name="Assistir National Geographic Wild HD ao vivo - 71" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-wild-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmM0MDljODUxZjVmOTljNzRjYzY2NzdjOGZhZjcyYjEucG5n" group-title="",Assistir National Geographic Wild HD ao vivo
-http://tvsala.herokuapp.com/api/71/playlist.m3u8
-#EXTINF:72, tvg-id="72 - Assistir Discovery Civilization ao vivo" tvg-name="Assistir Discovery Civilization ao vivo - 72" tvg-logo="https://cdn.canaismax.com/assistir-discovery-civilization-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODlkNGMwMGNjMGFiYzY1Mzk4MjU4MGRmZjhhMTM1MzAucG5n" group-title="",Assistir Discovery Civilization ao vivo
-http://tvsala.herokuapp.com/api/72/playlist.m3u8
-#EXTINF:73, tvg-id="73 - Assistir Discovery Science ao vivo" tvg-name="Assistir Discovery Science ao vivo - 73" tvg-logo="https://cdn.canaismax.com/assistir-discovery-science-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2NhMzE5NmZlNmU1MmNjMzM0NDMyZDJjZDM3YjdmNjQucG5n" group-title="",Assistir Discovery Science ao vivo
-http://tvsala.herokuapp.com/api/73/playlist.m3u8
-#EXTINF:74, tvg-id="74 - Assistir Discovery Theater HD ao vivo" tvg-name="Assistir Discovery Theater HD ao vivo - 74" tvg-logo="https://cdn.canaismax.com/assistir-discovery-theater-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTVhMjc2YzUyNjE3MmViMDIzNjQwZjI2NTFmNDY5NzUucG5n" group-title="",Assistir Discovery Theater HD ao vivo
-http://tvsala.herokuapp.com/api/74/playlist.m3u8
-#EXTINF:75, tvg-id="75 - Assistir History HD ao vivo" tvg-name="Assistir History HD ao vivo - 75" tvg-logo="https://cdn.canaismax.com/assistir-history-channel-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDM3ZDhkZTc4ZDJjNjFlNmVkNGZhMDFjNDNiMDJkOGMucG5n" group-title="",Assistir History HD ao vivo
-http://tvsala.herokuapp.com/api/75/playlist.m3u8
-#EXTINF:76, tvg-id="76 - Assistir History 2 ao vivo" tvg-name="Assistir History 2 ao vivo - 76" tvg-logo="https://cdn.canaismax.com/assistir-history-2-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzgwNzM0NzBjNTU2YjEyZmUxNTQ5OTgzYTNiMTRhNWMucG5n" group-title="",Assistir History 2 ao vivo
-http://tvsala.herokuapp.com/api/76/playlist.m3u8
-#EXTINF:77, tvg-id="77 - Assistir Gloob HD ao vivo" tvg-name="Assistir Gloob HD ao vivo - 77" tvg-logo="https://cdn.canaismax.com/assistir-gloob-hd-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTczYjg5NTEwZjVjMTY5NTQ1ZjVlNjY5Mjg3ZWZiMTEucG5n" group-title="",Assistir Gloob HD ao vivo
-http://tvsala.herokuapp.com/api/77/playlist.m3u8
-#EXTINF:78, tvg-id="78 - Assistir Discovery Kids ao vivo" tvg-name="Assistir Discovery Kids ao vivo - 78" tvg-logo="https://cdn.canaismax.com/assistir-discovery-kids-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOWE0OGJhMTIyNzk4Y2ZiMjk4ZDJjZjc4ZDE1OGM5YzkucG5n" group-title="",Assistir Discovery Kids ao vivo
-http://tvsala.herokuapp.com/api/78/playlist.m3u8
-#EXTINF:79, tvg-id="79 - Assistir Cartoon Network ao vivo" tvg-name="Assistir Cartoon Network ao vivo - 79" tvg-logo="https://cdn.canaismax.com/assistir-cartoon-network-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDI0Nzk5NjBhNTk0YTAxODlmMWYyZTgyNTVmMjQ0OTEucG5n" group-title="",Assistir Cartoon Network ao vivo
-http://tvsala.herokuapp.com/api/79/playlist.m3u8
-#EXTINF:80, tvg-id="80 - Assistir Gloobinho ao vivo" tvg-name="Assistir Gloobinho ao vivo - 80" tvg-logo="https://cdn.canaismax.com/assistir-gloobinho-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjk3NTZlNzJkYWQxMDViYmU5ZDlmMmFjYmE5OTViMDQucG5n" group-title="",Assistir Gloobinho ao vivo
-http://tvsala.herokuapp.com/api/80/playlist.m3u8
-#EXTINF:81, tvg-id="81 - Assistir Disney XD ao vivo" tvg-name="Assistir Disney XD ao vivo - 81" tvg-logo="https://cdn.canaismax.com/assistir-disney-xd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWNhYzQwODU0YWUwZGM2MTMyMzg3MDNkNDdjOGM5MmYucG5n" group-title="",Assistir Disney XD ao vivo
-http://tvsala.herokuapp.com/api/81/playlist.m3u8
-#EXTINF:82, tvg-id="82 - Assistir Disney Junior ao vivo" tvg-name="Assistir Disney Junior ao vivo - 82" tvg-logo="https://cdn.canaismax.com/assistir-disney-junior-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTMzYzk3ODA0NDQyOGViYTIzYTU4Mzk2OTNjYjA2ZmIucG5n" group-title="",Assistir Disney Junior ao vivo
-http://tvsala.herokuapp.com/api/82/playlist.m3u8
-#EXTINF:83, tvg-id="83 - Assistir Nickelodeon HD ao vivo" tvg-name="Assistir Nickelodeon HD ao vivo - 83" tvg-logo="https://cdn.canaismax.com/assistir-nickelodeon-nick-ao-vivo-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTM3MThhMmM5N2IyMDljNzg1YzFkNGUxNDIzMGE0ZTMucG5n" group-title="",Assistir Nickelodeon HD ao vivo
-http://tvsala.herokuapp.com/api/83/playlist.m3u8
-#EXTINF:84, tvg-id="84 - Assistir Nick Jr. ao vivo" tvg-name="Assistir Nick Jr. ao vivo - 84" tvg-logo="https://cdn.canaismax.com/assistir-nick-jr-ao-vivo-hd-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmNmOGIyMzA3NTY0MmNlY2UyNGI5MWIyMjg3ZDUwMDYucG5n" group-title="",Assistir Nick Jr. ao vivo
-http://tvsala.herokuapp.com/api/84/playlist.m3u8
-#EXTINF:85, tvg-id="85 - Assistir Disney Channel HD ao vivo" tvg-name="Assistir Disney Channel HD ao vivo - 85" tvg-logo="https://cdn.canaismax.com/assistir-disney-channel-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGE2ZTk5OGE4YzRkMTIxYjI2NDQzODk2YTJmNDYyMjYucG5n" group-title="",Assistir Disney Channel HD ao vivo
-http://tvsala.herokuapp.com/api/85/playlist.m3u8
-#EXTINF:86, tvg-id="86 - Assistir BABY TV ao vivo" tvg-name="Assistir BABY TV ao vivo - 86" tvg-logo="https://cdn.canaismax.com/assistir-baby-tv-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGZjMTcxOGY1ZTZlZTJiNjEyNDNiOGQ3MGQ2N2YzZGEucG5n" group-title="",Assistir BABY TV ao vivo
-http://tvsala.herokuapp.com/api/86/playlist.m3u8
-#EXTINF:87, tvg-id="87 - Assistir TV Rá Tim Bum! ao vivo" tvg-name="Assistir TV Rá Tim Bum! ao vivo - 87" tvg-logo="https://cdn.canaismax.com/assistir-tv-ra-tim-bum-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjE4ZmI4NThkNTlkMTczYjI4NjE4MDIxMDQ1ZWZkM2MucG5n" group-title="",Assistir TV Rá Tim Bum! ao vivo
-http://tvsala.herokuapp.com/api/87/playlist.m3u8
-#EXTINF:88, tvg-id="88 - Assistir Tooncast ao vivo" tvg-name="Assistir Tooncast ao vivo - 88" tvg-logo="https://cdn.canaismax.com/assistir-tooncast-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWQ3M2U2ODMzNzk0MjQwNWYxMDk1NzgwYzJhMjFlMjcucG5n" group-title="",Assistir Tooncast ao vivo
-http://tvsala.herokuapp.com/api/88/playlist.m3u8
-#EXTINF:89, tvg-id="89 - Assistir Boomerang ao vivo" tvg-name="Assistir Boomerang ao vivo - 89" tvg-logo="https://cdn.canaismax.com/assistir-boomerang-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzMzNjAyMDFjMDBmNzY2MjEzZWNkYjlmNGZmN2RiZjUucG5n" group-title="",Assistir Boomerang ao vivo
-http://tvsala.herokuapp.com/api/89/playlist.m3u8
-#EXTINF:90, tvg-id="90 - Assistir Nat Geo Kids HD ao vivo" tvg-name="Assistir Nat Geo Kids HD ao vivo - 90" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-kids-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDZlOTcwOTM1YjgyYzRkN2I4MmE4ZjZlMTcwNjNlNDEucG5n" group-title="",Assistir Nat Geo Kids HD ao vivo
-http://tvsala.herokuapp.com/api/90/playlist.m3u8
-#EXTINF:91, tvg-id="91 - Assistir Mais Globosat HD ao vivo" tvg-name="Assistir Mais Globosat HD ao vivo - 91" tvg-logo="https://cdn.canaismax.com/assistir-mais-globosat-hd-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjNjM2FjNGQ0YWNkNGRlMzI0YjVjYzhhNDQ2MzE1ZGIucG5n" group-title="",Assistir Mais Globosat HD ao vivo
-http://tvsala.herokuapp.com/api/91/playlist.m3u8
-#EXTINF:92, tvg-id="92 - Assistir BIS HD ao vivo" tvg-name="Assistir BIS HD ao vivo - 92" tvg-logo="https://cdn.canaismax.com/assistir-bis-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGQwZTk2NDhmYjgyMWQwMjA1NGE2NmViODc2ZGI2ZmEucG5n" group-title="",Assistir BIS HD ao vivo
-http://tvsala.herokuapp.com/api/92/playlist.m3u8
-#EXTINF:93, tvg-id="93 - Assistir truTV HD ao vivo" tvg-name="Assistir truTV HD ao vivo - 93" tvg-logo="https://cdn.canaismax.com/assistir-trutv-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Q4NDE1OGJhYzE4NDc4OTVkODBiMmI1MDRjMjgyMWIucG5n" group-title="",Assistir truTV HD ao vivo
-http://tvsala.herokuapp.com/api/93/playlist.m3u8
-#EXTINF:94, tvg-id="94 - Assistir E! ao vivo" tvg-name="Assistir E! ao vivo - 94" tvg-logo="https://cdn.canaismax.com/assistir-canal-e-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmRkZWMzODg2MzljY2UzMjVmMWJlYTk4MjMwYTBmM2YucG5n" group-title="",Assistir E! ao vivo
-http://tvsala.herokuapp.com/api/94/playlist.m3u8
-#EXTINF:95, tvg-id="95 - Assistir Paramount Channel ao vivo" tvg-name="Assistir Paramount Channel ao vivo - 95" tvg-logo="https://cdn.canaismax.com/assistir-paramount-channel-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2U4MzEwNGUwMWE5OWJiOTc0NjIzNGZjNjkwYjJlNzYucG5n" group-title="",Assistir Paramount Channel ao vivo
-http://tvsala.herokuapp.com/api/95/playlist.m3u8
-#EXTINF:96, tvg-id="96 - Assistir Comedy Central ao vivo" tvg-name="Assistir Comedy Central ao vivo - 96" tvg-logo="https://cdn.canaismax.com/assistir-comedy-central-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmRiMDc4YmJhODRhZTRlNjE1ODEwZGFjMGEwNjA0YzIucG5n" group-title="",Assistir Comedy Central ao vivo
-http://tvsala.herokuapp.com/api/96/playlist.m3u8
-#EXTINF:97, tvg-id="97 - Assistir I.SAT ao vivo" tvg-name="Assistir I.SAT ao vivo - 97" tvg-logo="https://cdn.canaismax.com/assistir-isat-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjc0MjIzNjJmMGVmM2U5NjJlYTM4ODA5YTI2NWJkYTAucG5n" group-title="",Assistir I.SAT ao vivo
-http://tvsala.herokuapp.com/api/97/playlist.m3u8
-#EXTINF:98, tvg-id="98 - Assistir TNT Séries ao vivo" tvg-name="Assistir TNT Séries ao vivo - 98" tvg-logo="https://cdn.canaismax.com/assistir-tnt-series-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzljZWE4YjE5NjU0NmM2MWNhM2Y5OGZlNjkxNTdhZDAucG5n" group-title="",Assistir TNT Séries ao vivo
-http://tvsala.herokuapp.com/api/98/playlist.m3u8
-#EXTINF:99, tvg-id="99 - Assistir Fox Life ao vivo" tvg-name="Assistir Fox Life ao vivo - 99" tvg-logo="https://cdn.canaismax.com/assistir-fox-life-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGJhNzg3OWQ1ZDE1MzQxMmM1NWZmYzA0NzI4NTY2MzcucG5n" group-title="",Assistir Fox Life ao vivo
-http://tvsala.herokuapp.com/api/99/playlist.m3u8
-#EXTINF:100, tvg-id="100 - Assistir TBS HD ao vivo" tvg-name="Assistir TBS HD ao vivo - 100" tvg-logo="https://cdn.canaismax.com/assistir-tbs-hd-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjU4MTdmN2QyM2U0Njc1MjJmM2NhN2E4NzhhNDUzYmMucG5n" group-title="",Assistir TBS HD ao vivo
-http://tvsala.herokuapp.com/api/100/playlist.m3u8
-#EXTINF:101, tvg-id="101 - Assistir Discovery World HD ao vivo" tvg-name="Assistir Discovery World HD ao vivo - 101" tvg-logo="https://cdn.canaismax.com/assistir-discovery-world-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM5ZDBmMzYxZDczNzcwNWQ2NjMzZDQzM2Q0NWJmNTUucG5n" group-title="",Assistir Discovery World HD ao vivo
-http://tvsala.herokuapp.com/api/101/playlist.m3u8
-#EXTINF:102, tvg-id="102 - Assistir Arte 1 ao vivo" tvg-name="Assistir Arte 1 ao vivo - 102" tvg-logo="https://cdn.canaismax.com/assistir-arte-1-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY5Yjg0MTg0YWJhMmI3OGIwZjZmYTkwZWQ1YmJiNGEucG5n" group-title="",Assistir Arte 1 ao vivo
-http://tvsala.herokuapp.com/api/102/playlist.m3u8
-#EXTINF:103, tvg-id="103 - Assistir Off ao vivo" tvg-name="Assistir Off ao vivo - 103" tvg-logo="https://cdn.canaismax.com/assistir-canal-off-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWQ4ZDE2NGFlNThmMTMxYWFjMTMyMjc4ZDAyMDBmOGMucG5n" group-title="",Assistir Off ao vivo
-http://tvsala.herokuapp.com/api/103/playlist.m3u8
-#EXTINF:104, tvg-id="104 - Assistir WooHoo ao vivo" tvg-name="Assistir WooHoo ao vivo - 104" tvg-logo="https://cdn.canaismax.com/assistir-woohoo-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGIzZjQyMmU5MGYxY2JiNWRmOGY5ZDU1ZDczODBkOGUucG5n" group-title="",Assistir WooHoo ao vivo
-http://tvsala.herokuapp.com/api/104/playlist.m3u8
-#EXTINF:105, tvg-id="105 - Assistir Discovery Turbo ao vivo" tvg-name="Assistir Discovery Turbo ao vivo - 105" tvg-logo="https://cdn.canaismax.com/assistir-discovery-turbo-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYxODIyYmUxYzEyYWVlYTcxNTUyOGU0OWJlY2ZjNzAucG5n" group-title="",Assistir Discovery Turbo ao vivo
-http://tvsala.herokuapp.com/api/105/playlist.m3u8
-#EXTINF:106, tvg-id="106 - Assistir Band Sports HD ao vivo" tvg-name="Assistir Band Sports HD ao vivo - 106" tvg-logo="https://cdn.canaismax.com/assistir-band-sports-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODljODJhYzdiNDgxOTBkNDJjMjAyMDU3Yjk5YjM1NGIucG5n" group-title="",Assistir Band Sports HD ao vivo
-http://tvsala.herokuapp.com/api/106/playlist.m3u8
-#EXTINF:107, tvg-id="107 - Assistir FishTV ao vivo" tvg-name="Assistir FishTV ao vivo - 107" tvg-logo="https://cdn.canaismax.com/assistir-fishtv-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZmRjN2JiMDM0OTNmZDEzOTIxYmE1NzUwYTg0NjI5OTAucG5n" group-title="",Assistir FishTV ao vivo
-http://tvsala.herokuapp.com/api/107/playlist.m3u8
-#EXTINF:108, tvg-id="108 - Assistir Globo Rede Bahia ao vivo" tvg-name="Assistir Globo Rede Bahia ao vivo - 108" tvg-logo="https://cdn.canaismax.com/assistir-globo-rede-bahia-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzZhNjhmNzE2MTNiNjg0NjhhZWE2YmRhZWYwODE1MDIucG5n" group-title="",Assistir Globo Rede Bahia ao vivo
-http://tvsala.herokuapp.com/api/108/playlist.m3u8
-#EXTINF:109, tvg-id="109 - Assistir BBB ao vivo" tvg-name="Assistir BBB ao vivo - 109" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",Assistir BBB ao vivo
-http://tvsala.herokuapp.com/api/109/playlist.m3u8
-#EXTINF:110, tvg-id="110 - Assistir Premiere Clubes HD ao vivo" tvg-name="Assistir Premiere Clubes HD ao vivo - 110" tvg-logo="https://cdn.canaismax.com/assistir-premiere-clubes-hd-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDU5MzMxMmMyODJiNDM0MmY1OWIxYzU0YjI1YzQyNmIucG5n" group-title="",Assistir Premiere Clubes HD ao vivo
-http://tvsala.herokuapp.com/api/110/playlist.m3u8
-#EXTINF:111, tvg-id="111 - Assistir Premiere 2 HD ao vivo" tvg-name="Assistir Premiere 2 HD ao vivo - 111" tvg-logo="https://cdn.canaismax.com/assistir-premiere-2-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGYwMmRmN2IyYWVkY2E5YTRhNTVjNjUxNzhkM2IwMTMucG5n" group-title="",Assistir Premiere 2 HD ao vivo
-http://tvsala.herokuapp.com/api/111/playlist.m3u8
-#EXTINF:112, tvg-id="112 - Assistir Premiere 3 HD ao vivo" tvg-name="Assistir Premiere 3 HD ao vivo - 112" tvg-logo="https://cdn.canaismax.com/assistir-premiere-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2ZiOWViNzM3OGFlM2M5ZWFjY2ZiMDkyZTkyMWM0MTkucG5n" group-title="",Assistir Premiere 3 HD ao vivo
-http://tvsala.herokuapp.com/api/112/playlist.m3u8
-#EXTINF:113, tvg-id="113 - Assistir Premiere 4 ao vivo" tvg-name="Assistir Premiere 4 ao vivo - 113" tvg-logo="https://cdn.canaismax.com/assistir-premiere-4-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGM5ZDA4NzVhYmU5Yjg3NzYzNThiNjczMGRhOGMzYWEucG5n" group-title="",Assistir Premiere 4 ao vivo
-http://tvsala.herokuapp.com/api/113/playlist.m3u8
-#EXTINF:114, tvg-id="114 - Assistir Premiere 5 HD ao vivo" tvg-name="Assistir Premiere 5 HD ao vivo - 114" tvg-logo="https://cdn.canaismax.com/assistir-premiere-5-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTE3ZWQ4ODAyYmE4NGRjNzRmOGQwZGUxY2M1Y2JiZmEucG5n" group-title="",Assistir Premiere 5 HD ao vivo
-http://tvsala.herokuapp.com/api/114/playlist.m3u8
-#EXTINF:115, tvg-id="115 - Assistir Premiere 6 ao vivo" tvg-name="Assistir Premiere 6 ao vivo - 115" tvg-logo="https://cdn.canaismax.com/assistir-premiere-6-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGVmM2VkOTg0NDgyMzFiNmIzYzM2MTQyYjczOTI2OTQucG5n" group-title="",Assistir Premiere 6 ao vivo
-http://tvsala.herokuapp.com/api/115/playlist.m3u8
-#EXTINF:116, tvg-id="116 - Assistir Premiere 7 ao vivo" tvg-name="Assistir Premiere 7 ao vivo - 116" tvg-logo="https://cdn.canaismax.com/assistir-premiere-7-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWRiY2U0MTVhZGJmZDgxNGQ5NmQxYjVkYTRmMDY4ZGMucG5n" group-title="",Assistir Premiere 7 ao vivo
-http://tvsala.herokuapp.com/api/116/playlist.m3u8
-#EXTINF:119, tvg-id="119 - Assistir Record News ao vivo" tvg-name="Assistir Record News ao vivo - 119" tvg-logo="https://cdn.canaismax.com/assistir-record-news-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzkwZDljN2MxODI2MDc0YWJhODQyZGYzMTMwYmU2MDQucG5n" group-title="",Assistir Record News ao vivo
-http://tvsala.herokuapp.com/api/119/playlist.m3u8
-#EXTINF:120, tvg-id="120 - Assistir MasterChef 14/07/2020 ao vivo" tvg-name="Assistir MasterChef 14/07/2020 ao vivo - 120" tvg-logo="https://cdn.canaismax.com/assistir-masterchef-14072020-ao-vivo-estreia-online-band/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGY0YjMxZTc4NTg4MmIwZTFkY2Y2MzdhMmIzNWYwMTgucG5n" group-title="",Assistir MasterChef 14/07/2020 ao vivo
-http://tvsala.herokuapp.com/api/120/playlist.m3u8
-#EXTINF:121, tvg-id="121 - Assistir Futura ao vivo" tvg-name="Assistir Futura ao vivo - 121" tvg-logo="https://cdn.canaismax.com/assistir-futura-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmQyMzM2MmJmNWQ1MmQyYTA1YTU3OWNlNzcxMmYxMzYucG5n" group-title="",Assistir Futura ao vivo
-http://tvsala.herokuapp.com/api/121/playlist.m3u8
-#EXTINF:122, tvg-id="122 - Assistir CNT Rio ao vivo" tvg-name="Assistir CNT Rio ao vivo - 122" tvg-logo="https://cdn.canaismax.com/cnt-rio/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYTcyMjJmMTA4ZjMwY2Y5ZWViM2NiM2RlYWRiOTA1YzgucG5n" group-title="",Assistir CNT Rio ao vivo
-http://tvsala.herokuapp.com/api/122/playlist.m3u8
-#EXTINF:123, tvg-id="123 - Assistir TVE ao vivo" tvg-name="Assistir TVE ao vivo - 123" tvg-logo="https://cdn.canaismax.com/assistir-tve-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDM0NDg3YWU0ZWNmZDQ1NDNiZjdmYWY3MzYyNzY3ZTUucG5n" group-title="",Assistir TVE ao vivo
-http://tvsala.herokuapp.com/api/123/playlist.m3u8
-#EXTINF:124, tvg-id="124 - Assistir CNN En Español ao vivo" tvg-name="Assistir CNN En Español ao vivo - 124" tvg-logo="https://cdn.canaismax.com/cnn-en-espanol/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmMyNjEzNGI3MDllZjZjNDlmM2QyYzEyMzk3MmNlY2QucG5n" group-title="",Assistir CNN En Español ao vivo
-http://tvsala.herokuapp.com/api/124/playlist.m3u8
-#EXTINF:125, tvg-id="125 - Assistir Band News HD ao vivo" tvg-name="Assistir Band News HD ao vivo - 125" tvg-logo="https://cdn.canaismax.com/assistir-band-news-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWY5MDNjYmQ2MDhkMjJmZjJkYjE0NzBmN2YyYzdlOTkucG5n" group-title="",Assistir Band News HD ao vivo
-http://tvsala.herokuapp.com/api/125/playlist.m3u8
+#EXTINF:1, tvg-id="1 - Globo Rio" tvg-name="Globo Rio - 1" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="",Globo Rio
+http://localhost:8000/api/1/playlist.m3u8
+#EXTINF:2, tvg-id="2 - Globo Rio" tvg-name="Globo Rio - 2" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="",Globo Rio
+http://localhost:8000/api/1/playlist.m3u8
+#EXTINF:3, tvg-id="3 - HD Globo Rio" tvg-name="HD Globo Rio - 3" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="",HD Globo Rio
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globorjhd/video.m3u8
+#EXTINF:4, tvg-id="4 - Globo Rio" tvg-name="Globo Rio - 4" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="",Globo Rio
+http://localhost:8000/api/1/playlist.m3u8
+#EXTINF:5, tvg-id="5 - Globo SP" tvg-name="Globo SP - 5" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="",Globo SP
+http://localhost:8000/api/2/playlist.m3u8
+#EXTINF:6, tvg-id="6 - Globo SP" tvg-name="Globo SP - 6" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="",Globo SP
+http://localhost:8000/api/2/playlist.m3u8
+#EXTINF:7, tvg-id="7 - HD Globo SP" tvg-name="HD Globo SP - 7" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="",HD Globo SP
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globosphd/video.m3u8
+#EXTINF:8, tvg-id="8 - Globo SP" tvg-name="Globo SP - 8" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="",Globo SP
+http://localhost:8000/api/2/playlist.m3u8
+#EXTINF:9, tvg-id="9 - HD Band HD" tvg-name="HD Band HD - 9" tvg-logo="https://cdn.canaismax.com/assistir-band-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTcwMjJmOWZlOGRmMDM3ZjY2Y2U0NGI3MGU1NzU1NDkucG5n" group-title="",HD Band HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinashd/video.m3u8
+#EXTINF:10, tvg-id="10 - SD Band HD" tvg-name="SD Band HD - 10" tvg-logo="https://cdn.canaismax.com/assistir-band-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTcwMjJmOWZlOGRmMDM3ZjY2Y2U0NGI3MGU1NzU1NDkucG5n" group-title="",SD Band HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinassd/video.m3u8
+#EXTINF:11, tvg-id="11 - Band HD" tvg-name="Band HD - 11" tvg-logo="https://cdn.canaismax.com/assistir-band-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTcwMjJmOWZlOGRmMDM3ZjY2Y2U0NGI3MGU1NzU1NDkucG5n" group-title="",Band HD
+http://localhost:8000/api/3/playlist.m3u8
+#EXTINF:13, tvg-id="13 - HD A Fazenda 2020" tvg-name="HD A Fazenda 2020 - 13" tvg-logo="https://cdn.canaismax.com/assistir-a-fazenda-2020-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM4ZTllMjhjYTdkMWVkNWRjYzQ2YTI0MTU3NmUwNjIucG5n" group-title="",HD A Fazenda 2020
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/afazendahd/video.m3u8
+#EXTINF:14, tvg-id="14 - SD A Fazenda 2020" tvg-name="SD A Fazenda 2020 - 14" tvg-logo="https://cdn.canaismax.com/assistir-a-fazenda-2020-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM4ZTllMjhjYTdkMWVkNWRjYzQ2YTI0MTU3NmUwNjIucG5n" group-title="",SD A Fazenda 2020
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/afazendasd/video.m3u8
+#EXTINF:15, tvg-id="15 - A Fazenda 2020" tvg-name="A Fazenda 2020 - 15" tvg-logo="https://cdn.canaismax.com/assistir-a-fazenda-2020-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM4ZTllMjhjYTdkMWVkNWRjYzQ2YTI0MTU3NmUwNjIucG5n" group-title="",A Fazenda 2020
+http://localhost:8000/api/4/playlist.m3u8
+#EXTINF:17, tvg-id="17 - UFC 198" tvg-name="UFC 198 - 17" tvg-logo="https://cdn.canaismax.com/assistir-ufc-198-anderson-silva-x-uriah-hall-ao-vivo-hd-combate/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGQxNDYzNzI5NTFlYzk0MWNlZGVkMjM2MjlhOWE5NmMuanBlZw==" group-title="",UFC 198
+http://localhost:8000/api/5/playlist.m3u8
+#EXTINF:18, tvg-id="18 - HD UFC 198" tvg-name="HD UFC 198 - 18" tvg-logo="https://cdn.canaismax.com/assistir-ufc-198-anderson-silva-x-uriah-hall-ao-vivo-hd-combate/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGQxNDYzNzI5NTFlYzk0MWNlZGVkMjM2MjlhOWE5NmMuanBlZw==" group-title="",HD UFC 198
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatehd/video.m3u8
+#EXTINF:19, tvg-id="19 - SD UFC 198" tvg-name="SD UFC 198 - 19" tvg-logo="https://cdn.canaismax.com/assistir-ufc-198-anderson-silva-x-uriah-hall-ao-vivo-hd-combate/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGQxNDYzNzI5NTFlYzk0MWNlZGVkMjM2MjlhOWE5NmMuanBlZw==" group-title="",SD UFC 198
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatesd/video.m3u8
+#EXTINF:20, tvg-id="20 - Rede Record" tvg-name="Rede Record - 20" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:21, tvg-id="21 - Rede Record" tvg-name="Rede Record - 21" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:22, tvg-id="22 - HD Rede Record" tvg-name="HD Rede Record - 22" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",HD Rede Record
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/recordhd/video.m3u8
+#EXTINF:23, tvg-id="23 - SD Rede Record" tvg-name="SD Rede Record - 23" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",SD Rede Record
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/recordsd/video.m3u8
+#EXTINF:24, tvg-id="24 - Rede Record" tvg-name="Rede Record - 24" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:25, tvg-id="25 - Rede Record" tvg-name="Rede Record - 25" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:26, tvg-id="26 - Rede Record" tvg-name="Rede Record - 26" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:27, tvg-id="27 - Rede Record" tvg-name="Rede Record - 27" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:28, tvg-id="28 - Rede Record" tvg-name="Rede Record - 28" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:29, tvg-id="29 - Rede Record" tvg-name="Rede Record - 29" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:30, tvg-id="30 - Rede Record" tvg-name="Rede Record - 30" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:31, tvg-id="31 - Rede Record" tvg-name="Rede Record - 31" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:32, tvg-id="32 - Rede Record" tvg-name="Rede Record - 32" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="",Rede Record
+http://localhost:8000/api/6/playlist.m3u8
+#EXTINF:33, tvg-id="33 - SBT HD" tvg-name="SBT HD - 33" tvg-logo="https://cdn.canaismax.com/assistir-sbt-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTZkZDdjMTg1YmZlNjQ0OGM1NTBmOTg2NDlmMzI0ZWYucG5n" group-title="",SBT HD
+http://localhost:8000/api/7/playlist.m3u8
+#EXTINF:34, tvg-id="34 - HD SBT HD" tvg-name="HD SBT HD - 34" tvg-logo="https://cdn.canaismax.com/assistir-sbt-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTZkZDdjMTg1YmZlNjQ0OGM1NTBmOTg2NDlmMzI0ZWYucG5n" group-title="",HD SBT HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sbthd/video.m3u8
+#EXTINF:35, tvg-id="35 - SD SBT HD" tvg-name="SD SBT HD - 35" tvg-logo="https://cdn.canaismax.com/assistir-sbt-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTZkZDdjMTg1YmZlNjQ0OGM1NTBmOTg2NDlmMzI0ZWYucG5n" group-title="",SD SBT HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sbtsd/video.m3u8
+#EXTINF:36, tvg-id="36 - HD Viva" tvg-name="HD Viva - 36" tvg-logo="https://cdn.canaismax.com/assistir-canal-viva-ao-vivo-24-online-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTk5NDBhNDE5ZDMwMzJhOTkxZDE3YTY1YTg2NTdlZTAucG5n" group-title="",HD Viva
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/vivahd/video.m3u8
+#EXTINF:37, tvg-id="37 - SD Viva" tvg-name="SD Viva - 37" tvg-logo="https://cdn.canaismax.com/assistir-canal-viva-ao-vivo-24-online-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTk5NDBhNDE5ZDMwMzJhOTkxZDE3YTY1YTg2NTdlZTAucG5n" group-title="",SD Viva
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/vivasd/video.m3u8
+#EXTINF:38, tvg-id="38 - Viva" tvg-name="Viva - 38" tvg-logo="https://cdn.canaismax.com/assistir-canal-viva-ao-vivo-24-online-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTk5NDBhNDE5ZDMwMzJhOTkxZDE3YTY1YTg2NTdlZTAucG5n" group-title="",Viva
+http://localhost:8000/api/8/playlist.m3u8
+#EXTINF:40, tvg-id="40 - HD MTV" tvg-name="HD MTV - 40" tvg-logo="https://cdn.canaismax.com/assistir-mtv-gratis-em-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzczMTczMGVhMmQ3NjVhYjY0ZTFkNjkzYjc0ZmE5M2MucG5n" group-title="",HD MTV
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/mtvhd/video.m3u8
+#EXTINF:41, tvg-id="41 - SD MTV" tvg-name="SD MTV - 41" tvg-logo="https://cdn.canaismax.com/assistir-mtv-gratis-em-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzczMTczMGVhMmQ3NjVhYjY0ZTFkNjkzYjc0ZmE5M2MucG5n" group-title="",SD MTV
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/mtvsd/video.m3u8
+#EXTINF:43, tvg-id="43 - HD FOX Premium 1 HD" tvg-name="HD FOX Premium 1 HD - 43" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmU0ODI3ZTZlZTVjOWZjYzk4YTY2NmRiMmY2M2IxYzMucG5n" group-title="",HD FOX Premium 1 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxpremiumhd/video.m3u8
+#EXTINF:44, tvg-id="44 - SD FOX Premium 1 HD" tvg-name="SD FOX Premium 1 HD - 44" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmU0ODI3ZTZlZTVjOWZjYzk4YTY2NmRiMmY2M2IxYzMucG5n" group-title="",SD FOX Premium 1 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxpremiumsd/video.m3u8
+#EXTINF:46, tvg-id="46 - Fox Sports" tvg-name="Fox Sports - 46" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTQ1OTg1YWJhNTAyZGRiNGUwMTAwMTZhNzk5ZWU1ZGEucG5n" group-title="",Fox Sports
+http://localhost:8000/api/11/playlist.m3u8
+#EXTINF:49, tvg-id="49 - SD Fox Sports" tvg-name="SD Fox Sports - 49" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTQ1OTg1YWJhNTAyZGRiNGUwMTAwMTZhNzk5ZWU1ZGEucG5n" group-title="",SD Fox Sports
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportssd/video.m3u8
+#EXTINF:50, tvg-id="50 - HD Fox Sports" tvg-name="HD Fox Sports - 50" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTQ1OTg1YWJhNTAyZGRiNGUwMTAwMTZhNzk5ZWU1ZGEucG5n" group-title="",HD Fox Sports
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportshd/video.m3u8
+#EXTINF:52, tvg-id="52 - Fox Sports 2" tvg-name="Fox Sports 2 - 52" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-2-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmIwZDk0NzgxMzMyNzcxMzVlODE2ZWRmOTMyNTUxNzAucG5n" group-title="",Fox Sports 2
+http://localhost:8000/api/12/playlist.m3u8
+#EXTINF:53, tvg-id="53 - HD Fox Sports 2" tvg-name="HD Fox Sports 2 - 53" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-2-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmIwZDk0NzgxMzMyNzcxMzVlODE2ZWRmOTMyNTUxNzAucG5n" group-title="",HD Fox Sports 2
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxsports2hd/video.m3u8
+#EXTINF:54, tvg-id="54 - SD Fox Sports 2" tvg-name="SD Fox Sports 2 - 54" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-2-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmIwZDk0NzgxMzMyNzcxMzVlODE2ZWRmOTMyNTUxNzAucG5n" group-title="",SD Fox Sports 2
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxsports2sd/video.m3u8
+#EXTINF:57, tvg-id="57 - ESPN Brasil HD" tvg-name="ESPN Brasil HD - 57" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="",ESPN Brasil HD
+http://localhost:8000/api/13/playlist.m3u8
+#EXTINF:58, tvg-id="58 - ESPN Brasil HD" tvg-name="ESPN Brasil HD - 58" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="",ESPN Brasil HD
+http://localhost:8000/api/13/playlist.m3u8
+#EXTINF:59, tvg-id="59 - SD ESPN Brasil HD" tvg-name="SD ESPN Brasil HD - 59" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="",SD ESPN Brasil HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnbrasilsd/video.m3u8
+#EXTINF:60, tvg-id="60 - HD ESPN Brasil HD" tvg-name="HD ESPN Brasil HD - 60" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="",HD ESPN Brasil HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnbrasilhd/video.m3u8
+#EXTINF:63, tvg-id="63 - HD DAZN" tvg-name="HD DAZN - 63" tvg-logo="https://cdn.canaismax.com/assistir-dazn-ao-vivo-canal-dazn-hd-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGUzNzg3ZDNkZjI5OTQ0NTFkMzBhZGZjMzYwZTdlYjUucG5n" group-title="",HD DAZN
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/livefc04hd/video.m3u8
+#EXTINF:64, tvg-id="64 - SD DAZN" tvg-name="SD DAZN - 64" tvg-logo="https://cdn.canaismax.com/assistir-dazn-ao-vivo-canal-dazn-hd-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGUzNzg3ZDNkZjI5OTQ0NTFkMzBhZGZjMzYwZTdlYjUucG5n" group-title="",SD DAZN
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/livefc04sd/video.m3u8
+#EXTINF:341, tvg-id="341 - Multishow HD" tvg-name="Multishow HD - 341" tvg-logo="https://cdn.canaismax.com/assistir-multishow-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM1NDM4OWVkZTc1OTBiNjliOTBmMjlhYTNiZjQ2NDcucG5n" group-title="",Multishow HD
+http://localhost:8000/api/15/playlist.m3u8
+#EXTINF:342, tvg-id="342 - HD Multishow HD" tvg-name="HD Multishow HD - 342" tvg-logo="https://cdn.canaismax.com/assistir-multishow-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM1NDM4OWVkZTc1OTBiNjliOTBmMjlhYTNiZjQ2NDcucG5n" group-title="",HD Multishow HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/multishowhd/video.m3u8
+#EXTINF:343, tvg-id="343 - SD Multishow HD" tvg-name="SD Multishow HD - 343" tvg-logo="https://cdn.canaismax.com/assistir-multishow-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM1NDM4OWVkZTc1OTBiNjliOTBmMjlhYTNiZjQ2NDcucG5n" group-title="",SD Multishow HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/multishowsd/video.m3u8
+#EXTINF:69, tvg-id="69 - UFC 253" tvg-name="UFC 253 - 69" tvg-logo="https://cdn.canaismax.com/assistir-israel-adesanya-x-paulo-borrachinha-ao-vivo-pelo-ufc-253-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTg0Y2EyOWNlYzY2ZTI4YmU3OTViZWZjNGIxOWRkZDYuanBlZw==" group-title="",UFC 253
+http://localhost:8000/api/16/playlist.m3u8
+#EXTINF:70, tvg-id="70 - HD UFC 253" tvg-name="HD UFC 253 - 70" tvg-logo="https://cdn.canaismax.com/assistir-israel-adesanya-x-paulo-borrachinha-ao-vivo-pelo-ufc-253-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTg0Y2EyOWNlYzY2ZTI4YmU3OTViZWZjNGIxOWRkZDYuanBlZw==" group-title="",HD UFC 253
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatehd/video.m3u8
+#EXTINF:71, tvg-id="71 - SD UFC 253" tvg-name="SD UFC 253 - 71" tvg-logo="https://cdn.canaismax.com/assistir-israel-adesanya-x-paulo-borrachinha-ao-vivo-pelo-ufc-253-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTg0Y2EyOWNlYzY2ZTI4YmU3OTViZWZjNGIxOWRkZDYuanBlZw==" group-title="",SD UFC 253
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatesd/video.m3u8
+#EXTINF:72, tvg-id="72 - RedeTV!" tvg-name="RedeTV! - 72" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="",RedeTV!
+http://localhost:8000/api/17/playlist.m3u8
+#EXTINF:73, tvg-id="73 - RedeTV!" tvg-name="RedeTV! - 73" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="",RedeTV!
+http://localhost:8000/api/17/playlist.m3u8
+#EXTINF:74, tvg-id="74 - HD RedeTV!" tvg-name="HD RedeTV! - 74" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="",HD RedeTV!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/redetvhd/video.m3u8
+#EXTINF:75, tvg-id="75 - SD RedeTV!" tvg-name="SD RedeTV! - 75" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="",SD RedeTV!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/redetvsd/video.m3u8
+#EXTINF:79, tvg-id="79 - HD SporTV HD" tvg-name="HD SporTV HD - 79" tvg-logo="https://cdn.canaismax.com/assistir-sportv-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjE4Y2FmOGM1NGIzNDI2YmYxMjdhYWFkZDIxMWM2MjAucG5n" group-title="",HD SporTV HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportvhd/video.m3u8
+#EXTINF:80, tvg-id="80 - SD SporTV HD" tvg-name="SD SporTV HD - 80" tvg-logo="https://cdn.canaismax.com/assistir-sportv-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjE4Y2FmOGM1NGIzNDI2YmYxMjdhYWFkZDIxMWM2MjAucG5n" group-title="",SD SporTV HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportvsd/video.m3u8
+#EXTINF:81, tvg-id="81 - SporTV HD" tvg-name="SporTV HD - 81" tvg-logo="https://cdn.canaismax.com/assistir-sportv-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjE4Y2FmOGM1NGIzNDI2YmYxMjdhYWFkZDIxMWM2MjAucG5n" group-title="",SporTV HD
+http://localhost:8000/api/18/playlist.m3u8
+#EXTINF:83, tvg-id="83 - SD SporTV2 HD" tvg-name="SD SporTV2 HD - 83" tvg-logo="https://cdn.canaismax.com/assistir-sportv-2-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWE4YmRhMjJjNzE3Mjc0ZjgyMTEzN2VhYjA5YzA3YjYucG5n" group-title="",SD SporTV2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv2sd/video.m3u8
+#EXTINF:84, tvg-id="84 - HD SporTV2 HD" tvg-name="HD SporTV2 HD - 84" tvg-logo="https://cdn.canaismax.com/assistir-sportv-2-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWE4YmRhMjJjNzE3Mjc0ZjgyMTEzN2VhYjA5YzA3YjYucG5n" group-title="",HD SporTV2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv2hd/video.m3u8
+#EXTINF:86, tvg-id="86 - HD SporTV3 HD" tvg-name="HD SporTV3 HD - 86" tvg-logo="https://cdn.canaismax.com/assistir-sportv-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2NkNWJkZTA2MmExOWUwNDRjYmVlYjU5MGM4ZDMzNjUucG5n" group-title="",HD SporTV3 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv3hd/video.m3u8
+#EXTINF:87, tvg-id="87 - SD SporTV3 HD" tvg-name="SD SporTV3 HD - 87" tvg-logo="https://cdn.canaismax.com/assistir-sportv-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2NkNWJkZTA2MmExOWUwNDRjYmVlYjU5MGM4ZDMzNjUucG5n" group-title="",SD SporTV3 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv3sd/video.m3u8
+#EXTINF:90, tvg-id="90 - Combate" tvg-name="Combate - 90" tvg-logo="https://cdn.canaismax.com/assistir-canal-ufc-combate-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWQwZjE3ZDNlNWQ4MTUxNjg1M2Y3ZDdlNjU4NDdiZGUucG5n" group-title="",Combate
+http://localhost:8000/api/21/playlist.m3u8
+#EXTINF:91, tvg-id="91 - HD Combate" tvg-name="HD Combate - 91" tvg-logo="https://cdn.canaismax.com/assistir-canal-ufc-combate-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWQwZjE3ZDNlNWQ4MTUxNjg1M2Y3ZDdlNjU4NDdiZGUucG5n" group-title="",HD Combate
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatehd/video.m3u8
+#EXTINF:92, tvg-id="92 - SD Combate" tvg-name="SD Combate - 92" tvg-logo="https://cdn.canaismax.com/assistir-canal-ufc-combate-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWQwZjE3ZDNlNWQ4MTUxNjg1M2Y3ZDdlNjU4NDdiZGUucG5n" group-title="",SD Combate
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatesd/video.m3u8
+#EXTINF:96, tvg-id="96 - ESPN" tvg-name="ESPN - 96" tvg-logo="https://cdn.canaismax.com/assistir-espn-vivo-online-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjcyYTQ2NTEyODcxMGQ3Njc4MTRjMzY0NzBhM2FiM2MucG5n" group-title="",ESPN
+http://localhost:8000/api/23/playlist.m3u8
+#EXTINF:97, tvg-id="97 - HD ESPN" tvg-name="HD ESPN - 97" tvg-logo="https://cdn.canaismax.com/assistir-espn-vivo-online-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjcyYTQ2NTEyODcxMGQ3Njc4MTRjMzY0NzBhM2FiM2MucG5n" group-title="",HD ESPN
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnhd/video.m3u8
+#EXTINF:98, tvg-id="98 - ESPN 2 HD" tvg-name="ESPN 2 HD - 98" tvg-logo="https://cdn.canaismax.com/assistir-espn-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTYzYzQ0ZTM2YmMwZmM3MzQ1ZWZiNTAyZTJjYjZkZWUucG5n" group-title="",ESPN 2 HD
+http://localhost:8000/api/24/playlist.m3u8
+#EXTINF:99, tvg-id="99 - SD ESPN 2 HD" tvg-name="SD ESPN 2 HD - 99" tvg-logo="https://cdn.canaismax.com/assistir-espn-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTYzYzQ0ZTM2YmMwZmM3MzQ1ZWZiNTAyZTJjYjZkZWUucG5n" group-title="",SD ESPN 2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnmaissd/video.m3u8
+#EXTINF:100, tvg-id="100 - HD ESPN 2 HD" tvg-name="HD ESPN 2 HD - 100" tvg-logo="https://cdn.canaismax.com/assistir-espn-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTYzYzQ0ZTM2YmMwZmM3MzQ1ZWZiNTAyZTJjYjZkZWUucG5n" group-title="",HD ESPN 2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnmaishd/video.m3u8
+#EXTINF:102, tvg-id="102 - HD Espn Extra" tvg-name="HD Espn Extra - 102" tvg-logo="https://cdn.canaismax.com/assistir-espn-extra-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODY1YjU1ZDA0Mzk3YWJkZDYyNTY2NGU3YTliMGI0YTcucG5n" group-title="",HD Espn Extra
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/espnextrahd/video.m3u8
+#EXTINF:103, tvg-id="103 - SD Espn Extra" tvg-name="SD Espn Extra - 103" tvg-logo="https://cdn.canaismax.com/assistir-espn-extra-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODY1YjU1ZDA0Mzk3YWJkZDYyNTY2NGU3YTliMGI0YTcucG5n" group-title="",SD Espn Extra
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/espnextrasd/video.m3u8
+#EXTINF:105, tvg-id="105 - HD Globo Nordeste" tvg-name="HD Globo Nordeste - 105" tvg-logo="https://cdn.canaismax.com/assistir-globo-nordeste-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Y2ZGY4MmNlMWQxMzU0ZTZhZDRlYjQzNmQ1NmNjYzYucG5n" group-title="",HD Globo Nordeste
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globonordestehd/video.m3u8
+#EXTINF:106, tvg-id="106 - Globo Nordeste" tvg-name="Globo Nordeste - 106" tvg-logo="https://cdn.canaismax.com/assistir-globo-nordeste-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Y2ZGY4MmNlMWQxMzU0ZTZhZDRlYjQzNmQ1NmNjYzYucG5n" group-title="",Globo Nordeste
+http://localhost:8000/api/26/playlist.m3u8
+#EXTINF:107, tvg-id="107 - Globo Nordeste" tvg-name="Globo Nordeste - 107" tvg-logo="https://cdn.canaismax.com/assistir-globo-nordeste-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Y2ZGY4MmNlMWQxMzU0ZTZhZDRlYjQzNmQ1NmNjYzYucG5n" group-title="",Globo Nordeste
+http://localhost:8000/api/26/playlist.m3u8
+#EXTINF:108, tvg-id="108 - Globo MG" tvg-name="Globo MG - 108" tvg-logo="https://cdn.canaismax.com/assistir-globo-minas-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjFiM2NhMDhiNTI0MzY4ODk4YTQzZTZmNTM4YTY3YjYucG5n" group-title="",Globo MG
+http://localhost:8000/api/27/playlist.m3u8
+#EXTINF:109, tvg-id="109 - Globo MG" tvg-name="Globo MG - 109" tvg-logo="https://cdn.canaismax.com/assistir-globo-minas-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjFiM2NhMDhiNTI0MzY4ODk4YTQzZTZmNTM4YTY3YjYucG5n" group-title="",Globo MG
+http://localhost:8000/api/27/playlist.m3u8
+#EXTINF:110, tvg-id="110 - HD TLC" tvg-name="HD TLC - 110" tvg-logo="https://cdn.canaismax.com/assistir-tlc-ao-vivo-gratis-em-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5MmFhN2Q2ZDhmYjUyYzgzODAzZGEyNDllYzU2NTIucG5n" group-title="",HD TLC
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tlchd/video.m3u8
+#EXTINF:111, tvg-id="111 - SD TLC" tvg-name="SD TLC - 111" tvg-logo="https://cdn.canaismax.com/assistir-tlc-ao-vivo-gratis-em-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5MmFhN2Q2ZDhmYjUyYzgzODAzZGEyNDllYzU2NTIucG5n" group-title="",SD TLC
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tlcsd/video.m3u8
+#EXTINF:112, tvg-id="112 - SD Discovery Home & Health HD" tvg-name="SD Discovery Home & Health HD - 112" tvg-logo="https://cdn.canaismax.com/assistir-discovery-home-and-health-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTcwODc5ODhhODczYjNmMGQ2ZjlhMTc5ZTQzMTVhODQucG5n" group-title="",SD Discovery Home & Health HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/homehealthsd/video.m3u8
+#EXTINF:113, tvg-id="113 - HD Discovery Home & Health HD" tvg-name="HD Discovery Home & Health HD - 113" tvg-logo="https://cdn.canaismax.com/assistir-discovery-home-and-health-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTcwODc5ODhhODczYjNmMGQ2ZjlhMTc5ZTQzMTVhODQucG5n" group-title="",HD Discovery Home & Health HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/homehealthhd/video.m3u8
+#EXTINF:114, tvg-id="114 - HD GNT HD" tvg-name="HD GNT HD - 114" tvg-logo="https://cdn.canaismax.com/assistir-gnt-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZlNTcxZDllZDU3ODg5MWMzZjBmOWFmMzI0MWE0OTIucG5n" group-title="",HD GNT HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gnthd/video.m3u8
+#EXTINF:115, tvg-id="115 - SD GNT HD" tvg-name="SD GNT HD - 115" tvg-logo="https://cdn.canaismax.com/assistir-gnt-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZlNTcxZDllZDU3ODg5MWMzZjBmOWFmMzI0MWE0OTIucG5n" group-title="",SD GNT HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gntsd/video.m3u8
+#EXTINF:116, tvg-id="116 - HD Globo News" tvg-name="HD Globo News - 116" tvg-logo="https://cdn.canaismax.com/assistir-globonews-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjI5MTZhMjczNmEyODc2ZDk3ZWY1NzBlZjA1ZDdkZmYucG5n" group-title="",HD Globo News
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globonewshd/video.m3u8
+#EXTINF:117, tvg-id="117 - SD Globo News" tvg-name="SD Globo News - 117" tvg-logo="https://cdn.canaismax.com/assistir-globonews-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjI5MTZhMjczNmEyODc2ZDk3ZWY1NzBlZjA1ZDdkZmYucG5n" group-title="",SD Globo News
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/globonewssd/video.m3u8
+#EXTINF:118, tvg-id="118 - HD Universal TV HD" tvg-name="HD Universal TV HD - 118" tvg-logo="https://cdn.canaismax.com/assistir-universal-tv-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDExYmNjMjJhZDQ1YzI2MDE5NDQ4MWM0N2E1MzY5YzkucG5n" group-title="",HD Universal TV HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/universalhd/video.m3u8
+#EXTINF:119, tvg-id="119 - SD Universal TV HD" tvg-name="SD Universal TV HD - 119" tvg-logo="https://cdn.canaismax.com/assistir-universal-tv-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDExYmNjMjJhZDQ1YzI2MDE5NDQ4MWM0N2E1MzY5YzkucG5n" group-title="",SD Universal TV HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/universalsd/video.m3u8
+#EXTINF:120, tvg-id="120 - Warner HD" tvg-name="Warner HD - 120" tvg-logo="https://cdn.canaismax.com/assistir-warner-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWUwNGVjZjZkMjNlZjY3MzVhNjE5YjU0ZTllYWQxZGMucG5n" group-title="",Warner HD
+http://localhost:8000/api/33/playlist.m3u8
+#EXTINF:121, tvg-id="121 - HD Warner HD" tvg-name="HD Warner HD - 121" tvg-logo="https://cdn.canaismax.com/assistir-warner-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWUwNGVjZjZkMjNlZjY3MzVhNjE5YjU0ZTllYWQxZGMucG5n" group-title="",HD Warner HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/warnerbrosshd/video.m3u8
+#EXTINF:122, tvg-id="122 - SD Warner HD" tvg-name="SD Warner HD - 122" tvg-logo="https://cdn.canaismax.com/assistir-warner-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWUwNGVjZjZkMjNlZjY3MzVhNjE5YjU0ZTllYWQxZGMucG5n" group-title="",SD Warner HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/warnerbrosssd/video.m3u8
+#EXTINF:124, tvg-id="124 - HD Sony Channel HD" tvg-name="HD Sony Channel HD - 124" tvg-logo="https://cdn.canaismax.com/assistir-canal-sony-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY4ZDYyNmFkZjI1YTI3MTUyZTZkNDNjNDAzMzRkMWMucG5n" group-title="",HD Sony Channel HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sonyhd/video.m3u8
+#EXTINF:125, tvg-id="125 - SD Sony Channel HD" tvg-name="SD Sony Channel HD - 125" tvg-logo="https://cdn.canaismax.com/assistir-canal-sony-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY4ZDYyNmFkZjI1YTI3MTUyZTZkNDNjNDAzMzRkMWMucG5n" group-title="",SD Sony Channel HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sonysd/video.m3u8
+#EXTINF:337, tvg-id="337 - Fox HD" tvg-name="Fox HD - 337" tvg-logo="https://cdn.canaismax.com/assistir-fox-hd-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIxYjk4NGFiYWE3MTM4MjgxMzE3MjgzNTRlNjFkMmUucG5n" group-title="",Fox HD
+http://localhost:8000/api/35/playlist.m3u8
+#EXTINF:338, tvg-id="338 - HD Fox HD" tvg-name="HD Fox HD - 338" tvg-logo="https://cdn.canaismax.com/assistir-fox-hd-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIxYjk4NGFiYWE3MTM4MjgxMzE3MjgzNTRlNjFkMmUucG5n" group-title="",HD Fox HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxhd/video.m3u8
+#EXTINF:339, tvg-id="339 - SD Fox HD" tvg-name="SD Fox HD - 339" tvg-logo="https://cdn.canaismax.com/assistir-fox-hd-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIxYjk4NGFiYWE3MTM4MjgxMzE3MjgzNTRlNjFkMmUucG5n" group-title="",SD Fox HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsd/video.m3u8
+#EXTINF:130, tvg-id="130 - HD Megapix HD" tvg-name="HD Megapix HD - 130" tvg-logo="https://cdn.canaismax.com/assistir-megapix-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGU4MDBjYWI3OTA1MzMwMWQ1ODllY2NhYmI3MzAwMjIucG5n" group-title="",HD Megapix HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/megapixhd/video.m3u8
+#EXTINF:131, tvg-id="131 - SD Megapix HD" tvg-name="SD Megapix HD - 131" tvg-logo="https://cdn.canaismax.com/assistir-megapix-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGU4MDBjYWI3OTA1MzMwMWQ1ODllY2NhYmI3MzAwMjIucG5n" group-title="",SD Megapix HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/megapixsd/video.m3u8
+#EXTINF:133, tvg-id="133 - TNT HD" tvg-name="TNT HD - 133" tvg-logo="https://cdn.canaismax.com/assistir-canal-tnt-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmEwN2MzNDM0MTViNzZiZjMwMmZkYmVhMzk3NDI4ZWQucG5n" group-title="",TNT HD
+http://localhost:8000/api/37/playlist.m3u8
+#EXTINF:135, tvg-id="135 - HD TNT HD" tvg-name="HD TNT HD - 135" tvg-logo="https://cdn.canaismax.com/assistir-canal-tnt-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmEwN2MzNDM0MTViNzZiZjMwMmZkYmVhMzk3NDI4ZWQucG5n" group-title="",HD TNT HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tnthd/video.m3u8
+#EXTINF:136, tvg-id="136 - SD TNT HD" tvg-name="SD TNT HD - 136" tvg-logo="https://cdn.canaismax.com/assistir-canal-tnt-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmEwN2MzNDM0MTViNzZiZjMwMmZkYmVhMzk3NDI4ZWQucG5n" group-title="",SD TNT HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tntsd/video.m3u8
+#EXTINF:137, tvg-id="137 - HD Cinemax HD" tvg-name="HD Cinemax HD - 137" tvg-logo="https://cdn.canaismax.com/assistir-cinemax-hd-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE4MTRkMjRkODFlYWFiMmQxMGRiMTk0YWU3YjhiYTcucG5n" group-title="",HD Cinemax HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cinemaxhd/video.m3u8
+#EXTINF:138, tvg-id="138 - SD Cinemax HD" tvg-name="SD Cinemax HD - 138" tvg-logo="https://cdn.canaismax.com/assistir-cinemax-hd-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE4MTRkMjRkODFlYWFiMmQxMGRiMTk0YWU3YjhiYTcucG5n" group-title="",SD Cinemax HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cinemaxsd/video.m3u8
+#EXTINF:139, tvg-id="139 - HBO" tvg-name="HBO - 139" tvg-logo="https://cdn.canaismax.com/assistir-hbo-ao-vivo-hd-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE3NmQzZjliNDBhY2VhYjAwYTdlYTY1ZDRmODU2ODcucG5n" group-title="",HBO
+http://localhost:8000/api/39/playlist.m3u8
+#EXTINF:140, tvg-id="140 - HD HBO" tvg-name="HD HBO - 140" tvg-logo="https://cdn.canaismax.com/assistir-hbo-ao-vivo-hd-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE3NmQzZjliNDBhY2VhYjAwYTdlYTY1ZDRmODU2ODcucG5n" group-title="",HD HBO
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbohd/video.m3u8
+#EXTINF:141, tvg-id="141 - SD HBO" tvg-name="SD HBO - 141" tvg-logo="https://cdn.canaismax.com/assistir-hbo-ao-vivo-hd-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE3NmQzZjliNDBhY2VhYjAwYTdlYTY1ZDRmODU2ODcucG5n" group-title="",SD HBO
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/hbosd/video.m3u8
+#EXTINF:142, tvg-id="142 - HD HBO2 HD" tvg-name="HD HBO2 HD - 142" tvg-logo="https://cdn.canaismax.com/assistir-hbo-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTRiOWI1NGI3YzQ5MjNkYTNjMGYzNTM3YmFmODk0ZDIucG5n" group-title="",HD HBO2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbo2hd/video.m3u8
+#EXTINF:143, tvg-id="143 - SD HBO2 HD" tvg-name="SD HBO2 HD - 143" tvg-logo="https://cdn.canaismax.com/assistir-hbo-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTRiOWI1NGI3YzQ5MjNkYTNjMGYzNTM3YmFmODk0ZDIucG5n" group-title="",SD HBO2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbo2sd/video.m3u8
+#EXTINF:144, tvg-id="144 - HD HBO Plus HD" tvg-name="HD HBO Plus HD - 144" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-hd-ao-vivo-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTg0MWI1YTRmMDAyYzQ0OGIwNGY2ZWM2MTM4ZDY1MzMucG5n" group-title="",HD HBO Plus HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplushd/video.m3u8
+#EXTINF:145, tvg-id="145 - SD HBO Plus HD" tvg-name="SD HBO Plus HD - 145" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-hd-ao-vivo-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTg0MWI1YTRmMDAyYzQ0OGIwNGY2ZWM2MTM4ZDY1MzMucG5n" group-title="",SD HBO Plus HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplussd/video.m3u8
+#EXTINF:146, tvg-id="146 - HD HBO Plus" tvg-name="HD HBO Plus - 146" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-ao-vivo-24-horas-online-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTg1NjI4YzY3NmFjNDdjNTg3MmQyNDhhM2RkYjZmOGEucG5n" group-title="",HD HBO Plus
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplushd/video.m3u8
+#EXTINF:147, tvg-id="147 - SD HBO Plus" tvg-name="SD HBO Plus - 147" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-ao-vivo-24-horas-online-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTg1NjI4YzY3NmFjNDdjNTg3MmQyNDhhM2RkYjZmOGEucG5n" group-title="",SD HBO Plus
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplussd/video.m3u8
+#EXTINF:148, tvg-id="148 - HD HBO Family" tvg-name="HD HBO Family - 148" tvg-logo="https://cdn.canaismax.com/assistir-hbo-family-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDlkZWE4YWM0NjgyYTNmMzRmZTQxYmMwZjI4MzJhNDYucG5n" group-title="",HD HBO Family
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbofamilyhd/video.m3u8
+#EXTINF:149, tvg-id="149 - SD HBO Family" tvg-name="SD HBO Family - 149" tvg-logo="https://cdn.canaismax.com/assistir-hbo-family-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDlkZWE4YWM0NjgyYTNmMzRmZTQxYmMwZjI4MzJhNDYucG5n" group-title="",SD HBO Family
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbofamilysd/video.m3u8
+#EXTINF:150, tvg-id="150 - HD HBO Signature HD" tvg-name="HD HBO Signature HD - 150" tvg-logo="https://cdn.canaismax.com/assistir-hbo-signature-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTNhYWRjMDkxMDM0OGZjZjQzZGVmOTQ4NGU1ZjBmYzQucG5n" group-title="",HD HBO Signature HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbosignaturehd/video.m3u8
+#EXTINF:151, tvg-id="151 - SD HBO Signature HD" tvg-name="SD HBO Signature HD - 151" tvg-logo="https://cdn.canaismax.com/assistir-hbo-signature-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTNhYWRjMDkxMDM0OGZjZjQzZGVmOTQ4NGU1ZjBmYzQucG5n" group-title="",SD HBO Signature HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbosignaturesd/video.m3u8
+#EXTINF:152, tvg-id="152 - SD HBO Mundi" tvg-name="SD HBO Mundi - 152" tvg-logo="https://cdn.canaismax.com/assistir-hbo-mundi-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTdhNjA2MDlkMzYwNzFkMjI1ZWFlNDIxNTE3NzM5MDEucG5n" group-title="",SD HBO Mundi
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbomundisd/video.m3u8
+#EXTINF:153, tvg-id="153 - HD HBO Mundi" tvg-name="HD HBO Mundi - 153" tvg-logo="https://cdn.canaismax.com/assistir-hbo-mundi-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTdhNjA2MDlkMzYwNzFkMjI1ZWFlNDIxNTE3NzM5MDEucG5n" group-title="",HD HBO Mundi
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbomundihd/video.m3u8
+#EXTINF:154, tvg-id="154 - SD HBO Xtreme" tvg-name="SD HBO Xtreme - 154" tvg-logo="https://cdn.canaismax.com/assistir-hbo-xtreme-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGUwNTExNGQ3ZjBiY2RiYzZiNTM3MjE5ZTQyZjJmN2IucG5n" group-title="",SD HBO Xtreme
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sextremesd/video.m3u8
+#EXTINF:155, tvg-id="155 - HD HBO Xtreme" tvg-name="HD HBO Xtreme - 155" tvg-logo="https://cdn.canaismax.com/assistir-hbo-xtreme-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGUwNTExNGQ3ZjBiY2RiYzZiNTM3MjE5ZTQyZjJmN2IucG5n" group-title="",HD HBO Xtreme
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sextremehd/video.m3u8
+#EXTINF:156, tvg-id="156 - HD MaxPrime" tvg-name="HD MaxPrime - 156" tvg-logo="https://cdn.canaismax.com/assistir-maxprime-ao-vivo-em-hd-sem-travar/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjBkZGQyMDNlYTQzZGExNGJkODcwNzNkYTNjYWY2OTkucG5n" group-title="",HD MaxPrime
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxprimehd/video.m3u8
+#EXTINF:157, tvg-id="157 - SD MaxPrime" tvg-name="SD MaxPrime - 157" tvg-logo="https://cdn.canaismax.com/assistir-maxprime-ao-vivo-em-hd-sem-travar/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjBkZGQyMDNlYTQzZGExNGJkODcwNzNkYTNjYWY2OTkucG5n" group-title="",SD MaxPrime
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxprimesd/video.m3u8
+#EXTINF:158, tvg-id="158 - SD HBO Pop" tvg-name="SD HBO Pop - 158" tvg-logo="https://cdn.canaismax.com/assistir-hbo-pop-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2M0ZjBjZTM3ZjMyNTBmNDY4NGNjNDkyMjFkNGU0MTkucG5n" group-title="",SD HBO Pop
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbopopsd/video.m3u8
+#EXTINF:159, tvg-id="159 - HD HBO Pop" tvg-name="HD HBO Pop - 159" tvg-logo="https://cdn.canaismax.com/assistir-hbo-pop-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2M0ZjBjZTM3ZjMyNTBmNDY4NGNjNDkyMjFkNGU0MTkucG5n" group-title="",HD HBO Pop
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbopophd/video.m3u8
+#EXTINF:160, tvg-id="160 - Telecine Premium HD" tvg-name="Telecine Premium HD - 160" tvg-logo="https://cdn.canaismax.com/assistir-telecine-premium-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYzOWJkMTc5NTI2NzQ3MGQ4ZDhkZmQ1OTdkZjBhZGYucG5n" group-title="",Telecine Premium HD
+http://localhost:8000/api/49/playlist.m3u8
+#EXTINF:161, tvg-id="161 - HD Telecine Premium HD" tvg-name="HD Telecine Premium HD - 161" tvg-logo="https://cdn.canaismax.com/assistir-telecine-premium-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYzOWJkMTc5NTI2NzQ3MGQ4ZDhkZmQ1OTdkZjBhZGYucG5n" group-title="",HD Telecine Premium HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepremiumhd/video.m3u8
+#EXTINF:162, tvg-id="162 - SD Telecine Premium HD" tvg-name="SD Telecine Premium HD - 162" tvg-logo="https://cdn.canaismax.com/assistir-telecine-premium-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYzOWJkMTc5NTI2NzQ3MGQ4ZDhkZmQ1OTdkZjBhZGYucG5n" group-title="",SD Telecine Premium HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/telecinepremiumsd/video.m3u8
+#EXTINF:163, tvg-id="163 - HD Telecine Action HD" tvg-name="HD Telecine Action HD - 163" tvg-logo="https://cdn.canaismax.com/assistir-telecine-action-ao-vivo-24-hora-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWMzNThhMmIwNjFmYTViODkzY2VhNTQzZGY4YWRjMWEucG5n" group-title="",HD Telecine Action HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecineactionhd/video.m3u8
+#EXTINF:164, tvg-id="164 - SD Telecine Action HD" tvg-name="SD Telecine Action HD - 164" tvg-logo="https://cdn.canaismax.com/assistir-telecine-action-ao-vivo-24-hora-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWMzNThhMmIwNjFmYTViODkzY2VhNTQzZGY4YWRjMWEucG5n" group-title="",SD Telecine Action HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/telecineactionsd/video.m3u8
+#EXTINF:165, tvg-id="165 - SD Telecine Touch HD" tvg-name="SD Telecine Touch HD - 165" tvg-logo="https://cdn.canaismax.com/assistir-telecine-touch-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODk5YjVmNWYwOGEwYjc2NTllY2Q3ZGRiZWZkNjk3ODUucG5n" group-title="",SD Telecine Touch HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinetouchsd/video.m3u8
+#EXTINF:166, tvg-id="166 - HD Telecine Touch HD" tvg-name="HD Telecine Touch HD - 166" tvg-logo="https://cdn.canaismax.com/assistir-telecine-touch-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODk5YjVmNWYwOGEwYjc2NTllY2Q3ZGRiZWZkNjk3ODUucG5n" group-title="",HD Telecine Touch HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinetouchhd/video.m3u8
+#EXTINF:167, tvg-id="167 - SD Telecine Fun HD" tvg-name="SD Telecine Fun HD - 167" tvg-logo="https://cdn.canaismax.com/assistir-telecine-fun-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNhMTc5ZmJiZWRhMDc3ZTU2ZGRhN2NjZDEzYjgzNmIucG5n" group-title="",SD Telecine Fun HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcfunsd/video.m3u8
+#EXTINF:168, tvg-id="168 - HD Telecine Fun HD" tvg-name="HD Telecine Fun HD - 168" tvg-logo="https://cdn.canaismax.com/assistir-telecine-fun-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNhMTc5ZmJiZWRhMDc3ZTU2ZGRhN2NjZDEzYjgzNmIucG5n" group-title="",HD Telecine Fun HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcfunhd/video.m3u8
+#EXTINF:169, tvg-id="169 - HD Telecine Pipoca HD" tvg-name="HD Telecine Pipoca HD - 169" tvg-logo="https://cdn.canaismax.com/assistir-telecine-pipoca-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzUxNmJiMzk2ODY3ZTJjYmU0MTJkOTJmM2EwMTY0OTYucG5n" group-title="",HD Telecine Pipoca HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepipocahd/video.m3u8
+#EXTINF:170, tvg-id="170 - SD Telecine Pipoca HD" tvg-name="SD Telecine Pipoca HD - 170" tvg-logo="https://cdn.canaismax.com/assistir-telecine-pipoca-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzUxNmJiMzk2ODY3ZTJjYmU0MTJkOTJmM2EwMTY0OTYucG5n" group-title="",SD Telecine Pipoca HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepipocasd/video.m3u8
+#EXTINF:171, tvg-id="171 - HD Telecine Cult HD" tvg-name="HD Telecine Cult HD - 171" tvg-logo="https://cdn.canaismax.com/assistir-telecine-cult-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDk2NGJlY2FhMGNiZWFlMDBiMmI1N2MyOGY4MTVjZDIucG5n" group-title="",HD Telecine Cult HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecineculthd/video.m3u8
+#EXTINF:172, tvg-id="172 - SD Telecine Cult HD" tvg-name="SD Telecine Cult HD - 172" tvg-logo="https://cdn.canaismax.com/assistir-telecine-cult-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDk2NGJlY2FhMGNiZWFlMDBiMmI1N2MyOGY4MTVjZDIucG5n" group-title="",SD Telecine Cult HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinecultsd/video.m3u8
+#EXTINF:173, tvg-id="173 - HD Canal Brasil" tvg-name="HD Canal Brasil - 173" tvg-logo="https://cdn.canaismax.com/assistir-canal-brasil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5OTBjZjI2NzQzZjI1NzY2MThhNDExMjE3ZTQyMTQucG5n" group-title="",HD Canal Brasil
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canalbrasilhd/video.m3u8
+#EXTINF:174, tvg-id="174 - SD Canal Brasil" tvg-name="SD Canal Brasil - 174" tvg-logo="https://cdn.canaismax.com/assistir-canal-brasil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5OTBjZjI2NzQzZjI1NzY2MThhNDExMjE3ZTQyMTQucG5n" group-title="",SD Canal Brasil
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canalbrasilsd/video.m3u8
+#EXTINF:175, tvg-id="175 - SD TCM" tvg-name="SD TCM - 175" tvg-logo="https://cdn.canaismax.com/assistir-tcm-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM0YjRmYmFlODg4MDk4NjliYTkwMTNlZGYxMmFmOTQucG5n" group-title="",SD TCM
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcmsd/video.m3u8
+#EXTINF:176, tvg-id="176 - HD TCM" tvg-name="HD TCM - 176" tvg-logo="https://cdn.canaismax.com/assistir-tcm-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM0YjRmYmFlODg4MDk4NjliYTkwMTNlZGYxMmFmOTQucG5n" group-title="",HD TCM
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcmhd/video.m3u8
+#EXTINF:177, tvg-id="177 - HD Space HD" tvg-name="HD Space HD - 177" tvg-logo="https://cdn.canaismax.com/assistir-canal-space-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjUzMTE0YTNmYzBiN2JkMWU2MjkwMjc4YTgxN2NkYTgucG5n" group-title="",HD Space HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/spacehd/video.m3u8
+#EXTINF:178, tvg-id="178 - SD Space HD" tvg-name="SD Space HD - 178" tvg-logo="https://cdn.canaismax.com/assistir-canal-space-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjUzMTE0YTNmYzBiN2JkMWU2MjkwMjc4YTgxN2NkYTgucG5n" group-title="",SD Space HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/spacesd/video.m3u8
+#EXTINF:180, tvg-id="180 - HD AXN HD" tvg-name="HD AXN HD - 180" tvg-logo="https://cdn.canaismax.com/assistir-canal-axn-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIyYjY5MmRhZmJjMGM2Yzk2ZTk5MTIwYWZhMWQwYzgucG5n" group-title="",HD AXN HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/axnhd/video.m3u8
+#EXTINF:181, tvg-id="181 - SD AXN HD" tvg-name="SD AXN HD - 181" tvg-logo="https://cdn.canaismax.com/assistir-canal-axn-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIyYjY5MmRhZmJjMGM2Yzk2ZTk5MTIwYWZhMWQwYzgucG5n" group-title="",SD AXN HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/axnsd/video.m3u8
+#EXTINF:182, tvg-id="182 - HD Investigação Discovery" tvg-name="HD Investigação Discovery - 182" tvg-logo="https://cdn.canaismax.com/assistir-investigacao-discovery-ao-vivo-discovery-id-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzNlYzNhMzQ1MDViMzNhNjM0YTZiZWY2NTUwNjViOWMucG5n" group-title="",HD Investigação Discovery
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/idhd/video.m3u8
+#EXTINF:183, tvg-id="183 - SD Investigação Discovery" tvg-name="SD Investigação Discovery - 183" tvg-logo="https://cdn.canaismax.com/assistir-investigacao-discovery-ao-vivo-discovery-id-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzNlYzNhMzQ1MDViMzNhNjM0YTZiZWY2NTUwNjViOWMucG5n" group-title="",SD Investigação Discovery
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/idsd/video.m3u8
+#EXTINF:185, tvg-id="185 - HD FX HD" tvg-name="HD FX HD - 185" tvg-logo="https://cdn.canaismax.com/assistir-fx-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmFmMzA5MzYwNWJhNjgyZjQwZDgxOGJhNzA3ODZhY2MucG5n" group-title="",HD FX HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fxhd/video.m3u8
+#EXTINF:186, tvg-id="186 - SD FX HD" tvg-name="SD FX HD - 186" tvg-logo="https://cdn.canaismax.com/assistir-fx-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmFmMzA5MzYwNWJhNjgyZjQwZDgxOGJhNzA3ODZhY2MucG5n" group-title="",SD FX HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fxsd/video.m3u8
+#EXTINF:187, tvg-id="187 - FX HD" tvg-name="FX HD - 187" tvg-logo="https://cdn.canaismax.com/assistir-fx-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmFmMzA5MzYwNWJhNjgyZjQwZDgxOGJhNzA3ODZhY2MucG5n" group-title="",FX HD
+http://localhost:8000/api/60/playlist.m3u8
+#EXTINF:188, tvg-id="188 - HD A&E" tvg-name="HD A&E - 188" tvg-logo="https://cdn.canaismax.com/assistir-ae-hd-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTYzZDEyNjg3MzRmYjQ3ZDI1NzBhMmNkZjRkMTBlNDUucG5n" group-title="",HD A&E
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/aehd/video.m3u8
+#EXTINF:189, tvg-id="189 - SD A&E" tvg-name="SD A&E - 189" tvg-logo="https://cdn.canaismax.com/assistir-ae-hd-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTYzZDEyNjg3MzRmYjQ3ZDI1NzBhMmNkZjRkMTBlNDUucG5n" group-title="",SD A&E
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/aesd/video.m3u8
+#EXTINF:190, tvg-id="190 - SD Lifetime" tvg-name="SD Lifetime - 190" tvg-logo="https://cdn.canaismax.com/assistir-lifetime-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDYzMDlkZDVmZTFlNDMzNWQ0YjAzYjIyMTA5NmY3YzQucG5n" group-title="",SD Lifetime
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimesd/video.m3u8
+#EXTINF:191, tvg-id="191 - HD Lifetime" tvg-name="HD Lifetime - 191" tvg-logo="https://cdn.canaismax.com/assistir-lifetime-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDYzMDlkZDVmZTFlNDMzNWQ0YjAzYjIyMTA5NmY3YzQucG5n" group-title="",HD Lifetime
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimehd/video.m3u8
+#EXTINF:192, tvg-id="192 - SD Studio Universal" tvg-name="SD Studio Universal - 192" tvg-logo="https://cdn.canaismax.com/assistir-studio-universal-online-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2I2Yjg2ZmEzMTE2ZDFiY2ZhOTg0ZTY1Yzg2ZDNjMzIucG5n" group-title="",SD Studio Universal
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/studiouniversalsd/video.m3u8
+#EXTINF:193, tvg-id="193 - HD Studio Universal" tvg-name="HD Studio Universal - 193" tvg-logo="https://cdn.canaismax.com/assistir-studio-universal-online-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2I2Yjg2ZmEzMTE2ZDFiY2ZhOTg0ZTY1Yzg2ZDNjMzIucG5n" group-title="",HD Studio Universal
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/studiouniversalhd/video.m3u8
+#EXTINF:194, tvg-id="194 - SD Curta!" tvg-name="SD Curta! - 194" tvg-logo="https://cdn.canaismax.com/assistir-curta-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTVhNTI4YWYwOWYwNjExNTMwZjcwNGI2NjFiNTZkMDcucG5n" group-title="",SD Curta!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/curtasd/video.m3u8
+#EXTINF:195, tvg-id="195 - HD Curta!" tvg-name="HD Curta! - 195" tvg-logo="https://cdn.canaismax.com/assistir-curta-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTVhNTI4YWYwOWYwNjExNTMwZjcwNGI2NjFiNTZkMDcucG5n" group-title="",HD Curta!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/curtahd/video.m3u8
+#EXTINF:196, tvg-id="196 - HD Syfy" tvg-name="HD Syfy - 196" tvg-logo="https://cdn.canaismax.com/assistir-syfy-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTMxNTM5NWVhOGE0MmI3ZmRiM2M4ZmY5ZjRkYzAxODAucG5n" group-title="",HD Syfy
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/syfyhd/video.m3u8
+#EXTINF:197, tvg-id="197 - SD Syfy" tvg-name="SD Syfy - 197" tvg-logo="https://cdn.canaismax.com/assistir-syfy-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTMxNTM5NWVhOGE0MmI3ZmRiM2M4ZmY5ZjRkYzAxODAucG5n" group-title="",SD Syfy
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/syfysd/video.m3u8
+#EXTINF:198, tvg-id="198 - SD FOX Premium 2 HD" tvg-name="SD FOX Premium 2 HD - 198" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-2-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNWE1YmQ2ZmI3ZjJlNjBlZmVhYTdiNjlkMzYzZjNhYWUucG5n" group-title="",SD FOX Premium 2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxpremiumsd/video.m3u8
+#EXTINF:199, tvg-id="199 - SD FOX Premium 2 HD" tvg-name="SD FOX Premium 2 HD - 199" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-2-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNWE1YmQ2ZmI3ZjJlNjBlZmVhYTdiNjlkMzYzZjNhYWUucG5n" group-title="",SD FOX Premium 2 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxpremiumsd/video.m3u8
+#EXTINF:200, tvg-id="200 - SD Prime Box Brazil" tvg-name="SD Prime Box Brazil - 200" tvg-logo="https://cdn.canaismax.com/assistir-prime-box-brazil-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYTk0OGYxYTM2M2Q4MTFmZDczNjUyOWRmNWZmY2UxYWIucG5n" group-title="",SD Prime Box Brazil
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/primeboxbrasilsd/video.m3u8
+#EXTINF:201, tvg-id="201 - Discovery Channel HD" tvg-name="Discovery Channel HD - 201" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="",Discovery Channel HD
+http://localhost:8000/api/68/playlist.m3u8
+#EXTINF:202, tvg-id="202 - SD Discovery Channel HD" tvg-name="SD Discovery Channel HD - 202" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="",SD Discovery Channel HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/discoverysd/video.m3u8
+#EXTINF:203, tvg-id="203 - HD Discovery Channel HD" tvg-name="HD Discovery Channel HD - 203" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="",HD Discovery Channel HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryhd/video.m3u8
+#EXTINF:204, tvg-id="204 - Discovery Channel HD" tvg-name="Discovery Channel HD - 204" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="",Discovery Channel HD
+http://localhost:8000/api/68/playlist.m3u8
+#EXTINF:205, tvg-id="205 - HD Animal Planet" tvg-name="HD Animal Planet - 205" tvg-logo="https://cdn.canaismax.com/assistir-animal-planet-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZiZGVhYjQyODZjOWExMDBiYjAwMzYyYjE4YTYwZDYucG5n" group-title="",HD Animal Planet
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/animalplanethd/video.m3u8
+#EXTINF:206, tvg-id="206 - SD Animal Planet" tvg-name="SD Animal Planet - 206" tvg-logo="https://cdn.canaismax.com/assistir-animal-planet-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZiZGVhYjQyODZjOWExMDBiYjAwMzYyYjE4YTYwZDYucG5n" group-title="",SD Animal Planet
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/animalplanetsd/video.m3u8
+#EXTINF:207, tvg-id="207 - HD National Geographic HD" tvg-name="HD National Geographic HD - 207" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGVlMjViNzI0YTRiYTVlZmJmZDZkMDdlYjU5MWMxNzkucG5n" group-title="",HD National Geographic HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/nathd/video.m3u8
+#EXTINF:208, tvg-id="208 - SD National Geographic HD" tvg-name="SD National Geographic HD - 208" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGVlMjViNzI0YTRiYTVlZmJmZDZkMDdlYjU5MWMxNzkucG5n" group-title="",SD National Geographic HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natsd/video.m3u8
+#EXTINF:210, tvg-id="210 - National Geographic Wild HD" tvg-name="National Geographic Wild HD - 210" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-wild-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmM0MDljODUxZjVmOTljNzRjYzY2NzdjOGZhZjcyYjEucG5n" group-title="",National Geographic Wild HD
+http://localhost:8000/api/71/playlist.m3u8
+#EXTINF:211, tvg-id="211 - SD National Geographic Wild HD" tvg-name="SD National Geographic Wild HD - 211" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-wild-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmM0MDljODUxZjVmOTljNzRjYzY2NzdjOGZhZjcyYjEucG5n" group-title="",SD National Geographic Wild HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeowildsd/video.m3u8
+#EXTINF:212, tvg-id="212 - SD Discovery Civilization" tvg-name="SD Discovery Civilization - 212" tvg-logo="https://cdn.canaismax.com/assistir-discovery-civilization-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODlkNGMwMGNjMGFiYzY1Mzk4MjU4MGRmZjhhMTM1MzAucG5n" group-title="",SD Discovery Civilization
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverycivilizationsd/video.m3u8
+#EXTINF:213, tvg-id="213 - HD Discovery Civilization" tvg-name="HD Discovery Civilization - 213" tvg-logo="https://cdn.canaismax.com/assistir-discovery-civilization-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODlkNGMwMGNjMGFiYzY1Mzk4MjU4MGRmZjhhMTM1MzAucG5n" group-title="",HD Discovery Civilization
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverycivilizationhd/video.m3u8
+#EXTINF:214, tvg-id="214 - SD Discovery Science" tvg-name="SD Discovery Science - 214" tvg-logo="https://cdn.canaismax.com/assistir-discovery-science-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2NhMzE5NmZlNmU1MmNjMzM0NDMyZDJjZDM3YjdmNjQucG5n" group-title="",SD Discovery Science
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverysciencesd/video.m3u8
+#EXTINF:215, tvg-id="215 - HD Discovery Science" tvg-name="HD Discovery Science - 215" tvg-logo="https://cdn.canaismax.com/assistir-discovery-science-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2NhMzE5NmZlNmU1MmNjMzM0NDMyZDJjZDM3YjdmNjQucG5n" group-title="",HD Discovery Science
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverysciencehd/video.m3u8
+#EXTINF:216, tvg-id="216 - SD Discovery Theater HD" tvg-name="SD Discovery Theater HD - 216" tvg-logo="https://cdn.canaismax.com/assistir-discovery-theater-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTVhMjc2YzUyNjE3MmViMDIzNjQwZjI2NTFmNDY5NzUucG5n" group-title="",SD Discovery Theater HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverytheatersd/video.m3u8
+#EXTINF:217, tvg-id="217 - HD Discovery Theater HD" tvg-name="HD Discovery Theater HD - 217" tvg-logo="https://cdn.canaismax.com/assistir-discovery-theater-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTVhMjc2YzUyNjE3MmViMDIzNjQwZjI2NTFmNDY5NzUucG5n" group-title="",HD Discovery Theater HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverytheaterhd/video.m3u8
+#EXTINF:218, tvg-id="218 - History HD" tvg-name="History HD - 218" tvg-logo="https://cdn.canaismax.com/assistir-history-channel-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDM3ZDhkZTc4ZDJjNjFlNmVkNGZhMDFjNDNiMDJkOGMucG5n" group-title="",History HD
+http://localhost:8000/api/75/playlist.m3u8
+#EXTINF:219, tvg-id="219 - HD History HD" tvg-name="HD History HD - 219" tvg-logo="https://cdn.canaismax.com/assistir-history-channel-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDM3ZDhkZTc4ZDJjNjFlNmVkNGZhMDFjNDNiMDJkOGMucG5n" group-title="",HD History HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/historyhd/video.m3u8
+#EXTINF:220, tvg-id="220 - SD History HD" tvg-name="SD History HD - 220" tvg-logo="https://cdn.canaismax.com/assistir-history-channel-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDM3ZDhkZTc4ZDJjNjFlNmVkNGZhMDFjNDNiMDJkOGMucG5n" group-title="",SD History HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/historysd/video.m3u8
+#EXTINF:222, tvg-id="222 - History 2" tvg-name="History 2 - 222" tvg-logo="https://cdn.canaismax.com/assistir-history-2-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzgwNzM0NzBjNTU2YjEyZmUxNTQ5OTgzYTNiMTRhNWMucG5n" group-title="",History 2
+http://localhost:8000/api/76/playlist.m3u8
+#EXTINF:223, tvg-id="223 - SD History 2" tvg-name="SD History 2 - 223" tvg-logo="https://cdn.canaismax.com/assistir-history-2-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzgwNzM0NzBjNTU2YjEyZmUxNTQ5OTgzYTNiMTRhNWMucG5n" group-title="",SD History 2
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/history2sd/video.m3u8
+#EXTINF:224, tvg-id="224 - HD History 2" tvg-name="HD History 2 - 224" tvg-logo="https://cdn.canaismax.com/assistir-history-2-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzgwNzM0NzBjNTU2YjEyZmUxNTQ5OTgzYTNiMTRhNWMucG5n" group-title="",HD History 2
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/history2hd/video.m3u8
+#EXTINF:225, tvg-id="225 - HD Gloob HD" tvg-name="HD Gloob HD - 225" tvg-logo="https://cdn.canaismax.com/assistir-gloob-hd-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTczYjg5NTEwZjVjMTY5NTQ1ZjVlNjY5Mjg3ZWZiMTEucG5n" group-title="",HD Gloob HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gloobhd/video.m3u8
+#EXTINF:226, tvg-id="226 - SD Gloob HD" tvg-name="SD Gloob HD - 226" tvg-logo="https://cdn.canaismax.com/assistir-gloob-hd-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTczYjg5NTEwZjVjMTY5NTQ1ZjVlNjY5Mjg3ZWZiMTEucG5n" group-title="",SD Gloob HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gloobsd/video.m3u8
+#EXTINF:227, tvg-id="227 - HD Discovery Kids" tvg-name="HD Discovery Kids - 227" tvg-logo="https://cdn.canaismax.com/assistir-discovery-kids-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOWE0OGJhMTIyNzk4Y2ZiMjk4ZDJjZjc4ZDE1OGM5YzkucG5n" group-title="",HD Discovery Kids
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverykidshd/video.m3u8
+#EXTINF:228, tvg-id="228 - SD Discovery Kids" tvg-name="SD Discovery Kids - 228" tvg-logo="https://cdn.canaismax.com/assistir-discovery-kids-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOWE0OGJhMTIyNzk4Y2ZiMjk4ZDJjZjc4ZDE1OGM5YzkucG5n" group-title="",SD Discovery Kids
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverykidssd/video.m3u8
+#EXTINF:229, tvg-id="229 - Discovery Kids" tvg-name="Discovery Kids - 229" tvg-logo="https://cdn.canaismax.com/assistir-discovery-kids-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOWE0OGJhMTIyNzk4Y2ZiMjk4ZDJjZjc4ZDE1OGM5YzkucG5n" group-title="",Discovery Kids
+http://localhost:8000/api/78/playlist.m3u8
+#EXTINF:230, tvg-id="230 - Cartoon Network" tvg-name="Cartoon Network - 230" tvg-logo="https://cdn.canaismax.com/assistir-cartoon-network-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDI0Nzk5NjBhNTk0YTAxODlmMWYyZTgyNTVmMjQ0OTEucG5n" group-title="",Cartoon Network
+http://localhost:8000/api/79/playlist.m3u8
+#EXTINF:231, tvg-id="231 - HD Cartoon Network" tvg-name="HD Cartoon Network - 231" tvg-logo="https://cdn.canaismax.com/assistir-cartoon-network-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDI0Nzk5NjBhNTk0YTAxODlmMWYyZTgyNTVmMjQ0OTEucG5n" group-title="",HD Cartoon Network
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cartoonnetworkhd/video.m3u8
+#EXTINF:232, tvg-id="232 - SD Cartoon Network" tvg-name="SD Cartoon Network - 232" tvg-logo="https://cdn.canaismax.com/assistir-cartoon-network-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDI0Nzk5NjBhNTk0YTAxODlmMWYyZTgyNTVmMjQ0OTEucG5n" group-title="",SD Cartoon Network
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/cartoonnetworksd/video.m3u8
+#EXTINF:234, tvg-id="234 - SD Gloobinho" tvg-name="SD Gloobinho - 234" tvg-logo="https://cdn.canaismax.com/assistir-gloobinho-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjk3NTZlNzJkYWQxMDViYmU5ZDlmMmFjYmE5OTViMDQucG5n" group-title="",SD Gloobinho
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gloobinhosd/video.m3u8
+#EXTINF:235, tvg-id="235 - HD Gloobinho" tvg-name="HD Gloobinho - 235" tvg-logo="https://cdn.canaismax.com/assistir-gloobinho-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjk3NTZlNzJkYWQxMDViYmU5ZDlmMmFjYmE5OTViMDQucG5n" group-title="",HD Gloobinho
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gloobinhohd/video.m3u8
+#EXTINF:236, tvg-id="236 - HD Disney XD" tvg-name="HD Disney XD - 236" tvg-logo="https://cdn.canaismax.com/assistir-disney-xd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWNhYzQwODU0YWUwZGM2MTMyMzg3MDNkNDdjOGM5MmYucG5n" group-title="",HD Disney XD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneyxdhd/video.m3u8
+#EXTINF:237, tvg-id="237 - SD Disney XD" tvg-name="SD Disney XD - 237" tvg-logo="https://cdn.canaismax.com/assistir-disney-xd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWNhYzQwODU0YWUwZGM2MTMyMzg3MDNkNDdjOGM5MmYucG5n" group-title="",SD Disney XD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneyxdsd/video.m3u8
+#EXTINF:238, tvg-id="238 - SD Disney Junior" tvg-name="SD Disney Junior - 238" tvg-logo="https://cdn.canaismax.com/assistir-disney-junior-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTMzYzk3ODA0NDQyOGViYTIzYTU4Mzk2OTNjYjA2ZmIucG5n" group-title="",SD Disney Junior
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneyjuniorsd/video.m3u8
+#EXTINF:239, tvg-id="239 - HD Disney Junior" tvg-name="HD Disney Junior - 239" tvg-logo="https://cdn.canaismax.com/assistir-disney-junior-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTMzYzk3ODA0NDQyOGViYTIzYTU4Mzk2OTNjYjA2ZmIucG5n" group-title="",HD Disney Junior
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneyjuniorhd/video.m3u8
+#EXTINF:240, tvg-id="240 - Nickelodeon HD" tvg-name="Nickelodeon HD - 240" tvg-logo="https://cdn.canaismax.com/assistir-nickelodeon-nick-ao-vivo-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTM3MThhMmM5N2IyMDljNzg1YzFkNGUxNDIzMGE0ZTMucG5n" group-title="",Nickelodeon HD
+http://localhost:8000/api/83/playlist.m3u8
+#EXTINF:241, tvg-id="241 - HD Nickelodeon HD" tvg-name="HD Nickelodeon HD - 241" tvg-logo="https://cdn.canaismax.com/assistir-nickelodeon-nick-ao-vivo-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTM3MThhMmM5N2IyMDljNzg1YzFkNGUxNDIzMGE0ZTMucG5n" group-title="",HD Nickelodeon HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/nickelodeonhd/video.m3u8
+#EXTINF:243, tvg-id="243 - HD Nick Jr." tvg-name="HD Nick Jr. - 243" tvg-logo="https://cdn.canaismax.com/assistir-nick-jr-ao-vivo-hd-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmNmOGIyMzA3NTY0MmNlY2UyNGI5MWIyMjg3ZDUwMDYucG5n" group-title="",HD Nick Jr.
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/nickjrhd/video.m3u8
+#EXTINF:244, tvg-id="244 - SD Nick Jr." tvg-name="SD Nick Jr. - 244" tvg-logo="https://cdn.canaismax.com/assistir-nick-jr-ao-vivo-hd-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmNmOGIyMzA3NTY0MmNlY2UyNGI5MWIyMjg3ZDUwMDYucG5n" group-title="",SD Nick Jr.
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/nickjrsd/video.m3u8
+#EXTINF:246, tvg-id="246 - HD Disney Channel HD" tvg-name="HD Disney Channel HD - 246" tvg-logo="https://cdn.canaismax.com/assistir-disney-channel-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGE2ZTk5OGE4YzRkMTIxYjI2NDQzODk2YTJmNDYyMjYucG5n" group-title="",HD Disney Channel HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneychannelhd/video.m3u8
+#EXTINF:248, tvg-id="248 - SD BABY TV" tvg-name="SD BABY TV - 248" tvg-logo="https://cdn.canaismax.com/assistir-baby-tv-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGZjMTcxOGY1ZTZlZTJiNjEyNDNiOGQ3MGQ2N2YzZGEucG5n" group-title="",SD BABY TV
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/babytvsd/video.m3u8
+#EXTINF:249, tvg-id="249 - SD TV Rá Tim Bum!" tvg-name="SD TV Rá Tim Bum! - 249" tvg-logo="https://cdn.canaismax.com/assistir-tv-ra-tim-bum-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjE4ZmI4NThkNTlkMTczYjI4NjE4MDIxMDQ1ZWZkM2MucG5n" group-title="",SD TV Rá Tim Bum!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/ratimbumsd/video.m3u8
+#EXTINF:250, tvg-id="250 - HD TV Rá Tim Bum!" tvg-name="HD TV Rá Tim Bum! - 250" tvg-logo="https://cdn.canaismax.com/assistir-tv-ra-tim-bum-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjE4ZmI4NThkNTlkMTczYjI4NjE4MDIxMDQ1ZWZkM2MucG5n" group-title="",HD TV Rá Tim Bum!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/ratimbumhd/video.m3u8
+#EXTINF:251, tvg-id="251 - HD Tooncast" tvg-name="HD Tooncast - 251" tvg-logo="https://cdn.canaismax.com/assistir-tooncast-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWQ3M2U2ODMzNzk0MjQwNWYxMDk1NzgwYzJhMjFlMjcucG5n" group-title="",HD Tooncast
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tooncasthd/video.m3u8
+#EXTINF:252, tvg-id="252 - SD Tooncast" tvg-name="SD Tooncast - 252" tvg-logo="https://cdn.canaismax.com/assistir-tooncast-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWQ3M2U2ODMzNzk0MjQwNWYxMDk1NzgwYzJhMjFlMjcucG5n" group-title="",SD Tooncast
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tooncastsd/video.m3u8
+#EXTINF:253, tvg-id="253 - HD Boomerang" tvg-name="HD Boomerang - 253" tvg-logo="https://cdn.canaismax.com/assistir-boomerang-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzMzNjAyMDFjMDBmNzY2MjEzZWNkYjlmNGZmN2RiZjUucG5n" group-title="",HD Boomerang
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/boomeranghd/video.m3u8
+#EXTINF:254, tvg-id="254 - SD Boomerang" tvg-name="SD Boomerang - 254" tvg-logo="https://cdn.canaismax.com/assistir-boomerang-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzMzNjAyMDFjMDBmNzY2MjEzZWNkYjlmNGZmN2RiZjUucG5n" group-title="",SD Boomerang
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/boomerangsd/video.m3u8
+#EXTINF:256, tvg-id="256 - SD Nat Geo Kids HD" tvg-name="SD Nat Geo Kids HD - 256" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-kids-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDZlOTcwOTM1YjgyYzRkN2I4MmE4ZjZlMTcwNjNlNDEucG5n" group-title="",SD Nat Geo Kids HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeokidssd/video.m3u8
+#EXTINF:257, tvg-id="257 - HD Nat Geo Kids HD" tvg-name="HD Nat Geo Kids HD - 257" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-kids-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDZlOTcwOTM1YjgyYzRkN2I4MmE4ZjZlMTcwNjNlNDEucG5n" group-title="",HD Nat Geo Kids HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeokidshd/video.m3u8
+#EXTINF:259, tvg-id="259 - SD Mais Globosat HD" tvg-name="SD Mais Globosat HD - 259" tvg-logo="https://cdn.canaismax.com/assistir-mais-globosat-hd-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjNjM2FjNGQ0YWNkNGRlMzI0YjVjYzhhNDQ2MzE1ZGIucG5n" group-title="",SD Mais Globosat HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maisglobosatsd/video.m3u8
+#EXTINF:260, tvg-id="260 - HD Mais Globosat HD" tvg-name="HD Mais Globosat HD - 260" tvg-logo="https://cdn.canaismax.com/assistir-mais-globosat-hd-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjNjM2FjNGQ0YWNkNGRlMzI0YjVjYzhhNDQ2MzE1ZGIucG5n" group-title="",HD Mais Globosat HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maisglobosathd/video.m3u8
+#EXTINF:261, tvg-id="261 - SD BIS HD" tvg-name="SD BIS HD - 261" tvg-logo="https://cdn.canaismax.com/assistir-bis-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGQwZTk2NDhmYjgyMWQwMjA1NGE2NmViODc2ZGI2ZmEucG5n" group-title="",SD BIS HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bissd/video.m3u8
+#EXTINF:262, tvg-id="262 - HD BIS HD" tvg-name="HD BIS HD - 262" tvg-logo="https://cdn.canaismax.com/assistir-bis-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGQwZTk2NDhmYjgyMWQwMjA1NGE2NmViODc2ZGI2ZmEucG5n" group-title="",HD BIS HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bishd/video.m3u8
+#EXTINF:263, tvg-id="263 - SD truTV HD" tvg-name="SD truTV HD - 263" tvg-logo="https://cdn.canaismax.com/assistir-trutv-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Q4NDE1OGJhYzE4NDc4OTVkODBiMmI1MDRjMjgyMWIucG5n" group-title="",SD truTV HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/trutvsd/video.m3u8
+#EXTINF:264, tvg-id="264 - HD E!" tvg-name="HD E! - 264" tvg-logo="https://cdn.canaismax.com/assistir-canal-e-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmRkZWMzODg2MzljY2UzMjVmMWJlYTk4MjMwYTBmM2YucG5n" group-title="",HD E!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/ehd/video.m3u8
+#EXTINF:265, tvg-id="265 - SD E!" tvg-name="SD E! - 265" tvg-logo="https://cdn.canaismax.com/assistir-canal-e-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmRkZWMzODg2MzljY2UzMjVmMWJlYTk4MjMwYTBmM2YucG5n" group-title="",SD E!
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/esd/video.m3u8
+#EXTINF:266, tvg-id="266 - SD Paramount Channel" tvg-name="SD Paramount Channel - 266" tvg-logo="https://cdn.canaismax.com/assistir-paramount-channel-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2U4MzEwNGUwMWE5OWJiOTc0NjIzNGZjNjkwYjJlNzYucG5n" group-title="",SD Paramount Channel
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/paramountchannelsd/video.m3u8
+#EXTINF:267, tvg-id="267 - HD Paramount Channel" tvg-name="HD Paramount Channel - 267" tvg-logo="https://cdn.canaismax.com/assistir-paramount-channel-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2U4MzEwNGUwMWE5OWJiOTc0NjIzNGZjNjkwYjJlNzYucG5n" group-title="",HD Paramount Channel
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/paramountchannelhd/video.m3u8
+#EXTINF:268, tvg-id="268 - HD Comedy Central" tvg-name="HD Comedy Central - 268" tvg-logo="https://cdn.canaismax.com/assistir-comedy-central-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmRiMDc4YmJhODRhZTRlNjE1ODEwZGFjMGEwNjA0YzIucG5n" group-title="",HD Comedy Central
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/comedycentralhd/video.m3u8
+#EXTINF:269, tvg-id="269 - SD Comedy Central" tvg-name="SD Comedy Central - 269" tvg-logo="https://cdn.canaismax.com/assistir-comedy-central-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmRiMDc4YmJhODRhZTRlNjE1ODEwZGFjMGEwNjA0YzIucG5n" group-title="",SD Comedy Central
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/comedycentralsd/video.m3u8
+#EXTINF:270, tvg-id="270 - SD I.SAT" tvg-name="SD I.SAT - 270" tvg-logo="https://cdn.canaismax.com/assistir-isat-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjc0MjIzNjJmMGVmM2U5NjJlYTM4ODA5YTI2NWJkYTAucG5n" group-title="",SD I.SAT
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/isatsd/video.m3u8
+#EXTINF:271, tvg-id="271 - HD TNT Séries" tvg-name="HD TNT Séries - 271" tvg-logo="https://cdn.canaismax.com/assistir-tnt-series-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzljZWE4YjE5NjU0NmM2MWNhM2Y5OGZlNjkxNTdhZDAucG5n" group-title="",HD TNT Séries
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tntserieshd/video.m3u8
+#EXTINF:272, tvg-id="272 - SD TNT Séries" tvg-name="SD TNT Séries - 272" tvg-logo="https://cdn.canaismax.com/assistir-tnt-series-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzljZWE4YjE5NjU0NmM2MWNhM2Y5OGZlNjkxNTdhZDAucG5n" group-title="",SD TNT Séries
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tntseriessd/video.m3u8
+#EXTINF:274, tvg-id="274 - HD Fox Life" tvg-name="HD Fox Life - 274" tvg-logo="https://cdn.canaismax.com/assistir-fox-life-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGJhNzg3OWQ1ZDE1MzQxMmM1NWZmYzA0NzI4NTY2MzcucG5n" group-title="",HD Fox Life
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxlifehd/video.m3u8
+#EXTINF:275, tvg-id="275 - SD Fox Life" tvg-name="SD Fox Life - 275" tvg-logo="https://cdn.canaismax.com/assistir-fox-life-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGJhNzg3OWQ1ZDE1MzQxMmM1NWZmYzA0NzI4NTY2MzcucG5n" group-title="",SD Fox Life
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxlifesd/video.m3u8
+#EXTINF:276, tvg-id="276 - SD TBS HD" tvg-name="SD TBS HD - 276" tvg-logo="https://cdn.canaismax.com/assistir-tbs-hd-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjU4MTdmN2QyM2U0Njc1MjJmM2NhN2E4NzhhNDUzYmMucG5n" group-title="",SD TBS HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tbssd/video.m3u8
+#EXTINF:277, tvg-id="277 - HD TBS HD" tvg-name="HD TBS HD - 277" tvg-logo="https://cdn.canaismax.com/assistir-tbs-hd-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjU4MTdmN2QyM2U0Njc1MjJmM2NhN2E4NzhhNDUzYmMucG5n" group-title="",HD TBS HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tbshd/video.m3u8
+#EXTINF:278, tvg-id="278 - HD Discovery World HD" tvg-name="HD Discovery World HD - 278" tvg-logo="https://cdn.canaismax.com/assistir-discovery-world-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM5ZDBmMzYxZDczNzcwNWQ2NjMzZDQzM2Q0NWJmNTUucG5n" group-title="",HD Discovery World HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryworldhd/video.m3u8
+#EXTINF:279, tvg-id="279 - SD Discovery World HD" tvg-name="SD Discovery World HD - 279" tvg-logo="https://cdn.canaismax.com/assistir-discovery-world-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM5ZDBmMzYxZDczNzcwNWQ2NjMzZDQzM2Q0NWJmNTUucG5n" group-title="",SD Discovery World HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryworldsd/video.m3u8
+#EXTINF:280, tvg-id="280 - SD Arte 1" tvg-name="SD Arte 1 - 280" tvg-logo="https://cdn.canaismax.com/assistir-arte-1-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY5Yjg0MTg0YWJhMmI3OGIwZjZmYTkwZWQ1YmJiNGEucG5n" group-title="",SD Arte 1
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/arte1sd/video.m3u8
+#EXTINF:281, tvg-id="281 - Arte 1" tvg-name="Arte 1 - 281" tvg-logo="https://cdn.canaismax.com/assistir-arte-1-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY5Yjg0MTg0YWJhMmI3OGIwZjZmYTkwZWQ1YmJiNGEucG5n" group-title="",Arte 1
+http://localhost:8000/api/102/playlist.m3u8
+#EXTINF:282, tvg-id="282 - SD Off" tvg-name="SD Off - 282" tvg-logo="https://cdn.canaismax.com/assistir-canal-off-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWQ4ZDE2NGFlNThmMTMxYWFjMTMyMjc4ZDAyMDBmOGMucG5n" group-title="",SD Off
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canaloffsd/video.m3u8
+#EXTINF:283, tvg-id="283 - HD Off" tvg-name="HD Off - 283" tvg-logo="https://cdn.canaismax.com/assistir-canal-off-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWQ4ZDE2NGFlNThmMTMxYWFjMTMyMjc4ZDAyMDBmOGMucG5n" group-title="",HD Off
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canaloffhd/video.m3u8
+#EXTINF:284, tvg-id="284 - SD WooHoo" tvg-name="SD WooHoo - 284" tvg-logo="https://cdn.canaismax.com/assistir-woohoo-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGIzZjQyMmU5MGYxY2JiNWRmOGY5ZDU1ZDczODBkOGUucG5n" group-title="",SD WooHoo
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/woohoosd/video.m3u8
+#EXTINF:285, tvg-id="285 - HD WooHoo" tvg-name="HD WooHoo - 285" tvg-logo="https://cdn.canaismax.com/assistir-woohoo-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGIzZjQyMmU5MGYxY2JiNWRmOGY5ZDU1ZDczODBkOGUucG5n" group-title="",HD WooHoo
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/woohoohd/video.m3u8
+#EXTINF:286, tvg-id="286 - WooHoo" tvg-name="WooHoo - 286" tvg-logo="https://cdn.canaismax.com/assistir-woohoo-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGIzZjQyMmU5MGYxY2JiNWRmOGY5ZDU1ZDczODBkOGUucG5n" group-title="",WooHoo
+http://localhost:8000/api/104/playlist.m3u8
+#EXTINF:287, tvg-id="287 - HD Discovery Turbo" tvg-name="HD Discovery Turbo - 287" tvg-logo="https://cdn.canaismax.com/assistir-discovery-turbo-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYxODIyYmUxYzEyYWVlYTcxNTUyOGU0OWJlY2ZjNzAucG5n" group-title="",HD Discovery Turbo
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryturbohd/video.m3u8
+#EXTINF:288, tvg-id="288 - SD Discovery Turbo" tvg-name="SD Discovery Turbo - 288" tvg-logo="https://cdn.canaismax.com/assistir-discovery-turbo-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYxODIyYmUxYzEyYWVlYTcxNTUyOGU0OWJlY2ZjNzAucG5n" group-title="",SD Discovery Turbo
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryturbosd/video.m3u8
+#EXTINF:289, tvg-id="289 - HD Band Sports HD" tvg-name="HD Band Sports HD - 289" tvg-logo="https://cdn.canaismax.com/assistir-band-sports-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODljODJhYzdiNDgxOTBkNDJjMjAyMDU3Yjk5YjM1NGIucG5n" group-title="",HD Band Sports HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandsportshd/video.m3u8
+#EXTINF:290, tvg-id="290 - SD Band Sports HD" tvg-name="SD Band Sports HD - 290" tvg-logo="https://cdn.canaismax.com/assistir-band-sports-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODljODJhYzdiNDgxOTBkNDJjMjAyMDU3Yjk5YjM1NGIucG5n" group-title="",SD Band Sports HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandsportssd/video.m3u8
+#EXTINF:291, tvg-id="291 - Band Sports HD" tvg-name="Band Sports HD - 291" tvg-logo="https://cdn.canaismax.com/assistir-band-sports-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODljODJhYzdiNDgxOTBkNDJjMjAyMDU3Yjk5YjM1NGIucG5n" group-title="",Band Sports HD
+http://localhost:8000/api/106/playlist.m3u8
+#EXTINF:292, tvg-id="292 - SD FishTV" tvg-name="SD FishTV - 292" tvg-logo="https://cdn.canaismax.com/assistir-fishtv-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZmRjN2JiMDM0OTNmZDEzOTIxYmE1NzUwYTg0NjI5OTAucG5n" group-title="",SD FishTV
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fishtvsd/video.m3u8
+#EXTINF:293, tvg-id="293 - HD FishTV" tvg-name="HD FishTV - 293" tvg-logo="https://cdn.canaismax.com/assistir-fishtv-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZmRjN2JiMDM0OTNmZDEzOTIxYmE1NzUwYTg0NjI5OTAucG5n" group-title="",HD FishTV
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fishtvhd/video.m3u8
+#EXTINF:294, tvg-id="294 - FishTV" tvg-name="FishTV - 294" tvg-logo="https://cdn.canaismax.com/assistir-fishtv-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZmRjN2JiMDM0OTNmZDEzOTIxYmE1NzUwYTg0NjI5OTAucG5n" group-title="",FishTV
+http://localhost:8000/api/107/playlist.m3u8
+#EXTINF:295, tvg-id="295 - Globo Rede Bahia" tvg-name="Globo Rede Bahia - 295" tvg-logo="https://cdn.canaismax.com/assistir-globo-rede-bahia-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzZhNjhmNzE2MTNiNjg0NjhhZWE2YmRhZWYwODE1MDIucG5n" group-title="",Globo Rede Bahia
+http://localhost:8000/api/108/playlist.m3u8
+#EXTINF:296, tvg-id="296 - Globo Rede Bahia" tvg-name="Globo Rede Bahia - 296" tvg-logo="https://cdn.canaismax.com/assistir-globo-rede-bahia-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzZhNjhmNzE2MTNiNjg0NjhhZWE2YmRhZWYwODE1MDIucG5n" group-title="",Globo Rede Bahia
+http://localhost:8000/api/108/playlist.m3u8
+#EXTINF:297, tvg-id="297 - Globo Rede Bahia" tvg-name="Globo Rede Bahia - 297" tvg-logo="https://cdn.canaismax.com/assistir-globo-rede-bahia-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzZhNjhmNzE2MTNiNjg0NjhhZWE2YmRhZWYwODE1MDIucG5n" group-title="",Globo Rede Bahia
+http://localhost:8000/api/108/playlist.m3u8
+#EXTINF:299, tvg-id="299 - BBB" tvg-name="BBB - 299" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",BBB
+http://localhost:8000/api/109/playlist.m3u8
+#EXTINF:300, tvg-id="300 - BBB" tvg-name="BBB - 300" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",BBB
+http://localhost:8000/api/109/playlist.m3u8
+#EXTINF:301, tvg-id="301 - BBB" tvg-name="BBB - 301" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",BBB
+http://localhost:8000/api/109/playlist.m3u8
+#EXTINF:302, tvg-id="302 - HD BBB" tvg-name="HD BBB - 302" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",HD BBB
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/multishowhd/video.m3u8
+#EXTINF:303, tvg-id="303 - SD BBB" tvg-name="SD BBB - 303" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="",SD BBB
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/multishowsd/video.m3u8
+#EXTINF:306, tvg-id="306 - HD Premiere Clubes HD" tvg-name="HD Premiere Clubes HD - 306" tvg-logo="https://cdn.canaismax.com/assistir-premiere-clubes-hd-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDU5MzMxMmMyODJiNDM0MmY1OWIxYzU0YjI1YzQyNmIucG5n" group-title="",HD Premiere Clubes HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/premiere1hd/video.m3u8
+#EXTINF:307, tvg-id="307 - SD Premiere Clubes HD" tvg-name="SD Premiere Clubes HD - 307" tvg-logo="https://cdn.canaismax.com/assistir-premiere-clubes-hd-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDU5MzMxMmMyODJiNDM0MmY1OWIxYzU0YjI1YzQyNmIucG5n" group-title="",SD Premiere Clubes HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/premiere1sd/video.m3u8
+#EXTINF:308, tvg-id="308 - Premiere 2 HD" tvg-name="Premiere 2 HD - 308" tvg-logo="https://cdn.canaismax.com/assistir-premiere-2-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGYwMmRmN2IyYWVkY2E5YTRhNTVjNjUxNzhkM2IwMTMucG5n" group-title="",Premiere 2 HD
+http://localhost:8000/api/111/playlist.m3u8
+#EXTINF:310, tvg-id="310 - Premiere 3 HD" tvg-name="Premiere 3 HD - 310" tvg-logo="https://cdn.canaismax.com/assistir-premiere-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2ZiOWViNzM3OGFlM2M5ZWFjY2ZiMDkyZTkyMWM0MTkucG5n" group-title="",Premiere 3 HD
+http://localhost:8000/api/112/playlist.m3u8
+#EXTINF:312, tvg-id="312 - Premiere 4" tvg-name="Premiere 4 - 312" tvg-logo="https://cdn.canaismax.com/assistir-premiere-4-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGM5ZDA4NzVhYmU5Yjg3NzYzNThiNjczMGRhOGMzYWEucG5n" group-title="",Premiere 4
+http://localhost:8000/api/113/playlist.m3u8
+#EXTINF:313, tvg-id="313 - SD Premiere 5 HD" tvg-name="SD Premiere 5 HD - 313" tvg-logo="https://cdn.canaismax.com/assistir-premiere-5-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTE3ZWQ4ODAyYmE4NGRjNzRmOGQwZGUxY2M1Y2JiZmEucG5n" group-title="",SD Premiere 5 HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/globoesporte1sd/video.m3u8
+#EXTINF:314, tvg-id="314 - Premiere 6" tvg-name="Premiere 6 - 314" tvg-logo="https://cdn.canaismax.com/assistir-premiere-6-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGVmM2VkOTg0NDgyMzFiNmIzYzM2MTQyYjczOTI2OTQucG5n" group-title="",Premiere 6
+http://localhost:8000/api/115/playlist.m3u8
+#EXTINF:316, tvg-id="316 - Premiere 7" tvg-name="Premiere 7 - 316" tvg-logo="https://cdn.canaismax.com/assistir-premiere-7-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWRiY2U0MTVhZGJmZDgxNGQ5NmQxYjVkYTRmMDY4ZGMucG5n" group-title="",Premiere 7
+http://localhost:8000/api/116/playlist.m3u8
+#EXTINF:319, tvg-id="319 - Record News" tvg-name="Record News - 319" tvg-logo="https://cdn.canaismax.com/assistir-record-news-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzkwZDljN2MxODI2MDc0YWJhODQyZGYzMTMwYmU2MDQucG5n" group-title="",Record News
+http://localhost:8000/api/119/playlist.m3u8
+#EXTINF:320, tvg-id="320 - SD Record News" tvg-name="SD Record News - 320" tvg-logo="https://cdn.canaismax.com/assistir-record-news-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzkwZDljN2MxODI2MDc0YWJhODQyZGYzMTMwYmU2MDQucG5n" group-title="",SD Record News
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/recordnewssd/video.m3u8
+#EXTINF:321, tvg-id="321 - HD Record News" tvg-name="HD Record News - 321" tvg-logo="https://cdn.canaismax.com/assistir-record-news-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzkwZDljN2MxODI2MDc0YWJhODQyZGYzMTMwYmU2MDQucG5n" group-title="",HD Record News
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/recordnewshd/video.m3u8
+#EXTINF:324, tvg-id="324 - HD MasterChef 14/07/2020" tvg-name="HD MasterChef 14/07/2020 - 324" tvg-logo="https://cdn.canaismax.com/assistir-masterchef-14072020-ao-vivo-estreia-online-band/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGY0YjMxZTc4NTg4MmIwZTFkY2Y2MzdhMmIzNWYwMTgucG5n" group-title="",HD MasterChef 14/07/2020
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinashd/video.m3u8
+#EXTINF:325, tvg-id="325 - SD MasterChef 14/07/2020" tvg-name="SD MasterChef 14/07/2020 - 325" tvg-logo="https://cdn.canaismax.com/assistir-masterchef-14072020-ao-vivo-estreia-online-band/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGY0YjMxZTc4NTg4MmIwZTFkY2Y2MzdhMmIzNWYwMTgucG5n" group-title="",SD MasterChef 14/07/2020
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinassd/video.m3u8
+#EXTINF:326, tvg-id="326 - SD Futura" tvg-name="SD Futura - 326" tvg-logo="https://cdn.canaismax.com/assistir-futura-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmQyMzM2MmJmNWQ1MmQyYTA1YTU3OWNlNzcxMmYxMzYucG5n" group-title="",SD Futura
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/futurasd/video.m3u8
+#EXTINF:327, tvg-id="327 - Futura" tvg-name="Futura - 327" tvg-logo="https://cdn.canaismax.com/assistir-futura-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmQyMzM2MmJmNWQ1MmQyYTA1YTU3OWNlNzcxMmYxMzYucG5n" group-title="",Futura
+http://localhost:8000/api/121/playlist.m3u8
+#EXTINF:328, tvg-id="328 - CNT Rio" tvg-name="CNT Rio - 328" tvg-logo="https://cdn.canaismax.com/cnt-rio/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYTcyMjJmMTA4ZjMwY2Y5ZWViM2NiM2RlYWRiOTA1YzgucG5n" group-title="",CNT Rio
+http://localhost:8000/api/122/playlist.m3u8
+#EXTINF:329, tvg-id="329 - SD TVE" tvg-name="SD TVE - 329" tvg-logo="https://cdn.canaismax.com/assistir-tve-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDM0NDg3YWU0ZWNmZDQ1NDNiZjdmYWY3MzYyNzY3ZTUucG5n" group-title="",SD TVE
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tvesd/video.m3u8
+#EXTINF:330, tvg-id="330 - CNN En Español" tvg-name="CNN En Español - 330" tvg-logo="https://cdn.canaismax.com/cnn-en-espanol/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmMyNjEzNGI3MDllZjZjNDlmM2QyYzEyMzk3MmNlY2QucG5n" group-title="",CNN En Español
+http://localhost:8000/api/124/playlist.m3u8
+#EXTINF:331, tvg-id="331 - HD CNN En Español" tvg-name="HD CNN En Español - 331" tvg-logo="https://cdn.canaismax.com/cnn-en-espanol/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmMyNjEzNGI3MDllZjZjNDlmM2QyYzEyMzk3MmNlY2QucG5n" group-title="",HD CNN En Español
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cnnhd/video.m3u8
+#EXTINF:332, tvg-id="332 - SD CNN En Español" tvg-name="SD CNN En Español - 332" tvg-logo="https://cdn.canaismax.com/cnn-en-espanol/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmMyNjEzNGI3MDllZjZjNDlmM2QyYzEyMzk3MmNlY2QucG5n" group-title="",SD CNN En Español
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cnnsd/video.m3u8
+#EXTINF:333, tvg-id="333 - Band News HD" tvg-name="Band News HD - 333" tvg-logo="https://cdn.canaismax.com/assistir-band-news-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWY5MDNjYmQ2MDhkMjJmZjJkYjE0NzBmN2YyYzdlOTkucG5n" group-title="",Band News HD
+http://localhost:8000/api/125/playlist.m3u8
+#EXTINF:334, tvg-id="334 - SD Band News HD" tvg-name="SD Band News HD - 334" tvg-logo="https://cdn.canaismax.com/assistir-band-news-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWY5MDNjYmQ2MDhkMjJmZjJkYjE0NzBmN2YyYzdlOTkucG5n" group-title="",SD Band News HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandnewssd/video.m3u8
+#EXTINF:335, tvg-id="335 - HD Band News HD" tvg-name="HD Band News HD - 335" tvg-logo="https://cdn.canaismax.com/assistir-band-news-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWY5MDNjYmQ2MDhkMjJmZjJkYjE0NzBmN2YyYzdlOTkucG5n" group-title="",HD Band News HD
+http://localhost:8000/api/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandnewshd/video.m3u8
+#EXTINF:336, tvg-id="336 - Band News HD" tvg-name="Band News HD - 336" tvg-logo="https://cdn.canaismax.com/assistir-band-news-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWY5MDNjYmQ2MDhkMjJmZjJkYjE0NzBmN2YyYzdlOTkucG5n" group-title="",Band News HD
+http://localhost:8000/api/125/playlist.m3u8

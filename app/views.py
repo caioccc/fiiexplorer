@@ -357,22 +357,47 @@ def get_other_m3u(request):
         return HttpResponseNotFound("hello")
 
 
+def get_text_type(link):
+    uri = str(link.m3u8)
+    if 'sd/' in uri:
+        return 'SD'
+    elif 'hd/' in uri:
+        return 'HD'
+    else:
+        return None
+
+
+def clean_title(channel):
+    title = str(channel.title)
+    if 'Assistir ' in title:
+        if ' ao vivo' in title:
+            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' ao vivo')]
+    return title
+
+
 def generate_lista(request):
     f = open("lista.m3u8", "a")
     f.truncate(0)
     f.write("#EXTM3U\n")
     for ch in Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct():
-        custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
-        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(ch.id,
-                                                                                                                 ch.id,
-                                                                                                                 ch.title,
-                                                                                                                 ch.title,
-                                                                                                                 ch.id,
-                                                                                                                 ch.img_url,
-                                                                                                                 '',
-                                                                                                                 ch.title,
-                                                                                                                 custom_m3u8))
-
+        for link in ch.link_set.filter(m3u8__icontains='.m3u8').distinct():
+            str_type = get_text_type(link)
+            if str_type:
+                title = str_type + ' ' + clean_title(ch)
+                custom_m3u8 = SITE_URL + 'api/other/playlist.m3u8?uri=' + link.m3u8
+            else:
+                title = clean_title(ch)
+                custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
+            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+                link.id,
+                link.id,
+                title,
+                title,
+                link.id,
+                ch.img_url,
+                '',
+                title,
+                custom_m3u8))
     fsock = open("lista.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
 
@@ -382,16 +407,23 @@ def get_lista_gen(request):
     f.truncate(0)
     f.write("#EXTM3U\n")
     for ch in Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct():
-        custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
-        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(ch.id,
-                                                                                                                 ch.id,
-                                                                                                                 ch.title,
-                                                                                                                 ch.title,
-                                                                                                                 ch.id,
-                                                                                                                 ch.img_url,
-                                                                                                                 '',
-                                                                                                                 ch.title,
-                                                                                                                 custom_m3u8))
-
+        for link in ch.link_set.filter(m3u8__icontains='.m3u8').distinct():
+            str_type = get_text_type(link)
+            if str_type:
+                title = str_type + ' ' + clean_title(ch)
+                custom_m3u8 = SITE_URL + 'api/other/playlist.m3u8?uri=' + link.m3u8
+            else:
+                title = clean_title(ch)
+                custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
+            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+                link.id,
+                link.id,
+                title,
+                title,
+                link.id,
+                ch.img_url,
+                '',
+                title,
+                custom_m3u8))
     fsock = open("lista.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
