@@ -100,20 +100,13 @@ def get_channel_id(string_script):
 
 
 def save_link_channel(canal, id_url):
-    # link = Link()
-    # link.url = id_url
-    # link.channel = canal
-    # link.m3u8 = get_m3u8(id_url)
-    # link.save()
-    # if link.m3u8 and link.m3u8 != '':
-    #     save_tss(link.m3u8, canal.title, canal.img_url, link)
-    # else:
-    #     print(canal.title, 'nao tem .m3u8')
-    link = Link()
-    link.url = id_url
-    link.channel = canal
-    link.m3u8 = get_m3u8(id_url)
-    link.save()
+    m3u8 = get_m3u8(id_url)
+    if m3u8:
+        link = Link()
+        link.url = id_url
+        link.channel = canal
+        link.m3u8 = m3u8
+        link.save()
 
 
 def get_headers():

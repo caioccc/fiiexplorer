@@ -39,7 +39,7 @@ urlpatterns = [
     path('logout/', auth_views.logout_then_login, name='logout'),
 
     path('get-json/', get_json, name='get-json'),
-    path('api/<int:pk_canal>/playlist.m3u8', generate_m3u, name='generate-m3u'),
+    path('api/playlist.m3u8', generate_m3u, name='generate-m3u'),
     path('ts', get_ts, name='get-ts'),
     path('api/other/playlist.m3u8', get_other_m3u, name='get-other-m3u'),
     path('generate-list', generate_lista, name='generate-list'),

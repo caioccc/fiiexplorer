@@ -12,7 +12,7 @@ from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, TemplateView
 
 from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk
-from app.models import Channel, Site, Filme, Serie, Temporada
+from app.models import Channel, Site, Filme, Serie, Temporada, Link
 from app.utils import get_page_bs4, get_headers
 from fiiexplorer.settings import SITE_URL
 
@@ -262,45 +262,69 @@ def check_m3u8_req(uri):
         return False
 
 
-def generate_m3u(request, pk_canal):
+def generate_m3u(request):
     headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
-    canal = Channel.objects.get(pk=pk_canal)
-    links = canal.link_set.all()
-    li = links.first()
+    uri_m3u8 = request.GET['uri']
     try:
-        req = requests.get(url=li.m3u8, headers=headers)
-        if req.status_code == 200:
-            page = BeautifulSoup(req.text, 'html.parser')
-            page_str = str(page.contents[0])
-            arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
-            arr_tss = re.findall("([^\s]+.ts)", page_str)
-            if len(arr_strings) > 0 and len(arr_tss) > 0:
+        req = requests.get(url=uri_m3u8, headers=headers)
+        page = BeautifulSoup(req.text, 'html.parser')
+        page_str = str(page.contents[0])
+        arr_strings_without_http = list(set(remove_iv(re.findall("([^\s]+.m3u8)", page_str))))
+        if len(arr_strings_without_http) > 0:
+            playlist_index = str(uri_m3u8).index('playlist.m3u8')
+            prefix = str(uri_m3u8)[:playlist_index]
+            for i in range(len(arr_strings_without_http)):
+                new_uri = prefix + str(arr_strings_without_http[i])
+                page_str = page_str.replace(arr_strings_without_http[i],
+                                            SITE_URL + 'api/other/playlist.m3u8?uri=' + str(new_uri))
+        else:
+            arr_strings = list(set(remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))))
+            if len(arr_strings) > 0:
                 for i in range(len(arr_strings)):
+                    if not 'key?id=' in str(arr_strings[i]):
+                        page_str = page_str.replace(arr_strings[i],
+                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
+                for uri_ts_coded in arr_strings:
+                    if 'key?id=' in str(uri_ts_coded):
+                        page_str = page_str.replace(uri_ts_coded,
+                                                    SITE_URL + 'ts?link=' + str(uri_ts_coded))
+                        break
+
+        return HttpResponse(
+            content=page_str,
+            status=req.status_code,
+            content_type=req.headers['Content-Type']
+        )
+    except (requests.exceptions.ConnectionError,):
+        print('erro ao connectar')
+        return HttpResponseNotFound()
+    except (Exception,):
+        return HttpResponseNotFound("hello")
+
+
+def get_other_m3u(request):
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
+    uri_m3u8 = request.GET['uri']
+    try:
+        req = requests.get(url=uri_m3u8, headers=headers)
+        page = BeautifulSoup(req.text, 'html.parser')
+        page_str = str(page.contents[0])
+        arr_strings = list(set(remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))))
+        if len(arr_strings) > 0:
+            for i in range(len(arr_strings)):
+                if not 'key?id=' in str(arr_strings[i]):
                     page_str = page_str.replace(arr_strings[i],
                                                 SITE_URL + 'ts?link=' + str(arr_strings[i]))
-            else:
-                arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
-                arr_tss = re.findall("([^\s]+.ts)", page_str)
-                if len(arr_tss) > 0:
-                    pass
-                    # for i in range(len(arr_tss)):
-                    #     page_str = page_str.replace(arr_strings[i],
-                    #                                 SITE_URL + 'ts?key=' + str(arr_strings[i]))
-                elif len(arr_strings_without_http) > 0:
-                    for i in range(len(arr_strings_without_http)):
-                        playlist_index = str(li.m3u8).index('playlist.m3u8')
-                        new_uri = str(li.m3u8)[:playlist_index] + str(arr_strings_without_http[i])
-                        page_str = page_str.replace(arr_strings_without_http[i],
-                                                    SITE_URL + 'api/other/playlist.m3u8?uri=' + str(new_uri))
-                else:
-                    pass
-            return HttpResponse(
-                content=page_str,
-                status=req.status_code,
-                content_type=req.headers['Content-Type']
-            )
-        else:
-            return HttpResponseNotFound("hello")
+            for uri_ts_coded in arr_strings:
+                if 'key?id=' in str(uri_ts_coded):
+                    page_str = page_str.replace(uri_ts_coded,
+                                                SITE_URL + 'ts?link=' + str(uri_ts_coded))
+                    break
+        return HttpResponse(
+            content=page_str,
+            status=req.status_code,
+            content_type=req.headers['Content-Type']
+        )
     except (Exception,):
         return HttpResponseNotFound("hello")
 
@@ -312,49 +336,6 @@ def remove_iv(array_uri):
             if index_iv >= 0:
                 array_uri[i] = str(array_uri[i])[:index_iv]
     return array_uri
-
-
-def get_other_m3u(request):
-    uri_m3u8 = request.GET['uri']
-    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
-    try:
-        req = requests.get(url=uri_m3u8, headers=headers)
-        if req.status_code == 200:
-            page = BeautifulSoup(req.text, 'html.parser')
-            page_str = str(page.contents[0])
-            arr_strings = remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))
-            if len(arr_strings) > 0:
-                for i in range(len(arr_strings)):
-                    if not 'key?id=' in str(arr_strings[i]):
-                        page_str = page_str.replace(arr_strings[i],
-                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
-                for uri_ts_coded in arr_strings:
-                    if 'key?id=' in str(uri_ts_coded):
-                        page_str = page_str.replace(uri_ts_coded,
-                                                    SITE_URL + 'ts?link=' + str(uri_ts_coded))
-                        break
-            else:
-                arr_strings_without_http = re.findall("([^\s]+.m3u8)", page_str)
-                arr_tss = re.findall("([^\s]+.ts)", page_str)
-                if len(arr_tss) > 0:
-                    for i in range(len(arr_tss)):
-                        page_str = page_str.replace(arr_strings[i],
-                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
-                elif len(arr_strings_without_http) > 0:
-                    for i in range(len(arr_strings_without_http)):
-                        page_str = page_str.replace(arr_strings[i],
-                                                    SITE_URL + 'ts?link=' + str(arr_strings[i]))
-                else:
-                    pass
-            return HttpResponse(
-                content=page_str,
-                status=req.status_code,
-                content_type=req.headers['Content-Type']
-            )
-        else:
-            return HttpResponseNotFound("hello")
-    except (Exception,):
-        return HttpResponseNotFound("hello")
 
 
 def get_text_type(link):

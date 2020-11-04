@@ -86,7 +86,7 @@
             <div class="row">
                 {% for link in canal.link_set.all %}
                     <div class="col-xs-4 col-sm-3 col-md-2">
-                        <a data-m3u8="{% url 'get-other-m3u' %}?uri={{ link.m3u8 }}" href="#{{ link.m3u8 }}"
+                        <a data-m3u8="{% url 'generate-m3u' %}?uri={{ link.m3u8 }}" href="#{{ link.m3u8 }}"
                            class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
                     </div>
                 {% endfor %}
@@ -104,50 +104,52 @@
     <script>
         var player = new Clappr.Player({
             parentId: "#Player",
-            source: "{{ SITE_URL }}" + "api/{{ canal.pk }}/playlist.m3u8",
+            poster: "{{ canal.img_url }}",
+            source: "{{ SITE_URL }}" + "api/playlist.m3u8?uri={{ canal.link_set.first.m3u8 }}",
             width: '100%',
             height: "340px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
-            autoPlay: false,
-            language: 'pt-BR',
             plugins: [HlsjsPlayback, ChromecastPlugin, LevelSelector, ClapprNerdStats, ClapprStats],
             clapprNerdStats: {
-                // Optional: provide multiple combination of keyboard shortcuts to show/hide the statistics.
-                // For reference, visit: https://github.com/ccampbell/mousetrap.
-                // Default: ['command+shift+s', 'ctrl+shift+s']
                 shortcut: ['command+shift+s', 'ctrl+shift+s'],
-
-                // Optional: position of the icon to show/hide the statistics.
-                // Values: 'top-right', 'top-left', 'bottom-right', 'bottom-left', 'none'
-                // Default: 'top-right'
                 iconPosition: 'top-right'
             },
-            levelSelectorConfig: {
-                title: 'Quality',
-                labels: {
-                    2: 'High', // 500kbps
-                    1: 'Med', // 240kbps
-                    0: 'Low', // 120kbps
-                },
-                labelCallback: function (playbackLevel, customLabel) {
-                    return customLabel + playbackLevel.level.height + 'p'; // High 720p
-                }
-            },
             playback: {
-                preload: 'auto',
+                extrapolatedWindowNumSegments: 10,
                 hlsjsConfig: {
-                    maxBufferLength: 120,
-                    maxMaxBufferLength: 1000,
-                    maxBufferSize: 180 * 1000 * 1000,
-                    maxBufferHole: 0.8
+                    //número de segmentos necessários para iniciar uma reprodução de transmissão ao vivo.
+                    initialLiveManifestSize: 3,
+                    //Comprimento máximo do buffer em segundos. Se o comprimento do buffer for / se tornar menor que esse valor, um novo fragmento será carregado.
+                    maxBufferLength: 30,
+                    //Tamanho máximo do buffer 'mínimo' em bytes. Se o tamanho do buffer inicial for maior do que este valor, nenhum fragmento será carregado.
+                    maxBufferSize: 60 * 1000 * 1000,
+                    //Tolerância 'máxima' de buracos do buffer entre fragmentos que hls.js pode lidar ao pesquisar o próximo fragmento para carregar.
+                    maxBufferHole: 0.5,
+                    //atraso máximo de carregamento de vídeo usado na seleção de nível de início automático:
+                    maxLoadingDelay: 4,
+                    //O algoritmo ABR sempre tentará escolher um nível de qualidade que deve evitar rebuffering. então o algoritmo ABR tentará encontrar um nível que deve garantir menos do que o maxStarvationDelaydo buffer.
+                    maxStarvationDelay: 5,
+                    //se for esperado que o elemento de mídia seja reproduzido e se currentTime não tiver se movido por mais de highBufferWatchdogPeriode se houver mais de maxBufferHolesegundos no buffer antecipadamente, o hls.js tentará cutucar a reprodução para recuperar a reprodução
+                    highBufferWatchdogPeriod: 3,
+                    //No caso de a reprodução continuar a parar após o primeiro toque do indicador de reprodução, currentTime será ainda mais deslocado após nudgeOffset para tentar restaurar a reprodução. media.currentTime + = (nb nudge retry -1) * nudgeOffset
+                    nudgeOffset: 0.1,
+                    //Número máximo de tentativas de nudge antes de hls.js gerar um BUFFER_STALLED_ERROR fatal
+                    nudgeMaxRetry: 3,
+                    //Este fator de tolerância é usado durante a pesquisa de fragmentos.
+                    maxFragLookUpTolerance: 0.25,
+                    //Comprimento máximo do buffer em segundos. Hls.js nunca excederá esse valor, mesmo se ainda maxBufferSize não for atingido.
+                    maxMaxBufferLength: 600,
+                    //limite de atraso ao vivo, expresso em múltiplos de EXT-X-TARGETDURATION. se definido como 3, a reprodução começará a partir do fragmento N-3, N sendo o último fragmento da lista de reprodução ao vivo.
+                    liveSyncDurationCount: 5,
+                    //Comece a pré-busca do fragmento inicial, embora a mídia ainda não esteja anexada.
+                    startFragPrefetch: false,
+
                 }
             },
             chromecast: {
                 appId: '9DFB77C0',
                 media: {
-                    type: ChromecastPlugin.None,
-                    title: 'Awesome Hot Air Balloon Slackline',
-                    subtitle: 'You won\'t get much closer to Skylining than this!'
+                    title: '{{ canal.title }}'
                 }
             },
             clapprStats: {
@@ -159,14 +161,6 @@
                 },
                 // Fire PERCENTAGE_EVENT when video complete some percentage.
                 onCompletion: [10, 20, 55, 100],
-                // optional: provide an img uri hosted at the same place as your farm
-                // or near of it prefferable 1x1px, without caching.
-                uriToMeasureLatency: "{% static 'img/focus.png' %}",
-                // optional: provide some assets uris hosted at the same place as your farm
-                // or near of it prefferable in an uncompressible file format, without caching.
-                urisToMeasureBandwidth: [
-                    {url: "{% static 'img/photogrid.jpg' %}", timeout: 3000}
-                ],
                 // optional: number of reports between two consecutive bandwidth tests.
                 runBandwidthTestEvery: 10
             }
