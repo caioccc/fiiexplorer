@@ -368,7 +368,7 @@ def generate_lista(request):
                 custom_m3u8 = SITE_URL + 'api/other/playlist.m3u8?uri=' + link.m3u8
             else:
                 title = clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
+                custom_m3u8 = SITE_URL + 'api/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,
@@ -395,7 +395,7 @@ def get_lista_gen(request):
                 custom_m3u8 = SITE_URL + 'api/other/playlist.m3u8?uri=' + link.m3u8
             else:
                 title = clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/' + str(ch.id) + '/playlist.m3u8'
+                custom_m3u8 = SITE_URL + 'api/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,
