@@ -23,10 +23,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/1x1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/test100k.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/test1Mb.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/view-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista.m3u8" beforeDir="false" afterPath="$PROJECT_DIR$/lista.m3u8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/animate.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/animate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/autoheight.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/autoheight.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/autoplay.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/autoplay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/autowidth.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/autowidth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/center.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/center.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/demos.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/demos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/lazyLoad.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/lazyLoad.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/merge.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/merge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/mousewheel.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/mousewheel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/responsive.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/responsive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/rtl.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/rtl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/urlhashnav.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/urlhashnav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/video.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/gromart/node_modules/owl.carousel/docs/demos/video.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/plugins/datatables/extensions/ColReorder/examples/scrolling.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/plugins/datatables/extensions/ColReorder/examples/scrolling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/plugins/datatables/extensions/KeyTable/examples/simple.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/plugins/datatables/extensions/KeyTable/examples/simple.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +99,7 @@
     <property name="ignore_missing_gitignore" value="true" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/management/commands" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -87,16 +108,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
-      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\static" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\management\commands" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
       <recent name="C:\Users\Caio\Documents\fiiexplorer\app\templates" />
-      <recent name="C:\Users\Caio\Documents\fiiexplorer\app" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
+      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -262,22 +283,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1604339500013" />
-    <state width="1323" height="208" key="GridCell.Tab.0.bottom" timestamp="1604510911835">
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom" timestamp="1604581632999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="208" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604510911835" />
-    <state width="1323" height="208" key="GridCell.Tab.0.center" timestamp="1604510911835">
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1604581632999" />
+    <state width="1323" height="209" key="GridCell.Tab.0.center" timestamp="1604581632999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="208" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604510911835" />
-    <state width="1323" height="208" key="GridCell.Tab.0.left" timestamp="1604510911835">
+    <state width="1323" height="209" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1604581632999" />
+    <state width="1323" height="209" key="GridCell.Tab.0.left" timestamp="1604581632999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="208" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604510911835" />
-    <state width="1323" height="208" key="GridCell.Tab.0.right" timestamp="1604510911835">
+    <state width="1323" height="209" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1604581632999" />
+    <state width="1323" height="209" key="GridCell.Tab.0.right" timestamp="1604581632999">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="208" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604510911835" />
+    <state width="1323" height="209" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1604581632999" />
     <state width="1323" height="267" key="GridCell.Tab.1.bottom" timestamp="1604357421527">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -310,10 +331,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="235" y="92" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1604333673157" />
-    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1604345501364">
+    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1604581495978">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604345501364" />
+    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1604581495978" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604330931654">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

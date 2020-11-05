@@ -8,11 +8,8 @@
     <script src='//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@latest/dist/hlsjs-playback.min.js'></script>
     <script type="text/javascript"
             src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
-    <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@clappr/stats-plugin@latest/dist/clappr-stats.min.js"
+            type="text/javascript"></script>
 
     <div class="row">
         <div class="col-xs-6">
@@ -102,67 +99,131 @@
     </div>
 
     <script>
+
+        function getSecondsString(fileSizeInBytes) {
+            return fileSizeInBytes.toFixed(1) + ' s';
+        };
+
+        function getReadableFileSizeString(fileSizeInBytes) {
+
+            var i = -1;
+            var byteUnits = [' kbps', ' Mbps', ' Gbps', ' Tbps', 'Pbps', 'Ebps', 'Zbps', 'Ybps'];
+            do {
+                fileSizeInBytes = fileSizeInBytes / 1024;
+                i++;
+            } while (fileSizeInBytes > 1024);
+
+            return Math.max(fileSizeInBytes, 0.1).toFixed(1) + byteUnits[i];
+        };
+        var r = 3; // Retry attempts
         var player = new Clappr.Player({
             parentId: "#Player",
+            autoPlay: true,
             poster: "{{ canal.img_url }}",
             source: "{{ SITE_URL }}" + "api/playlist.m3u8?uri={{ canal.link_set.first.m3u8 }}",
-            width: '100%',
-            height: "340px",
+            width: '640px',
+            height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
-            plugins: [HlsjsPlayback, ChromecastPlugin, LevelSelector, ClapprNerdStats, ClapprStats],
-            clapprNerdStats: {
-                shortcut: ['command+shift+s', 'ctrl+shift+s'],
-                iconPosition: 'top-right'
+            plugins: [HlsjsPlayback, LevelSelector, ClapprStats],
+            clapprStats: {
+                // optional: time in miliseconds for each report.
+                // default: 5000
+                runEach: 5000,
+                // optional: callback function.
+                // default: console.log
+                onReport: (metrics) => {
+                    metrics.timers.startup = getSecondsString(metrics.timers.startup / 1000);
+                    metrics.timers.watch = getSecondsString(metrics.timers.watch / 1000);
+                    metrics.timers.pause = getSecondsString(metrics.timers.pause / 1000);
+                    metrics.timers.buffering = getSecondsString(metrics.timers.buffering / 1000);
+                    metrics.timers.session = getSecondsString(metrics.timers.session / 1000);
+                    metrics.timers.latency = getSecondsString(metrics.timers.latency / 1000);
+                    metrics.extra.bufferingPercentage = metrics.extra.bufferingPercentage.toFixed(2) + '%';
+                    metrics.extra.watchedPercentage = metrics.extra.watchedPercentage.toFixed(2) + '%';
+                    metrics.extra.buffersize = getSecondsString(metrics.extra.buffersize / 1000);
+                    metrics.extra.duration = getSecondsString(metrics.extra.duration / 1000);
+                    metrics.extra.currentTime = getSecondsString(metrics.extra.currentTime / 1000);
+                    metrics.extra.bandwidth = getReadableFileSizeString(metrics.extra.bandwidth);
+
+                    console.table(metrics.timers);
+                    console.table(metrics.extra);
+                },
+                // optional: provide an img uri hosted at the same place as your farm
+                // or near of it prefferable 1x1px, without caching.
+                // default: none
+                uriToMeasureLatency: '{% static 'img/1x1.png' %}',
+                // optional: provide some assets uris hosted at the same place as your farm
+                // or near of it prefferable in an uncompressible file format, without caching.
+                // default: none
+                urisToMeasureBandwidth: [
+                    {url: '{% static 'img/test100k.db' %}', timeout: 3000},
+                    {url: '{% static 'img/test1Mb.db' %}', timeout: 6000}
+                ],
+                // optional: number of reports between two consecutive bandwidth tests.
+                // default: 10
+                runBandwidthTestEvery: 10
             },
             playback: {
-                extrapolatedWindowNumSegments: 10,
+                //extrapolatedWindowNumSegments: 24,
                 hlsjsConfig: {
                     //número de segmentos necessários para iniciar uma reprodução de transmissão ao vivo.
-                    initialLiveManifestSize: 3,
+                    initialLiveManifestSize: 4,
                     //Comprimento máximo do buffer em segundos. Se o comprimento do buffer for / se tornar menor que esse valor, um novo fragmento será carregado.
                     maxBufferLength: 30,
                     //Tamanho máximo do buffer 'mínimo' em bytes. Se o tamanho do buffer inicial for maior do que este valor, nenhum fragmento será carregado.
                     maxBufferSize: 60 * 1000 * 1000,
                     //Tolerância 'máxima' de buracos do buffer entre fragmentos que hls.js pode lidar ao pesquisar o próximo fragmento para carregar.
-                    maxBufferHole: 0.5,
+                    //maxBufferHole: 0.7,
                     //atraso máximo de carregamento de vídeo usado na seleção de nível de início automático:
-                    maxLoadingDelay: 4,
+                    //maxLoadingDelay: 4,
                     //O algoritmo ABR sempre tentará escolher um nível de qualidade que deve evitar rebuffering. então o algoritmo ABR tentará encontrar um nível que deve garantir menos do que o maxStarvationDelaydo buffer.
-                    maxStarvationDelay: 5,
+                    //maxStarvationDelay: 5,
                     //se for esperado que o elemento de mídia seja reproduzido e se currentTime não tiver se movido por mais de highBufferWatchdogPeriode se houver mais de maxBufferHolesegundos no buffer antecipadamente, o hls.js tentará cutucar a reprodução para recuperar a reprodução
-                    highBufferWatchdogPeriod: 3,
+                    //highBufferWatchdogPeriod: 3,
                     //No caso de a reprodução continuar a parar após o primeiro toque do indicador de reprodução, currentTime será ainda mais deslocado após nudgeOffset para tentar restaurar a reprodução. media.currentTime + = (nb nudge retry -1) * nudgeOffset
-                    nudgeOffset: 0.1,
+                    //nudgeOffset: 0.1,
                     //Número máximo de tentativas de nudge antes de hls.js gerar um BUFFER_STALLED_ERROR fatal
-                    nudgeMaxRetry: 3,
+                    //nudgeMaxRetry: 3,
                     //Este fator de tolerância é usado durante a pesquisa de fragmentos.
-                    maxFragLookUpTolerance: 0.25,
+                    //maxFragLookUpTolerance: 0.55,
                     //Comprimento máximo do buffer em segundos. Hls.js nunca excederá esse valor, mesmo se ainda maxBufferSize não for atingido.
-                    maxMaxBufferLength: 600,
+                    //maxMaxBufferLength: 600,
                     //limite de atraso ao vivo, expresso em múltiplos de EXT-X-TARGETDURATION. se definido como 3, a reprodução começará a partir do fragmento N-3, N sendo o último fragmento da lista de reprodução ao vivo.
-                    liveSyncDurationCount: 5,
+                    //liveSyncDurationCount: 3,
                     //Comece a pré-busca do fragmento inicial, embora a mídia ainda não esteja anexada.
-                    startFragPrefetch: false,
+                    //startFragPrefetch: false,
 
                 }
             },
-            chromecast: {
-                appId: '9DFB77C0',
-                media: {
-                    title: '{{ canal.title }}'
+            events: {
+                onError: function (e) {
+                    r--;
+                    var s = player.options.source;
+                    // Replace previous line by the following line to simulate successful recovery
+                    // var s = (r > 2) ? player.options.source : 'http://clappr.io/highline.mp4';
+                    var t = 10;
+                    var retry = function () {
+                        if (t === 0) {
+                            var o = player.options;
+                            o.source = s;
+                            player.configure(o);
+                            return;
+                        }
+                        Clappr.$('#retryCounter').text(t);
+                        t--;
+                        setTimeout(retry, 1000);
+                    };
+                    player.configure({
+                        autoPlay: true,
+                        source: 'playback.error',
+                        playbackNotSupportedMessage: 'Network fatal error.' + ((r > 0)
+                            ? ' Retrying in <span id="retryCounter"></span> seconds ...'
+                            : ' All retry attempts failed'),
+                    });
+                    if (r > 0) {
+                        retry();
+                    }
                 }
-            },
-            clapprStats: {
-                // optional: time in miliseconds for each report.
-                runEach: 5 * 1000,
-                // optional: callback function.
-                onReport: (metrics) => {
-                    console.log(JSON.stringify(metrics));
-                },
-                // Fire PERCENTAGE_EVENT when video complete some percentage.
-                onCompletion: [10, 20, 55, 100],
-                // optional: number of reports between two consecutive bandwidth tests.
-                runBandwidthTestEvery: 10
             }
         });
 
@@ -180,7 +241,7 @@
                 var uri = window.location.origin + $(this).data('m3u8');
                 console.log(uri);
                 player.configure({
-                    source: uri
+                    source: uri, autoPlay: true
                 });
             });
         });
