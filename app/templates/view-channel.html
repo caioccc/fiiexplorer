@@ -28,7 +28,7 @@
         <div class="col-xs-3">
             <img src="{{ canal.img_url }}" class="img-thumbnail img-responsive" style="background-color: #0d3349"/>
         </div>
-        <div class="col-xs-9">
+        <div class="col-xs-7">
             <h1 class=""><b>{{ canal.title }}</b></h1>
             <h2></h2>
         </div>
@@ -83,8 +83,10 @@
             <div class="row">
                 {% for link in canal.link_set.all %}
                     <div class="col-xs-4 col-sm-3 col-md-2">
-                        <a data-m3u8="{% url 'generate-m3u' %}?uri={{ link.m3u8 }}" href="#{{ link.m3u8 }}"
+                        <a data-uri="{{ link.m3u8 }}" data-m3u8="{% url 'generate-m3u' %}?uri={{ link.m3u8 }}"
+                           href="#{{ link.m3u8 }}"
                            class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
+
                     </div>
                 {% endfor %}
             </div>
@@ -118,9 +120,9 @@
         var r = 3; // Retry attempts
         var player = new Clappr.Player({
             parentId: "#Player",
-            autoPlay: true,
+            autoPlay: false,
             poster: "{{ canal.img_url }}",
-            source: "{{ SITE_URL }}" + "api/playlist.m3u8?uri={{ canal.link_set.first.m3u8 }}",
+            source: "",
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
@@ -151,14 +153,14 @@
                 // optional: provide an img uri hosted at the same place as your farm
                 // or near of it prefferable 1x1px, without caching.
                 // default: none
-                uriToMeasureLatency: '{% static 'img/1x1.png' %}',
+                //uriToMeasureLatency: '{% static 'img/1x1.png' %}',
                 // optional: provide some assets uris hosted at the same place as your farm
                 // or near of it prefferable in an uncompressible file format, without caching.
                 // default: none
-                urisToMeasureBandwidth: [
-                    {url: '{% static 'img/test100k.db' %}', timeout: 3000},
-                    {url: '{% static 'img/test1Mb.db' %}', timeout: 6000}
-                ],
+                //urisToMeasureBandwidth: [
+                //    {url: '{% static 'img/test100k.db' %}', timeout: 3000},
+                //    {url: '{% static 'img/test1Mb.db' %}', timeout: 6000}
+                //],
                 // optional: number of reports between two consecutive bandwidth tests.
                 // default: 10
                 runBandwidthTestEvery: 10
@@ -167,13 +169,13 @@
                 //extrapolatedWindowNumSegments: 24,
                 hlsjsConfig: {
                     //número de segmentos necessários para iniciar uma reprodução de transmissão ao vivo.
-                    initialLiveManifestSize: 4,
+                    //initialLiveManifestSize: 4,
                     //Comprimento máximo do buffer em segundos. Se o comprimento do buffer for / se tornar menor que esse valor, um novo fragmento será carregado.
-                    maxBufferLength: 30,
+                    //maxBufferLength: 30,
                     //Tamanho máximo do buffer 'mínimo' em bytes. Se o tamanho do buffer inicial for maior do que este valor, nenhum fragmento será carregado.
-                    maxBufferSize: 60 * 1000 * 1000,
+                    //maxBufferSize: 60 * 1000 * 1000,
                     //Tolerância 'máxima' de buracos do buffer entre fragmentos que hls.js pode lidar ao pesquisar o próximo fragmento para carregar.
-                    //maxBufferHole: 0.7,
+                    maxBufferHole: 3,
                     //atraso máximo de carregamento de vídeo usado na seleção de nível de início automático:
                     //maxLoadingDelay: 4,
                     //O algoritmo ABR sempre tentará escolher um nível de qualidade que deve evitar rebuffering. então o algoritmo ABR tentará encontrar um nível que deve garantir menos do que o maxStarvationDelaydo buffer.
@@ -189,7 +191,7 @@
                     //Comprimento máximo do buffer em segundos. Hls.js nunca excederá esse valor, mesmo se ainda maxBufferSize não for atingido.
                     //maxMaxBufferLength: 600,
                     //limite de atraso ao vivo, expresso em múltiplos de EXT-X-TARGETDURATION. se definido como 3, a reprodução começará a partir do fragmento N-3, N sendo o último fragmento da lista de reprodução ao vivo.
-                    //liveSyncDurationCount: 3,
+                    liveSyncDurationCount: 7,
                     //Comece a pré-busca do fragmento inicial, embora a mídia ainda não esteja anexada.
                     //startFragPrefetch: false,
 
@@ -238,11 +240,21 @@
 
         $(document).ready(function () {
             $('a.link').click(function () {
-                var uri = window.location.origin + $(this).data('m3u8');
-                console.log(uri);
+                var data_m3u8 = $(this).data('m3u8');
+                var data_uri = $(this).data('uri');
+                var uri = window.location.origin + data_m3u8;
+                if (data_m3u8 !== '#') {
+                    $.get("{% url 'collect-buffer'  %}?uri=" + data_uri, function (data) {
+                        console.log(data_uri);
+                    });
+                } else {
+                    uri = window.location.origin + '/api/playlist.m3u8?uri=' + data_uri
+                }
+                console.log('source ', uri);
                 player.configure({
-                    source: uri, autoPlay: true
+                    source: uri, autoPlay: false
                 });
+
             });
         });
     </script>

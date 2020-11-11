@@ -7,6 +7,18 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         try:
+            siteX = Site()
+            siteX.name = 'multicanais'
+            siteX.url = 'https://multicanais.com/'
+            siteX.save()
+            cat1X = CategoryChannel()
+            cat1X.name = 'TV AO VIVO'
+            cat1X.url = 'https://multicanais.com/aovivo/assistir-tv-online-gratis-hd-24h/'
+            cat1X.path = 'aovivo/assistir-tv-online-gratis-hd-24h/'
+            cat1X.site = siteX
+            cat1X.pages = 3
+            cat1X.save()
+
             site = Site()
             site.name = 'canaismax'
             site.url = 'https://canaismax.com/'

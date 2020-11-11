@@ -1,8 +1,9 @@
+import random
 import re
 
-import m3u8
 import requests
 from bs4 import BeautifulSoup
+from django.db import IntegrityError
 
 from app.models import Episodio, LinkSerie, Temporada, Link
 
@@ -99,14 +100,38 @@ def get_channel_id(string_script):
     return ''
 
 
+def save_link_channel_multicanais(canal, id_url):
+    m3u8 = get_m3u8_multicanais(id_url)
+    if m3u8:
+        try:
+            link = Link()
+            link.url = id_url
+            link.channel = canal
+            link.m3u8 = m3u8
+            link.save()
+        except (IntegrityError):
+            m3u8 = get_m3u8_multicanais(id_url, 'futebolonlineaovivo.com')
+            try:
+                link = Link()
+                link.url = id_url
+                link.channel = canal
+                link.m3u8 = m3u8
+                link.save()
+            except (IntegrityError):
+                print('ja possui os dois links')
+
+
 def save_link_channel(canal, id_url):
     m3u8 = get_m3u8(id_url)
     if m3u8:
-        link = Link()
-        link.url = id_url
-        link.channel = canal
-        link.m3u8 = m3u8
-        link.save()
+        try:
+            link = Link()
+            link.url = id_url
+            link.channel = canal
+            link.m3u8 = m3u8
+            link.save()
+        except (IntegrityError,):
+            print(m3u8)
 
 
 def get_headers():
@@ -158,6 +183,24 @@ def contain_http(uri):
 #     except (requests.exceptions.ConnectionError,):
 #         print('Connection Error', link.channel.title)
 
+def get_m3u8_multicanais(id_url, select_server=None):
+    string_canal_id = '.php?canal='
+    uri = str(id_url)
+    try:
+        index_prefix = uri.index(string_canal_id)
+        if index_prefix > -1:
+            name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
+            if not select_server:
+                m3u8_uri = "https://live.tvfolha.com/" + name_channel + "/video.m3u8"
+            else:
+                m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8"
+            return m3u8_uri
+        else:
+            print('nao tem m3u8', id_url)
+            return ''
+    except (ValueError,):
+        print('nao tem nome no url, ', id_url)
+
 
 def get_m3u8(id_url):
     try:
@@ -165,10 +208,9 @@ def get_m3u8(id_url):
         if miner_req:
             script = None
             for scr in miner_req.select('script'):
-                if len(scr.contents) > 0:
-                    if 'document.referrer' in str(scr.contents[0]):
-                        script = scr
-            content_script = str(script.contents[0])
+                if 'document.referrer' in str(scr):
+                    script = scr
+            content_script = str(script)
             string_source = 'source: "'
             string_m3u8 = '.m3u8'
             sources_indexes = [m.start() for m in

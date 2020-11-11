@@ -1,6 +1,9 @@
 import datetime
 import logging
 import re
+import sys
+import threading
+import time
 from threading import Thread
 
 # Create your views here.
@@ -11,8 +14,9 @@ from django.http import JsonResponse, HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, TemplateView
 
-from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk
-from app.models import Channel, Site, Filme, Serie, Temporada, Link
+from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk, mineM3u8, \
+    mineMultiCanais
+from app.models import Channel, Site, Filme, Serie, Temporada, Link, Buff, Ts
 from app.utils import get_page_bs4, get_headers
 from fiiexplorer.settings import SITE_URL
 
@@ -65,6 +69,17 @@ class CollectFilmes(TemplateView):
         return redirect('/filmes')
 
 
+class CollectMultiCanais(TemplateView):
+    template_name = 'multicanais.html'
+
+    def get(self, request, *args, **kwargs):
+        site = Site.objects.get(name='multicanais')
+        site.done = False
+        site.save()
+        Thread(target=mineMultiCanais).start()
+        return redirect('/multicanais')
+
+
 class CollectTopCanais(TemplateView):
     template_name = 'topcanais.html'
 
@@ -114,6 +129,25 @@ class FilmesView(LoginRequiredMixin, ListView):
         return Filme.objects.all()
 
 
+class MultiCanaisView(LoginRequiredMixin, ListView):
+    template_name = 'multicanais.html'
+    login_url = '/admin/login/'
+    model = Channel
+    context_object_name = 'canais'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        json = request_json()
+        kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
+        kwargs['num_pages'] = len(json) / 4
+        kwargs['total_items'] = len(json)
+        return super(MultiCanaisView, self).get_context_data(object_list=object_list, **kwargs)
+
+    def get_queryset(self):
+        if 'q' in self.request.GET:
+            return Channel.objects.filter(title__icontains=self.request.GET['q'], category__site__name='multicanais')
+        return Channel.objects.filter(category__site__name='multicanais')
+
+
 class TopCanaisView(LoginRequiredMixin, ListView):
     template_name = 'topcanais.html'
     login_url = '/admin/login/'
@@ -144,12 +178,30 @@ class ViewFilm(LoginRequiredMixin, DetailView):
         return super(ViewFilm, self).get_context_data(object_list=object_list, **kwargs)
 
 
+class CollectBufferChannel(TemplateView):
+    template_name = 'index.html'
+
+    def get(self, request, *args, **kwargs):
+        uri = self.request.GET['uri']
+        link = Link.objects.get(m3u8=uri)
+        th = Thread(target=mineM3u8, name='meuth', kwargs=dict(uri=uri))
+        th.start()
+        return redirect('/view-channel/' + str(link.channel.pk))
+
+
 class ViewChannel(LoginRequiredMixin, DetailView):
     template_name = 'view-channel.html'
     login_url = '/admin/login/'
     model = Channel
     pk_url_kwarg = 'pk'
     context_object_name = 'canal'
+
+    def get(self, request, *args, **kwargs):
+        # ch = self.get_object()
+        # uri = ch.link_set.all().order_by('created_at').first().m3u8
+        # th = Thread(target=mineM3u8, name='meuth', kwargs=dict(uri=uri))
+        # th.start()
+        return super(ViewChannel, self).get(request, *args, **kwargs)
 
     def get_context_data(self, *, object_list=None, **kwargs):
         kwargs = self.insert_context_data(**kwargs)
@@ -192,6 +244,14 @@ class CanaisMaxView(LoginRequiredMixin, ListView):
     model = Channel
     context_object_name = 'canais'
 
+    def get(self, request, *args, **kwargs):
+        Buff.objects.all().delete()
+        for i in range(10):
+            th = threading.currentThread()
+            th._is_stopped = True
+            print(th.is_alive())
+        return super(CanaisMaxView, self).get(request, *args, **kwargs)
+
     def get_context_data(self, *, object_list=None, **kwargs):
         json = request_json()
         kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
@@ -228,12 +288,12 @@ def get_json(request):
     return JsonResponse(json, safe=False)
 
 
-def get_ts(request):
+def get_tss(request):
     key = request.GET['link']
     headers = get_headers()
-    print(key)
+    print('TS request: ', key)
     try:
-        req = requests.get(url=key, stream=True, timeout=60, headers=headers)
+        req = requests.get(url=key, stream=True, timeout=120, headers=headers)
         if req.status_code == 200:
             return HttpResponse(
                 content=req.content,
@@ -262,7 +322,7 @@ def check_m3u8_req(uri):
         return False
 
 
-def generate_m3u(request):
+def generate_m3uu(request):
     headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
     uri_m3u8 = request.GET['uri']
     try:
@@ -300,6 +360,63 @@ def generate_m3u(request):
         return HttpResponseNotFound()
     except (Exception,):
         return HttpResponseNotFound("hello")
+
+
+def get_ts(request):
+    key = request.GET['link']
+    headers = get_headers()
+    print('TS request: ', key)
+    try:
+        req = requests.get(url=key, stream=True, timeout=120, headers=headers)
+        if req.status_code == 200:
+            return HttpResponse(
+                content=req.content,
+                status=req.status_code,
+                content_type=req.headers['Content-Type']
+            )
+        else:
+            return HttpResponseNotFound("hello")
+    except (Exception,):
+        return HttpResponseNotFound("hello")
+
+
+def generate_m3u(request):
+    uri_m3u8 = request.GET['uri']
+    buffs = Buff.objects.filter(link__m3u8=uri_m3u8).order_by('created_at')
+    while len(buffs) < 5:
+        time.sleep(3)
+    buff = buffs.first()
+    content = buff.content
+    type = buff.content_type
+    return HttpResponse(
+        content=content,
+        status=200,
+        content_type=type
+    )
+
+
+def get_ts_(request):
+    pk = request.GET['pk']
+    ts = Ts.objects.get(pk=pk)
+    content = ts.content
+    type = ts.content_type
+    return HttpResponse(
+        content=content,
+        status=200,
+        content_type=type
+    )
+
+
+def get_inner_buff_m3u(request):
+    pk = request.GET['pk']
+    buff = Buff.objects.get(pk=pk)
+    content = buff.content
+    type = buff.content_type
+    return HttpResponse(
+        content=content,
+        status=200,
+        content_type=type
+    )
 
 
 def get_other_m3u(request):

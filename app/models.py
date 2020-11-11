@@ -58,13 +58,28 @@ class Channel(TimeStamped):
 class Link(TimeStamped):
     url = models.TextField(blank=True, null=True)
     channel = models.ForeignKey(Channel, on_delete=models.CASCADE)
-    m3u8 = models.TextField(blank=True, null=True)
+    m3u8 = models.TextField(blank=True, null=True, unique=True)
+    done = models.BooleanField(default=False)
 
     def __str__(self):
         return "%s" % self.url
 
     def __unicode__(self):
         return "%s" % self.url
+
+
+class Buff(TimeStamped):
+    link = models.ForeignKey(Link, blank=True, null=True, on_delete=models.CASCADE)
+    content = models.TextField(blank=True, null=True)
+    content_type = models.CharField(max_length=255, blank=True, null=True)
+    head = models.BooleanField(default=False)
+
+
+class Ts(TimeStamped):
+    content = models.TextField(blank=True, null=True)
+    content_type = models.CharField(max_length=255, blank=True, null=True)
+    url = models.TextField(blank=True, null=True)
+    buff = models.ForeignKey(Buff, on_delete=models.CASCADE)
 
 
 class Filme(TimeStamped):
