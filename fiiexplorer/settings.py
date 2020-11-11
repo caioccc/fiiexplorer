@@ -134,4 +134,4 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 if DEBUG:
     SITE_URL = 'http://localhost:8000/'
 else:
-    SITE_URL = 'http://tvsala.herokuapp.com/'
+    SITE_URL = 'http://tvmovel.herokuapp.com/'
