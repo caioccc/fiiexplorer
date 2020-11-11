@@ -13,13 +13,24 @@
 
     <div class="row">
         <div class="col-xs-6">
-            <a href="{% url 'index' %}"
-               class="btn btn-default">Voltar</a>
+            {% if canal.category.site.name == 'multicanais' %}
+                <a href="{% url 'multicanais' %}"
+                   class="btn btn-default">Voltar</a>
+            {% else %}
+                <a href="{% url 'index' %}"
+                   class="btn btn-default">Voltar</a>
+            {% endif %}
+
         </div>
         <div class="col-xs-6">
             {% if not canal.category.site.name == 'topcanais' %}
-                <a href="{% url 'collect-canal' canal.pk %}"
-                   class="btn btn-warning pull-right">Update</a>
+                {% if canal.category.site.name == 'multicanais' %}
+                    <a href="{% url 'collect-canal-multicanais' canal.pk %}"
+                       class="btn btn-warning pull-right">Update</a>
+                {% else %}
+                    <a href="{% url 'collect-canal' canal.pk %}"
+                       class="btn btn-warning pull-right">Update</a>
+                {% endif %}
             {% endif %}
         </div>
     </div>
@@ -83,9 +94,18 @@
             <div class="row">
                 {% for link in canal.link_set.all %}
                     <div class="col-xs-4 col-sm-3 col-md-2">
-                        <a data-uri="{{ link.m3u8 }}" data-m3u8="{% url 'generate-m3u' %}?uri={{ link.m3u8 }}"
-                           href="#{{ link.m3u8 }}"
-                           class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
+                        {% if canal.category.site.name == 'multicanais' %}
+                            <a data-uri="{{ link.m3u8 }}"
+                               data-m3u8="{% url 'generate-m3u-multicanais' %}?uri={{ link.m3u8 }}"
+                               href="#{{ link.m3u8 }}"
+                               class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
+
+                        {% else %}
+                            <a data-uri="{{ link.m3u8 }}" data-m3u8="{% url 'generate-m3u' %}?uri={{ link.m3u8 }}"
+                               href="#{{ link.m3u8 }}"
+                               class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
+
+                        {% endif %}
 
                     </div>
                 {% endfor %}
@@ -120,9 +140,13 @@
         var r = 3; // Retry attempts
         var player = new Clappr.Player({
             parentId: "#Player",
-            autoPlay: false,
+            autoPlay: true,
             poster: "{{ canal.img_url }}",
-            source: "",
+            {% if canal.category.site.name == 'multicanais' %}
+                source: window.location.origin + "{% url 'generate-m3u-multicanais' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
+            {% else %}
+                source: window.location.origin + "{% url 'generate-m3u' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
+            {% endif %}
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
@@ -163,7 +187,7 @@
                 //],
                 // optional: number of reports between two consecutive bandwidth tests.
                 // default: 10
-                runBandwidthTestEvery: 10
+                //runBandwidthTestEvery: 10
             },
             playback: {
                 //extrapolatedWindowNumSegments: 24,
@@ -174,8 +198,6 @@
                     //maxBufferLength: 30,
                     //Tamanho máximo do buffer 'mínimo' em bytes. Se o tamanho do buffer inicial for maior do que este valor, nenhum fragmento será carregado.
                     //maxBufferSize: 60 * 1000 * 1000,
-                    //Tolerância 'máxima' de buracos do buffer entre fragmentos que hls.js pode lidar ao pesquisar o próximo fragmento para carregar.
-                    maxBufferHole: 3,
                     //atraso máximo de carregamento de vídeo usado na seleção de nível de início automático:
                     //maxLoadingDelay: 4,
                     //O algoritmo ABR sempre tentará escolher um nível de qualidade que deve evitar rebuffering. então o algoritmo ABR tentará encontrar um nível que deve garantir menos do que o maxStarvationDelaydo buffer.
@@ -192,41 +214,13 @@
                     //maxMaxBufferLength: 600,
                     //limite de atraso ao vivo, expresso em múltiplos de EXT-X-TARGETDURATION. se definido como 3, a reprodução começará a partir do fragmento N-3, N sendo o último fragmento da lista de reprodução ao vivo.
                     liveSyncDurationCount: 7,
+                    //Tolerância 'máxima' de buracos do buffer entre fragmentos que hls.js pode lidar ao pesquisar o próximo fragmento para carregar.
+                    maxBufferHole: 3,
                     //Comece a pré-busca do fragmento inicial, embora a mídia ainda não esteja anexada.
                     //startFragPrefetch: false,
 
                 }
             },
-            events: {
-                onError: function (e) {
-                    r--;
-                    var s = player.options.source;
-                    // Replace previous line by the following line to simulate successful recovery
-                    // var s = (r > 2) ? player.options.source : 'http://clappr.io/highline.mp4';
-                    var t = 10;
-                    var retry = function () {
-                        if (t === 0) {
-                            var o = player.options;
-                            o.source = s;
-                            player.configure(o);
-                            return;
-                        }
-                        Clappr.$('#retryCounter').text(t);
-                        t--;
-                        setTimeout(retry, 1000);
-                    };
-                    player.configure({
-                        autoPlay: true,
-                        source: 'playback.error',
-                        playbackNotSupportedMessage: 'Network fatal error.' + ((r > 0)
-                            ? ' Retrying in <span id="retryCounter"></span> seconds ...'
-                            : ' All retry attempts failed'),
-                    });
-                    if (r > 0) {
-                        retry();
-                    }
-                }
-            }
         });
 
         //player.on(Clappr.Events.PLAYER_STOP, playerStop);
@@ -240,21 +234,11 @@
 
         $(document).ready(function () {
             $('a.link').click(function () {
-                var data_m3u8 = $(this).data('m3u8');
-                var data_uri = $(this).data('uri');
-                var uri = window.location.origin + data_m3u8;
-                if (data_m3u8 !== '#') {
-                    $.get("{% url 'collect-buffer'  %}?uri=" + data_uri, function (data) {
-                        console.log(data_uri);
-                    });
-                } else {
-                    uri = window.location.origin + '/api/playlist.m3u8?uri=' + data_uri
-                }
-                console.log('source ', uri);
+                var uri = window.location.origin + $(this).data('m3u8');
+                console.log(uri);
                 player.configure({
-                    source: uri, autoPlay: false
+                    source: uri, autoPlay: true
                 });
-
             });
         });
     </script>

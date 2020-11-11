@@ -68,20 +68,6 @@ class Link(TimeStamped):
         return "%s" % self.url
 
 
-class Buff(TimeStamped):
-    link = models.ForeignKey(Link, blank=True, null=True, on_delete=models.CASCADE)
-    content = models.TextField(blank=True, null=True)
-    content_type = models.CharField(max_length=255, blank=True, null=True)
-    head = models.BooleanField(default=False)
-
-
-class Ts(TimeStamped):
-    content = models.TextField(blank=True, null=True)
-    content_type = models.CharField(max_length=255, blank=True, null=True)
-    url = models.TextField(blank=True, null=True)
-    buff = models.ForeignKey(Buff, on_delete=models.CASCADE)
-
-
 class Filme(TimeStamped):
     title = models.CharField(max_length=255, blank=True, null=True)
     duracao = models.CharField(max_length=255, blank=True, null=True)

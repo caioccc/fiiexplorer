@@ -23,22 +23,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/miner/multicanais.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/multicanais.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f258a22-10b5-41b9-80c0-c76827c6debd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f258a22-10b5-41b9-80c0-c76827c6debd.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/management/commands/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/delete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/management/commands/initialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/initialize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0002_buff_buff_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20201110_1843.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/migrations/0004_buff_head.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/canaismax.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/canaismax.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/multicanais.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/multicanais.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/view-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista.m3u8" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,16 +94,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
-      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\static" />
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\management\commands" />
       <recent name="C:\Users\Caio\Documents\fiiexplorer\app\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
+      <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
     </key>
   </component>
   <component name="RunManager">
@@ -257,54 +258,51 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="WindowStateProjectService">
     <state x="113" y="13" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604408450791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="113" y="13" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604408450791" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605029694256">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605123302131">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605029694256" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605123302131" />
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate" timestamp="1605117661710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1605117661710" />
-    <state width="1323" height="252" key="GridCell.Tab.0.bottom" timestamp="1605120347408">
+    <state width="1323" height="229" key="GridCell.Tab.0.bottom" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605120347408" />
-    <state width="1323" height="252" key="GridCell.Tab.0.center" timestamp="1605120347408">
+    <state width="1323" height="229" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.0.center" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605120347408" />
-    <state width="1323" height="252" key="GridCell.Tab.0.left" timestamp="1605120347408">
+    <state width="1323" height="229" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.0.left" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605120347408" />
-    <state width="1323" height="252" key="GridCell.Tab.0.right" timestamp="1605120347408">
+    <state width="1323" height="229" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.0.right" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605120347408" />
-    <state width="1323" height="252" key="GridCell.Tab.1.bottom" timestamp="1605120347409">
+    <state width="1323" height="229" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.1.bottom" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605120347409" />
-    <state width="1323" height="252" key="GridCell.Tab.1.center" timestamp="1605120347409">
+    <state width="1323" height="229" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.1.center" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605120347409" />
-    <state width="1323" height="252" key="GridCell.Tab.1.left" timestamp="1605120347409">
+    <state width="1323" height="229" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.1.left" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605120347408" />
-    <state width="1323" height="252" key="GridCell.Tab.1.right" timestamp="1605120347409">
+    <state width="1323" height="229" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="229" key="GridCell.Tab.1.right" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="252" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605120347409" />
+    <state width="1323" height="229" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
     <state x="498" y="297" key="ReplaceDuplicatesPrompt" timestamp="1603904534202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -317,22 +315,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1605026993074" />
-    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1605118184944">
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1605121811830">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1605118184944" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1605121811830" />
     <state x="235" y="92" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605030064618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="235" y="92" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1605030064618" />
-    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1605098992571">
+    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1605123316193">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605098992571" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1604948185555">
+    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605123316193" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605125114463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1604948185555" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605125114463" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

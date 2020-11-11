@@ -1,8 +1,6 @@
-import re
-
 from app.miner.common import Miner
-from app.utils import get_page_bs4, save_link_channel, get_channel_id, get_img_url, make_ids
 from app.models import Channel, Link, Site
+from app.utils import get_page_bs4, save_link_channel, get_channel_id, get_img_url, make_ids
 
 
 class CustomMiner(Miner):

@@ -18,8 +18,9 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 from app.views import TopCanaisView, ViewChannel, CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, \
     FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie, CollectSerie, CollectCanal, get_json, generate_m3u, \
-    get_ts, get_other_m3u, generate_lista, get_lista_gen, CollectBufferChannel, get_inner_buff_m3u, get_ts_, \
-    MultiCanaisView, CollectMultiCanais
+    get_ts, get_other_m3u, get_lista_gen, \
+    MultiCanaisView, CollectMultiCanais, generate_m3u_multicanais, get_ts_multicanais, get_lista_multicanais, \
+    CollectCanalMultiCanais
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,18 +40,20 @@ urlpatterns = [
     path('collect-series/', CollectSeries.as_view(), name='collect-series'),
     path('collect-serie/<int:pk>', CollectSerie.as_view(), name='collect-serie'),
     path('collect-canal/<int:pk>', CollectCanal.as_view(), name='collect-canal'),
+    path('collect-canal-multicanais/<int:pk>', CollectCanalMultiCanais.as_view(), name='collect-canal-multicanais'),
     path('logout/', auth_views.logout_then_login, name='logout'),
-
-    path('collect-buffer-channel', CollectBufferChannel.as_view(), name='collect-buffer'),
 
     path('get-json/', get_json, name='get-json'),
     path('api/playlist.m3u8', generate_m3u, name='generate-m3u'),
     path('ts', get_ts, name='get-ts'),
     path('api/other/playlist.m3u8', get_other_m3u, name='get-other-m3u'),
-    path('generate-list', generate_lista, name='generate-list'),
-    path('lista.m3u8', get_lista_gen, name='get-lista-gen'),
+    path('api/multi/playlist.m3u8', generate_m3u_multicanais, name='generate-m3u-multicanais'),
+    path('multi/ts', get_ts_multicanais, name='get-ts-multicanais'),
 
-    path('inner/playlist.m3u8', get_inner_buff_m3u, name='inner-buffer'),
-    path('api/ts', get_ts_, name='get-ts'),
+    path('lista.m3u8', get_lista_gen, name='get-lista-gen'),
+    path('playlist.m3u8', get_lista_multicanais, name='get-lista-multicanais'),
+
+    # path('inner/playlist.m3u8', get_inner_buff_m3u, name='inner-buffer'),
+    # path('api/ts', get_ts_, name='get-ts'),
 
 ]

@@ -1,9 +1,6 @@
 import datetime
 import logging
 import re
-import sys
-import threading
-import time
 from threading import Thread
 
 # Create your views here.
@@ -14,10 +11,10 @@ from django.http import JsonResponse, HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView, TemplateView
 
-from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk, mineM3u8, \
-    mineMultiCanais
-from app.models import Channel, Site, Filme, Serie, Temporada, Link, Buff, Ts
-from app.utils import get_page_bs4, get_headers
+from app.miner.explorer import mineTopCanais, mineCanaisMax, mineFilmes, mineSeries, mineSeriePk, mineCanalPk, \
+    mineMultiCanais, mineCanalMultiCanais
+from app.models import Channel, Site, Filme, Serie, Temporada
+from app.utils import get_headers
 from fiiexplorer.settings import SITE_URL
 
 logging.basicConfig(level=logging.DEBUG)
@@ -31,6 +28,17 @@ class CollectCanal(DetailView):
         canal = self.get_object()
         canal.link_set.all().delete()
         Thread(target=mineCanalPk, kwargs=dict(pk=canal.pk)).start()
+        return redirect('/view-channel/' + str(canal.pk))
+
+
+class CollectCanalMultiCanais(DetailView):
+    template_name = 'index.html'
+    model = Channel
+
+    def get(self, request, *args, **kwargs):
+        canal = self.get_object()
+        canal.link_set.all().delete()
+        Thread(target=mineCanalMultiCanais, kwargs=dict(pk=canal.pk)).start()
         return redirect('/view-channel/' + str(canal.pk))
 
 
@@ -178,17 +186,6 @@ class ViewFilm(LoginRequiredMixin, DetailView):
         return super(ViewFilm, self).get_context_data(object_list=object_list, **kwargs)
 
 
-class CollectBufferChannel(TemplateView):
-    template_name = 'index.html'
-
-    def get(self, request, *args, **kwargs):
-        uri = self.request.GET['uri']
-        link = Link.objects.get(m3u8=uri)
-        th = Thread(target=mineM3u8, name='meuth', kwargs=dict(uri=uri))
-        th.start()
-        return redirect('/view-channel/' + str(link.channel.pk))
-
-
 class ViewChannel(LoginRequiredMixin, DetailView):
     template_name = 'view-channel.html'
     login_url = '/admin/login/'
@@ -197,10 +194,6 @@ class ViewChannel(LoginRequiredMixin, DetailView):
     context_object_name = 'canal'
 
     def get(self, request, *args, **kwargs):
-        # ch = self.get_object()
-        # uri = ch.link_set.all().order_by('created_at').first().m3u8
-        # th = Thread(target=mineM3u8, name='meuth', kwargs=dict(uri=uri))
-        # th.start()
         return super(ViewChannel, self).get(request, *args, **kwargs)
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -245,11 +238,6 @@ class CanaisMaxView(LoginRequiredMixin, ListView):
     context_object_name = 'canais'
 
     def get(self, request, *args, **kwargs):
-        Buff.objects.all().delete()
-        for i in range(10):
-            th = threading.currentThread()
-            th._is_stopped = True
-            print(th.is_alive())
         return super(CanaisMaxView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, *, object_list=None, **kwargs):
@@ -288,24 +276,6 @@ def get_json(request):
     return JsonResponse(json, safe=False)
 
 
-def get_tss(request):
-    key = request.GET['link']
-    headers = get_headers()
-    print('TS request: ', key)
-    try:
-        req = requests.get(url=key, stream=True, timeout=120, headers=headers)
-        if req.status_code == 200:
-            return HttpResponse(
-                content=req.content,
-                status=req.status_code,
-                content_type=req.headers['Content-Type']
-            )
-        else:
-            return HttpResponseNotFound("hello")
-    except (Exception,):
-        return HttpResponseNotFound("hello")
-
-
 def check_m3u8_req(uri):
     try:
         headers = get_headers()
@@ -322,7 +292,52 @@ def check_m3u8_req(uri):
         return False
 
 
-def generate_m3uu(request):
+def generate_m3u_multicanais(request):
+    uri_m3u8 = request.GET['uri']
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    try:
+        req = requests.get(url=uri_m3u8, headers=headers)
+        page = BeautifulSoup(req.text, 'html.parser')
+        page_str = str(page.contents[0])
+        arr_strings = list(set(remove_iv(re.findall("([^\s]+.ts)", page_str))))
+        if len(arr_strings) > 0:
+            index_ = str(uri_m3u8).index('video.m3u8')
+            prefix = uri_m3u8[:index_]
+            for i in range(len(arr_strings)):
+                new_uri = prefix + arr_strings[i]
+                page_str = page_str.replace(arr_strings[i],
+                                            SITE_URL + 'multi/ts?link=' + str(new_uri))
+
+        return HttpResponse(
+            content=page_str,
+            status=req.status_code,
+            content_type=req.headers['Content-Type']
+        )
+    except (requests.exceptions.ConnectionError,):
+        print('erro ao connectar')
+        return HttpResponseNotFound()
+    except (Exception,):
+        return HttpResponseNotFound("hello")
+
+
+def get_ts_multicanais(request):
+    key = request.GET['link']
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    try:
+        req = requests.get(url=key, stream=True, timeout=120, headers=headers)
+        if req.status_code == 200:
+            return HttpResponse(
+                content=req.content,
+                status=req.status_code,
+                content_type=req.headers['Content-Type']
+            )
+        else:
+            return HttpResponseNotFound("hello")
+    except (Exception,):
+        return HttpResponseNotFound("hello")
+
+
+def generate_m3u(request):
     headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
     uri_m3u8 = request.GET['uri']
     try:
@@ -362,63 +377,6 @@ def generate_m3uu(request):
         return HttpResponseNotFound("hello")
 
 
-def get_ts(request):
-    key = request.GET['link']
-    headers = get_headers()
-    print('TS request: ', key)
-    try:
-        req = requests.get(url=key, stream=True, timeout=120, headers=headers)
-        if req.status_code == 200:
-            return HttpResponse(
-                content=req.content,
-                status=req.status_code,
-                content_type=req.headers['Content-Type']
-            )
-        else:
-            return HttpResponseNotFound("hello")
-    except (Exception,):
-        return HttpResponseNotFound("hello")
-
-
-def generate_m3u(request):
-    uri_m3u8 = request.GET['uri']
-    buffs = Buff.objects.filter(link__m3u8=uri_m3u8).order_by('created_at')
-    while len(buffs) < 5:
-        time.sleep(3)
-    buff = buffs.first()
-    content = buff.content
-    type = buff.content_type
-    return HttpResponse(
-        content=content,
-        status=200,
-        content_type=type
-    )
-
-
-def get_ts_(request):
-    pk = request.GET['pk']
-    ts = Ts.objects.get(pk=pk)
-    content = ts.content
-    type = ts.content_type
-    return HttpResponse(
-        content=content,
-        status=200,
-        content_type=type
-    )
-
-
-def get_inner_buff_m3u(request):
-    pk = request.GET['pk']
-    buff = Buff.objects.get(pk=pk)
-    content = buff.content
-    type = buff.content_type
-    return HttpResponse(
-        content=content,
-        status=200,
-        content_type=type
-    )
-
-
 def get_other_m3u(request):
     headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
     uri_m3u8 = request.GET['uri']
@@ -442,6 +400,24 @@ def get_other_m3u(request):
             status=req.status_code,
             content_type=req.headers['Content-Type']
         )
+    except (Exception,):
+        return HttpResponseNotFound("hello")
+
+
+def get_ts(request):
+    key = request.GET['link']
+    headers = get_headers()
+    print(key)
+    try:
+        req = requests.get(url=key, stream=True, timeout=60, headers=headers)
+        if req.status_code == 200:
+            return HttpResponse(
+                content=req.content,
+                status=req.status_code,
+                content_type=req.headers['Content-Type']
+            )
+        else:
+            return HttpResponseNotFound("hello")
     except (Exception,):
         return HttpResponseNotFound("hello")
 
@@ -473,19 +449,14 @@ def clean_title(channel):
     return title
 
 
-def generate_lista(request):
-    f = open("lista.m3u8", "a")
+def get_lista_multicanais(request):
+    f = open("playlist.m3u8", "a")
     f.truncate(0)
     f.write("#EXTM3U\n")
-    for ch in Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct():
+    for ch in Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct():
         for link in ch.link_set.filter(m3u8__icontains='.m3u8').distinct():
-            str_type = get_text_type(link)
-            if str_type:
-                title = str_type + ' ' + clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/other/playlist.m3u8?uri=' + link.m3u8
-            else:
-                title = clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/playlist.m3u8?uri=' + link.m3u8
+            title = clean_title(ch)
+            custom_m3u8 = SITE_URL + 'api/multi/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,
@@ -496,7 +467,7 @@ def generate_lista(request):
                 '',
                 title,
                 custom_m3u8))
-    fsock = open("lista.m3u8", "rb")
+    fsock = open("playlist.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
 
 
