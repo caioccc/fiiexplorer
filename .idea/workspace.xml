@@ -22,25 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/management/commands/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/delete.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0002_buff_buff_link.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0003_auto_20201110_1843.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/migrations/0004_buff_head.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/canaismax.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/canaismax.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/multicanais.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/multicanais.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/view-channel.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista.m3u8" beforeDir="false" />
-    </list>
+    <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,22 +253,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1605117661710" />
-    <state width="1323" height="229" key="GridCell.Tab.0.bottom" timestamp="1605124007474">
+    <state width="1323" height="254" key="GridCell.Tab.0.bottom" timestamp="1605125482015">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="229" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
-    <state width="1323" height="229" key="GridCell.Tab.0.center" timestamp="1605124007474">
+    <state width="1323" height="254" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605125482015" />
+    <state width="1323" height="254" key="GridCell.Tab.0.center" timestamp="1605125482014">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="229" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
-    <state width="1323" height="229" key="GridCell.Tab.0.left" timestamp="1605124007474">
+    <state width="1323" height="254" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605125482014" />
+    <state width="1323" height="254" key="GridCell.Tab.0.left" timestamp="1605125482014">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="229" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
-    <state width="1323" height="229" key="GridCell.Tab.0.right" timestamp="1605124007474">
+    <state width="1323" height="254" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605125482014" />
+    <state width="1323" height="254" key="GridCell.Tab.0.right" timestamp="1605125482014">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="229" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605124007474" />
+    <state width="1323" height="254" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605125482014" />
     <state width="1323" height="229" key="GridCell.Tab.1.bottom" timestamp="1605124007474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
