@@ -5,14 +5,13 @@ from threading import Thread
 import requests
 from bs4 import BeautifulSoup
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
 from app.miner.explorer import mineChannelCanaisMax, mineCanaisMax
 from app.models import Channel, Site
 from app.utils import request_json, get_date_now, get_text_type, clean_title, remove_iv
-from fiiexplorer.settings import SITE_URL
 
 
 class CollectChannelCanaisMax(DetailView):
@@ -73,7 +72,7 @@ class ViewChannelCanaisMax(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         kwargs = self.insert_context_data(**kwargs)
-        kwargs['SITE_URL'] = SITE_URL
+        kwargs['SITE_URL'] = 'http://' + self.request.META['HTTP_HOST'] + '/'
         return super(ViewChannelCanaisMax, self).get_context_data(object_list=object_list, **kwargs)
 
     def insert_context_data(self, **kwargs):
@@ -112,10 +111,11 @@ def playlist_m3u8_canaismax(request):
             for i in range(len(arr_strings_without_http)):
                 new_uri = prefix + str(arr_strings_without_http[i])
                 page_str = page_str.replace(arr_strings_without_http[i],
-                                            SITE_URL + 'api/max/other/playlist.m3u8?uri=' + str(new_uri))
+                                            'http://' + request.META[
+                                                'HTTP_HOST'] + '/' + 'api/max/other/playlist.m3u8?uri=' + str(new_uri))
         else:
             arr_strings = list(set(remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))))
-            page_str = replace_page_str(arr_strings, page_str)
+            page_str = replace_page_str(arr_strings, page_str, request)
         return HttpResponse(
             content=page_str,
             status=req.status_code,
@@ -136,7 +136,7 @@ def playlist_other_m3u8_canaismax(request):
         page = BeautifulSoup(req.text, 'html.parser')
         page_str = str(page.contents[0])
         arr_strings = list(set(remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))))
-        page_str = replace_page_str(arr_strings, page_str)
+        page_str = replace_page_str(arr_strings, page_str, request)
         return HttpResponse(
             content=page_str,
             status=req.status_code,
@@ -146,16 +146,18 @@ def playlist_other_m3u8_canaismax(request):
         return HttpResponseNotFound("hello")
 
 
-def replace_page_str(arr_strings, page_str):
+def replace_page_str(arr_strings, page_str, request):
     if len(arr_strings) > 0:
         for i in range(len(arr_strings)):
             if not 'key?id=' in str(arr_strings[i]):
                 page_str = page_str.replace(arr_strings[i],
-                                            SITE_URL + 'api/max/ts?link=' + str(arr_strings[i]))
+                                            'http://' + request.META['HTTP_HOST'] + '/' + 'api/max/ts?link=' + str(
+                                                arr_strings[i]))
         for uri_ts_coded in arr_strings:
             if 'key?id=' in str(uri_ts_coded):
                 page_str = page_str.replace(uri_ts_coded,
-                                            SITE_URL + 'api/max/ts?link=' + str(uri_ts_coded))
+                                            'http://' + request.META['HTTP_HOST'] + '/' + 'api/max/ts?link=' + str(
+                                                uri_ts_coded))
                 break
     return page_str
 
@@ -186,10 +188,11 @@ def get_lista_canaismax(request):
             str_type = get_text_type(link)
             if str_type:
                 title = str_type + ' ' + clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/max/other/playlist.m3u8?uri=' + link.m3u8
+                custom_m3u8 = 'http://' + request.META[
+                    'HTTP_HOST'] + '/' + 'api/max/other/playlist.m3u8?uri=' + link.m3u8
             else:
                 title = clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/max/playlist.m3u8?uri=' + link.m3u8
+                custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/' + 'api/max/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,

@@ -11,7 +11,6 @@ from django.views.generic import TemplateView, ListView, DetailView
 from app.miner.explorer import mineAllTopCanais, mineChannelTopCanais
 from app.models import Site, Channel
 from app.utils import request_json, remove_iv, get_text_type, clean_title
-from fiiexplorer.settings import SITE_URL
 
 
 class CollectAllTopCanais(TemplateView):
@@ -52,7 +51,7 @@ class ViewChannelTopCanais(LoginRequiredMixin, DetailView):
     context_object_name = 'canal'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['SITE_URL'] = SITE_URL
+        kwargs['SITE_URL'] = 'http://'+self.request.META['HTTP_HOST'] + '/'
         return super(ViewChannelTopCanais, self).get_context_data(object_list=object_list, **kwargs)
 
 
@@ -81,10 +80,10 @@ def playlist_m3u8_topcanais(request):
             for i in range(len(arr_strings_without_http)):
                 new_uri = prefix + str(arr_strings_without_http[i])
                 page_str = page_str.replace(arr_strings_without_http[i],
-                                            SITE_URL + 'api/topcanais/other/playlist.m3u8?uri=' + str(new_uri))
+                                            'http://'+request.META['HTTP_HOST'] + '/' + 'api/topcanais/other/playlist.m3u8?uri=' + str(new_uri))
         else:
             arr_strings = list(set(remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))))
-            page_str = replace_page_str(arr_strings, page_str)
+            page_str = replace_page_str(arr_strings, page_str, request)
         return HttpResponse(
             content=page_str,
             status=req.status_code,
@@ -105,7 +104,7 @@ def playlist_other_m3u8_topcanais(request):
         page = BeautifulSoup(req.text, 'html.parser')
         page_str = str(page.contents[0])
         arr_strings = list(set(remove_iv(re.findall("(?P<url>https?://[^\s]+)", page_str))))
-        page_str = replace_page_str(arr_strings, page_str)
+        page_str = replace_page_str(arr_strings, page_str, request)
         return HttpResponse(
             content=page_str,
             status=req.status_code,
@@ -115,16 +114,16 @@ def playlist_other_m3u8_topcanais(request):
         return HttpResponseNotFound("hello")
 
 
-def replace_page_str(arr_strings, page_str):
+def replace_page_str(arr_strings, page_str, request):
     if len(arr_strings) > 0:
         for i in range(len(arr_strings)):
             if not 'key?id=' in str(arr_strings[i]):
                 page_str = page_str.replace(arr_strings[i],
-                                            SITE_URL + 'api/topcanais/ts?link=' + str(arr_strings[i]))
+                                            'http://'+request.META['HTTP_HOST'] + '/'  + 'api/topcanais/ts?link=' + str(arr_strings[i]))
         for uri_ts_coded in arr_strings:
             if 'key?id=' in str(uri_ts_coded):
                 page_str = page_str.replace(uri_ts_coded,
-                                            SITE_URL + 'api/topcanais/ts?link=' + str(uri_ts_coded))
+                                            'http://'+request.META['HTTP_HOST'] + '/'  + 'api/topcanais/ts?link=' + str(uri_ts_coded))
                 break
     return page_str
 
@@ -155,10 +154,10 @@ def get_lista_topcanais(request):
             str_type = get_text_type(link)
             if str_type:
                 title = str_type + ' ' + clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/topcanais/other/playlist.m3u8?uri=' + link.m3u8
+                custom_m3u8 = 'http://'+request.META['HTTP_HOST'] + '/'  + 'api/topcanais/other/playlist.m3u8?uri=' + link.m3u8
             else:
                 title = clean_title(ch)
-                custom_m3u8 = SITE_URL + 'api/topcanais/playlist.m3u8?uri=' + link.m3u8
+                custom_m3u8 = 'http://'+request.META['HTTP_HOST'] + '/'  + 'api/topcanais/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,

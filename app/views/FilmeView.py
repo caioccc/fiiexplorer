@@ -11,7 +11,6 @@ from django.views.generic import TemplateView, ListView, DetailView
 from app.miner.explorer import mineFilmes, mineFilmeOneCanaisMax
 from app.models import Site, Filme
 from app.utils import remove_iv, clean_title
-from fiiexplorer.settings import SITE_URL
 
 
 class CollectFilmesCanaisMax(TemplateView):
@@ -73,7 +72,7 @@ def playlist_m3u8_filmes_canaismax(request):
         if len(arr_strings) > 0:
             for i in range(len(arr_strings)):
                 page_str = page_str.replace(arr_strings[i],
-                                            SITE_URL + 'api/filmes/canaismax/ts?link=' + str(arr_strings[i]))
+                                            'http://'+request.META['HTTP_HOST'] + '/' + 'api/filmes/canaismax/ts?link=' + str(arr_strings[i]))
 
         return HttpResponse(
             content=page_str,
@@ -111,7 +110,7 @@ def gen_lista_filmes_canaismax(request):
     for ch in Filme.objects.all():
         for link in ch.url_set.filter(m3u8__icontains='.m3u8').distinct():
             title = clean_title(ch)
-            custom_m3u8 = SITE_URL + 'api/filmes/canaismax/playlist.m3u8?uri=' + link.m3u8
+            custom_m3u8 = 'http://'+request.META['HTTP_HOST'] + '/' + 'api/filmes/canaismax/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,

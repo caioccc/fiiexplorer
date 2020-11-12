@@ -11,7 +11,6 @@ from django.views.generic import DetailView, TemplateView, ListView
 from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais
 from app.models import Channel, Site
 from app.utils import clean_title, remove_iv
-from fiiexplorer.settings import SITE_URL
 
 
 class CollectChannelMultiCanais(DetailView):
@@ -59,7 +58,7 @@ class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):
     context_object_name = 'canal'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs['SITE_URL'] = SITE_URL
+        kwargs['SITE_URL'] = 'http://' + self.request.META['HTTP_HOST'] + '/'
         return super(ViewChannelMultiCanais, self).get_context_data(object_list=object_list, **kwargs)
 
 
@@ -77,7 +76,8 @@ def playlist_m3u8_multicanais(request):
             for i in range(len(arr_strings)):
                 new_uri = prefix + arr_strings[i]
                 page_str = page_str.replace(arr_strings[i],
-                                            SITE_URL + 'api/multi/ts?link=' + str(new_uri))
+                                            'http://' + request.META['HTTP_HOST'] + '/api/multi/ts?link=' + str(
+                                                new_uri))
 
         return HttpResponse(
             content=page_str,
@@ -115,7 +115,7 @@ def gen_lista_multicanais(request):
     for ch in Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct():
         for link in ch.link_set.filter(m3u8__icontains='.m3u8').distinct():
             title = clean_title(ch)
-            custom_m3u8 = SITE_URL + 'api/multi/playlist.m3u8?uri=' + link.m3u8
+            custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
             f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
                 link.id,
                 link.id,

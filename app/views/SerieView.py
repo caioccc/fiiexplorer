@@ -11,7 +11,6 @@ from django.views.generic import DetailView, TemplateView, ListView
 from app.miner.explorer import mineSeriePk, mineSeries
 from app.models import Serie, Temporada, Site
 from app.utils import remove_iv
-from fiiexplorer.settings import SITE_URL
 
 
 class CollectSerie(DetailView):
@@ -69,7 +68,7 @@ def playlist_m3u8_series_canaismax(request):
         if len(arr_strings) > 0:
             for i in range(len(arr_strings)):
                 page_str = page_str.replace(arr_strings[i],
-                                            SITE_URL + 'api/series/canaismax/ts?link=' + str(arr_strings[i]))
+                                            'http://'+request.META['HTTP_HOST'] + '/' + 'api/series/canaismax/ts?link=' + str(arr_strings[i]))
 
         return HttpResponse(
             content=page_str,

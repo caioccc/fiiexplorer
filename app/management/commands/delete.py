@@ -15,6 +15,11 @@ class Command(BaseCommand):
             Filme.objects.all().delete()
             Url.objects.all().delete()
             User.objects.all().delete()
+            Filme.objects.all().delete()
+            Serie.objects.all().delete()
+            Temporada.objects.all().delete()
+            Episodio.objects.all().delete()
+            LinkSerie.objects.all().delete()
         except (Exception,):
             raise CommandError('Erro ao deletar Models')
         self.stdout.write(self.style.SUCCESS('Successfully deleted'))

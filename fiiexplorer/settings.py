@@ -130,8 +130,3 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-if DEBUG:
-    SITE_URL = 'http://localhost:8000/'
-else:
-    SITE_URL = 'http://tvsala.herokuapp.com/'
