@@ -14,46 +14,66 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
 from django.contrib.auth import views as auth_views
-from app.views import TopCanaisView, ViewChannel, CanaisMaxView, CollectTopCanais, CollectCanaisMax, CollectFilmes, \
-    FilmesView, ViewFilm, SeriesView, CollectSeries, ViewSerie, CollectSerie, CollectCanal, get_json, generate_m3u, \
-    get_ts, get_other_m3u, get_lista_gen, \
-    MultiCanaisView, CollectMultiCanais, generate_m3u_multicanais, get_ts_multicanais, get_lista_multicanais, \
-    CollectCanalMultiCanais
+from django.urls import path
+
+from app.views.CanaisMaxView import CanaisMaxView, CollectAllCanaisMax, ViewChannelCanaisMax, CollectChannelCanaisMax, \
+    playlist_m3u8_canaismax, playlist_other_m3u8_canaismax, get_ts_canaismax, get_lista_canaismax
+from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, FilmesView, gen_lista_filmes_canaismax, \
+    get_ts_filmes_canaismax, playlist_m3u8_filmes_canaismax, CollectFilmeOneCanaisMax
+from app.views.MultiCanaisView import CollectChannelMultiCanais, CollectAllMultiCanais, MultiCanaisView, \
+    ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais
+from app.views.SerieView import CollectSeries, CollectSerie, ViewSerie, SeriesView, playlist_m3u8_series_canaismax, \
+    get_ts_series_canaismax
+from app.views.TopCanaisView import CollectAllTopCanais, TopCanaisView, ViewChannelTopCanais, CollectChannelTopCanais, \
+    playlist_m3u8_topcanais, playlist_other_m3u8_topcanais, get_lista_topcanais, get_ts_topcanais
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CanaisMaxView.as_view(), name='index'),
+
+    path('collect-channel-multicanais/<int:pk>', CollectChannelMultiCanais.as_view(),
+         name='collect-channel-multicanais'),
+    path('collect-multicanais/', CollectAllMultiCanais.as_view(), name='collect-multicanais'),
+    path('', MultiCanaisView.as_view(), name='multicanais'),
     path('multicanais/', MultiCanaisView.as_view(), name='multicanais'),
-    path('topcanais/', TopCanaisView.as_view(), name='topcanais'),
+    path('multicanais/<int:pk>', ViewChannelMultiCanais.as_view(), name='view-channel-multicanais'),
+    path('api/multi/playlist.m3u8', playlist_m3u8_multicanais, name='playlist-m3u8-multicanais'),
+    path('api/multi/ts', get_ts_multicanais, name='get-ts-multicanais'),
+    path('lista-multicanais.m3u8', gen_lista_multicanais, name='gen-lista-multicanais'),
+
+    path('collect-channel-canaismax/<int:pk>', CollectChannelCanaisMax.as_view(), name='collect-channel-canaismax'),
+    path('collect-canaismax/', CollectAllCanaisMax.as_view(), name='collect-canaismax'),
     path('canaismax/', CanaisMaxView.as_view(), name='canaismax'),
+    path('canaismax/<int:pk>', ViewChannelCanaisMax.as_view(), name='view-channel-canaismax'),
+    path('api/max/playlist.m3u8', playlist_m3u8_canaismax, name='playlist-m3u8-canaismax'),
+    path('api/max/other/playlist.m3u8', playlist_other_m3u8_canaismax, name='playlist-other-m3u8-canaismax'),
+    path('api/max/ts', get_ts_canaismax, name='get-ts-canaismax'),
+    path('lista-canaismax.m3u8', get_lista_canaismax, name='get-lista-canaismax'),
+
+    path('collect-topcanais/', CollectAllTopCanais.as_view(), name='collect-topcanais'),
+    path('collect-channel-topcanais/<int:pk>', CollectChannelTopCanais.as_view(), name='collect-channel-topcanais'),
+    path('topcanais/', TopCanaisView.as_view(), name='topcanais'),
+    path('topcanais/<int:pk>', ViewChannelTopCanais.as_view(), name='view-channel-topcanais'),
+    path('api/topcanais/playlist.m3u8', playlist_m3u8_topcanais, name='playlist-m3u8-topcanais'),
+    path('api/topcanais/other/playlist.m3u8', playlist_other_m3u8_topcanais, name='playlist-other-m3u8-topcanais'),
+    path('api/topcanais/ts', get_ts_topcanais, name='get-ts-topcanais'),
+    path('lista-topcanais.m3u8', get_lista_topcanais, name='get-lista-topcanais'),
+
     path('filmes/', FilmesView.as_view(), name='filmes'),
+    path('collect-film/canaismax/<int:pk>', CollectFilmeOneCanaisMax.as_view(), name='collect-film-canaismax'),
+    path('collect-filmes/', CollectFilmesCanaisMax.as_view(), name='collect-filmes-canaismax'),
+    path('view-film/<int:pk>', ViewFilmCanaisMax.as_view(), name='view-film'),
+    path('api/filmes/canaismax/playlist.m3u8', playlist_m3u8_filmes_canaismax, name='m3u8-filmes-canaismax'),
+    path('api/filmes/canaismax/ts', get_ts_filmes_canaismax, name='ts-filmes-canaismax'),
+    path('filmes-canaismax.m3u8', gen_lista_filmes_canaismax, name='gen-filmes-canaismax'),
+
     path('series/', SeriesView.as_view(), name='series'),
-    path('view-film/<int:pk>', ViewFilm.as_view(), name='view-film'),
-    path('view-channel/<int:pk>', ViewChannel.as_view(), name='view-channel'),
-    path('view-serie/<int:pk>', ViewSerie.as_view(), name='view-serie'),
-    path('collect-filmes/', CollectFilmes.as_view(), name='collect-filmes'),
-    path('collect/', CollectTopCanais.as_view(), name='collect'),
-    path('collect-canaismax/', CollectCanaisMax.as_view(), name='collect-canaismax'),
-    path('collect-multicanais/', CollectMultiCanais.as_view(), name='collect-multicanais'),
+    path('series/<int:pk>', ViewSerie.as_view(), name='view-serie'),
     path('collect-series/', CollectSeries.as_view(), name='collect-series'),
     path('collect-serie/<int:pk>', CollectSerie.as_view(), name='collect-serie'),
-    path('collect-canal/<int:pk>', CollectCanal.as_view(), name='collect-canal'),
-    path('collect-canal-multicanais/<int:pk>', CollectCanalMultiCanais.as_view(), name='collect-canal-multicanais'),
+    path('api/series/canaismax/playlist.m3u8', playlist_m3u8_series_canaismax, name='m3u8-series-canaismax'),
+    path('api/series/canaismax/ts', get_ts_series_canaismax, name='ts-series-canaismax'),
+
     path('logout/', auth_views.logout_then_login, name='logout'),
-
-    path('get-json/', get_json, name='get-json'),
-    path('api/playlist.m3u8', generate_m3u, name='generate-m3u'),
-    path('ts', get_ts, name='get-ts'),
-    path('api/other/playlist.m3u8', get_other_m3u, name='get-other-m3u'),
-    path('api/multi/playlist.m3u8', generate_m3u_multicanais, name='generate-m3u-multicanais'),
-    path('multi/ts', get_ts_multicanais, name='get-ts-multicanais'),
-
-    path('lista.m3u8', get_lista_gen, name='get-lista-gen'),
-    path('playlist.m3u8', get_lista_multicanais, name='get-lista-multicanais'),
-
-    # path('inner/playlist.m3u8', get_inner_buff_m3u, name='inner-buffer'),
-    # path('api/ts', get_ts_, name='get-ts'),
 
 ]

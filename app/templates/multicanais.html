@@ -3,13 +3,6 @@
 {% load staticfiles %}
 
 {% block content %}
-    <style>
-        .list_fii_segmento {
-            padding: 0px;
-            margin: 4px 4px;
-            display: inline-block;
-        }
-    </style>
     <div class="row">
         <div class="col-xs-12">
             <div class="box box-default">
@@ -35,88 +28,6 @@
             </div>
         </div>
     </div>
-
-    <div class="box box-default">
-        <div class="box-header">
-            <label class="box-title">
-                Programação Ao Vivo
-            </label>
-        </div>
-        <div class="box-body">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div id="Carousel" class="carousel slide" data-ride="carousel">
-
-                        <ol class="carousel-indicators">
-                            {% for page in json %}
-                                <li data-target="#Carousel" data-slide-to="{{ forloop.counter0 }}"
-                                    {% if forloop.counter0 == 0 %}class="active"{% endif %}></li>
-                            {% endfor %}
-                        </ol>
-
-                        <!-- Carousel items -->
-
-                        <div class="carousel-inner">
-                            {% for page in json %}
-                                <div class="item {% if forloop.counter0 == 0 %}active{% endif %}">
-                                    <div class="row">
-                                        {% for item in page %}
-                                            <div class="col-xs-6 col-sm-3">
-                                                <div class="item-channel item item-cnl"
-                                                     data-id="{{ item.canalid }}">
-                                                    <a href="#">
-                                                        <div class="info-channel">
-                                                            <img class="owl-lazy img-responsive"
-                                                                 data-src="{{ item.canal.logoBrancoUrl }}"
-                                                                 alt="{{ item.slug }}"
-                                                                 src="{{ item.canal.logoBrancoUrl|get_image }}"
-                                                                 style="opacity: 1;"/>
-                                                        </div>
-                                                        <div class="img-prog-channel">
-                                                            <img class="owl-lazy img-responsive"
-                                                                 data-src="{{ item.imagemUrl }}"
-                                                                 alt="{{ item.slug }}"
-                                                                 src="{{ item.imagemUrl|get_image }}"
-                                                                 style="opacity: 1;"/>
-                                                        </div>
-                                                        <div class="info-prog-channel"><b>{{ item.canal.nome }}</b>
-                                                            <div class="prog-atu-pass">{{ item.titulo }}</div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        {% endfor %}
-
-                                    </div><!--.row-->
-                                </div><!--.item-->
-                            {% endfor %}
-
-                        </div><!--.carousel-inner-->
-                        <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
-                        <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
-                    </div>
-                </div>
-                <script>
-                    $(document).ready(function () {
-                        $('#Carousel').carousel({
-                            interval: 5000
-                        })
-                    });
-
-
-                    function get_url_image(url) {
-                        if (url.charAt(0) === '/') {
-                            return 'https://canaismax.com' + url;
-                        } else {
-                            return url;
-                        }
-                    }
-                </script>
-            </div>
-        </div>
-    </div>
-
-
     <div class="row">
         <div class="col-md-12">
             <div class="box box-primary">
@@ -124,7 +35,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <a href="{% url 'collect-multicanais' %}" class="btn btn-primary">
-                                <i class="fa fa-rocket"></i> <span>Collect Channels Multicanais</span>
+                                <i class="fa fa-rocket"></i> <span>Collect MultiCanais</span>
                             </a>
                         </div>
                     </div>
@@ -137,24 +48,16 @@
                                 <div class="box box-default" style="border-top: None;">
                                     <!-- /.box-header -->
                                     <div class="box-body">
-                                        <a href="{% url 'view-channel' canal.pk %}">
+                                        <a href="{% url 'view-channel-multicanais' canal.pk %}">
                                             <img src="{{ canal.img_url }}"
                                                  class="img-responsive img-thumbnail"
-                                                 style="
-                                                         {% if site == 'topcanais' %}
-
-                                                         {% else %}
-                                                             background-color: #1a2226;
-                                                         {% endif %}
-                                                         "
+                                                 style="background-color: #1a2226;"
                                             />
                                         </a>
                                     </div>
                                     <!-- /.box-body -->
                                 </div>
                             </div>
-
-
                         {% endfor %}
                     </div>
                 </div>
@@ -163,7 +66,6 @@
     </div>
 
     <script type="text/javascript">
-
         $(document).ready(function () {
         });
     </script>

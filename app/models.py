@@ -58,7 +58,7 @@ class Channel(TimeStamped):
 class Link(TimeStamped):
     url = models.TextField(blank=True, null=True)
     channel = models.ForeignKey(Channel, on_delete=models.CASCADE)
-    m3u8 = models.TextField(blank=True, null=True, unique=True)
+    m3u8 = models.TextField(blank=True, null=True)
     done = models.BooleanField(default=False)
 
     def __str__(self):
@@ -90,6 +90,7 @@ class Url(TimeStamped):
     filme = models.ForeignKey(Filme, blank=True, null=True, on_delete=models.CASCADE)
     data_id = models.TextField(blank=True, null=True)
     data_player = models.TextField(blank=True, null=True)
+    m3u8 = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.url
@@ -143,6 +144,7 @@ class Episodio(TimeStamped):
 
 class LinkSerie(TimeStamped):
     url = models.TextField(blank=True, null=True)
+    m3u8 = models.TextField(blank=True, null=True)
     episodio = models.ForeignKey(Episodio, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):

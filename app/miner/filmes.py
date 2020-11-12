@@ -1,5 +1,6 @@
 from app.miner.common import Miner
 from app.models import Channel, Link, Site, Filme, Url
+from app.utils import get_page_bs4, save_url_filmes_canaismax
 
 
 class CustomMiner(Miner):
@@ -8,7 +9,7 @@ class CustomMiner(Miner):
         pages = int(category.pages) + 1
         for i in range(1, pages):
             temp_url = self.get_page_url(category.url, 'filmes', i)
-            page = self.get_page_bs4(temp_url)
+            page = get_page_bs4(temp_url)
             if page:
                 divs_entries = page.select('div.item')
                 print('total_filmes_na_page', len(divs_entries))
@@ -32,7 +33,7 @@ class CustomMiner(Miner):
                             img_url = img_tag['data-src']
                         else:
                             img_url = ''
-                        second_page = self.get_page_bs4(href)
+                        second_page = get_page_bs4(href)
                         if second_page:
                             sinopse = '' if len(second_page.select('section.description')) == 0 else \
                                 second_page.select('section.description')[0].get_text()
@@ -64,18 +65,12 @@ class CustomMiner(Miner):
         ch.url_site = str(href)
         ch.save()
         for id_url in ids:
-            link = Url()
-            link.url = id_url
-            link.filme = ch
-            link.save()
+            save_url_filmes_canaismax(ch, id_url)
 
     def mine(self):
-        try:
-            Filme.objects.all().delete()
-            Url.objects.all().delete()
-            site = Site.objects.get(name='filmes')
-            for category in site.categorychannel_set.all():
-                self.extract(category)
-            return True
-        except (Exception,):
-            return False
+        Filme.objects.all().delete()
+        Url.objects.all().delete()
+        site = Site.objects.get(name='filmes')
+        for category in site.categorychannel_set.all():
+            self.extract(category)
+        return True

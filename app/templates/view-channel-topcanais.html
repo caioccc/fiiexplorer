@@ -13,25 +13,13 @@
 
     <div class="row">
         <div class="col-xs-6">
-            {% if canal.category.site.name == 'multicanais' %}
-                <a href="{% url 'multicanais' %}"
-                   class="btn btn-default">Voltar</a>
-            {% else %}
-                <a href="{% url 'index' %}"
-                   class="btn btn-default">Voltar</a>
-            {% endif %}
+            <a href="{% url 'topcanais' %}"
+               class="btn btn-default">Voltar</a>
 
         </div>
         <div class="col-xs-6">
-            {% if not canal.category.site.name == 'topcanais' %}
-                {% if canal.category.site.name == 'multicanais' %}
-                    <a href="{% url 'collect-canal-multicanais' canal.pk %}"
-                       class="btn btn-warning pull-right">Update</a>
-                {% else %}
-                    <a href="{% url 'collect-canal' canal.pk %}"
-                       class="btn btn-warning pull-right">Update</a>
-                {% endif %}
-            {% endif %}
+            <a href="{% url 'collect-channel-topcanais' canal.pk %}"
+               class="btn btn-warning pull-right">Update</a>
         </div>
     </div>
     <br/>
@@ -81,8 +69,6 @@
                             $(".timeline").find(".progress").width(porcent.toFixed(4) + "%");
                             $(".timeline .pointer-progress").css('left', porcent.toFixed(4) + "%");
                         }, 1000);
-
-
                     });
                 </script>
             </div>
@@ -94,19 +80,10 @@
             <div class="row">
                 {% for link in canal.link_set.all %}
                     <div class="col-xs-4 col-sm-3 col-md-2">
-                        {% if canal.category.site.name == 'multicanais' %}
-                            <a data-uri="{{ link.m3u8 }}"
-                               data-m3u8="{% url 'generate-m3u-multicanais' %}?uri={{ link.m3u8 }}"
-                               href="#{{ link.m3u8 }}"
-                               class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
-
-                        {% else %}
-                            <a data-uri="{{ link.m3u8 }}" data-m3u8="{% url 'generate-m3u' %}?uri={{ link.m3u8 }}"
-                               href="#{{ link.m3u8 }}"
-                               class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
-
-                        {% endif %}
-
+                        <a data-uri="{{ link.m3u8 }}"
+                           data-m3u8="{% url 'playlist-m3u8-topcanais' %}?uri={{ link.m3u8 }}"
+                           href="#{{ link.m3u8 }}"
+                           class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
                     </div>
                 {% endfor %}
             </div>
@@ -137,26 +114,17 @@
 
             return Math.max(fileSizeInBytes, 0.1).toFixed(1) + byteUnits[i];
         };
-        var r = 3; // Retry attempts
+
         var player = new Clappr.Player({
             parentId: "#Player",
-            autoPlay: true,
+            autoPlay: false,
             poster: "{{ canal.img_url }}",
-            {% if canal.category.site.name == 'multicanais' %}
-                source: window.location.origin + "{% url 'generate-m3u-multicanais' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
-            {% else %}
-                source: window.location.origin + "{% url 'generate-m3u' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
-            {% endif %}
+            source: window.location.origin + "{% url 'playlist-m3u8-topcanais' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
             plugins: [HlsjsPlayback, LevelSelector, ClapprStats],
             clapprStats: {
-                // optional: time in miliseconds for each report.
-                // default: 5000
-                runEach: 5000,
-                // optional: callback function.
-                // default: console.log
                 onReport: (metrics) => {
                     metrics.timers.startup = getSecondsString(metrics.timers.startup / 1000);
                     metrics.timers.watch = getSecondsString(metrics.timers.watch / 1000);
@@ -170,64 +138,20 @@
                     metrics.extra.duration = getSecondsString(metrics.extra.duration / 1000);
                     metrics.extra.currentTime = getSecondsString(metrics.extra.currentTime / 1000);
                     metrics.extra.bandwidth = getReadableFileSizeString(metrics.extra.bandwidth);
-
                     console.table(metrics.timers);
                     console.table(metrics.extra);
                 },
-                // optional: provide an img uri hosted at the same place as your farm
-                // or near of it prefferable 1x1px, without caching.
-                // default: none
-                //uriToMeasureLatency: '{% static 'img/1x1.png' %}',
-                // optional: provide some assets uris hosted at the same place as your farm
-                // or near of it prefferable in an uncompressible file format, without caching.
-                // default: none
-                //urisToMeasureBandwidth: [
-                //    {url: '{% static 'img/test100k.db' %}', timeout: 3000},
-                //    {url: '{% static 'img/test1Mb.db' %}', timeout: 6000}
-                //],
-                // optional: number of reports between two consecutive bandwidth tests.
-                // default: 10
-                //runBandwidthTestEvery: 10
+                uriToMeasureLatency: '{% static 'img/1x1.png' %}',
+                urisToMeasureBandwidth: [
+                    {url: '{% static 'img/test100k.db' %}', timeout: 3000},
+                    {url: '{% static 'img/test1Mb.db' %}', timeout: 6000}
+                ],
+                runBandwidthTestEvery: 10
             },
             playback: {
-                //extrapolatedWindowNumSegments: 24,
-                hlsjsConfig: {
-                    //número de segmentos necessários para iniciar uma reprodução de transmissão ao vivo.
-                    //initialLiveManifestSize: 4,
-                    //Comprimento máximo do buffer em segundos. Se o comprimento do buffer for / se tornar menor que esse valor, um novo fragmento será carregado.
-                    //maxBufferLength: 30,
-                    //Tamanho máximo do buffer 'mínimo' em bytes. Se o tamanho do buffer inicial for maior do que este valor, nenhum fragmento será carregado.
-                    //maxBufferSize: 60 * 1000 * 1000,
-                    //atraso máximo de carregamento de vídeo usado na seleção de nível de início automático:
-                    //maxLoadingDelay: 4,
-                    //O algoritmo ABR sempre tentará escolher um nível de qualidade que deve evitar rebuffering. então o algoritmo ABR tentará encontrar um nível que deve garantir menos do que o maxStarvationDelaydo buffer.
-                    //maxStarvationDelay: 5,
-                    //se for esperado que o elemento de mídia seja reproduzido e se currentTime não tiver se movido por mais de highBufferWatchdogPeriode se houver mais de maxBufferHolesegundos no buffer antecipadamente, o hls.js tentará cutucar a reprodução para recuperar a reprodução
-                    //highBufferWatchdogPeriod: 3,
-                    //No caso de a reprodução continuar a parar após o primeiro toque do indicador de reprodução, currentTime será ainda mais deslocado após nudgeOffset para tentar restaurar a reprodução. media.currentTime + = (nb nudge retry -1) * nudgeOffset
-                    //nudgeOffset: 0.1,
-                    //Número máximo de tentativas de nudge antes de hls.js gerar um BUFFER_STALLED_ERROR fatal
-                    //nudgeMaxRetry: 3,
-                    //Este fator de tolerância é usado durante a pesquisa de fragmentos.
-                    //maxFragLookUpTolerance: 0.55,
-                    //Comprimento máximo do buffer em segundos. Hls.js nunca excederá esse valor, mesmo se ainda maxBufferSize não for atingido.
-                    //maxMaxBufferLength: 600,
-                    //limite de atraso ao vivo, expresso em múltiplos de EXT-X-TARGETDURATION. se definido como 3, a reprodução começará a partir do fragmento N-3, N sendo o último fragmento da lista de reprodução ao vivo.
-                    liveSyncDurationCount: 7,
-                    //Tolerância 'máxima' de buracos do buffer entre fragmentos que hls.js pode lidar ao pesquisar o próximo fragmento para carregar.
-                    maxBufferHole: 3,
-                    //Comece a pré-busca do fragmento inicial, embora a mídia ainda não esteja anexada.
-                    //startFragPrefetch: false,
-
-                }
+                hlsjsConfig: {}
             },
         });
-
-        //player.on(Clappr.Events.PLAYER_STOP, playerStop);
-
-        function playerStop() {
-            location.reload();
-        }
 
         player.setVolume(100);
         player.play();
@@ -237,7 +161,7 @@
                 var uri = window.location.origin + $(this).data('m3u8');
                 console.log(uri);
                 player.configure({
-                    source: uri, autoPlay: true
+                    source: uri, autoPlay: false
                 });
             });
         });

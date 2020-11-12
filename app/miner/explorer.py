@@ -5,12 +5,14 @@ import time
 
 import requests
 
+logging.basicConfig(level=logging.DEBUG)
+
 from app.miner import canaismax, topcanais, filmes, series, multicanais
 from app.miner.common import check_new_minig_requests_delay
-from app.models import Site, Serie, Channel, Link
+from app.models import Site, Serie, Channel, Filme
 from app.utils import get_page_bs4, get_episodios, get_url_temporada, save_temporada, get_channel_id, \
-    save_link_channel, make_ids, get_headers, make_ids_topcanais, save_link_channel_multicanais
-from fiiexplorer.settings import SITE_URL
+    save_link_channel, make_ids, make_ids_topcanais, save_link_channel_multicanais, save_link_channel_topcanais, \
+    make_ids_multicanais, save_url_filmes_canaismax
 
 miners = {
     "canaismax": canaismax.CustomMiner,
@@ -39,12 +41,12 @@ def mineSeries():
         site = Site.objects.get(name=NAME)
         if not site.done:
             miner = miners[NAME]()
-            logging.debug('INICIOU A BUSCA SERIES CANAISMAX!')
+            logging.debug('INICIOU A BUSCA SERIES DE CANAISMAX!')
             result = miner.mine()
             if result:
                 site.done = True
                 site.save()
-                logging.debug('FINALIZOU A BUSCA EM SERIES CANAISMAX!')
+                logging.debug('FINALIZOU A BUSCA EM SERIES DE CANAISMAX!')
                 time.sleep(60)
         time.sleep(check_new_minig_requests_delay)
 
@@ -55,12 +57,12 @@ def mineFilmes():
         site = Site.objects.get(name=NAME)
         if not site.done:
             miner = miners[NAME]()
-            logging.debug('INICIOU A BUSCA FILMES CANAISMAX!')
+            logging.debug('INICIOU A BUSCA FILMES DE CANAISMAX!')
             result = miner.mine()
             if result:
                 site.done = True
                 site.save()
-                logging.debug('FINALIZOU A BUSCA EM FILMES CANAISMAX!')
+                logging.debug('FINALIZOU A BUSCA EM FILMES DE CANAISMAX!')
                 time.sleep(60)
         time.sleep(check_new_minig_requests_delay)
 
@@ -71,7 +73,7 @@ def mineCanaisMax():
         site = Site.objects.get(name=NAME)
         if not site.done:
             miner = miners[NAME]()
-            logging.debug('INICIOU A BUSCA CANAISMAX!')
+            logging.debug('INICIOU A BUSCA EM CANAISMAX!')
             result = miner.mine()
             if result:
                 site.done = True
@@ -81,23 +83,23 @@ def mineCanaisMax():
         time.sleep(check_new_minig_requests_delay)
 
 
-def mineTopCanais():
+def mineAllTopCanais():
     while True:
         NAME = 'topcanais'
         site = Site.objects.get(name=NAME)
         if not site.done:
             miner = miners[NAME]()
-            logging.debug('INICIOU A BUSCA TOPCANAIS!')
+            logging.debug('INICIOU A BUSCA EM TOPCANAIS!')
             result = miner.mine()
             if result:
                 site.done = True
                 site.save()
-                logging.debug('FINALIZOU A BUSCA TOPCANAIS!')
+                logging.debug('FINALIZOU A BUSCA EM TOPCANAIS!')
                 time.sleep(60)
         time.sleep(check_new_minig_requests_delay)
 
 
-def mineMultiCanais():
+def mineAllMultiCanais():
     while True:
         NAME = 'multicanais'
         site = Site.objects.get(name=NAME)
@@ -133,11 +135,11 @@ def mineSeriePk(pk=None):
         time.sleep(check_new_minig_requests_delay)
 
 
-def mineCanalPk(pk=None):
+def mineChannelCanaisMax(pk=None):
     while True:
         canal = Channel.objects.get(pk=pk)
         url = canal.url_site
-        logging.debug('INICIOU A BUSCA CANAL: ' + url)
+        logging.debug('INICIOU A BUSCA CANAISMAX CANAL: ' + url)
         second_page = get_page_bs4(url)
         if second_page:
             div_links = second_page.find_all('a', attrs={'class': 'cativ'})
@@ -151,26 +153,74 @@ def mineCanalPk(pk=None):
                     if len(ids) > 0:
                         for id_url in ids:
                             save_link_channel(canal, id_url)
-        logging.debug('FINALIZOU A BUSCA CANAL')
+        logging.debug('FINALIZOU A BUSCA CANAISMAX DO CANAL: ' + url)
         time.sleep(check_new_minig_requests_delay)
 
 
-def mineCanalMultiCanais(pk=None):
+def mineChannelTopCanais(pk=None):
     while True:
         canal = Channel.objects.get(pk=pk)
         url = canal.url_site
-        logging.debug('INICIOU A BUSCA CANAL: ' + url)
+        logging.debug('INICIOU A BUSCA TOPCANAIS CANAL: ' + url)
         second_page = get_page_bs4(url)
         if second_page:
-            div_links = second_page.find('div', attrs={'class': 'links'})
+            div_links = second_page.find('div', attrs={'class': 'canais'})
             if div_links:
                 atags = div_links.find_all("a")
                 if len(atags) > 0:
                     ids = make_ids_topcanais(atags)
                     if len(ids) > 0:
                         for id_url in ids:
-                            save_link_channel_multicanais(canal, id_url)
-        logging.debug('FINALIZOU A BUSCA CANAL')
+                            save_link_channel_topcanais(canal, id_url)
+        logging.debug('FINALIZOU A BUSCA CANAISMAX DO CANAL: ' + url)
+        time.sleep(check_new_minig_requests_delay)
+
+
+def mineChannelMultiCanais(pk=None):
+    while True:
+        canal = Channel.objects.get(pk=pk)
+        url = canal.url_site
+        logging.debug('INICIOU A BUSCA MULTICANAIS CANAL: ' + url)
+        second_page = get_page_bs4(url)
+        if second_page:
+            div_links = second_page.find('div', attrs={'class': 'links'})
+            if div_links:
+                atags = div_links.find_all("a")
+                if len(atags) > 0:
+                    ids = make_ids_multicanais(atags)
+                    if len(ids) > 0:
+                        if len(ids) == 1:
+                            save_link_channel_multicanais(canal, ids[0])
+                            save_link_channel_multicanais(canal, ids[0], 'futebolonlineaovivo.com')
+                        else:
+                            for id_url in ids:
+                                save_link_channel_multicanais(canal, id_url)
+        logging.debug('FINALIZOU A BUSCA MULTICANAIS CANAL: ' + url)
+        time.sleep(check_new_minig_requests_delay)
+
+
+def mineFilmeOneCanaisMax(pk=None):
+    while True:
+        filme = Filme.objects.get(pk=pk)
+        url = filme.url_site
+        logging.debug('INICIOU A BUSCA FILME ONE EM CANAISMAX: ' + url)
+        second_page = get_page_bs4(url)
+        if second_page:
+            div_links = second_page.find_all('a', attrs={'class': 'cativ'})
+            if div_links:
+                atags = div_links
+                if len(atags) > 0:
+                    ids = []
+                    for a in atags:
+                        if a.has_attr('data-id'):
+                            data_id = str(a['data-id'])
+                            data_player = str(a['data-player'])
+                            url_data_id = 'https://canaismax.com/embed/' + data_id + '/' + data_player
+                            ids.append(url_data_id)
+                    if len(ids) > 0:
+                        for id_url in ids:
+                            save_url_filmes_canaismax(filme, id_url)
+        logging.debug('FINALIZOU A BUSCA MULTICANAIS CANAL: ' + url)
         time.sleep(check_new_minig_requests_delay)
 
 
@@ -195,15 +245,15 @@ def is_video(type):
     return False
 
 
-def is_downloadable(url):
-    h = requests.head(url, allow_redirects=True, headers=get_headers())
+def is_downloadable(url, headers):
+    h = requests.head(url, allow_redirects=True, headers=headers)
     header = h.headers
     content_type = header.get('content-type')
     return not is_video(content_type)
 
 
-def get_page_str(uri):
-    req = requests.get(url=uri, stream=True, headers=get_headers())
+def get_page_str(uri, headers):
+    req = requests.get(url=uri, stream=True, headers=headers)
     type = req.headers['Content-Type']
     if req.status_code == 200:
         page_str = str(req.text)

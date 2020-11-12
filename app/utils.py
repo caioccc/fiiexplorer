@@ -1,10 +1,11 @@
+import datetime
 import re
 
 import requests
 from bs4 import BeautifulSoup
 from django.db import IntegrityError
 
-from app.models import Episodio, LinkSerie, Temporada, Link
+from app.models import Episodio, LinkSerie, Temporada, Link, Url
 
 
 def get_page_bs4(url):
@@ -59,10 +60,7 @@ def save_episodio(ids, img_url_episodio, title_episodio, type_episodio, temporad
     episodio.title = title_episodio
     episodio.save()
     for id_url_epi in ids:
-        link = LinkSerie()
-        link.url = id_url_epi
-        link.episodio = episodio
-        link.save()
+        save_url_serie_epi_canaismax(episodio, id_url_epi)
 
 
 def get_img_url(img_tag):
@@ -99,8 +97,8 @@ def get_channel_id(string_script):
     return ''
 
 
-def save_link_channel_multicanais(canal, id_url):
-    m3u8 = get_m3u8_multicanais(id_url)
+def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
+    m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
     if m3u8:
         try:
             link = Link()
@@ -108,16 +106,136 @@ def save_link_channel_multicanais(canal, id_url):
             link.channel = canal
             link.m3u8 = m3u8
             link.save()
-        except (IntegrityError):
-            m3u8 = get_m3u8_multicanais(id_url, 'futebolonlineaovivo.com')
+        except (Exception):
+            print('erro ao salvar link')
+
+
+def get_m3u8_filme_canaismax(uri):
+    uri = str(uri)
+    try:
+        miner_req = get_page_bs4(uri)
+        if miner_req:
+            script = None
+            for scr in miner_req.select('script'):
+                if 'Clappr.Player' in str(scr):
+                    script = scr
+            content_script = str(script)
+            string_source = 'source: "'
+            string_m3u8 = '.m3u8'
+            sources_indexes = [m.start() for m in
+                               re.finditer(string_source, content_script)]
+            m3u8_indexes = [m.start() for m in
+                            re.finditer(string_m3u8, content_script)]
+            strings = [
+                content_script[(int(sources_indexes[i]) + len(string_source)):(int(m3u8_indexes[i]) + len(string_m3u8))]
+                for i in range(len(sources_indexes))]
+            if len(strings) > 0:
+                return strings
+    except (Exception,):
+        print('nao tem source na uri, ', uri)
+        return None
+
+
+def get_m3u8_serie_epi_canaismax(uri):
+    uri = str(uri)
+    try:
+        miner_req = get_page_bs4(uri)
+        if miner_req:
+            script = None
+            for scr in miner_req.select('script'):
+                if 'Clappr.Player' in str(scr):
+                    script = scr
+            content_script = str(script)
+            string_source = 'source: "'
+            string_m3u8 = '.m3u8'
+            sources_indexes = [m.start() for m in
+                               re.finditer(string_source, content_script)]
+            m3u8_indexes = [m.start() for m in
+                            re.finditer(string_m3u8, content_script)]
+            strings = [
+                content_script[(int(sources_indexes[i]) + len(string_source)):(int(m3u8_indexes[i]) + len(string_m3u8))]
+                for i in range(len(sources_indexes))]
+            if len(strings) > 0:
+                return strings
+    except (Exception,):
+        print('nao tem source uri, ', uri)
+        return None
+
+
+def save_url_serie_epi_canaismax(episodio, id_url):
+    m3u8_arr = get_m3u8_serie_epi_canaismax(id_url)
+    for m3u8 in m3u8_arr:
+        if m3u8:
             try:
-                link = Link()
+                link = LinkSerie()
                 link.url = id_url
-                link.channel = canal
+                link.episodio = episodio
                 link.m3u8 = m3u8
                 link.save()
-            except (IntegrityError):
-                print('ja possui os dois links')
+            except (Exception):
+                print('erro ao salvar link do episodio da serie: ', episodio)
+
+
+def save_url_filmes_canaismax(filme, id_url):
+    m3u8_arr = get_m3u8_filme_canaismax(id_url)
+    for m3u8 in m3u8_arr:
+        if m3u8:
+            try:
+                link = Url()
+                link.url = id_url
+                link.filme = filme
+                link.m3u8 = m3u8
+                link.save()
+            except (Exception):
+                print('erro ao salvar link do filme')
+
+
+def get_m3u8_topcanais(id_url, select_server=''):
+    string_canal_id = '.php?canal='
+    string_end_canal_id = '&pasta'
+    uri = str(id_url)
+    try:
+        index_prefix = uri.index(string_canal_id)
+        index_end_suffix = uri.index(string_end_canal_id)
+        name_channel = uri[index_prefix + len(string_canal_id):index_end_suffix]
+        miner_req = get_page_bs4(id_url)
+        if miner_req:
+            script = None
+            for scr in miner_req.select('script'):
+                if 'document.referrer' in str(scr):
+                    script = scr
+            content_script = str(script)
+            string_source = 'source: "'
+            string_m3u8 = '/video.m3u8'
+            sources_indexes = [m.start() for m in
+                               re.finditer(string_source, content_script)]
+            m3u8_indexes = [m.start() for m in
+                            re.finditer(string_m3u8, content_script)]
+            strings = [
+                content_script[(int(sources_indexes[i]) + len(string_source)):(int(m3u8_indexes[i]) + len(string_m3u8))]
+                for i in range(len(sources_indexes))]
+            if len(strings) > 0:
+                if name_channel in strings[0]:
+                    return strings[0]
+                uri_m3u8 = str(strings[0]) + str(name_channel) + string_m3u8
+                return uri_m3u8
+            return None
+    except (Exception,):
+        print('nao tem nome na uri, ', id_url)
+        return None
+
+
+def save_link_channel_topcanais(canal, id_url):
+    m3u8 = get_m3u8_topcanais(id_url)
+    if m3u8:
+        try:
+            link = Link()
+            link.url = id_url
+            link.channel = canal
+            link.m3u8 = m3u8
+            link.save()
+        except (Exception):
+            print('erro ao salvar link')
 
 
 def save_link_channel(canal, id_url):
@@ -129,13 +247,8 @@ def save_link_channel(canal, id_url):
             link.channel = canal
             link.m3u8 = m3u8
             link.save()
-        except (IntegrityError,):
-            print(m3u8)
-
-
-def get_headers():
-    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
-    return headers
+        except (Exception,):
+            print('erro ao salvar link')
 
 
 def contain_http(uri):
@@ -144,61 +257,19 @@ def contain_http(uri):
     return False
 
 
-# def save_tss(uri, name, logo, link):
-#     headers = get_headers()
-#     if uri != '':
-#         try:
-#             if contain_http(uri):
-#                 req = requests.get(url=uri, headers=headers)
-#                 if req.status_code == 200:
-#                     page = BeautifulSoup(req.text, 'html.parser')
-#                     page_str = str(page.contents[0])
-#                     arr_strings = re.findall("(?P<url>https?://[^\s]+)", page_str)
-#                     if len(arr_strings) > 0:
-#                         for ts_uri in arr_strings:
-#                             _save_ts(headers, link, logo, name, ts_uri)
-#                     else:
-#                         arr_strings = re.findall("([^\s]+.m3u8)", page_str)
-#                         for ts_uri in arr_strings:
-#                             print(ts_uri, 'nao foi possivel salvar TS')
-#                             # _save_ts(headers, link, logo, name, ts_uri)
-#             else:
-#                 print('nao contem http ', uri)
-#         except(requests.exceptions.ConnectionError,):
-#             print(link.channel.title, 'nao foi possivel salvar TS')
-#         except (Exception,):
-#             print(link.channel.title, 'nao foi possivel salvar TS')
-#
-#
-# def _save_ts(headers, link, logo, name, ts_uri):
-#     try:
-#         if contain_http(ts_uri):
-#             req_test_uri = requests.get(url=ts_uri, stream=True, headers=headers)
-#             if req_test_uri.status_code == 200:
-#                 ts = Ts(link=link, name=name, logo=logo, uri=ts_uri)
-#                 ts.save()
-#         else:
-#             print('TS not contain https ', ts_uri)
-#     except (requests.exceptions.ConnectionError,):
-#         print('Connection Error', link.channel.title)
-
-def get_m3u8_multicanais(id_url, select_server=None):
+def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
     string_canal_id = '.php?canal='
     uri = str(id_url)
     try:
         index_prefix = uri.index(string_canal_id)
         if index_prefix > -1:
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
-            if not select_server:
-                m3u8_uri = "https://live.tvfolha.com/" + name_channel + "/video.m3u8"
-            else:
-                m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8"
+            m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8"
             return m3u8_uri
         else:
-            print('nao tem m3u8', id_url)
             return ''
     except (ValueError,):
-        print('nao tem nome no url, ', id_url)
+        pass
 
 
 def get_m3u8(id_url):
@@ -231,6 +302,18 @@ def make_ids_topcanais(atags):
     for a in atags:
         if a.has_attr('data-id'):
             data_id = str(a['data-id'])
+            data_pasta = str(a['data-pasta'])
+            url_id = 'https://topcanais.com/player/aovivo.php?canal=' + data_id + '&pasta=' + data_pasta
+            if url_id:
+                ids.append(url_id)
+    return ids
+
+
+def make_ids_multicanais(atags):
+    ids = []
+    for a in atags:
+        if a.has_attr('data-id'):
+            data_id = str(a['data-id'])
             if 'http' in data_id:
                 url_id = 'https://multicanais.com/player.php?id=' + data_id
                 ids.append(url_id)
@@ -258,3 +341,61 @@ def make_ids(atags):
             else:
                 ids.append(data_id)
     return ids
+
+
+def get_date_now():
+    now = datetime.datetime.now()
+    month = str("0") + str(now.month) if now.month < 10 else now.month
+    day = str("0") + str(now.day) if now.day < 10 else now.day
+    return '%s-%s-%s' % (now.year, month, day)
+
+
+def request_json():
+    api_url = 'https://canaismax.com/api/programacao'
+    req = requests.get(api_url)
+    if req.status_code == 200:
+        json = req.json()
+        return json
+    return None
+
+
+def check_m3u8_req(uri, headers):
+    try:
+        req = requests.get(uri, headers=headers)
+        if req.status_code == 200:
+            size = 0
+            for chunk in req.iter_content(256):
+                size += len(chunk)
+                if size > 4096:
+                    return True
+        return False
+    except (Exception,):
+        print('Break ao checar m3u8')
+        return False
+
+
+def remove_iv(array_uri):
+    for i in range(len(array_uri)):
+        if '",IV' in str(array_uri[i]):
+            index_iv = str(array_uri[i]).index('",IV=')
+            if index_iv >= 0:
+                array_uri[i] = str(array_uri[i])[:index_iv]
+    return array_uri
+
+
+def get_text_type(link):
+    uri = str(link.m3u8)
+    if 'sd/' in uri:
+        return 'SD'
+    elif 'hd/' in uri:
+        return 'HD'
+    else:
+        return None
+
+
+def clean_title(channel):
+    title = str(channel.title)
+    if 'Assistir ' in title:
+        if ' ao vivo' in title:
+            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' ao vivo')]
+    return title

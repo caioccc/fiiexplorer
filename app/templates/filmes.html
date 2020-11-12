@@ -2,13 +2,6 @@
 {% load staticfiles %}
 
 {% block content %}
-    <style>
-        .list_fii_segmento {
-            padding: 0px;
-            margin: 4px 4px;
-            display: inline-block;
-        }
-    </style>
     <div class="row">
         <div class="col-xs-12">
             <div class="box box-default">
@@ -41,8 +34,8 @@
                 <div class="box box-header">
                     <div class="row">
                         <div class="col-xs-12">
-                            <a href="{% url 'collect-filmes' %}" class="btn btn-primary">
-                                <i class="fa fa-rocket"></i> <span>Collect Films</span>
+                            <a href="{% url 'collect-filmes-canaismax' %}" class="btn btn-primary">
+                                <i class="fa fa-rocket"></i> <span>Collect Films CanaisMax</span>
                             </a>
                         </div>
                     </div>
@@ -79,9 +72,7 @@
             </div>
         </div>
     </div>
-
     <script type="text/javascript">
-
         $(document).ready(function () {
         });
     </script>

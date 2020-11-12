@@ -24,7 +24,7 @@ class CustomMiner(Miner):
                             if div_links:
                                 atags = div_links.find_all("a")
                                 if len(atags) > 0:
-                                    ids = self.make_ids_topcanais(atags, title)
+                                    ids = self.make_ids_multicanais(atags, title)
                                     if len(ids) > 0:
                                         ch = Channel()
                                         ch.title = title
@@ -33,10 +33,14 @@ class CustomMiner(Miner):
                                         ch.url_site = str(href)
                                         ch.save()
                                         print(title, '-', len(ids))
-                                        for id_url in ids:
-                                            save_link_channel_multicanais(ch, id_url)
+                                        if len(ids) == 1:
+                                            save_link_channel_multicanais(ch, ids[0])
+                                            save_link_channel_multicanais(ch, ids[0], 'futebolonlineaovivo.com')
+                                        else:
+                                            for id_url in ids:
+                                                save_link_channel_multicanais(ch, id_url)
 
-    def make_ids_topcanais(self, atags, title):
+    def make_ids_multicanais(self, atags, title):
         ids = []
         for a in atags:
             if a.has_attr('data-id'):

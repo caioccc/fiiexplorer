@@ -2,8 +2,6 @@ import datetime
 
 from django import template
 
-from app.views import request_json
-
 register = template.Library()
 
 

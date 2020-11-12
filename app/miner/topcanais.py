@@ -1,6 +1,6 @@
 from app.miner.common import Miner
 from app.models import Channel, Link, Site
-from app.utils import get_page_bs4, save_link_channel
+from app.utils import get_page_bs4, save_link_channel, save_link_channel_topcanais
 
 
 class CustomMiner(Miner):
@@ -32,8 +32,9 @@ class CustomMiner(Miner):
                                         ch.category = category
                                         ch.url_site = str(href)
                                         ch.save()
+                                        print(title, '-', len(ids))
                                         for id_url in ids:
-                                            save_link_channel(ch, id_url)
+                                            save_link_channel_topcanais(ch, id_url)
 
     def make_ids_topcanais(self, atags, title):
         ids = []
@@ -41,30 +42,15 @@ class CustomMiner(Miner):
             if a.has_attr('data-id'):
                 data_id = str(a['data-id'])
                 data_pasta = str(a['data-pasta'])
-                data_playertipo = str(a['data-playertipo'])
-                if data_playertipo == 'externo':
-                    print('externo', title)
-                    if a.has_attr('data-servidor'):
-                        data_servidor = str(a['data-servidor'])
-                    else:
-                        data_servidor = data_id
-                    url_id = 'https://topcanais.com/player/player.php?id=' + data_id + '&player=' + data_servidor
-                elif data_playertipo == 'hls':
-                    print('hls', title)
-                    url_id = 'https://topcanais.com/player/hls.php?id=' + data_id
-                else:
-                    print('normal', title)
-                    url_id = 'https://topcanais.com/player/aovivo.php?canal=' + data_id + '&pasta=' + data_pasta
-                ids.append(url_id)
+                url_id = 'https://topcanais.com/player/aovivo.php?canal=' + data_id + '&pasta=' + data_pasta
+                if url_id:
+                    ids.append(url_id)
         return ids
 
     def mine(self):
-        try:
-            Channel.objects.filter(category__site__name='topcanais').delete()
-            Link.objects.filter(channel__category__site__name='topcanais').delete()
-            site = Site.objects.get(name='topcanais')
-            for category in site.categorychannel_set.all():
-                self.extract(category)
-            return True
-        except (Exception,):
-            return False
+        Channel.objects.filter(category__site__name='topcanais').delete()
+        Link.objects.filter(channel__category__site__name='topcanais').delete()
+        site = Site.objects.get(name='topcanais')
+        for category in site.categorychannel_set.all():
+            self.extract(category)
+        return True

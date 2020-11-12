@@ -3,32 +3,31 @@
 {% load filters %}
 
 {% block content %}
+    <link rel="stylesheet" href='{% static 'css/style-view-channel.css' %}'/>
     <script src="//cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
     <script src='//cdn.jsdelivr.net/npm/@clappr/hlsjs-playback@latest/dist/hlsjs-playback.min.js'></script>
     <script type="text/javascript"
             src="//cdn.jsdelivr.net/gh/clappr/clappr-level-selector-plugin@latest/dist/level-selector.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@clappr/stats-plugin@latest/dist/clappr-stats.min.js"
             type="text/javascript"></script>
+
     <div class="row">
         <div class="col-xs-6">
-            <a href="{% url 'filmes' %}"
+            <a href="{% url 'multicanais' %}"
                class="btn btn-default">Voltar</a>
         </div>
         <div class="col-xs-6">
-            <a href="{% url 'collect-film-canaismax' filme.pk %}"
+            <a href="{% url 'collect-channel-multicanais' canal.pk %}"
                class="btn btn-warning pull-right">Update</a>
         </div>
     </div>
     <br/>
     <div class="row">
         <div class="col-xs-3">
-            <img src="{{ filme.img_url }}" class="img-thumbnail img-responsive"/>
+            <img src="{{ canal.img_url }}" class="img-thumbnail img-responsive" style="background-color: #0d3349"/>
         </div>
-        <div class="col-xs-9">
-            <h1 class=""><b>{{ filme.title }}</b></h1>
-            <h3>{{ filme.duracao }}</h3>
-            <h3>{{ filme.ano }}</h3>
-            <h3>{{ filme.sinopse }}</h3>
+        <div class="col-xs-7">
+            <h1 class=""><b>{{ canal.title }}</b></h1>
             <h2></h2>
         </div>
     </div>
@@ -36,11 +35,12 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="row">
-                {% for link in filme.url_set.all %}
-                    <div class="col-xs-3 col-sm-2 col-md-1">
-                        <a data-m3u8="{% url 'm3u8-filmes-canaismax' %}?uri={{ link.m3u8 }}"
-                           data-uri="{{ link.m3u8 }}" href="#{{ link.m3u8 }}"
-                           class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' %}</a>
+                {% for link in canal.link_set.all %}
+                    <div class="col-xs-4 col-sm-3 col-md-2">
+                        <a data-uri="{{ link.m3u8 }}"
+                           data-m3u8="{% url 'playlist-m3u8-multicanais' %}?uri={{ link.m3u8 }}"
+                           href="#{{ link.m3u8 }}"
+                           class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
                     </div>
                 {% endfor %}
             </div>
@@ -54,7 +54,8 @@
         </div>
     </div>
 
-    <script type="text/javascript">
+    <script>
+
         function getSecondsString(fileSizeInBytes) {
             return fileSizeInBytes.toFixed(1) + ' s';
         };
@@ -73,9 +74,9 @@
 
         var player = new Clappr.Player({
             parentId: "#Player",
-            autoPlay: false,
-            poster: "{{ filme.img_url }}",
-            source: window.location.origin + "{% url 'm3u8-filmes-canaismax' %}?uri=" + "{{ filme.url_set.first.m3u8 }}",
+            autoPlay: true,
+            poster: "{{ canal.img_url }}",
+            source: window.location.origin + "{% url 'playlist-m3u8-multicanais' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
@@ -94,6 +95,7 @@
                     metrics.extra.duration = getSecondsString(metrics.extra.duration / 1000);
                     metrics.extra.currentTime = getSecondsString(metrics.extra.currentTime / 1000);
                     metrics.extra.bandwidth = getReadableFileSizeString(metrics.extra.bandwidth);
+
                     console.table(metrics.timers);
                     console.table(metrics.extra);
                 },
@@ -106,11 +108,11 @@
             },
             playback: {
                 hlsjsConfig: {
-                    liveSyncDurationCount: 7
+                    liveSyncDurationCount: 7,
+                    maxBufferHole: 3,
                 }
             },
         });
-
         player.setVolume(100);
         player.play();
 
@@ -119,7 +121,7 @@
                 var uri = window.location.origin + $(this).data('m3u8');
                 console.log(uri);
                 player.configure({
-                    source: uri, autoPlay: false
+                    source: uri, autoPlay: true
                 });
             });
         });

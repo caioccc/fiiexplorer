@@ -63,17 +63,14 @@ class CustomMiner(Miner):
         return serie
 
     def mine(self):
-        try:
-            Serie.objects.all().delete()
-            Temporada.objects.all().delete()
-            Episodio.objects.all().delete()
-            LinkSerie.objects.all().delete()
-            site = Site.objects.get(name='series')
-            for category in site.categorychannel_set.all():
-                self.extract(category)
-            return True
-        except (Exception,):
-            return False
+        Serie.objects.all().delete()
+        Temporada.objects.all().delete()
+        Episodio.objects.all().delete()
+        LinkSerie.objects.all().delete()
+        site = Site.objects.get(name='series')
+        for category in site.categorychannel_set.all():
+            self.extract(category)
+        return True
 
     def get_temporadas(self, param):
         if 'temporadas' in param:
