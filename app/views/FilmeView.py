@@ -108,18 +108,20 @@ def gen_lista_filmes_canaismax(request):
     f.truncate(0)
     f.write("#EXTM3U\n")
     for ch in Filme.objects.all():
-        for link in ch.url_set.filter(m3u8__icontains='.m3u8').distinct():
-            title = clean_title(ch)
-            custom_m3u8 = 'http://'+request.META['HTTP_HOST'] + '/' + 'api/filmes/canaismax/playlist.m3u8?uri=' + link.m3u8
-            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
-                link.id,
-                link.id,
-                title,
-                title,
-                link.id,
-                ch.img_url,
-                '',
-                title,
-                custom_m3u8))
+        link = ch.url_set.all().distinct().first()
+        title = clean_title(ch)
+        custom_m3u8 = 'http://'+request.META['HTTP_HOST'] + '/' + 'api/filmes/canaismax/playlist.m3u8?uri=' + link.m3u8
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+            link.id,
+            link.id,
+            title,
+            title,
+            link.id,
+            ch.img_url,
+            '',
+            title,
+            custom_m3u8))
     fsock = open("filmes-canaismax.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
+
+

@@ -10,7 +10,7 @@ from django.views.generic import DetailView, TemplateView, ListView
 
 from app.miner.explorer import mineSeriePk, mineSeries
 from app.models import Serie, Temporada, Site
-from app.utils import remove_iv
+from app.utils import remove_iv, clean_title
 
 
 class CollectSerie(DetailView):
@@ -68,7 +68,9 @@ def playlist_m3u8_series_canaismax(request):
         if len(arr_strings) > 0:
             for i in range(len(arr_strings)):
                 page_str = page_str.replace(arr_strings[i],
-                                            'http://'+request.META['HTTP_HOST'] + '/' + 'api/series/canaismax/ts?link=' + str(arr_strings[i]))
+                                            'http://' + request.META[
+                                                'HTTP_HOST'] + '/' + 'api/series/canaismax/ts?link=' + str(
+                                                arr_strings[i]))
 
         return HttpResponse(
             content=page_str,
@@ -97,3 +99,28 @@ def get_ts_series_canaismax(request):
             return HttpResponseNotFound("hello")
     except (Exception,):
         return HttpResponseNotFound("hello")
+
+
+def gen_lista_series_canaismax(request):
+    f = open("series-canaismax.m3u8", "a")
+    f.truncate(0)
+    f.write("#EXTM3U\n")
+    for serie in Serie.objects.all():
+        for temp in serie.temporada_set.all():
+            for epi in temp.episodio_set.all():
+                link = epi.linkserie_set.all().first()
+                title = str(clean_title(serie)) + ' ' + str(epi.type) + ' - ' + str(epi.title)
+                custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/' + 'api/series/canaismax/playlist.m3u8?uri=' + str(link.m3u8)
+                f.write(
+                    '#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+                        link.id,
+                        link.id,
+                        title,
+                        title,
+                        link.id,
+                        serie.img_url,
+                        '',
+                        title,
+                        custom_m3u8))
+    fsock = open("series-canaismax.m3u8", "rb")
+    return HttpResponse(fsock, content_type='text')

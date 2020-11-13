@@ -24,7 +24,7 @@ from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, Filme
 from app.views.MultiCanaisView import CollectChannelMultiCanais, CollectAllMultiCanais, MultiCanaisView, \
     ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais
 from app.views.SerieView import CollectSeries, CollectSerie, ViewSerie, SeriesView, playlist_m3u8_series_canaismax, \
-    get_ts_series_canaismax
+    get_ts_series_canaismax, gen_lista_series_canaismax
 from app.views.TopCanaisView import CollectAllTopCanais, TopCanaisView, ViewChannelTopCanais, CollectChannelTopCanais, \
     playlist_m3u8_topcanais, playlist_other_m3u8_topcanais, get_lista_topcanais, get_ts_topcanais
 
@@ -73,6 +73,7 @@ urlpatterns = [
     path('collect-serie/<int:pk>', CollectSerie.as_view(), name='collect-serie'),
     path('api/series/canaismax/playlist.m3u8', playlist_m3u8_series_canaismax, name='m3u8-series-canaismax'),
     path('api/series/canaismax/ts', get_ts_series_canaismax, name='ts-series-canaismax'),
+    path('series-canaismax.m3u8', gen_lista_series_canaismax, name='gen-series-canaismax'),
 
     path('logout/', auth_views.logout_then_login, name='logout'),
 
