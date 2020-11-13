@@ -398,4 +398,8 @@ def clean_title(channel):
     if 'Assistir ' in title:
         if ' ao vivo' in title:
             return title[(title.index('Assistir ') + len('Assistir ')):title.index(' ao vivo')]
+        if ' Ao Vivo' in title:
+            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' Ao Vivo')]
+    elif  'Ao Vivo' in title:
+            return title[:title.index(' Ao Vivo')]
     return title

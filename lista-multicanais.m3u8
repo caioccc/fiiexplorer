@@ -1,41 +1,41 @@
 #EXTM3U
-#EXTINF:1, tvg-id="1 - Assistir AMC Ao Vivo Online 24 horas Grátis" tvg-name="Assistir AMC Ao Vivo Online 24 horas Grátis - 1" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="",Assistir AMC Ao Vivo Online 24 horas Grátis
+#EXTINF:1, tvg-id="1 - AMC" tvg-name="AMC - 1" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="",AMC
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/AMC/video.m3u8
-#EXTINF:3, tvg-id="3 - Globo Ao Vivo Online Grátis HD 24 horas Sem Travar no Ar" tvg-name="Globo Ao Vivo Online Grátis HD 24 horas Sem Travar no Ar - 3" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="",Globo Ao Vivo Online Grátis HD 24 horas Sem Travar no Ar
+#EXTINF:3, tvg-id="3 - Globo" tvg-name="Globo - 3" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="",Globo
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/GLOBORJ/video.m3u8
-#EXTINF:9, tvg-id="9 - Assistir CNN Brasil Ao Vivo Online 24 horas Grátis" tvg-name="Assistir CNN Brasil Ao Vivo Online 24 horas Grátis - 9" tvg-logo="https://multicanais.com/wp-content/uploads/2020/04/Cnn-brasil-ao-vivo-online-grátis-344x193.png" group-title="",Assistir CNN Brasil Ao Vivo Online 24 horas Grátis
+#EXTINF:9, tvg-id="9 - CNN Brasil" tvg-name="CNN Brasil - 9" tvg-logo="https://multicanais.com/wp-content/uploads/2020/04/Cnn-brasil-ao-vivo-online-grátis-344x193.png" group-title="",CNN Brasil
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/CNN/video.m3u8
-#EXTINF:11, tvg-id="11 - Assistir Fox Premium Ao Vivo Online HD Grátis 24 Horas" tvg-name="Assistir Fox Premium Ao Vivo Online HD Grátis 24 Horas - 11" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="",Assistir Fox Premium Ao Vivo Online HD Grátis 24 Horas
+#EXTINF:11, tvg-id="11 - Fox Premium" tvg-name="Fox Premium - 11" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="",Fox Premium
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/FOXPREMIUM/video.m3u8
-#EXTINF:13, tvg-id="13 - Assistir DAZN Ao Vivo Online em HD 24 horas gratuitamente" tvg-name="Assistir DAZN Ao Vivo Online em HD 24 horas gratuitamente - 13" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Dazn-online-grátis-hd-344x193.jpg" group-title="",Assistir DAZN Ao Vivo Online em HD 24 horas gratuitamente
+#EXTINF:13, tvg-id="13 - DAZN" tvg-name="DAZN - 13" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Dazn-online-grátis-hd-344x193.jpg" group-title="",DAZN
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/DAZN/video.m3u8
-#EXTINF:15, tvg-id="15 - Assistir SporTV Ao Vivo Online HD 24 horas" tvg-name="Assistir SporTV Ao Vivo Online HD 24 horas - 15" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="",Assistir SporTV Ao Vivo Online HD 24 horas
+#EXTINF:15, tvg-id="15 - SporTV" tvg-name="SporTV - 15" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="",SporTV
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SPORTVSD/video.m3u8
-#EXTINF:18, tvg-id="18 - Assistir Combate Ao Vivo Online e Grátis em HD" tvg-name="Assistir Combate Ao Vivo Online e Grátis em HD - 18" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="",Assistir Combate Ao Vivo Online e Grátis em HD
+#EXTINF:18, tvg-id="18 - Combate" tvg-name="Combate - 18" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="",Combate
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/COMBATE/video.m3u8
-#EXTINF:22, tvg-id="22 - Assistir BandNews Ao Vivo Online 24 horas Grátis" tvg-name="Assistir BandNews Ao Vivo Online 24 horas Grátis - 22" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-BandNews-ao-vivo-grátis-online-344x193.png" group-title="",Assistir BandNews Ao Vivo Online 24 horas Grátis
+#EXTINF:22, tvg-id="22 - BandNews" tvg-name="BandNews - 22" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-BandNews-ao-vivo-grátis-online-344x193.png" group-title="",BandNews
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/BANDNEWS/video.m3u8
-#EXTINF:24, tvg-id="24 - Assistir Telecine FUN Ao Vivo Online Grátis 24 horas" tvg-name="Assistir Telecine FUN Ao Vivo Online Grátis 24 horas - 24" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-Telecine-FUN-ao-vivo-online-344x193.png" group-title="",Assistir Telecine FUN Ao Vivo Online Grátis 24 horas
+#EXTINF:24, tvg-id="24 - Telecine FUN" tvg-name="Telecine FUN - 24" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-Telecine-FUN-ao-vivo-online-344x193.png" group-title="",Telecine FUN
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/TELECINEFUN/video.m3u8
-#EXTINF:27, tvg-id="27 - Assistir Viva Ao Vivo Online Grátis 24 horas" tvg-name="Assistir Viva Ao Vivo Online Grátis 24 horas - 27" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-VIVA-ao-Vivo-Online-Grátis-HD-344x193.png" group-title="",Assistir Viva Ao Vivo Online Grátis 24 horas
+#EXTINF:27, tvg-id="27 - Viva" tvg-name="Viva - 27" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-VIVA-ao-Vivo-Online-Grátis-HD-344x193.png" group-title="",Viva
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/VIVASD/video.m3u8
-#EXTINF:30, tvg-id="30 - Assistir Nat Geo Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Nat Geo Ao Vivo Online 24 horas Grátis - 30" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-natgeo-ao-vivo-online-grátis-344x193.png" group-title="",Assistir Nat Geo Ao Vivo Online 24 horas Grátis
+#EXTINF:30, tvg-id="30 - Nat Geo" tvg-name="Nat Geo - 30" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-natgeo-ao-vivo-online-grátis-344x193.png" group-title="",Nat Geo
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/NATGEO/video.m3u8
-#EXTINF:32, tvg-id="32 - Assistir Food Network Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Food Network Ao Vivo Online 24 horas Grátis - 32" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-Foodnetwork-ao-vivo-grátis-online-344x193.png" group-title="",Assistir Food Network Ao Vivo Online 24 horas Grátis
+#EXTINF:32, tvg-id="32 - Food Network" tvg-name="Food Network - 32" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-Foodnetwork-ao-vivo-grátis-online-344x193.png" group-title="",Food Network
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/FOODNETWORK/video.m3u8
-#EXTINF:34, tvg-id="34 - Assistir Multishow Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Multishow Ao Vivo Online 24 horas Grátis - 34" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-multishow-ao-vivo-344x193.png" group-title="",Assistir Multishow Ao Vivo Online 24 horas Grátis
+#EXTINF:34, tvg-id="34 - Multishow" tvg-name="Multishow - 34" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-multishow-ao-vivo-344x193.png" group-title="",Multishow
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/MULTISHOWSD/video.m3u8
-#EXTINF:37, tvg-id="37 - Assistir Animal Planet Ao Vivo Online 24 horas" tvg-name="Assistir Animal Planet Ao Vivo Online 24 horas - 37" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-animal-planet-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Animal Planet Ao Vivo Online 24 horas
+#EXTINF:37, tvg-id="37 - Animal Planet" tvg-name="Animal Planet - 37" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-animal-planet-ao-vivo-online-24-horas-344x193.png" group-title="",Animal Planet
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/ANIMALPLANET/video.m3u8
 #EXTINF:39, tvg-id="39 - ESPN 2" tvg-name="ESPN 2 - 39" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Assistir-ESPN-2-ao-vivo-online-24-horas-344x193.png" group-title="",ESPN 2
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/espn2xp/video.m3u8
 #EXTINF:41, tvg-id="41 - Universal Channel" tvg-name="Universal Channel - 41" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-universal-online-ao-vivo-344x193.png" group-title="",Universal Channel
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/UNIVERSAL/video.m3u8
-#EXTINF:44, tvg-id="44 - Assistir A&E Ao Vivo Online 24 horas Grátis" tvg-name="Assistir A&E Ao Vivo Online 24 horas Grátis - 44" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-AE-ao-vivo-online-344x193.png" group-title="",Assistir A&E Ao Vivo Online 24 horas Grátis
+#EXTINF:44, tvg-id="44 - A&E" tvg-name="A&E - 44" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-AE-ao-vivo-online-344x193.png" group-title="",A&E
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/AEE/video.m3u8
-#EXTINF:46, tvg-id="46 - Assistir TLC Ao Vivo Online 24 horas Grátis" tvg-name="Assistir TLC Ao Vivo Online 24 horas Grátis - 46" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-TLC-online-ao-vivo-344x193.png" group-title="",Assistir TLC Ao Vivo Online 24 horas Grátis
+#EXTINF:46, tvg-id="46 - TLC" tvg-name="TLC - 46" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-TLC-online-ao-vivo-344x193.png" group-title="",TLC
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/TLC/video.m3u8
-#EXTINF:48, tvg-id="48 - Assistir Premiere Clubes Ao Vivo Grátis Online" tvg-name="Assistir Premiere Clubes Ao Vivo Grátis Online - 48" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-premiere-ao-vivo-online-344x193.png" group-title="",Assistir Premiere Clubes Ao Vivo Grátis Online
+#EXTINF:48, tvg-id="48 - Premiere Clubes" tvg-name="Premiere Clubes - 48" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-premiere-ao-vivo-online-344x193.png" group-title="",Premiere Clubes
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/pfc/video.m3u8
 #EXTINF:53, tvg-id="53 - Premiere 4" tvg-name="Premiere 4 - 53" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Premiere-4-344x193.png" group-title="",Premiere 4
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/PREMIERE4/video.m3u8
@@ -43,11 +43,11 @@ http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/PREMI
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/PREMIERE3/video.m3u8
 #EXTINF:57, tvg-id="57 - Premiere 2" tvg-name="Premiere 2 - 57" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Premiere-2--344x193.png" group-title="",Premiere 2
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/PREMIERE2/video.m3u8
-#EXTINF:59, tvg-id="59 - Assistir E! Ao Vivo Online 24 horas Grátis" tvg-name="Assistir E! Ao Vivo Online 24 horas Grátis - 59" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-e-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir E! Ao Vivo Online 24 horas Grátis
+#EXTINF:59, tvg-id="59 - E!" tvg-name="E! - 59" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-e-ao-vivo-online-24-horas-344x193.png" group-title="",E!
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/E/video.m3u8
-#EXTINF:61, tvg-id="61 - Assistir TNT Séries Ao Vivo Online 24 horas" tvg-name="Assistir TNT Séries Ao Vivo Online 24 horas - 61" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assisitir-TNT-séries-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir TNT Séries Ao Vivo Online 24 horas
+#EXTINF:61, tvg-id="61 - TNT Séries" tvg-name="TNT Séries - 61" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assisitir-TNT-séries-ao-vivo-online-24-horas-344x193.png" group-title="",TNT Séries
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/TNTSERIES/video.m3u8
-#EXTINF:63, tvg-id="63 - Assistir Comedy Central Ao Vivo Online 24 horas" tvg-name="Assistir Comedy Central Ao Vivo Online 24 horas - 63" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-comedy-central-ao-vivo-344x193.png" group-title="",Assistir Comedy Central Ao Vivo Online 24 horas
+#EXTINF:63, tvg-id="63 - Comedy Central" tvg-name="Comedy Central - 63" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-comedy-central-ao-vivo-344x193.png" group-title="",Comedy Central
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/COMEDY/video.m3u8
 #EXTINF:65, tvg-id="65 - SBT" tvg-name="SBT - 65" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Sbt-ao-vivo-online-344x193.png" group-title="",SBT
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SBT/video.m3u8
@@ -55,45 +55,45 @@ http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SBT/v
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/recordtvrj/video.m3u8
 #EXTINF:73, tvg-id="73 - Band" tvg-name="Band - 73" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Band-Ao-vivo-online-344x193.png" group-title="",Band
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/BAND/video.m3u8
-#EXTINF:75, tvg-id="75 - Assistir History Ao Vivo Online 24 horas Grátis" tvg-name="Assistir History Ao Vivo Online 24 horas Grátis - 75" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-history-ao-vivo-online-344x193.png" group-title="",Assistir History Ao Vivo Online 24 horas Grátis
+#EXTINF:75, tvg-id="75 - History" tvg-name="History - 75" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-history-ao-vivo-online-344x193.png" group-title="",History
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/HISTORY/video.m3u8
-#EXTINF:77, tvg-id="77 - Assistir MTV Ao Vivo Online 24 horas Grátis" tvg-name="Assistir MTV Ao Vivo Online 24 horas Grátis - 77" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-mtv-ao-vivo-online-344x193.png" group-title="",Assistir MTV Ao Vivo Online 24 horas Grátis
+#EXTINF:77, tvg-id="77 - MTV" tvg-name="MTV - 77" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-mtv-ao-vivo-online-344x193.png" group-title="",MTV
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/MTV/video.m3u8
 #EXTINF:79, tvg-id="79 - UFC" tvg-name="UFC - 79" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/ufc-ao-vivo-online-344x193.jpeg" group-title="",UFC
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/COMBATE/video.m3u8
 #EXTINF:83, tvg-id="83 - Tooncast" tvg-name="Tooncast - 83" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Tooncast-ao-vivo-online-344x193.png" group-title="",Tooncast
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/Tooncast/video.m3u8
-#EXTINF:86, tvg-id="86 - Assistir Nick Jr Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Nick Jr Ao Vivo Online 24 horas Grátis - 86" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-nick-jr-ao-vivo-online-344x193.png" group-title="",Assistir Nick Jr Ao Vivo Online 24 horas Grátis
+#EXTINF:86, tvg-id="86 - Nick Jr" tvg-name="Nick Jr - 86" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-nick-jr-ao-vivo-online-344x193.png" group-title="",Nick Jr
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/NICKJR/video.m3u8
-#EXTINF:88, tvg-id="88 - Assistir Gloob Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Gloob Ao Vivo Online 24 horas Grátis - 88" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-gloob-ao-vivo-online-344x193.png" group-title="",Assistir Gloob Ao Vivo Online 24 horas Grátis
+#EXTINF:88, tvg-id="88 - Gloob" tvg-name="Gloob - 88" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-gloob-ao-vivo-online-344x193.png" group-title="",Gloob
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/GLOOB/video.m3u8
 #EXTINF:90, tvg-id="90 - Band Sports" tvg-name="Band Sports - 90" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-band-sports-online-ao-vivo-24-horas-344x193.png" group-title="",Band Sports
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/BANDSPORTS/video.m3u8
 #EXTINF:92, tvg-id="92 - ESPN" tvg-name="ESPN - 92" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Espn-ao-vivo-online-344x193.png" group-title="",ESPN
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/espnxp/video.m3u8
-#EXTINF:94, tvg-id="94 - Assistir SporTV 3 Ao Vivo Online Grátis HD 24 horas" tvg-name="Assistir SporTV 3 Ao Vivo Online Grátis HD 24 horas - 94" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv3-ao-vivo-online-344x193.png" group-title="",Assistir SporTV 3 Ao Vivo Online Grátis HD 24 horas
+#EXTINF:94, tvg-id="94 - SporTV 3" tvg-name="SporTV 3 - 94" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv3-ao-vivo-online-344x193.png" group-title="",SporTV 3
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SPORTV3SD/video.m3u8
-#EXTINF:97, tvg-id="97 - Assistir SporTV 2 Ao Vivo Online HD 24 horas" tvg-name="Assistir SporTV 2 Ao Vivo Online HD 24 horas - 97" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv2-ao-vivo-online-344x193.png" group-title="",Assistir SporTV 2 Ao Vivo Online HD 24 horas
+#EXTINF:97, tvg-id="97 - SporTV 2" tvg-name="SporTV 2 - 97" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv2-ao-vivo-online-344x193.png" group-title="",SporTV 2
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SPORTV2SD/video.m3u8
-#EXTINF:100, tvg-id="100 - Assistir GNT Ao Vivo Online 24 horas" tvg-name="Assistir GNT Ao Vivo Online 24 horas - 100" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-gnt-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir GNT Ao Vivo Online 24 horas
+#EXTINF:100, tvg-id="100 - GNT" tvg-name="GNT - 100" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-gnt-ao-vivo-online-24-horas-344x193.png" group-title="",GNT
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/GNTSD/video.m3u8
-#EXTINF:103, tvg-id="103 - Assistir Space Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Space Ao Vivo Online 24 horas Grátis - 103" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Space-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Space Ao Vivo Online 24 horas Grátis
+#EXTINF:103, tvg-id="103 - Space" tvg-name="Space - 103" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Space-ao-vivo-online-24-horas-344x193.png" group-title="",Space
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SPACE/video.m3u8
-#EXTINF:105, tvg-id="105 - Assistir Discovery Turbo Ao Vivo Online 24 horas" tvg-name="Assistir Discovery Turbo Ao Vivo Online 24 horas - 105" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-turbo-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Discovery Turbo Ao Vivo Online 24 horas
+#EXTINF:105, tvg-id="105 - Discovery Turbo" tvg-name="Discovery Turbo - 105" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-turbo-ao-vivo-online-24-horas-344x193.png" group-title="",Discovery Turbo
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/DISCOVERYTURBO/video.m3u8
 #EXTINF:107, tvg-id="107 - Discovery Channel" tvg-name="Discovery Channel - 107" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-ao-vivo-online-24-horas-344x193.png" group-title="",Discovery Channel
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/DISCOVERY/video.m3u8
-#EXTINF:109, tvg-id="109 - Assistir Discovery Home & Health Ao Vivo Online 24 horas" tvg-name="Assistir Discovery Home & Health Ao Vivo Online 24 horas - 109" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Discovery-Home-Health-ao-vivo-online-344x193.png" group-title="",Assistir Discovery Home & Health Ao Vivo Online 24 horas
+#EXTINF:109, tvg-id="109 - Discovery Home & Health" tvg-name="Discovery Home & Health - 109" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Discovery-Home-Health-ao-vivo-online-344x193.png" group-title="",Discovery Home & Health
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/HOMEHEALTH/video.m3u8
 #EXTINF:111, tvg-id="111 - Globo RJ" tvg-name="Globo RJ - 111" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-RJ-ao-vivo-344x193.png" group-title="",Globo RJ
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/GLOBORJ/video.m3u8
 #EXTINF:113, tvg-id="113 - Discovery Kids" tvg-name="Discovery Kids - 113" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-dicovery-kids-ao-vivo-344x193.png" group-title="",Discovery Kids
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/DISCOVERYKIDS/video.m3u8
-#EXTINF:115, tvg-id="115 - Assistir Investigação Discovery Ao Vivo Online" tvg-name="Assistir Investigação Discovery Ao Vivo Online - 115" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-id-ao-vivo-online-344x193.png" group-title="",Assistir Investigação Discovery Ao Vivo Online
+#EXTINF:115, tvg-id="115 - Investigação Discovery" tvg-name="Investigação Discovery - 115" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-id-ao-vivo-online-344x193.png" group-title="",Investigação Discovery
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/ID/video.m3u8
-#EXTINF:117, tvg-id="117 - Assistir FX Ao Vivo Online 24 horas Grátis" tvg-name="Assistir FX Ao Vivo Online 24 horas Grátis - 117" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assisitir-fx-ao-vivo-344x193.png" group-title="",Assistir FX Ao Vivo Online 24 horas Grátis
+#EXTINF:117, tvg-id="117 - FX" tvg-name="FX - 117" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assisitir-fx-ao-vivo-344x193.png" group-title="",FX
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/FX/video.m3u8
-#EXTINF:119, tvg-id="119 - Assistir AXN Ao Vivo Online 24 horas" tvg-name="Assistir AXN Ao Vivo Online 24 horas - 119" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-axn-ao-vivo-344x193.png" group-title="",Assistir AXN Ao Vivo Online 24 horas
+#EXTINF:119, tvg-id="119 - AXN" tvg-name="AXN - 119" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-axn-ao-vivo-344x193.png" group-title="",AXN
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/AXN/video.m3u8
 #EXTINF:121, tvg-id="121 - Telecine Cult" tvg-name="Telecine Cult - 121" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-cult-ao-vivo-344x193.png" group-title="",Telecine Cult
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/TELECINECULT/video.m3u8
@@ -105,11 +105,11 @@ http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/TELEC
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/espnextraxp/video.m3u8
 #EXTINF:132, tvg-id="132 - Assistir Fox Sports 2 Ao vivo Online 24 horas" tvg-name="Assistir Fox Sports 2 Ao vivo Online 24 horas - 132" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Fox-Sports-2-ao-vivo-1-344x193.png" group-title="",Assistir Fox Sports 2 Ao vivo Online 24 horas
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/FOXSPORTS2/video.m3u8
-#EXTINF:134, tvg-id="134 - Assistir Megapix Online Ao Vivo 24 horas" tvg-name="Assistir Megapix Online Ao Vivo 24 horas - 134" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Mega-Pix-Ao-vivo-Online-Grátis-HD-344x193.png" group-title="",Assistir Megapix Online Ao Vivo 24 horas
+#EXTINF:134, tvg-id="134 - Megapix Online" tvg-name="Megapix Online - 134" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Mega-Pix-Ao-vivo-Online-Grátis-HD-344x193.png" group-title="",Megapix Online
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/MEGAPIX/video.m3u8
-#EXTINF:137, tvg-id="137 - Assistir Globo News Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Globo News Ao Vivo Online 24 horas Grátis - 137" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/globo-news-ao-vivo-online-344x193.png" group-title="",Assistir Globo News Ao Vivo Online 24 horas Grátis
+#EXTINF:137, tvg-id="137 - Globo News" tvg-name="Globo News - 137" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/globo-news-ao-vivo-online-344x193.png" group-title="",Globo News
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/GLOBONEWSSD/video.m3u8
-#EXTINF:140, tvg-id="140 - Assistir Boomerang Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Boomerang Ao Vivo Online 24 horas Grátis - 140" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-Boomerang-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Boomerang Ao Vivo Online 24 horas Grátis
+#EXTINF:140, tvg-id="140 - Boomerang" tvg-name="Boomerang - 140" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-Boomerang-ao-vivo-online-24-horas-344x193.png" group-title="",Boomerang
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/BOOMERANG/video.m3u8
 #EXTINF:142, tvg-id="142 - TNT online" tvg-name="TNT online - 142" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-TNT-ao-vivo-online-344x193.png" group-title="",TNT online
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/TNT/video.m3u8
@@ -123,15 +123,15 @@ http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/HBO/v
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/FOX/video.m3u8
 #EXTINF:154, tvg-id="154 - Sony Channel" tvg-name="Sony Channel - 154" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sony-ao-vivo-online-24-horas-1-344x193.png" group-title="",Sony Channel
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/SONY/video.m3u8
-#EXTINF:156, tvg-id="156 - Assistir Cinemax Ao Vivo Online 24 horas Grátis" tvg-name="Assistir Cinemax Ao Vivo Online 24 horas Grátis - 156" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cinemax-Ao-vivo-Online-Grátis-344x193.png" group-title="",Assistir Cinemax Ao Vivo Online 24 horas Grátis
+#EXTINF:156, tvg-id="156 - Cinemax" tvg-name="Cinemax - 156" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cinemax-Ao-vivo-Online-Grátis-344x193.png" group-title="",Cinemax
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/CINEMAX/video.m3u8
 #EXTINF:158, tvg-id="158 - Assistir Fox Sports Ao vivo Online HD grátis" tvg-name="Assistir Fox Sports Ao vivo Online HD grátis - 158" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-fox-sports-online-ao-vivo-1-344x193.png" group-title="",Assistir Fox Sports Ao vivo Online HD grátis
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/FOXSPORTS/video.m3u8
 #EXTINF:160, tvg-id="160 - Assistir Nickelodeon Ao vivo online 24 horas" tvg-name="Assistir Nickelodeon Ao vivo online 24 horas - 160" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Nickelodeon-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Nickelodeon Ao vivo online 24 horas
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/NICK/video.m3u8
-#EXTINF:162, tvg-id="162 - Assistir Cartoon Network Ao Vivo Online 24 horas" tvg-name="Assistir Cartoon Network Ao Vivo Online 24 horas - 162" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cartoon-Network-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Cartoon Network Ao Vivo Online 24 horas
+#EXTINF:162, tvg-id="162 - Cartoon Network" tvg-name="Cartoon Network - 162" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cartoon-Network-ao-vivo-online-24-horas-344x193.png" group-title="",Cartoon Network
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/CARTOON/video.m3u8
-#EXTINF:164, tvg-id="164 - Assistir Disney Channel Ao Vivo Online" tvg-name="Assistir Disney Channel Ao Vivo Online - 164" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Disney-Channel-ao-vivo-online-24-horas-344x193.png" group-title="",Assistir Disney Channel Ao Vivo Online
+#EXTINF:164, tvg-id="164 - Disney Channel" tvg-name="Disney Channel - 164" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Disney-Channel-ao-vivo-online-24-horas-344x193.png" group-title="",Disney Channel
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/disney/video.m3u8
 #EXTINF:166, tvg-id="166 - ESPN Brasil Ao vivo 24 horas online" tvg-name="ESPN Brasil Ao vivo 24 horas online - 166" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-espn-brasil-ao-vivo-online-1-1-344x193.png" group-title="",ESPN Brasil Ao vivo 24 horas online
 http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.tvfolha.com/espnbrasilxp/video.m3u8
