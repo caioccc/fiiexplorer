@@ -24,13 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/management/commands/delete.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/delete.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/canaismax.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/canaismax.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/CanaisMaxView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/CanaisMaxView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/FilmeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/FilmeView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/MultiCanaisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MultiCanaisView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/SerieView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/SerieView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/TopCanaisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/TopCanaisView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lista-multicanais.m3u8" beforeDir="false" afterPath="$PROJECT_DIR$/lista-multicanais.m3u8" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +227,8 @@
       <workItem from="1605012142813" duration="15823000" />
       <workItem from="1605043222513" duration="3842000" />
       <workItem from="1605097429496" duration="19263000" />
-      <workItem from="1605183822817" duration="21225000" />
+      <workItem from="1605183822817" duration="22785000" />
+      <workItem from="1605265201991" duration="2049000" />
     </task>
     <servers />
   </component>
@@ -255,46 +255,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="113" y="13" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604408450791" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605195445359">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605207740169">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605195445359" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605207740169" />
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate" timestamp="1605117661710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1605117661710" />
-    <state width="1323" height="417" key="GridCell.Tab.0.bottom" timestamp="1605206910452">
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1605266067606">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605206910452" />
-    <state width="1323" height="417" key="GridCell.Tab.0.center" timestamp="1605206910452">
+    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605266067606" />
+    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1605266067590">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605206910452" />
-    <state width="1323" height="417" key="GridCell.Tab.0.left" timestamp="1605206910452">
+    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605266067590" />
+    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1605266067590">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605206910452" />
-    <state width="1323" height="417" key="GridCell.Tab.0.right" timestamp="1605206910452">
+    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605266067590" />
+    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1605266067606">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605206910452" />
-    <state width="1323" height="417" key="GridCell.Tab.1.bottom" timestamp="1605206910453">
+    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605266067606" />
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1605265539209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605206910453" />
-    <state width="1323" height="417" key="GridCell.Tab.1.center" timestamp="1605206910452">
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605265539209" />
+    <state width="1323" height="199" key="GridCell.Tab.1.center" timestamp="1605265539209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605206910452" />
-    <state width="1323" height="417" key="GridCell.Tab.1.left" timestamp="1605206910452">
+    <state width="1323" height="199" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605265539209" />
+    <state width="1323" height="199" key="GridCell.Tab.1.left" timestamp="1605265539209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605206910452" />
-    <state width="1323" height="417" key="GridCell.Tab.1.right" timestamp="1605206910453">
+    <state width="1323" height="199" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605265539209" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right" timestamp="1605265539209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="417" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605206910453" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605265539209" />
     <state x="498" y="297" key="ReplaceDuplicatesPrompt" timestamp="1603904534202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

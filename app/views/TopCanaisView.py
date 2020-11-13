@@ -31,10 +31,10 @@ class TopCanaisView(LoginRequiredMixin, ListView):
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        json = request_json()
-        kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
-        kwargs['num_pages'] = len(json) / 4
-        kwargs['total_items'] = len(json)
+        # json = request_json()
+        # kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
+        # kwargs['num_pages'] = len(json) / 4
+        # kwargs['total_items'] = len(json)
         return super(TopCanaisView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):

@@ -113,18 +113,18 @@ def gen_lista_multicanais(request):
     f.truncate(0)
     f.write("#EXTM3U\n")
     for ch in Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct():
-        for link in ch.link_set.filter(m3u8__icontains='.m3u8').distinct():
-            title = clean_title(ch)
-            custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
-            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
-                link.id,
-                link.id,
-                title,
-                title,
-                link.id,
-                ch.img_url,
-                '',
-                title,
-                custom_m3u8))
+        link = ch.link_set.all().first()
+        title = clean_title(ch)
+        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+            link.id,
+            link.id,
+            title,
+            title,
+            link.id,
+            ch.img_url,
+            '',
+            title,
+            custom_m3u8))
     fsock = open("lista-multicanais.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')

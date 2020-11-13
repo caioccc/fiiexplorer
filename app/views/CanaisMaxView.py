@@ -46,10 +46,10 @@ class CanaisMaxView(LoginRequiredMixin, ListView):
         return super(CanaisMaxView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        json = request_json()
-        kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
-        kwargs['num_pages'] = len(json) / 4
-        kwargs['total_items'] = len(json)
+        # json = request_json()
+        # kwargs['json'] = [json[i:i + 4] for i in range(0, len(json), 4)]
+        # kwargs['num_pages'] = len(json) / 4
+        # kwargs['total_items'] = len(json)
         return super(CanaisMaxView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
@@ -71,7 +71,7 @@ class ViewChannelCanaisMax(LoginRequiredMixin, DetailView):
         return super(ViewChannelCanaisMax, self).get(request, *args, **kwargs)
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        kwargs = self.insert_context_data(**kwargs)
+        # kwargs = self.insert_context_data(**kwargs)
         kwargs['SITE_URL'] = 'http://' + self.request.META['HTTP_HOST'] + '/'
         return super(ViewChannelCanaisMax, self).get_context_data(object_list=object_list, **kwargs)
 
