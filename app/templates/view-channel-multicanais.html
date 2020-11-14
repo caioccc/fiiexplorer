@@ -17,8 +17,10 @@
                class="btn btn-default">Voltar</a>
         </div>
         <div class="col-xs-6">
+             {% if user.is_superuser %}
             <a href="{% url 'collect-channel-multicanais' canal.pk %}"
                class="btn btn-warning pull-right">Update</a>
+            {% endif %}
         </div>
     </div>
     <br/>

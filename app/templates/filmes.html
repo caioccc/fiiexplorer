@@ -34,9 +34,11 @@
                 <div class="box box-header">
                     <div class="row">
                         <div class="col-xs-12">
-                            <a href="{% url 'collect-filmes-canaismax' %}" class="btn btn-primary">
-                                <i class="fa fa-rocket"></i> <span>Collect Films CanaisMax</span>
-                            </a>
+                            {% if user.is_superuser %}
+                                <a href="{% url 'collect-filmes-canaismax' %}" class="btn btn-primary">
+                                    <i class="fa fa-rocket"></i> <span>Collect Films CanaisMax</span>
+                                </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

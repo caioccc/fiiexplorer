@@ -18,8 +18,10 @@
 
         </div>
         <div class="col-xs-6">
-            <a href="{% url 'collect-channel-topcanais' canal.pk %}"
-               class="btn btn-warning pull-right">Update</a>
+            {% if user.is_superuser %}
+                <a href="{% url 'collect-channel-topcanais' canal.pk %}"
+                   class="btn btn-warning pull-right">Update</a>
+            {% endif %}
         </div>
     </div>
     <br/>
