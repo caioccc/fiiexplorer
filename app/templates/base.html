@@ -172,7 +172,157 @@
     </footer>
 </div>
 
+<script>
+    let noop = function () {
+    };
+    window.console =
+        {
+            log: noop,
+            error: noop,
+            info: noop,
+            debug: noop,
+            warn: noop,
+            trace: noop,
+            dir: noop,
+            dirxml: noop,
+            group: noop,
+            groupEnd: noop,
+            time: noop,
+            timeEnd: noop,
+            assert: noop,
+            profile: noop
+        };
+    (function () {
 
+                function attachMedia() {
+                    player.src(
+                        {
+                            src: '//e' + String.fromCharCode(100) + '\u0067e-' + String.fromCharCode(97) + 'w\u0073.' + 'a' + String.fromCharCode(111) + 'v' + 'i' + String.fromCharCode(118) + String.fromCharCode(111) + String.fromCharCode(116) + 'v' + '.' + 'xy' + 'z/' + '\u0068' + 'l' + 's' + '/s:' + String.fromCharCode(55) + '8' + String.fromCharCode(46) + '4' + String.fromCharCode(54) + String.fromCharCode(46) + '\u00324' + '\u0030' + String.fromCharCode(46) + String.fromCharCode(49) + '55' + '/h' + String.fromCharCode(98) + 'o\u006du' + '\u006ed' + '\u0069' + '_' + '\u0039f' + '68' + '2d' + '\u0066' + '\u0032' + '_1d' + '7' + 'd' + String.fromCharCode(102) + String.fromCharCode(53) + 'f0' + '\u0062' + 'c6f' + 'bae' + 'b\u0036' + String.fromCharCode(57) + '\u00358' + '\u00305b' + String.fromCharCode(50) + String.fromCharCode(52) + '3' + '3d5' + String.fromCharCode(102) + '\u00381' + '\u0063' + 'f53' + '73\u0065' + '\u0037/' + '\u0070' + 'lay' + String.fromCharCode(108) + String.fromCharCode(105) + 'st\u002e' + '\u006d3' + 'u' + '8',
+                            type: "application/x-mpegURL",
+                        }
+                    )
+                }
+
+                attachMedia();
+                let hlsjs = player.tech_;
+                hlsjs.on(Hls.Events.MEDIA_ATTACHED, function () {
+                        console.log("video and hls.js are now bound together !");
+                        hlsjs.on(Hls.Events.MANIFEST_PARSED, function (event, data) {
+                                console.log("manifest loaded, found " + data.levels.length + " quality level");
+                                hlsjs.el_.play()
+                            }
+                        )
+                    }
+                );
+                let maxRetryError = [];
+                let reconnectTimeout;
+                hlsjs.on(Hls.Events.ERROR, function (event, data) {
+                        console.warn('ERROR', event, data);
+                        if (data.fatal) {
+                            switch (data.type) {
+                                case Hls.ErrorTypes.NETWORK_ERROR:
+                                    console.warn("fatal network error encountered, try to recover");
+                                    hlsjs.reset();
+                                    maxRetryError = [];
+                                    clearTimeout(reconnectTimeout);
+                                    reconnectTimeout = setTimeout(function () {
+                                            attachMedia()
+                                        }
+                                        , 15 * 1000);
+                                    break;
+                                case Hls.ErrorTypes.MEDIA_ERROR:
+                                    console.warn("fatal media error encountered, try to recover");
+                                    break;
+                                default:
+                                    console.warn("cannot recover");
+                                    hlsjs.reset();
+                                    break
+                            }
+                        } else {
+                            switch (data.details) {
+                                case Hls.ErrorDetails.LEVEL_LOAD_ERROR:
+                                case Hls.ErrorDetails.LEVEL_LOAD_TIMEOUT:
+                                case Hls.ErrorDetails.FRAG_LOAD_ERROR:
+                                case Hls.ErrorDetails.FRAG_LOAD_TIMEOUT:
+                                    if (!maxRetryError[data.details]) maxRetryError[data.details] = 1;
+                                    console.warn('ERROR N', maxRetryError[data.details]);
+                                    if (maxRetryError[data.details] >= 10) {
+                                        console.warn('Max errors reached, detach media');
+                                        hlsjs.reset();
+                                        maxRetryError = [];
+                                        clearTimeout(reconnectTimeout);
+                                        reconnectTimeout = setTimeout(function () {
+                                                attachMedia()
+                                            }
+                                            , 15 * 1000)
+                                    } else {
+                                        maxRetryError[data.details]++
+                                    }
+                                    break
+                            }
+                        }
+                    }
+                )
+            }
+
+            isBot = function () {
+                var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+                var documentDetectionKeys = ["__webdriver_evaluate", "__selenium_evaluate", "__webdriver_script_function", "__webdriver_script_func", "__webdriver_script_fn", "__fxdriver_evaluate", "__driver_unwrapped", "__webdriver_unwrapped", "__driver_evaluate", "__selenium_unwrapped", "__fxdriver_unwrapped",];
+                var windowDetectionKeys = ["_phantom", "__nightmare", "_selenium", "callPhantom", "callSelenium", "_Selenium_IDE_Recorder",];
+                for (let windowDetectionKey in windowDetectionKeys) {
+                    let windowDetectionKeyValue = windowDetectionKeys[windowDetectionKey];
+                    if (window[windowDetectionKeyValue]) {
+                        return true
+                    }
+                }
+                ;
+                for (let documentDetectionKey in documentDetectionKeys) {
+                    let documentDetectionKeyValue = documentDetectionKeys[documentDetectionKey];
+                    if (window['document'][documentDetectionKeyValue]) {
+                        return true
+                    }
+                }
+                ;
+                for (let documentKey in window['document']) {
+                    if (documentKey.match(/\$[a-z]dc_/) && window['document'][documentKey]['cache_']) {
+                        return true
+                    }
+                }
+                if (window['external'] && window['external'].toString && window['external'].toString() && (window['external'].toString()['indexOf']('Sequentum') != -1)) return true;
+                if (window['document']['documentElement']['getAttribute']('selenium')) return true;
+                if (window['document']['documentElement']['getAttribute']('webdriver')) return true;
+                if (window['document']['documentElement']['getAttribute']('driver')) return true;
+                if (window['navigator'].webdriver) return true;
+                if (window.callPhantom) return true;
+                if (window._phantom) return true;
+                if (window.phantom) return true;
+                if (window.__nightmare) return true;
+                if (document.__selenium_unwrapped) return true;
+                if (document.__webdriver_evaluate) return true;
+                if (document.__driver_evaluate) return true;
+                if (isChrome && window.orientation === undefined && navigator.plugins.length === 0) return true;
+                if (isChrome && !window.chrome) return true;
+                if (navigator.languages === "") return true;
+                var permissionDenied = false;
+                navigator.permissions && navigator.permissions.query(
+                    {
+                        name: 'notifications'
+                    }
+                ).then(function (permissionStatus) {
+                        if (Notification.permission === 'denied' && permissionStatus.state === 'prompt') {
+                            var permissionDenied = true
+                        }
+                    }
+                );
+                if (permissionDenied) return true;
+                return false
+            };
+            if (!isBot()) checkAutoplaySupport(initPlayer);
+            window.videojs.log('off')
+        }
+    )();
+
+</script>
 <!-- ./wrapper -->
 
 <!-- Bootstrap 3.3.5 -->

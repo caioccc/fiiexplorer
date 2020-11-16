@@ -4,6 +4,7 @@ from threading import Thread
 import requests
 from bs4 import BeautifulSoup
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
@@ -46,8 +47,10 @@ class MultiCanaisView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         if 'q' in self.request.GET:
-            return Channel.objects.filter(title__icontains=self.request.GET['q'], category__site__name='multicanais')
-        return Channel.objects.filter(category__site__name='multicanais')
+            return Channel.objects.filter(Q(title__icontains=self.request.GET['q']),
+                                          Q(category__site__name='multicanais') | Q(category__site__name='aovivogratis')
+                                          )
+        return Channel.objects.filter(Q(category__site__name='multicanais') | Q(category__site__name='aovivogratis'))
 
 
 class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):

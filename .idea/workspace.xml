@@ -23,15 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/app/templates/aovivogratis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/view-channel-aovivogratis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/AoVivoGratisView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/view-channel-canaismax.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel-canaismax.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/management/commands/initialize.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/management/commands/initialize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/multicanais.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/multicanais.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/multicanais.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/multicanais.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/MultiCanaisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MultiCanaisView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-multicanais.m3u8" beforeDir="false" afterPath="$PROJECT_DIR$/lista-multicanais.m3u8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,16 +88,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\static" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\management\commands" />
-      <recent name="C:\Users\Caio\Documents\fiiexplorer\app\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
       <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\views" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\static" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\management\commands" />
     </key>
   </component>
   <component name="RunManager">
@@ -232,7 +234,7 @@
       <workItem from="1605183822817" duration="22785000" />
       <workItem from="1605265201991" duration="8627000" />
       <workItem from="1605364485045" duration="2737000" />
-      <workItem from="1605530818130" duration="12288000" />
+      <workItem from="1605530818130" duration="24127000" />
     </task>
     <servers />
   </component>
@@ -259,46 +261,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="113" y="13" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1604408450791" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605540952957">
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605559519766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605540952957" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605559519766" />
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate" timestamp="1605117661710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1605117661710" />
-    <state width="1323" height="188" key="GridCell.Tab.0.bottom" timestamp="1605541196289">
+    <state width="1323" height="199" key="GridCell.Tab.0.bottom" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605541196289" />
-    <state width="1323" height="188" key="GridCell.Tab.0.center" timestamp="1605541196289">
+    <state width="1323" height="199" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.0.center" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605541196289" />
-    <state width="1323" height="188" key="GridCell.Tab.0.left" timestamp="1605541196288">
+    <state width="1323" height="199" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.0.left" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605541196288" />
-    <state width="1323" height="188" key="GridCell.Tab.0.right" timestamp="1605541196289">
+    <state width="1323" height="199" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.0.right" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="188" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605541196289" />
-    <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1605540953944">
+    <state width="1323" height="199" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605540953944" />
-    <state width="1323" height="199" key="GridCell.Tab.1.center" timestamp="1605540953944">
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.1.center" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605540953944" />
-    <state width="1323" height="199" key="GridCell.Tab.1.left" timestamp="1605540953944">
+    <state width="1323" height="199" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.1.left" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605540953944" />
-    <state width="1323" height="199" key="GridCell.Tab.1.right" timestamp="1605540953944">
+    <state width="1323" height="199" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right" timestamp="1605563630554">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605540953944" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605563630554" />
     <state x="498" y="297" key="ReplaceDuplicatesPrompt" timestamp="1603904534202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -311,10 +313,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1605026993074" />
-    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1605538355003">
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1605559219053">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1605538355003" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1605559219053" />
     <state x="235" y="92" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605030064618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

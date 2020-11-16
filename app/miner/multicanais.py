@@ -45,9 +45,8 @@ class CustomMiner(Miner):
         for a in atags:
             if a.has_attr('data-id'):
                 data_id = str(a['data-id'])
-                if 'http' in data_id:
-                    url_id = 'https://multicanais.com/player.php?id=' + data_id
-                    ids.append(url_id)
+                url_id = 'https://multicanais.com/player.php?id=' + data_id
+                ids.append(url_id)
         return ids
 
     def mine(self):
