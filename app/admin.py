@@ -14,8 +14,21 @@ class SiteAdmin(admin.ModelAdmin):
     list_display = ['name', 'id', 'url', ]
 
 
-admin.site.register(Channel)
-admin.site.register(Link)
+class LinkInline(admin.TabularInline):
+    model = Link
+
+
+class ChannelAdmin(admin.ModelAdmin):
+    inlines = [LinkInline, ]
+    list_display = ['title', 'id', ]
+
+
+class LinkAdmin(admin.ModelAdmin):
+    list_display = ['id', 'm3u8', 'channel']
+
+
+admin.site.register(Channel, ChannelAdmin)
+admin.site.register(Link, LinkAdmin)
 admin.site.register(CategoryChannel)
 admin.site.register(Site, SiteAdmin)
 admin.site.register(Filme)

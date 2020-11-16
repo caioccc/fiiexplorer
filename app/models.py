@@ -60,6 +60,7 @@ class Link(TimeStamped):
     channel = models.ForeignKey(Channel, on_delete=models.CASCADE)
     m3u8 = models.TextField(blank=True, null=True)
     done = models.BooleanField(default=False)
+    swarmId = models.TextField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return "%s" % self.url

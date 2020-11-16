@@ -239,13 +239,14 @@ def save_link_channel_topcanais(canal, id_url):
 
 
 def save_link_channel(canal, id_url):
-    m3u8 = get_m3u8(id_url)
+    m3u8, swarmId = get_m3u8_and_swarmid(id_url)
     if m3u8:
         try:
             link = Link()
             link.url = id_url
             link.channel = canal
             link.m3u8 = m3u8
+            link.swarmId = swarmId
             link.save()
         except (Exception,):
             print('erro ao salvar link')
@@ -272,7 +273,7 @@ def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
         pass
 
 
-def get_m3u8(id_url):
+def get_m3u8_and_swarmid(id_url):
     try:
         miner_req = get_page_bs4(id_url)
         if miner_req:
@@ -283,6 +284,18 @@ def get_m3u8(id_url):
             content_script = str(script)
             string_source = 'source: "'
             string_m3u8 = '.m3u8'
+            string_swarmid = "swarmId: '"
+            options_end_swarm = ["max'", "mycdn'"]
+            string_end_swarm = options_end_swarm[0]
+            swarm_indexes = [m.start() for m in
+                             re.finditer(string_swarmid, content_script)]
+            swarm_end_indexes = []
+            for opt in options_end_swarm:
+                aux = [m.start() for m in
+                       re.finditer(opt, content_script)]
+                if len(aux) > 0:
+                    string_end_swarm = opt
+                    swarm_end_indexes = aux
             sources_indexes = [m.start() for m in
                                re.finditer(string_source, content_script)]
             m3u8_indexes = [m.start() for m in
@@ -290,11 +303,20 @@ def get_m3u8(id_url):
             strings = [
                 content_script[(int(sources_indexes[i]) + len(string_source)):(int(m3u8_indexes[i]) + len(string_m3u8))]
                 for i in range(len(sources_indexes))]
+            swarm_id = None
+            if len(swarm_end_indexes) > 0:
+                swarm_id = [content_script[
+                            (int(swarm_indexes[ind]) + len(string_swarmid)):(
+                                    int(swarm_end_indexes[ind]) + (len(string_end_swarm)-1))] for ind in
+                            range(len(swarm_end_indexes))]
             if len(strings) > 0:
-                return strings[0]
-            return ''
+                if swarm_id:
+                    if len(swarm_id) > 0:
+                        return strings[0], swarm_id[0]
+                return strings[0], ''
+            return '', ''
     except (Exception,):
-        return ''
+        return '', ''
 
 
 def make_ids_topcanais(atags):
@@ -363,11 +385,7 @@ def check_m3u8_req(uri, headers):
     try:
         req = requests.get(uri, headers=headers)
         if req.status_code == 200:
-            size = 0
-            for chunk in req.iter_content(256):
-                size += len(chunk)
-                if size > 4096:
-                    return True
+            return True
         return False
     except (Exception,):
         print('Break ao checar m3u8')
@@ -400,6 +418,6 @@ def clean_title(channel):
             return title[(title.index('Assistir ') + len('Assistir ')):title.index(' ao vivo')]
         if ' Ao Vivo' in title:
             return title[(title.index('Assistir ') + len('Assistir ')):title.index(' Ao Vivo')]
-    elif  'Ao Vivo' in title:
-            return title[:title.index(' Ao Vivo')]
+    elif 'Ao Vivo' in title:
+        return title[:title.index(' Ao Vivo')]
     return title

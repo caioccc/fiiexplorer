@@ -10,7 +10,7 @@ from django.views.generic import DetailView, TemplateView, ListView
 
 from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais
 from app.models import Channel, Site
-from app.utils import clean_title, remove_iv
+from app.utils import clean_title, remove_iv, check_m3u8_req
 
 
 class CollectChannelMultiCanais(DetailView):
@@ -108,23 +108,51 @@ def get_ts_multicanais(request):
         return HttpResponseNotFound("hello")
 
 
+def check_channel_title_especific(title_channel):
+    title_channel = str(title_channel)
+    canais = ['DAZN', 'ESPN', 'Rede TV', 'Premiere', 'Cult', 'Disney']
+    for title in canais:
+        if title in title_channel:
+            return True
+    return False
+
+
 def gen_lista_multicanais(request):
     f = open("lista-multicanais.m3u8", "a")
     f.truncate(0)
     f.write("#EXTM3U\n")
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
     for ch in Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct():
-        link = ch.link_set.all().first()
-        title = clean_title(ch)
-        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
-        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
-            link.id,
-            link.id,
-            title,
-            title,
-            link.id,
-            ch.img_url,
-            '',
-            title,
-            custom_m3u8))
+        if check_channel_title_especific(ch.title):
+            for link in ch.link_set.all():
+                if check_m3u8_req(link.m3u8, headers=headers):
+                    title = clean_title(ch)
+                    custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+                    f.write(
+                        '#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+                            link.id,
+                            link.id,
+                            title,
+                            title,
+                            link.id,
+                            ch.img_url,
+                            '',
+                            title,
+                            custom_m3u8))
+                    break
+        else:
+            link = ch.link_set.all().first()
+            title = clean_title(ch)
+            custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+                link.id,
+                link.id,
+                title,
+                title,
+                link.id,
+                ch.img_url,
+                '',
+                title,
+                custom_m3u8))
     fsock = open("lista-multicanais.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
