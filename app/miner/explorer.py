@@ -12,7 +12,7 @@ from app.miner.common import check_new_minig_requests_delay
 from app.models import Site, Serie, Channel, Filme
 from app.utils import get_page_bs4, get_episodios, get_url_temporada, save_temporada, get_channel_id, \
     save_link_channel, make_ids, make_ids_topcanais, save_link_channel_multicanais, save_link_channel_topcanais, \
-    make_ids_multicanais, save_url_filmes_canaismax
+    make_ids_multicanais, save_url_filmes_canaismax, get_source_script_aovivogratis
 
 miners = {
     "canaismax": canaismax.CustomMiner,
@@ -50,6 +50,19 @@ def mineAllAoVivoGratis():
                 logging.debug('FINALIZOU A BUSCA AOVIVOGRATIS!')
                 time.sleep(60)
         time.sleep(check_new_minig_requests_delay)
+
+
+def mineChannelAoVivoGratis(pk=None):
+    while True:
+        canal = Channel.objects.get(pk=pk)
+        url = canal.url_site
+        logging.debug('INICIOU A SNIFFER CANAL: ' + canal.title)
+        m3u8 = get_source_script_aovivogratis(url)
+        link = canal.link_set.first()
+        link.m3u8 = m3u8
+        link.save()
+        logging.debug('FINALIZOU SNIFFER CANAL: ' + canal.title)
+        time.sleep(60)
 
 
 def mineSeries():

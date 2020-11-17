@@ -48,7 +48,7 @@
                     <div class="row">
                         {% for canal in canais %}
                             <div class=" text-center col-xs-12 col-sm-4 col-md-3"
-                            data-toggle="tooltip" data-placement="bottom" title="{{ canal.title }}">
+                                 data-toggle="tooltip" data-placement="bottom" title="{{ canal.title }}">
                                 <div class="box box-default" style="border-top: None;">
                                     <!-- /.box-header -->
                                     <div class="box-body">
@@ -63,6 +63,15 @@
                                 </div>
                             </div>
                         {% endfor %}
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <div class="pull-right">
+                        {% if user.is_superuser %}
+                            <a href="{% url 'sniffer-aovivogratis' %}" class="btn btn-danger">
+                                <i class="fa fa-rocket"></i> <span>Run Sniffer</span>
+                            </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

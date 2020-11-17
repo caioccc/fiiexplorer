@@ -1,6 +1,13 @@
 from app.miner.common import Miner
 from app.models import Channel, Link, Site
-from app.utils import get_page_bs4, save_link_channel_aovivogratis, get_source_script_aovivogratis
+from app.utils import get_page_bs4, get_source_script_aovivogratis, save_link_channel_aovivogratis
+
+
+def get_title(href):
+    href = str(href)
+    index_bar = href.rfind('/')
+    index_end = href.rfind('.')
+    return href[index_bar + 1:index_end]
 
 
 class CustomMiner(Miner):
@@ -19,6 +26,8 @@ class CustomMiner(Miner):
                         imgtag = atag.find('img')
                         title = imgtag['alt']
                         img_url = imgtag['data-src']
+                        if title == '':
+                            title = get_title(img_url)
                         second_page = get_page_bs4(href)
                         if second_page:
                             div_links = second_page.find('iframe')

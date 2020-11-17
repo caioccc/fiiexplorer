@@ -1,0 +1,30 @@
+{% load staticfiles %}
+{% load filters %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lista Ao Vivo Gratis| Dashboard</title>
+</head>
+<body>
+<script src="{% static 'plugins/jQuery/jQuery-2.2.0.min.js' %}"></script>
+#EXTM3U
+{% for canal in canais %}
+    <p>#EXTINF:{{ canal.id }}, tvg-id="{{ canal.id }} - {{ canal.title }}" tvg-name="{{ canal.name }} - {{ canal.id }}"
+        tvg-logo="{{ canal.img_url }}"
+        <br/>
+        <span id="id-{{ forloop.counter0 }}"></span>
+    </p>
+{% endfor %}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        {% for link in links %}
+            $('#id-{{ forloop.counter0 }}').text("https:" +{{ link|safe }})
+        {% endfor %}
+    });
+</script>
+</body>
+</html>

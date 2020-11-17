@@ -1,16 +1,28 @@
 import re
+from functools import reduce
+from operator import or_
 from threading import Thread
 
 import requests
 from bs4 import BeautifulSoup
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
-from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais, mineAllAoVivoGratis
+from app.miner.explorer import mineAllAoVivoGratis, mineChannelAoVivoGratis
 from app.models import Channel, Site
-from app.utils import clean_title, remove_iv, check_m3u8_req, get_source_script_aovivogratis
+from app.utils import remove_iv, get_source_script_aovivogratis
+
+
+class SnifferAoVivoGratis(TemplateView):
+    template_name = 'aovivogratis.html'
+
+    def get(self, request, *args, **kwargs):
+        for ch in Channel.objects.filter(category__site__name='aovivogratis'):
+            Thread(target=mineChannelAoVivoGratis, kwargs=dict(pk=ch.pk)).start()
+        return redirect('/aovivogratis')
 
 
 class CollectAllAoVivoGratis(TemplateView):
@@ -100,3 +112,19 @@ def get_ts_aovivogratis(request):
             return HttpResponseNotFound("hello")
     except (Exception,):
         return HttpResponseNotFound("hello")
+
+
+class GetListaAoVivoGratis(TemplateView):
+    template_name = 'lista_aovivogratis.html'
+
+    def get(self, request, *args, **kwargs):
+        canais = Channel.objects.filter(category__site__name='aovivogratis')
+        kwargs['canais'] = canais
+        arr_links = []
+        for canal in canais:
+            source = canal.link_set.first().m3u8
+            index_init = source.index('player.src({src:') + len('player.src({src:')
+            index_end = source.index(',type:')
+            arr_links.append(source[index_init:index_end])
+        kwargs['links'] = arr_links
+        return super(GetListaAoVivoGratis, self).get(request, *args, **kwargs)

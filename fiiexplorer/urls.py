@@ -18,7 +18,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path
 
 from app.views.AoVivoGratisView import AoVivoGratisView, ViewChannelAoVivoGratis, playlist_m3u8_aovivogratis, \
-    get_ts_aovivogratis, CollectAllAoVivoGratis
+    get_ts_aovivogratis, CollectAllAoVivoGratis, GetListaAoVivoGratis, SnifferAoVivoGratis
 from app.views.CanaisMaxView import CanaisMaxView, CollectAllCanaisMax, ViewChannelCanaisMax, CollectChannelCanaisMax, \
     playlist_m3u8_canaismax, playlist_other_m3u8_canaismax, get_ts_canaismax, get_lista_canaismax
 from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, FilmesView, gen_lista_filmes_canaismax, \
@@ -80,9 +80,11 @@ urlpatterns = [
     path('logout/', auth_views.logout_then_login, name='logout'),
 
     path('collect-aovivogratis/', CollectAllAoVivoGratis.as_view(), name='collect-aovivogratis'),
+    path('run-sniffer/aovivogratis/', SnifferAoVivoGratis.as_view(), name='sniffer-aovivogratis'),
     path('aovivogratis/', AoVivoGratisView.as_view(), name='aovivogratis'),
     path('aovivogratis/<int:pk>', ViewChannelAoVivoGratis.as_view(), name='view-channel-aovivogratis'),
     path('api/aovivogratis/playlist.m3u8', playlist_m3u8_aovivogratis, name='playlist-m3u8-aovivogratis'),
     path('api/aovivogratis/ts', get_ts_aovivogratis, name='get-ts-aovivogratis'),
+    path('lista-aovivogratis.m3u8', GetListaAoVivoGratis.as_view(), name='lista-aovivogratis')
 
 ]

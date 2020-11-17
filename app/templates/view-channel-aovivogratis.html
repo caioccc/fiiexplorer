@@ -100,15 +100,6 @@
         player.setVolume(100);
         player.play();
 
-        $(document).ready(function () {
-            $('a.link').click(function () {
-                var uri = window.location.origin + $(this).data('m3u8');
-                console.log(uri);
-                player.configure({
-                    source: uri, autoPlay: true
-                });
-            });
-        });
     </script>
 
 
