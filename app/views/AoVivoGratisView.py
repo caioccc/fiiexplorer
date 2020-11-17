@@ -28,6 +28,22 @@ class AoVivoGratisView(LoginRequiredMixin, ListView):
         return Channel.objects.filter(category__site__name='aovivogratis')
 
 
+def house():
+    import jsbeautifier.unpackers.packer as packer
+    headers = {'referer': 'https://www.tibiadown.com/', 'authority': 'player.aovivotv.xyz'}
+    req = requests.get('https://player.aovivotv.xyz/channels/studiouniversal', headers=headers)
+    if req.status_code == 200:
+        page = BeautifulSoup(req.text, 'html.parser')
+        scripts = [scr for scr in page.select('script') if 'eval(function(' in str(scr)]
+        script = str(scripts[0].contents[0])
+        if packer.detect(script):
+            unpacked = packer.unpack(script)
+            # index_init = unpacked.index('player.src({src:') + len('player.src({src:')
+            # index_end = unpacked.index(',type:')
+            return unpacked
+    return ''
+
+
 class ViewChannelAoVivoGratis(LoginRequiredMixin, DetailView):
     template_name = 'view-channel-aovivogratis.html'
     login_url = '/admin/login/'
@@ -37,6 +53,7 @@ class ViewChannelAoVivoGratis(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         kwargs['SITE_URL'] = 'http://' + self.request.META['HTTP_HOST'] + '/'
+        channel = self.get_object()
         return super(ViewChannelAoVivoGratis, self).get_context_data(object_list=object_list, **kwargs)
 
 
