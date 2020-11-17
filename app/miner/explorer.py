@@ -7,7 +7,7 @@ import requests
 
 logging.basicConfig(level=logging.DEBUG)
 
-from app.miner import canaismax, topcanais, filmes, series, multicanais
+from app.miner import canaismax, topcanais, filmes, series, multicanais, aovivogratis
 from app.miner.common import check_new_minig_requests_delay
 from app.models import Site, Serie, Channel, Filme
 from app.utils import get_page_bs4, get_episodios, get_url_temporada, save_temporada, get_channel_id, \
@@ -20,6 +20,7 @@ miners = {
     "filmes": filmes.CustomMiner,
     "series": series.CustomMiner,
     "multicanais": multicanais.CustomMiner,
+    "aovivogratis": aovivogratis.CustomMiner
 }
 
 mined = 0
@@ -33,6 +34,22 @@ def remove_iv(array_uri):
             if index_iv >= 0:
                 array_uri[i] = str(array_uri[i])[:index_iv]
     return array_uri
+
+
+def mineAllAoVivoGratis():
+    while True:
+        NAME = 'aovivogratis'
+        site = Site.objects.get(name=NAME)
+        if not site.done:
+            miner = miners[NAME]()
+            logging.debug('INICIOU A BUSCA AOVIVOGRATIS!')
+            result = miner.mine()
+            if result:
+                site.done = True
+                site.save()
+                logging.debug('FINALIZOU A BUSCA AOVIVOGRATIS!')
+                time.sleep(60)
+        time.sleep(check_new_minig_requests_delay)
 
 
 def mineSeries():

@@ -4,6 +4,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from django.db import IntegrityError
+from jsbeautifier.unpackers import packer
 
 from app.models import Episodio, LinkSerie, Temporada, Link, Url
 
@@ -95,6 +96,17 @@ def get_channel_id(string_script):
         id = string_script[ind:ind_bar]
         return id
     return ''
+
+
+def save_link_channel_aovivogratis(canal, href, m3u8):
+    try:
+        link = Link()
+        link.url = href
+        link.channel = canal
+        link.m3u8 = m3u8
+        link.save()
+    except (Exception):
+        print('erro ao salvar link')
 
 
 def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
@@ -258,6 +270,20 @@ def contain_http(uri):
     return False
 
 
+def get_source_script_aovivogratis(uri):
+    headers = {'referer': 'https://www.tibiadown.com/', 'authority': 'player.aovivotv.xyz'}
+    req = requests.get(uri, headers=headers)
+    if req.status_code == 200:
+        page = BeautifulSoup(req.text, 'html.parser')
+        scripts = [scr for scr in page.select('script') if 'eval(function(' in str(scr)]
+        if len(scripts) > 0:
+            script = str(scripts[0].string)
+            if packer.detect(script):
+                unpacked = packer.unpack(script)
+                return unpacked
+    return ''
+
+
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
     string_canal_id = '.php?canal='
     uri = str(id_url)
@@ -307,7 +333,7 @@ def get_m3u8_and_swarmid(id_url):
             if len(swarm_end_indexes) > 0:
                 swarm_id = [content_script[
                             (int(swarm_indexes[ind]) + len(string_swarmid)):(
-                                    int(swarm_end_indexes[ind]) + (len(string_end_swarm)-1))] for ind in
+                                    int(swarm_end_indexes[ind]) + (len(string_end_swarm) - 1))] for ind in
                             range(len(swarm_end_indexes))]
             if len(strings) > 0:
                 if swarm_id:

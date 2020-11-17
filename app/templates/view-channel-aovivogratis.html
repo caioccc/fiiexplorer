@@ -13,7 +13,7 @@
 
     <div class="row">
         <div class="col-xs-6">
-            <a href="{% url 'multicanais' %}"
+            <a href="{% url 'aovivogratis' %}"
                class="btn btn-default">Voltar</a>
         </div>
         <div class="col-xs-6">
@@ -30,20 +30,6 @@
         </div>
     </div>
     <br/>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="row">
-                {% for link in canal.link_set.all %}
-                    <div class="col-xs-4 col-sm-3 col-md-2">
-                        <a data-uri="{{ link.m3u8 }}"
-                           data-m3u8="{% url 'playlist-m3u8-aovivogratis' %}?uri={{ link.m3u8 }}"
-                           href="#{{ link.m3u8 }}"
-                           class="btn btn-primary btn-large link">Link {% cycle '1' '2' '3' '4' '5' '6' '7' '8' '9' '10' '11' '12' '13' '14' '15' %} {{ link|get_text_type }}</a>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
     <br/>
     <div class="row">
         <div class="col-xs-12">
@@ -74,7 +60,7 @@
             parentId: "#Player",
             autoPlay: true,
             poster: "{{ canal.img_url }}",
-            source: window.location.origin + "{% url 'playlist-m3u8-aovivogratis' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
+            source: {{ source|safe }},
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
