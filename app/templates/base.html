@@ -119,12 +119,17 @@
                 <li class="header">MENU</li>
                 <li id="index" class="index">
                     <a href="{% url 'multicanais' %}">
-                        <i class="fa fa-file-movie-o"></i> <span>MultiCanais</span>
+                        <i class="fa fa-file-video"></i> <span>MultiCanais</span>
                     </a>
                 </li>
                 <li id="index" class="index">
                     <a href="{% url 'aovivogratis' %}">
                         <i class="fa fa-tv"></i> <span>AO VIVO Gratis</span>
+                    </a>
+                </li>
+                <li id="index" class="index">
+                    <a href="{% url 'futemax' %}">
+                        <i class="fa fa-soccer-ball-o"></i> <span>Futemax</span>
                     </a>
                 </li>
                 {% if user.is_superuser %}
@@ -140,12 +145,12 @@
                     </li>
                     <li id="index" class="index">
                         <a href="{% url 'filmes' %}">
-                            <i class="fa fa-file-movie-o"></i> <span>Filmes</span>
+                            <i class="fa fa-video-camera"></i> <span>Filmes</span>
                         </a>
                     </li>
                     <li id="index" class="index">
                         <a href="{% url 'series' %}">
-                            <i class="fa fa-video-camera"></i> <span>Series</span>
+                            <i class="fa fa-forward"></i> <span>Series</span>
                         </a>
                     </li>
                 {% endif %}

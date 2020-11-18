@@ -23,17 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/lista_aovivogratis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/futemax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/templates/view-channel-futemax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/FutemaxView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/aovivogratis.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/aovivogratis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/aovivogratis.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/aovivogratis.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/view-channel-aovivogratis.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel-aovivogratis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templatetags/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/filters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/AoVivoGratisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/AoVivoGratisView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lista-multicanais.m3u8" beforeDir="false" afterPath="$PROJECT_DIR$/lista-multicanais.m3u8" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,16 +93,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\views" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\static" />
+      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\management\commands" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app" />
       <recent name="C:\Users\caiom\PycharmProjects\fiiexplorer\app" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\templates" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\miner" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\views" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\static" />
-      <recent name="C:\Users\rdi-v\Documents\fiiexplorer\app\management\commands" />
     </key>
   </component>
   <component name="RunManager">
@@ -241,7 +240,9 @@
       <workItem from="1605265201991" duration="8627000" />
       <workItem from="1605364485045" duration="2737000" />
       <workItem from="1605530818130" duration="24127000" />
-      <workItem from="1605622247764" duration="6058000" />
+      <workItem from="1605622247764" duration="6852000" />
+      <workItem from="1605701215803" duration="24000" />
+      <workItem from="1605704444490" duration="6649000" />
     </task>
     <servers />
   </component>
@@ -276,38 +277,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1605613270943" />
-    <state width="1323" height="294" key="GridCell.Tab.0.bottom" timestamp="1605628087467">
+    <state width="1323" height="199" key="GridCell.Tab.0.bottom" timestamp="1605711877207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="294" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605628087467" />
-    <state width="1323" height="294" key="GridCell.Tab.0.center" timestamp="1605628087467">
+    <state width="1323" height="199" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605711877207" />
+    <state width="1323" height="199" key="GridCell.Tab.0.center" timestamp="1605711877206">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="294" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605628087467" />
-    <state width="1323" height="294" key="GridCell.Tab.0.left" timestamp="1605628087467">
+    <state width="1323" height="199" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605711877206" />
+    <state width="1323" height="199" key="GridCell.Tab.0.left" timestamp="1605711877206">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="294" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605628087467" />
-    <state width="1323" height="294" key="GridCell.Tab.0.right" timestamp="1605628087467">
+    <state width="1323" height="199" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605711877206" />
+    <state width="1323" height="199" key="GridCell.Tab.0.right" timestamp="1605711877207">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="294" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605628087467" />
-    <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1605625799896">
+    <state width="1323" height="199" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605711877207" />
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1605711537850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605625799896" />
-    <state width="1323" height="199" key="GridCell.Tab.1.center" timestamp="1605625799896">
+    <state width="1323" height="199" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605711537850" />
+    <state width="1323" height="199" key="GridCell.Tab.1.center" timestamp="1605711537849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605625799896" />
-    <state width="1323" height="199" key="GridCell.Tab.1.left" timestamp="1605625799896">
+    <state width="1323" height="199" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1605711537849" />
+    <state width="1323" height="199" key="GridCell.Tab.1.left" timestamp="1605711537849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605625799896" />
-    <state width="1323" height="199" key="GridCell.Tab.1.right" timestamp="1605625799896">
+    <state width="1323" height="199" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1605711537849" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right" timestamp="1605711537849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605625799896" />
+    <state width="1323" height="199" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1605711537849" />
     <state x="498" y="297" key="ReplaceDuplicatesPrompt" timestamp="1603904534202">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -320,18 +321,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1605026993074" />
-    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1605625795520">
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1605711377188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1605625795520" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1605711377188" />
     <state x="235" y="92" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605030064618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="235" y="92" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1605030064618" />
-    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1605627456616">
+    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1605711028171">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605627456616" />
+    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605711028171" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1605125114463">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -23,6 +23,8 @@ from app.views.CanaisMaxView import CanaisMaxView, CollectAllCanaisMax, ViewChan
     playlist_m3u8_canaismax, playlist_other_m3u8_canaismax, get_ts_canaismax, get_lista_canaismax
 from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, FilmesView, gen_lista_filmes_canaismax, \
     get_ts_filmes_canaismax, playlist_m3u8_filmes_canaismax, CollectFilmeOneCanaisMax
+from app.views.FutemaxView import FutemaxView, ViewChannelFutemax, playlist_m3u8_futemax, playlist_other_m3u8_futemax, \
+    get_ts_futemax
 from app.views.MultiCanaisView import CollectChannelMultiCanais, CollectAllMultiCanais, MultiCanaisView, \
     ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais
 from app.views.SerieView import CollectSeries, CollectSerie, ViewSerie, SeriesView, playlist_m3u8_series_canaismax, \
@@ -85,6 +87,12 @@ urlpatterns = [
     path('aovivogratis/<int:pk>', ViewChannelAoVivoGratis.as_view(), name='view-channel-aovivogratis'),
     path('api/aovivogratis/playlist.m3u8', playlist_m3u8_aovivogratis, name='playlist-m3u8-aovivogratis'),
     path('api/aovivogratis/ts', get_ts_aovivogratis, name='get-ts-aovivogratis'),
-    path('lista-aovivogratis.m3u8', GetListaAoVivoGratis.as_view(), name='lista-aovivogratis')
+    path('lista-aovivogratis.m3u8', GetListaAoVivoGratis.as_view(), name='lista-aovivogratis'),
+
+    path('futemax/', FutemaxView.as_view(), name='futemax'),
+    path('view-futemax', ViewChannelFutemax.as_view(), name='view-channel-futemax'),
+    path('api/futemax/playlist.m3u8', playlist_m3u8_futemax, name='playlist-m3u8-futemax'),
+    path('api/futemax/other/playlist.m3u8', playlist_other_m3u8_futemax, name='playlist-other-m3u8-futemax'),
+    path('api/futemax/ts', get_ts_futemax, name='get-ts-futemax'),
 
 ]

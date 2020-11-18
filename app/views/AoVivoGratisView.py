@@ -1,12 +1,9 @@
 import re
-from functools import reduce
-from operator import or_
 from threading import Thread
 
 import requests
 from bs4 import BeautifulSoup
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.db.models import Q
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView

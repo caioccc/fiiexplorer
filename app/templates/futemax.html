@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load filters %}
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-default">
+                <div class="box-header">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <form action="#" method="get" class="form-inline">
+                                <div class="form-group">
+                                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                        <input type="text" class="form-control" id="q" name="q"
+                                               placeholder="Buscar...">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <!-- form start -->
+                <div class="box-body">
+                    <div class="row">
+                        {% for canal in canais %}
+                            <div class=" text-center col-xs-6 col-sm-4 col-md-3"
+                                 data-toggle="tooltip" data-placement="bottom" title="{{ canal.title }}"
+                            >
+                                <div class="box box-default" style="border-top: None;">
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <a href="{% url 'view-channel-futemax' %}?uri={{ canal.pk }}">
+                                            <img src="{{ canal.img_url }}"
+                                                 class="img-responsive img-thumbnail"
+                                                 style="background-color: #1a2226;width: 249px;height: 140px;"
+                                            />
+                                        </a>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+    </script>
+
+{% endblock %}
