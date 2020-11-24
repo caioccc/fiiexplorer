@@ -23,15 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/templates/futemax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/templates/view-channel-futemax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/FutemaxView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/multicanais.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/multicanais.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templatetags/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/templatetags/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/AoVivoGratisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/AoVivoGratisView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/filmes.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/filmes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/series.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/series.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiiexplorer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +59,6 @@
   <component name="JupyterTrust" id="548fdd30-11cb-4684-9284-bf5fde6d9e79" />
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/static/gromart/node_modules" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
   </component>
   <component name="ProjectId" id="1eom2wzsvaCibHxcBKrMKDzVqlk" />
   <component name="ProjectViewState">
@@ -242,6 +235,13 @@
       <workItem from="1605622247764" duration="6852000" />
       <workItem from="1605701215803" duration="24000" />
       <workItem from="1605704444490" duration="6813000" />
+      <workItem from="1605733742820" duration="634000" />
+      <workItem from="1605744639318" duration="161000" />
+      <workItem from="1605790777217" duration="86000" />
+      <workItem from="1605793362209" duration="798000" />
+      <workItem from="1605870130016" duration="2689000" />
+      <workItem from="1605987821452" duration="422000" />
+      <workItem from="1606227363597" duration="1562000" />
     </task>
     <servers />
   </component>
@@ -276,22 +276,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="162" y="273" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1605613270943" />
-    <state width="1323" height="199" key="GridCell.Tab.0.bottom" timestamp="1605712134954">
+    <state width="1323" height="132" key="GridCell.Tab.0.bottom" timestamp="1606228355330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1605712134954" />
-    <state width="1323" height="199" key="GridCell.Tab.0.center" timestamp="1605712134954">
+    <state width="1323" height="132" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606228355330" />
+    <state width="1323" height="132" key="GridCell.Tab.0.center" timestamp="1606228355330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1605712134954" />
-    <state width="1323" height="199" key="GridCell.Tab.0.left" timestamp="1605712134954">
+    <state width="1323" height="132" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606228355330" />
+    <state width="1323" height="132" key="GridCell.Tab.0.left" timestamp="1606228355330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1605712134954" />
-    <state width="1323" height="199" key="GridCell.Tab.0.right" timestamp="1605712134954">
+    <state width="1323" height="132" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606228355330" />
+    <state width="1323" height="132" key="GridCell.Tab.0.right" timestamp="1606228355330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="199" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1605712134954" />
+    <state width="1323" height="132" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606228355330" />
     <state width="1323" height="199" key="GridCell.Tab.1.bottom" timestamp="1605712134955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

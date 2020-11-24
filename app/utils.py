@@ -109,9 +109,12 @@ def save_link_channel_aovivogratis(canal, href, m3u8):
         print('erro ao salvar link')
 
 
-def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
+def save_link_channel_multicanais(canal, id_url, select_server):
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    if not select_server:
+        select_server = 'tvfolha.com'
     m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
-    if m3u8:
+    if m3u8 and check_m3u8_req(m3u8, headers=headers):
         try:
             link = Link()
             link.url = id_url
@@ -409,7 +412,7 @@ def request_json():
 
 def check_m3u8_req(uri, headers):
     try:
-        req = requests.get(uri, headers=headers)
+        req = requests.head(uri, headers=headers)
         if req.status_code == 200:
             return True
         return False

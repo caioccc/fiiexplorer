@@ -3,76 +3,20 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-default">
-                <div class="box-header">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <form action="#" method="get" class="form-inline">
-                                <div class="form-group">
-                                    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-search"></i>
-                                        </div>
-                                        <input type="text" class="form-control" id="q" name="q"
-                                               placeholder="Buscar...">
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary mb-2">Buscar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
         <div class="col-md-12">
             <div class="box box-primary">
-                <div class="box box-header">
-                    <div class="row">
-                        <div class="col-xs-12">
-                             {% if user.is_superuser %}
-                            <a href="{% url 'collect-series' %}" class="btn btn-primary">
-                                <i class="fa fa-rocket"></i> <span>Collect Series</span>
-                            </a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
                 <!-- form start -->
                 <div class="box-body">
                     <div class="row">
-                        {% for serie in series %}
-                            <div class="col-xs-12 col-sm-4 col-md-3">
-                                <div class="thumbnail">
-                                    <a href="{% url 'view-serie' serie.pk %}">
-                                        <h5 class="text-center">
-                                            <span class="label label-info info">
-                                                <span>{{ serie.title }}</span>
-                                            </span>
-                                        </h5>
-                                        <img src="{{ serie.img_url }}"
-                                             data-toggle="tooltip" data-placement="bottom"
-                                             title="{{ serie.sinopse }}"
-                                             alt="{{ serie.title }}"
-                                             class="img-responsive img-thumbnail"
-                                             style=""
-                                        />
-                                    </a>
-                                </div>
-
-                            </div>
-                        {% endfor %}
+                        <div class="col-xs-12">
+                            <iframe src="https://filmplay.biz/series/" width="100%" height="640px" allowfullscreen> </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript">
-
         $(document).ready(function () {
         });
     </script>

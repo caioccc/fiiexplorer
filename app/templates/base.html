@@ -132,28 +132,25 @@
                         <i class="fa fa-soccer-ball-o"></i> <span>Futemax</span>
                     </a>
                 </li>
+
                 {% if user.is_superuser %}
-                    <li id="index" class="index">
-                        <a href="{% url 'canaismax' %}">
-                            <i class="fa fa-tv"></i> <span>Canais Max</span>
-                        </a>
-                    </li>
                     <li id="index" class="index">
                         <a href="{% url 'topcanais' %}">
                             <i class="fa fa-building"></i> <span>Top Canais</span>
                         </a>
                     </li>
-                    <li id="index" class="index">
-                        <a href="{% url 'filmes' %}">
-                            <i class="fa fa-video-camera"></i> <span>Filmes</span>
-                        </a>
-                    </li>
-                    <li id="index" class="index">
-                        <a href="{% url 'series' %}">
-                            <i class="fa fa-forward"></i> <span>Series</span>
-                        </a>
-                    </li>
                 {% endif %}
+                <li id="index" class="index">
+                    <a href="{% url 'filmes' %}">
+                        <i class="fa fa-video-camera"></i> <span>Filmes</span>
+                    </a>
+                </li>
+                <li id="index" class="index">
+                    <a href="{% url 'series' %}">
+                        <i class="fa fa-forward"></i> <span>Series</span>
+                    </a>
+                </li>
+
                 <li id="logout" class="logout">
                     <a href="{% url 'logout' %}?next=/">
                         <i class="fa fa-sign-out"></i> <span>Sair</span>
