@@ -79,8 +79,8 @@
             autoPlay: true,
             poster: "{{ canal.img_url }}",
             source: window.location.origin + "{% url 'playlist-m3u8-multicanais' %}?uri=" + "{{ canal.link_set.first.m3u8 }}",
-            width: '640px',
-            height: "360px",
+            width: '100%',
+            height: "400px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
             plugins: [HlsjsPlayback, LevelSelector, ClapprStats],
             clapprStats: {

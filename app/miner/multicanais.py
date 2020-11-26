@@ -33,12 +33,9 @@ class CustomMiner(Miner):
                                         ch.url_site = str(href)
                                         ch.save()
                                         print(title, '-', len(ids))
-                                        if len(ids) == 1:
-                                            save_link_channel_multicanais(ch, ids[0], None)
-                                            save_link_channel_multicanais(ch, ids[0], select_server='futebolonlineaovivo.com')
-                                        else:
-                                            for id_url in ids:
-                                                save_link_channel_multicanais(ch, id_url, None)
+                                        for id_url in ids:
+                                            save_link_channel_multicanais(ch, id_url, None)
+
 
     def make_ids_multicanais(self, atags, title):
         ids = []

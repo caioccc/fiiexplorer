@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from django.db import IntegrityError
 from jsbeautifier.unpackers import packer
 
-from app.models import Episodio, LinkSerie, Temporada, Link, Url
+from app.models import Episodio, LinkSerie, Temporada, Link, Url, Channel
 
 
 def get_page_bs4(url):
@@ -109,19 +109,25 @@ def save_link_channel_aovivogratis(canal, href, m3u8):
         print('erro ao salvar link')
 
 
-def save_link_channel_multicanais(canal, id_url, select_server):
-    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+def exists_m3u8_saved(m3u8):
+    links = Channel.objects.filter(link__m3u8=m3u8)
+    if len(links) > 0:
+        return True
+    return False
+
+
+def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
     if not select_server:
         select_server = 'tvfolha.com'
     m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
-    if m3u8 and check_m3u8_req(m3u8, headers=headers):
+    if m3u8 and not exists_m3u8_saved(m3u8):
         try:
             link = Link()
             link.url = id_url
             link.channel = canal
             link.m3u8 = m3u8
             link.save()
-        except (Exception):
+        except (Exception,):
             print('erro ao salvar link')
 
 
@@ -412,7 +418,7 @@ def request_json():
 
 def check_m3u8_req(uri, headers):
     try:
-        req = requests.head(uri, headers=headers)
+        req = requests.head(uri, headers=headers, timeout=30)
         if req.status_code == 200:
             return True
         return False
