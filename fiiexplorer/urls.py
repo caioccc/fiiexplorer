@@ -26,7 +26,7 @@ from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, Filme
 from app.views.FutemaxView import FutemaxView, ViewChannelFutemax, playlist_m3u8_futemax, playlist_other_m3u8_futemax, \
     get_ts_futemax
 from app.views.MultiCanaisView import CollectChannelMultiCanais, CollectAllMultiCanais, MultiCanaisView, \
-    ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais
+    ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais, api_multicanais
 from app.views.SerieView import CollectSeries, CollectSerie, ViewSerie, SeriesView, playlist_m3u8_series_canaismax, \
     get_ts_series_canaismax, gen_lista_series_canaismax
 from app.views.TopCanaisView import CollectAllTopCanais, TopCanaisView, ViewChannelTopCanais, CollectChannelTopCanais, \
@@ -44,6 +44,7 @@ urlpatterns = [
     path('api/multi/playlist.m3u8', playlist_m3u8_multicanais, name='playlist-m3u8-multicanais'),
     path('api/multi/ts', get_ts_multicanais, name='get-ts-multicanais'),
     path('lista-multicanais.m3u8', gen_lista_multicanais, name='gen-lista-multicanais'),
+    path('api/multicanais/canais', api_multicanais, name='api'),
 
     path('collect-channel-canaismax/<int:pk>', CollectChannelCanaisMax.as_view(), name='collect-channel-canaismax'),
     path('collect-canaismax/', CollectAllCanaisMax.as_view(), name='collect-canaismax'),

@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
@@ -158,3 +158,24 @@ def gen_lista_multicanais(request):
                 custom_m3u8))
     fsock = open("lista-multicanais.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
+
+
+def api_multicanais(request):
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    lista_geral = Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct()
+    entries = []
+    for ch in lista_geral:
+        link = ch.link_set.all().first()
+        title = clean_title(ch)
+        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+        if check_channel_title_especific(ch.title):
+            for link in ch.link_set.all():
+                if check_m3u8_req(link.m3u8, headers=headers):
+                    title = clean_title(ch)
+                    custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+        entries.append({'id': str(ch.id),
+                        'name': str(title),
+                        'm3u8': str(custom_m3u8),
+                        'uri': str(custom_m3u8),
+                        'img_url': str(ch.img_url)})
+    return JsonResponse(entries, safe=False)
