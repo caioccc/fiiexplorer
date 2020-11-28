@@ -120,7 +120,8 @@ def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
     if not select_server:
         select_server = 'tvfolha.com'
     m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
-    if m3u8 and not exists_m3u8_saved(m3u8):
+    # if m3u8 and not exists_m3u8_saved(m3u8):
+    if m3u8:
         try:
             link = Link()
             link.url = id_url
@@ -294,6 +295,7 @@ def get_source_script_aovivogratis(uri):
 
 
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
     string_canal_id = '.php?canal='
     uri = str(id_url)
     try:
@@ -301,7 +303,10 @@ def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
         if index_prefix > -1:
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
             m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8"
-            return m3u8_uri
+            if check_m3u8_req(m3u8_uri, headers=headers):
+                return m3u8_uri
+            else:
+                return ''
         else:
             return ''
     except (ValueError,):
@@ -418,7 +423,7 @@ def request_json():
 
 def check_m3u8_req(uri, headers):
     try:
-        req = requests.head(uri, headers=headers, timeout=30)
+        req = requests.get(uri, headers=headers, timeout=30)
         if req.status_code == 200:
             return True
         return False
@@ -451,8 +456,8 @@ def clean_title(channel):
     if 'Assistir ' in title:
         if ' ao vivo' in title:
             return title[(title.index('Assistir ') + len('Assistir ')):title.index(' ao vivo')]
-        if ' Ao Vivo' in title:
-            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' Ao Vivo')]
+        if ' Ao ' in title:
+            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' Ao ')]
     elif 'Ao Vivo' in title:
         return title[:title.index(' Ao Vivo')]
     return title

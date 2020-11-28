@@ -48,8 +48,9 @@ class MultiCanaisView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         if 'q' in self.request.GET:
             return Channel.objects.filter(Q(title__icontains=self.request.GET['q']),
-                                          Q(category__site__name='multicanais'))
-        return Channel.objects.filter(Q(category__site__name='multicanais'))
+                                          Q(link__m3u8__icontains='.m3u8'),
+                                          Q(category__site__name='multicanais')).distinct()
+        return Channel.objects.filter(Q(link__m3u8__icontains='.m3u8'), Q(category__site__name='multicanais')).distinct()
 
 
 class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):
@@ -123,39 +124,20 @@ def gen_lista_multicanais(request):
     f = open("lista-multicanais.m3u8", "a")
     f.truncate(0)
     f.write("#EXTM3U\n")
-    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
     for ch in Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct():
-        if check_channel_title_especific(ch.title):
-            for link in ch.link_set.all():
-                if check_m3u8_req(link.m3u8, headers=headers):
-                    title = clean_title(ch)
-                    custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
-                    f.write(
-                        '#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
-                            link.id,
-                            link.id,
-                            title,
-                            title,
-                            link.id,
-                            ch.img_url,
-                            '',
-                            title,
-                            custom_m3u8))
-                    break
-        else:
-            link = ch.link_set.all().first()
-            title = clean_title(ch)
-            custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
-            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
-                link.id,
-                link.id,
-                title,
-                title,
-                link.id,
-                ch.img_url,
-                '',
-                title,
-                custom_m3u8))
+        link = ch.link_set.all().first()
+        title = clean_title(ch)
+        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+            link.id,
+            link.id,
+            title,
+            title,
+            link.id,
+            ch.img_url,
+            '',
+            title,
+            custom_m3u8))
     fsock = open("lista-multicanais.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
 

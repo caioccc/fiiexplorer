@@ -1,6 +1,6 @@
 from app.miner.common import Miner
 from app.models import Channel, Link, Site
-from app.utils import get_page_bs4, save_link_channel_multicanais
+from app.utils import get_page_bs4, save_link_channel_multicanais, check_m3u8_req
 
 
 class CustomMiner(Miner):
