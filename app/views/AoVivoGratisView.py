@@ -116,7 +116,11 @@ def gen_lista_aovivogratis(request):
     f.write("#EXTM3U\n")
     for ch in Channel.objects.filter(link__m3u8__icontains='.m3u8').distinct():
         title = clean_title(ch)
-        custom_m3u8 = ch.link_set.first().m3u8
+        custom_m3u8 = ''
+        if ch.category.site.name == 'multicanais':
+            custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+        else:
+            custom_m3u8 = ch.link_set.first().m3u8
         f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
             ch.id,
             ch.id,
