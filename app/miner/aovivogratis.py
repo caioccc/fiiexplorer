@@ -1,6 +1,8 @@
+import re
+
 from app.miner.common import Miner
 from app.models import Channel, Link, Site
-from app.utils import get_page_bs4, get_source_script_aovivogratis, save_link_channel_aovivogratis
+from app.utils import get_page_bs4, get_source_script_aovivogratis, save_link_channel_aovivogratis, clean_title
 
 
 def get_title(href):
@@ -8,6 +10,14 @@ def get_title(href):
     index_bar = href.rfind('/')
     index_end = href.rfind('.')
     return href[index_bar + 1:index_end]
+
+
+def exists_title_in_multicanais(title):
+    lista = [clean_title(ch) for ch in Channel.objects.filter(category__site__name='multicanais')]
+    li = [titulo for titulo in lista if re.search(titulo, title.lower(), re.IGNORECASE)]
+    if len(li) > 0:
+        return True
+    return False
 
 
 class CustomMiner(Miner):
@@ -28,23 +38,24 @@ class CustomMiner(Miner):
                         img_url = imgtag['data-src']
                         if title == '':
                             title = get_title(img_url)
-                        second_page = get_page_bs4(href)
-                        if second_page:
-                            div_links = second_page.find('iframe')
-                            if div_links:
-                                ids = self.make_ids_multicanais(div_links)
-                                if ids:
-                                    ids = ids.replace('external', '')
-                                    m3u8 = get_source_script_aovivogratis(ids)
-                                    if m3u8:
-                                        ch = Channel()
-                                        ch.title = title
-                                        ch.img_url = img_url
-                                        ch.category = category
-                                        ch.url_site = str(ids)
-                                        ch.save()
-                                        print(title, )
-                                        save_link_channel_aovivogratis(ch, href, m3u8)
+                        if not exists_title_in_multicanais(title):
+                            second_page = get_page_bs4(href)
+                            if second_page:
+                                div_links = second_page.find('iframe')
+                                if div_links:
+                                    ids = self.make_ids_multicanais(div_links)
+                                    if ids:
+                                        ids = ids.replace('external', '')
+                                        m3u8 = get_source_script_aovivogratis(ids)
+                                        if m3u8:
+                                            ch = Channel()
+                                            ch.title = title
+                                            ch.img_url = img_url
+                                            ch.category = category
+                                            ch.url_site = str(ids)
+                                            ch.save()
+                                            print(title, )
+                                            save_link_channel_aovivogratis(ch, href, m3u8)
 
     def make_ids_multicanais(self, div_links):
         return div_links['data-src']

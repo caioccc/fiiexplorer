@@ -68,13 +68,8 @@ def snifferAoVivoGratis():
                     print('Nao Conseguiu atualizar o link canal ', str(ch.title))
             logging.debug('FINALIZOU SNIFFER CANAL: ' + ch.title)
             print('------------ ')
-            time.sleep(10)
-        time.sleep(1700)
-
-
-def mineChannelAoVivoGratis(pk=None):
-    while True:
-        canal = Channel.objects.get(pk=pk)
+            time.sleep(3)
+        time.sleep(1)
 
 
 def mineSeries():

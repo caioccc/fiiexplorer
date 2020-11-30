@@ -468,11 +468,13 @@ def get_text_type(link):
 
 def clean_title(channel):
     title = str(channel.title)
-    if 'Assistir ' in title:
-        if ' ao vivo' in title:
-            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' ao vivo')]
-        if ' Ao ' in title:
-            return title[(title.index('Assistir ') + len('Assistir ')):title.index(' Ao ')]
-    elif 'Ao Vivo' in title:
-        return title[:title.index(' Ao Vivo')]
+    if 'assistir ' in title.lower():
+        if ' ao ' in title.lower():
+            title = title[(title.lower().index('assistir ') + len('assistir ')):title.lower().index(' ao ')]
+        else:
+            title = title[(title.lower().index('assistir ') + len('assistir ')):]
+    if ' ao' in title.lower():
+        title = title[:title.lower().index(' ao ')]
+    if ' online' in title.lower():
+        title = title[:title.lower().index(' online')]
     return title

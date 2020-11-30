@@ -9,7 +9,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
-from app.miner.explorer import mineAllAoVivoGratis, mineChannelAoVivoGratis, snifferAoVivoGratis
+from app.miner.explorer import mineAllAoVivoGratis, snifferAoVivoGratis
 from app.models import Channel, Site
 from app.utils import remove_iv, get_m3u8_aovivogratis_by_eval, \
     clean_title
@@ -114,7 +114,7 @@ def gen_lista_aovivogratis(request):
     f = open("lista-aovivo.m3u8", "a")
     f.truncate(0)
     f.write("#EXTM3U\n")
-    for ch in Channel.objects.filter(category__site__name='aovivogratis', link__m3u8__icontains='.m3u8').distinct():
+    for ch in Channel.objects.filter(link__m3u8__icontains='.m3u8').distinct():
         title = clean_title(ch)
         custom_m3u8 = ch.link_set.first().m3u8
         f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
