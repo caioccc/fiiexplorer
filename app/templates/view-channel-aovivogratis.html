@@ -60,7 +60,7 @@
             parentId: "#Player",
             autoPlay: true,
             poster: "{{ canal.img_url }}",
-            source: {{ source|safe }},
+            source: "{{ source|safe }}",
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},

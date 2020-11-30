@@ -1,4 +1,5 @@
 import re
+import time
 from threading import Thread
 
 import requests
@@ -8,17 +9,17 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
-from app.miner.explorer import mineAllAoVivoGratis, mineChannelAoVivoGratis
+from app.miner.explorer import mineAllAoVivoGratis, mineChannelAoVivoGratis, snifferAoVivoGratis
 from app.models import Channel, Site
-from app.utils import remove_iv, get_source_script_aovivogratis
+from app.utils import remove_iv, get_m3u8_aovivogratis_by_eval, \
+    clean_title
 
 
 class SnifferAoVivoGratis(TemplateView):
     template_name = 'aovivogratis.html'
 
     def get(self, request, *args, **kwargs):
-        for ch in Channel.objects.filter(category__site__name='aovivogratis'):
-            Thread(target=mineChannelAoVivoGratis, kwargs=dict(pk=ch.pk)).start()
+        Thread(target=snifferAoVivoGratis).start()
         return redirect('/aovivogratis')
 
 
@@ -58,10 +59,8 @@ class ViewChannelAoVivoGratis(LoginRequiredMixin, DetailView):
     def get_context_data(self, *, object_list=None, **kwargs):
         kwargs['SITE_URL'] = 'http://' + self.request.META['HTTP_HOST'] + '/'
         channel = self.get_object()
-        source = get_source_script_aovivogratis(channel.url_site)
-        index_init = source.index('player.src({src:') + len('player.src({src:')
-        index_end = source.index(',type:')
-        kwargs['source'] = source[index_init:index_end]
+        string_m3u8 = get_m3u8_aovivogratis_by_eval(channel.url_site)
+        kwargs['source'] = string_m3u8
         return super(ViewChannelAoVivoGratis, self).get_context_data(object_list=object_list, **kwargs)
 
 
@@ -111,17 +110,23 @@ def get_ts_aovivogratis(request):
         return HttpResponseNotFound("hello")
 
 
-class GetListaAoVivoGratis(TemplateView):
-    template_name = 'lista_aovivogratis.html'
-
-    def get(self, request, *args, **kwargs):
-        canais = Channel.objects.filter(category__site__name='aovivogratis')
-        kwargs['canais'] = canais
-        arr_links = []
-        for canal in canais:
-            source = canal.link_set.first().m3u8
-            index_init = source.index('player.src({src:') + len('player.src({src:')
-            index_end = source.index(',type:')
-            arr_links.append(source[index_init:index_end])
-        kwargs['links'] = arr_links
-        return super(GetListaAoVivoGratis, self).get(request, *args, **kwargs)
+def gen_lista_aovivogratis(request):
+    f = open("lista-aovivo.m3u8", "a")
+    f.truncate(0)
+    f.write("#EXTM3U\n")
+    for ch in Channel.objects.filter(category__site__name='aovivogratis', link__m3u8__icontains='.m3u8').distinct():
+        title = clean_title(ch)
+        custom_m3u8 = ch.link_set.first().m3u8
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+            ch.id,
+            ch.id,
+            title,
+            title,
+            ch.id,
+            ch.img_url,
+            '',
+            title,
+            custom_m3u8))
+    f.close()
+    fsock = open("lista-aovivo.m3u8", "rb")
+    return HttpResponse(fsock, content_type='text')

@@ -1,0 +1,19 @@
+#EXTM3U
+#EXTINF:1545, tvg-id="1545 - Globo SP" tvg-name="Globo SP - 1545" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/globo-2.png" group-title="",Globo SP
+https://edge-aws.aovivotv.xyz/hls/s:88.198.239.170/globosp_cfe21c68_becfe2e3dc102f19e8537cd2f2311046f944e562/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzQ3O30%3D
+#EXTINF:1546, tvg-id="1546 - Record" tvg-name="Record - 1546" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/rederecord.png" group-title="",Record
+https://edge-aws.aovivotv.xyz/hls/s:95.216.15.44:81/record_3554dce5_137a53cb4e303379dd70ca9c98526f49ffd8250f/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzQ4O30%3D
+#EXTINF:1547, tvg-id="1547 - Globo RJ" tvg-name="Globo RJ - 1547" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/globo-1.png" group-title="",Globo RJ
+https://edge-aws.aovivotv.xyz/hls/s:209.126.108.100:81/globorj_bc15c774_142aa9684ca0b2412517b0efb6382216db819e74/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzUxO30%3D
+#EXTINF:1548, tvg-id="1548 - Globo nordeste" tvg-name="Globo nordeste - 1548" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/globo-3.png" group-title="",Globo nordeste
+https://edge-aws.aovivotv.xyz/hls/s:209.126.108.100:81/globonordeste_acf10f2c_752fd626e5160ad066cfdb8a6f544eb40eac7ae2/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzUzO30%3D
+#EXTINF:1549, tvg-id="1549 - ESPN Brasil" tvg-name="ESPN Brasil - 1549" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/espnbrasil.png" group-title="",ESPN Brasil
+https://edge-aws.aovivotv.xyz/hls/s:95.216.15.44:81/espnbrasil_2a459380_1f162c8c344f4aa797a3d1b88b2ffcfe20ea4dfc/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzU1O30%3D
+#EXTINF:1550, tvg-id="1550 - Band" tvg-name="Band - 1550" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/band.png" group-title="",Band
+https://edge-aws.aovivotv.xyz/hls/s:95.216.15.44:81/band_49e3d046_f61ebf94e6d7af7fa0a1a2f742fa9c02c90fe983/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzU3O30%3D
+#EXTINF:1551, tvg-id="1551 - Canal Combate" tvg-name="Canal Combate - 1551" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/combate.png" group-title="",Canal Combate
+https://edge-aws.aovivotv.xyz/hls/s:78.47.27.206/combate_ac3478d6_4ff66c77d209d61657d8d5ee019101a432aaf879/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzU5O30%3D
+#EXTINF:1552, tvg-id="1552 - Telecine Premium" tvg-name="Telecine Premium - 1552" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/tcpremium.png" group-title="",Telecine Premium
+https://edge-aws.aovivotv.xyz/hls/s:88.198.163.51/telecinepremium_a929eb33_97a7b5af054aeeb4d160f2d1d0f60fe38b44656f/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzYxO30%3D
+#EXTINF:1553, tvg-id="1553 - Telecine Pipoca" tvg-name="Telecine Pipoca - 1553" tvg-logo="https://aovivo.gratis/wp-content/uploads/2019/07/tcpipoca.png" group-title="",Telecine Pipoca
+https://edge-aws.aovivotv.xyz/hls/s:95.216.15.44:81/telecinepipoca_fd937516_ae0937bdcb2c9ad9441c10862c8f4c87805fb6b8/playlist.m3u8?jsf=YTozOntpOjA7czoxNToiMTkxLjI0Mi4yMDQuMTE2IjtpOjE7czoyMToicHl0aG9uLXJlcXVlc3RzLzIuOS4xIjtpOjI7aToxNjA2NzQ2MzYzO30%3D

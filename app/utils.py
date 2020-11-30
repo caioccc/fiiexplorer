@@ -5,6 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from django.db import IntegrityError
 from jsbeautifier.unpackers import packer
+from six import unichr
 
 from app.models import Episodio, LinkSerie, Temporada, Link, Url, Channel
 
@@ -103,7 +104,7 @@ def save_link_channel_aovivogratis(canal, href, m3u8):
         link = Link()
         link.url = href
         link.channel = canal
-        link.m3u8 = m3u8
+        link.m3u8 = get_m3u8_aovivogratis_by_eval(canal.url_site)
         link.save()
     except (Exception):
         print('erro ao salvar link')
@@ -278,6 +279,20 @@ def contain_http(uri):
     if str(uri).startswith('http'):
         return True
     return False
+
+
+def from_char_code(*args):
+    return ''.join(map(unichr, args))
+
+
+def get_m3u8_aovivogratis_by_eval(url):
+    source = get_source_script_aovivogratis(url)
+    index_init = source.index('player.src({src:') + len('player.src({src:')
+    index_end = source.index(',type:')
+    item = source[index_init:index_end]
+    replaced_item = item.replace('String.fromCharCode(', 'from_char_code(')
+    string = 'https:' + str(eval(replaced_item))
+    return string
 
 
 def get_source_script_aovivogratis(uri):

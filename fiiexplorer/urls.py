@@ -18,7 +18,7 @@ from django.contrib.auth import views as auth_views
 from django.urls import path
 
 from app.views.AoVivoGratisView import AoVivoGratisView, ViewChannelAoVivoGratis, playlist_m3u8_aovivogratis, \
-    get_ts_aovivogratis, CollectAllAoVivoGratis, GetListaAoVivoGratis, SnifferAoVivoGratis
+    get_ts_aovivogratis, CollectAllAoVivoGratis, SnifferAoVivoGratis, gen_lista_aovivogratis
 from app.views.CanaisMaxView import CanaisMaxView, CollectAllCanaisMax, ViewChannelCanaisMax, CollectChannelCanaisMax, \
     playlist_m3u8_canaismax, playlist_other_m3u8_canaismax, get_ts_canaismax, get_lista_canaismax
 from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, FilmesView, gen_lista_filmes_canaismax, \
@@ -88,7 +88,7 @@ urlpatterns = [
     path('aovivogratis/<int:pk>', ViewChannelAoVivoGratis.as_view(), name='view-channel-aovivogratis'),
     path('api/aovivogratis/playlist.m3u8', playlist_m3u8_aovivogratis, name='playlist-m3u8-aovivogratis'),
     path('api/aovivogratis/ts', get_ts_aovivogratis, name='get-ts-aovivogratis'),
-    path('lista-aovivogratis.m3u8', GetListaAoVivoGratis.as_view(), name='lista-aovivogratis'),
+    path('lista-aovivo.m3u8', gen_lista_aovivogratis, name='lista-aovivogratis'),
 
     path('futemax/', FutemaxView.as_view(), name='futemax'),
     path('view-futemax', ViewChannelFutemax.as_view(), name='view-channel-futemax'),
