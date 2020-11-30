@@ -13,6 +13,12 @@ def get_title(href):
 
 
 def exists_title_in_multicanais(title):
+    if 'telecine' in title.lower():
+        return False
+    if 'hbo' in title.lower():
+        return False
+    if 'max' in title.lower():
+        return False
     lista = [clean_title(ch) for ch in Channel.objects.filter(category__site__name='multicanais')]
     li = [titulo for titulo in lista if re.search(titulo, title.lower(), re.IGNORECASE)]
     if len(li) > 0:
@@ -30,6 +36,7 @@ class CustomMiner(Miner):
             if page:
                 divs_entries = page.select('div.post-thumb-img-content')
                 if len(divs_entries) > 0:
+                    divs_entries = divs_entries[:154]
                     for div in divs_entries:
                         atag = div.find('a')
                         href = atag['href']
