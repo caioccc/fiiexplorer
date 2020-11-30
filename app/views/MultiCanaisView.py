@@ -138,6 +138,7 @@ def gen_lista_multicanais(request):
             '',
             title,
             custom_m3u8))
+    f.close()
     fsock = open("lista-multicanais.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
 
