@@ -478,3 +478,41 @@ def clean_title(channel):
     if ' online' in title.lower():
         title = title[:title.lower().index(' online')]
     return title
+
+
+def films_get_playfilms():
+    uri = 'https://filmplay.biz/filmes/page/1'  # iter page
+    req = requests.get(uri)
+    page = BeautifulSoup(req.text, 'html.parser')
+    tag_movies = page.select('.movies')
+    movies = [tag.select('div.poster>a')[0]['href'] for tag in tag_movies]
+    for link_movie in movies:
+        req = requests.get(link_movie)
+        page = BeautifulSoup(req.text, 'html.parser')
+        link_id_movie = str(page.select('link[rel="shortlink"]')[0]['href'])
+        id_movie = link_id_movie[link_id_movie.index('p=') + len('p='):]
+        req = requests.get('https://filmplay.biz/wp-json/dooplayer/v1/post/' + id_movie + '?type=movie&source=1')
+        json = req.json()
+        req = requests.get(json['embed_url'])
+        page = BeautifulSoup(req.text, 'html.parser')
+        iframe = page.find('iframe')
+        url_iframe = iframe['src']
+        req = requests.get(url_iframe)
+        page = BeautifulSoup(req.text, 'html.parser')
+        string_init = "addiframe"
+        string_end = "Now"
+        script = [scr for scr in page.select('script') if string_init in str(scr)][0]
+        script = str(script).replace('\n', '').replace('\t', '').replace('\r', '')
+        init_index = [m.start() for m in re.finditer(string_init, script)]
+        end_index = [m.start() for m in re.finditer(string_end, script)]
+        strings = [script[(int(init_index[i]) + len(string_init)):int(end_index[i])] for i in range(len(init_index))]
+        link_regex = re.compile('((https?):((//)|(\\\\))+([\w\d:#@%/;$()~_?\+-=\\\.&](#!)?)*)', re.DOTALL)
+        p = [re.findall(link_regex, st) for st in strings]
+        links_video = [arr[0][0] for arr in p[:len(p) - 1]]
+        for link_video in links_video:
+            req = requests.get(link_video)
+            page = BeautifulSoup(req.text, 'html.parser')
+            iframe_video = page.find('iframe')
+            url_iframe_video = iframe_video['src']
+            req = requests.get(url_iframe_video)
+            page = BeautifulSoup(req.text, 'html.parser')

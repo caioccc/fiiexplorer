@@ -135,7 +135,7 @@ def gen_lista_multicanais(request):
             title,
             link.id,
             ch.img_url,
-            '',
+            'Canais Ao Vivo',
             title,
             custom_m3u8))
     f.close()
