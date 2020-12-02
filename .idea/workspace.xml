@@ -24,8 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/MultiCanaisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MultiCanaisView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +243,7 @@
       <workItem from="1606771680618" duration="1425000" />
       <workItem from="1606773440399" duration="98000" />
       <workItem from="1606822168297" duration="5944000" />
-      <workItem from="1606910577228" duration="602000" />
+      <workItem from="1606910577228" duration="1619000" />
     </task>
     <servers />
   </component>
