@@ -14,7 +14,7 @@ class Command(BaseCommand):
             siteX.save()
             cat1X = CategoryChannel()
             cat1X.name = 'TV AO VIVO'
-            cat1X.url = 'https://multicanais.com/aovivo/assistir-tv-online-gratis-hd-24h/'
+            cat1X.url = 'https://multicanais.com/aovivo/assistir-tv-online-gratis-hoje-hd/'
             cat1X.path = 'aovivo/assistir-tv-online-gratis-hd-24h/'
             cat1X.site = siteX
             cat1X.pages = 3
