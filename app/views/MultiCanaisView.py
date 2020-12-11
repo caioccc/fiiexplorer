@@ -10,8 +10,8 @@ from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
 from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais
-from app.models import Channel, Site
-from app.utils import clean_title, remove_iv, check_m3u8_req
+from app.models import Channel, Site, Link
+from app.utils import clean_title, remove_iv, check_m3u8_req, get_token_multicanais
 
 
 class CollectChannelMultiCanais(DetailView):
@@ -80,7 +80,6 @@ def playlist_m3u8_multicanais(request):
                 page_str = page_str.replace(arr_strings[i],
                                             'http://' + request.META['HTTP_HOST'] + '/api/multi/ts?link=' + str(
                                                 new_uri))
-
         return HttpResponse(
             content=page_str,
             status=req.status_code,
@@ -126,7 +125,11 @@ def gen_lista_multicanais(request):
     for ch in Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct():
         link = ch.link_set.all().first()
         title = clean_title(ch)
-        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + link.m3u8
+        uri_m3u8 = link.m3u8
+        name_channel = uri_m3u8[uri_m3u8.index('vivo.com/') + len('vivo.com/'):uri_m3u8.index('/video.m3u8')]
+        token = get_token_multicanais(name_channel)
+        new_m3u8_uri = "https://live.futebolonlineaovivo.com/" + name_channel + "/video.m3u8?token=" + str(token)
+        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + new_m3u8_uri
         f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
             link.id,
             link.id,

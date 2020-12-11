@@ -309,6 +309,15 @@ def get_source_script_aovivogratis(uri):
     return ''
 
 
+def get_token_multicanais(canal):
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    req = requests.post('https://esporteone.com/app/stream/get_token.php', {'canal': canal}, headers=headers)
+    if req.status_code == 200:
+        return req.json()['token']
+    else:
+        return None
+
+
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
     string_canal_id = '.php?canal='
@@ -317,7 +326,9 @@ def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
         index_prefix = uri.index(string_canal_id)
         if index_prefix > -1:
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
-            m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8"
+            select_server = 'futebolonlineaovivo.com'
+            token = get_token_multicanais(name_channel)
+            m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8?token=" + str(token)
             if check_m3u8_req(m3u8_uri, headers=headers):
                 return m3u8_uri
             else:
