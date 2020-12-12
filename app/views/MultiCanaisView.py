@@ -126,10 +126,11 @@ def gen_lista_multicanais(request):
         link = ch.link_set.all().first()
         title = clean_title(ch)
         uri_m3u8 = link.m3u8
-        name_channel = uri_m3u8[uri_m3u8.index('vivo.com/') + len('vivo.com/'):uri_m3u8.index('/video.m3u8')]
-        token = get_token_multicanais(name_channel)
-        new_m3u8_uri = "https://live.futebolonlineaovivo.com/" + name_channel + "/video.m3u8?token=" + str(token)
-        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + new_m3u8_uri
+        # name_channel = uri_m3u8[uri_m3u8.index('vivo.com/') + len('vivo.com/'):uri_m3u8.index('/video.m3u8')]
+        # token = get_token_multicanais(name_channel)
+        # new_m3u8_uri = "https://live.futebolonlineaovivo.com/" + name_channel + "/video.m3u8?token=" + str(token)
+        # custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + new_m3u8_uri
+        custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/api/multi/playlist.m3u8?uri=' + str(link.m3u8)
         f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
             link.id,
             link.id,

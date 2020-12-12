@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from django.db import IntegrityError
 from jsbeautifier.unpackers import packer
 from six import unichr
+import random
 
 from app.models import Episodio, LinkSerie, Temporada, Link, Url, Channel
 
@@ -319,6 +320,7 @@ def get_token_multicanais(canal):
 
 
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
+    arr_sites = ['esporteflix.com', 'multicanais.tv', 'netcanais.com', 'futebolfree.com']
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
     string_canal_id = '.php?canal='
     uri = str(id_url)
@@ -326,9 +328,10 @@ def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
         index_prefix = uri.index(string_canal_id)
         if index_prefix > -1:
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
-            select_server = 'futebolonlineaovivo.com'
-            token = get_token_multicanais(name_channel)
-            m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8?token=" + str(token)
+            select_server = random.choice(arr_sites)
+            # token = get_token_multicanais(name_channel)
+            # m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8?token=" + str(token)
+            m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8"
             if check_m3u8_req(m3u8_uri, headers=headers):
                 return m3u8_uri
             else:
