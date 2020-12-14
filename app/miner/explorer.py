@@ -57,13 +57,14 @@ def snifferAoVivoGratis():
         try:
             for ch in Channel.objects.filter(category__site__name='aovivogratis'):
                 url = ch.url_site
-                print('----------- sniff: ', ch.title)
                 m3u8 = get_m3u8_aovivogratis_by_eval(url)
                 if m3u8:
                     if str(m3u8)[:150] not in str(ch.link_set.first().m3u8):
-                        print(ch.link_set.first().m3u8)
-                        print(m3u8[:250])
                         print('----- MUDOU M3U8 CH: ', ch.title)
+                        print('antigo: ', ch.link_set.first().m3u8)
+                        print('novo: ', m3u8)
+                        print('----------------------------------')
+
                         try:
                             link = ch.link_set.first()
                             link.m3u8 = m3u8
