@@ -9,7 +9,7 @@ from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
 from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView
 
-from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais
+from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais, snifferAoVivoGratis
 from app.models import Channel, Site, Link
 from app.utils import clean_title, remove_iv, check_m3u8_req, get_token_multicanais
 
@@ -43,6 +43,7 @@ class MultiCanaisView(LoginRequiredMixin, ListView):
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        Thread(target=snifferAoVivoGratis).start()
         return super(MultiCanaisView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):

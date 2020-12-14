@@ -13,16 +13,16 @@ def get_title(href):
 
 
 def exists_title_in_multicanais(title):
-    if 'telecine' in title.lower():
-        return False
-    if 'hbo' in title.lower():
-        return False
-    if 'max' in title.lower():
-        return False
-    lista = [clean_title(ch) for ch in Channel.objects.filter(category__site__name='multicanais')]
-    li = [titulo for titulo in lista if re.search(titulo, title.lower(), re.IGNORECASE)]
-    if len(li) > 0:
-        return True
+    # if 'telecine' in title.lower():
+    #     return False
+    # if 'hbo' in title.lower():
+    #     return False
+    # if 'max' in title.lower():
+    #     return False
+    # lista = [clean_title(ch) for ch in Channel.objects.filter(category__site__name='multicanais')]
+    # li = [titulo for titulo in lista if re.search(titulo, title.lower(), re.IGNORECASE)]
+    # if len(li) > 0:
+    #     return True
     return False
 
 

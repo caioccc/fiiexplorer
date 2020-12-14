@@ -54,22 +54,28 @@ def mineAllAoVivoGratis():
 
 def snifferAoVivoGratis():
     while True:
-        for ch in Channel.objects.filter(category__site__name='aovivogratis'):
-            url = ch.url_site
-            print('----------- sniff: ', ch.title)
-            logging.debug('INICIOU A SNIFFER CANAL: ' + ch.title)
-            m3u8 = get_m3u8_aovivogratis_by_eval(url)
-            if m3u8:
-                try:
-                    link = ch.link_set.first()
-                    link.m3u8 = m3u8
-                    link.save()
-                except (Exception,):
-                    print('Nao Conseguiu atualizar o link canal ', str(ch.title))
-            logging.debug('FINALIZOU SNIFFER CANAL: ' + ch.title)
-            print('------------ ')
-            time.sleep(3)
-        time.sleep(1)
+        try:
+            for ch in Channel.objects.filter(category__site__name='aovivogratis'):
+                url = ch.url_site
+                print('----------- sniff: ', ch.title)
+                m3u8 = get_m3u8_aovivogratis_by_eval(url)
+                if m3u8:
+                    if str(m3u8)[:150] not in str(ch.link_set.first().m3u8):
+                        print(ch.link_set.first().m3u8)
+                        print(m3u8[:250])
+                        print('----- MUDOU M3U8 CH: ', ch.title)
+                        try:
+                            link = ch.link_set.first()
+                            link.m3u8 = m3u8
+                            link.save()
+                        except (Exception,):
+                            print('Nao Conseguiu atualizar o link canal ', str(ch.title))
+                print('------------ ')
+                time.sleep(2)
+            time.sleep(1)
+        except (Exception,):
+            print('--- Erro ao rodar sniffer. Reiniciar em 10s')
+            time.sleep(10)
 
 
 def mineSeries():
