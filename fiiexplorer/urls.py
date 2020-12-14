@@ -83,7 +83,7 @@ urlpatterns = [
     path('logout/', auth_views.logout_then_login, name='logout'),
 
     path('collect-aovivogratis/', CollectAllAoVivoGratis.as_view(), name='collect-aovivogratis'),
-    path('run-sniffer/aovivogratis/', SnifferAoVivoGratis.as_view(), name='sniffer-aovivogratis'),
+    path('s/', SnifferAoVivoGratis.as_view(), name='sniffer-aovivogratis'),
     path('aovivogratis/', AoVivoGratisView.as_view(), name='aovivogratis'),
     path('aovivogratis/<int:pk>', ViewChannelAoVivoGratis.as_view(), name='view-channel-aovivogratis'),
     path('api/aovivogratis/playlist.m3u8', playlist_m3u8_aovivogratis, name='playlist-m3u8-aovivogratis'),

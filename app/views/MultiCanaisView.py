@@ -43,7 +43,6 @@ class MultiCanaisView(LoginRequiredMixin, ListView):
     context_object_name = 'canais'
 
     def get_context_data(self, *, object_list=None, **kwargs):
-        Thread(target=snifferAoVivoGratis).start()
         return super(MultiCanaisView, self).get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
