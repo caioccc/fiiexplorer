@@ -48,8 +48,10 @@ class MultiCanaisView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         if 'q' in self.request.GET:
             return Channel.objects.filter(Q(title__icontains=self.request.GET['q']),
+                                          Q(category__site__name='multicanais'),
                                           Q(link__m3u8__icontains='.m3u8')).distinct()
-        return Channel.objects.filter(Q(link__m3u8__icontains='.m3u8')).distinct()
+        return Channel.objects.filter(Q(link__m3u8__icontains='.m3u8'),
+                                      Q(category__site__name='multicanais')).distinct()
 
 
 class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):

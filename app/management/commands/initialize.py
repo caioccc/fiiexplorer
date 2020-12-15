@@ -62,6 +62,13 @@ class Command(BaseCommand):
             cat24.site = site2
             cat24.pages = 4
             cat24.save()
+            cat25 = CategoryChannel()
+            cat25.name = 'Infantil'
+            cat25.url = 'https://topcanais.com/infantil/'
+            cat25.path = 'infantil/'
+            cat25.site = site2
+            cat25.pages = 3
+            cat25.save()
 
             site3 = Site()
             site3.name = 'filmes'

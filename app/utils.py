@@ -119,8 +119,6 @@ def exists_m3u8_saved(m3u8):
 
 
 def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
-    if not select_server:
-        select_server = 'tvfolha.com'
     m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
     # if m3u8 and not exists_m3u8_saved(m3u8):
     if m3u8:
@@ -251,7 +249,8 @@ def get_m3u8_topcanais(id_url, select_server=''):
 
 def save_link_channel_topcanais(canal, id_url):
     m3u8 = get_m3u8_topcanais(id_url)
-    if m3u8:
+    headers = {'origin': 'https://topcanais.com', 'referer': 'https://topcanais.com/'}
+    if check_m3u8_req(m3u8, headers=headers):
         try:
             link = Link()
             link.url = id_url
@@ -320,14 +319,17 @@ def get_token_multicanais(canal):
 
 
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
-    arr_sites = ['esporteflix.com', 'multicanais.tv', 'netcanais.com', 'futebolfree.com']
-    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    arr_sites = ['esporteflix.com', 'netcanais.com', 'futebolfree.com']
     string_canal_id = '.php?canal='
+    string_referer = 'player.php?id='
     uri = str(id_url)
     try:
         index_prefix = uri.index(string_canal_id)
+        index_referer = uri.index(string_referer)
         if index_prefix > -1:
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
+            referer = uri[index_referer + len(string_referer):]
+            headers = {'origin': 'https://esporteone.com', 'referer': str(referer)}
             select_server = random.choice(arr_sites)
             # token = get_token_multicanais(name_channel)
             # m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8?token=" + str(token)
@@ -452,7 +454,7 @@ def request_json():
 
 def check_m3u8_req(uri, headers):
     try:
-        req = requests.get(uri, headers=headers, timeout=30)
+        req = requests.head(uri, headers=headers, timeout=10)
         if req.status_code == 200:
             return True
         return False
