@@ -319,7 +319,7 @@ def get_token_multicanais(canal):
 
 
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
-    arr_sites = ['esporteflix.com', 'netcanais.com', 'futebolfree.com']
+    arr_sites = ['esporteflix.com', 'multicanais.tv', 'netcanais.com', 'futebolfree.com']
     string_canal_id = '.php?canal='
     string_referer = 'player.php?id='
     uri = str(id_url)
@@ -329,7 +329,8 @@ def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
         if index_prefix > -1:
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
             referer = uri[index_referer + len(string_referer):]
-            headers = {'origin': 'https://esporteone.com', 'referer': str(referer)}
+            headers = {'origin': 'https://esporteone.com', 'referer': str(referer),
+                       'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
             select_server = random.choice(arr_sites)
             # token = get_token_multicanais(name_channel)
             # m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8?token=" + str(token)

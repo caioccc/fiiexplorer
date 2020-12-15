@@ -1,11 +1,115 @@
 #EXTM3U
-#EXTINF:2779, tvg-id="2779 - AMC" tvg-name="AMC - 2779" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="Canais Ao Vivo",AMC
-http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolonlineaovivo.com/AMCSD/video.m3u8?token=1dcb0823cf915f118e03a4465cd649e56224d1b7-03a750509e4d8d0458931d537b186eea-1607783234-1607696834&remote=191.242.204.116
-#EXTINF:2782, tvg-id="2782 - Globo" tvg-name="Globo - 2782" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="Canais Ao Vivo",Globo
-http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolonlineaovivo.com/GLOBORJ/video.m3u8?token=0d7dc1cccaf8f9a9f580cd5a783e3a6d2350aaa3-fdae81b4233a3012067209af86b6a5c2-1607783235-1607696835&remote=191.242.204.116
-#EXTINF:2786, tvg-id="2786 - Fox Premium" tvg-name="Fox Premium - 2786" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="Canais Ao Vivo",Fox Premium
-http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolonlineaovivo.com/FOXPREMIUM/video.m3u8?token=0da7f4403b000d058a47c2123bd637de223c6ae1-a604d3d6edc7cb367a24cf8f34fb1c23-1607783235-1607696835&remote=191.242.204.116
-#EXTINF:2787, tvg-id="2787 - SPORTV" tvg-name="SPORTV - 2787" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="Canais Ao Vivo",SPORTV
-http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolonlineaovivo.com/SPORTVSD/video.m3u8?token=a20f3a5cf07f688a2f6de6aa8074b2540bdf7311-9b510ee7d4813d1e3a9c4be1c8738482-1607783236-1607696836&remote=191.242.204.116
-#EXTINF:2790, tvg-id="2790 - Combate" tvg-name="Combate - 2790" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="Canais Ao Vivo",Combate
-http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolonlineaovivo.com/COMBATE/video.m3u8?token=14af83d76aa17d8664f16087a22c20865d680cec-1ff99e0301a3aa482c8c657e5c2c98d2-1607783237-1607696837&remote=191.242.204.116
+#EXTINF:3511, tvg-id="3511 - AMC" tvg-name="AMC - 3511" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="Canais Ao Vivo",AMC
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/AMCSD/video.m3u8
+#EXTINF:3514, tvg-id="3514 - Globo" tvg-name="Globo - 3514" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="Canais Ao Vivo",Globo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/GLOBORJ/video.m3u8
+#EXTINF:3517, tvg-id="3517 - Fox Premium" tvg-name="Fox Premium - 3517" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="Canais Ao Vivo",Fox Premium
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/FOXPREMIUM/video.m3u8
+#EXTINF:3518, tvg-id="3518 - SPORTV" tvg-name="SPORTV - 3518" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="Canais Ao Vivo",SPORTV
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/SPORTVSD/video.m3u8
+#EXTINF:3521, tvg-id="3521 - Combate" tvg-name="Combate - 3521" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="Canais Ao Vivo",Combate
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/COMBATE/video.m3u8
+#EXTINF:3524, tvg-id="3524 - Telecine Fun" tvg-name="Telecine Fun - 3524" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-Telecine-FUN-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Telecine Fun
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEFUNSD/video.m3u8
+#EXTINF:3527, tvg-id="3527 - Viva" tvg-name="Viva - 3527" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-VIVA-ao-Vivo-Online-Grátis-HD-344x193.png" group-title="Canais Ao Vivo",Viva
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/VIVASD/video.m3u8
+#EXTINF:3530, tvg-id="3530 - Nat Geo" tvg-name="Nat Geo - 3530" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-natgeo-ao-vivo-online-grátis-344x193.png" group-title="Canais Ao Vivo",Nat Geo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/NATGEO/video.m3u8
+#EXTINF:3532, tvg-id="3532 - Food Network" tvg-name="Food Network - 3532" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-Foodnetwork-ao-vivo-grátis-online-344x193.png" group-title="Canais Ao Vivo",Food Network
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/FOODNETWORKSD/video.m3u8
+#EXTINF:3535, tvg-id="3535 - Multishow" tvg-name="Multishow - 3535" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-multishow-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Multishow
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/MULTISHOWSD/video.m3u8
+#EXTINF:3538, tvg-id="3538 - Animal Planet" tvg-name="Animal Planet - 3538" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-animal-planet-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Animal Planet
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/ANIMALPLANETSD/video.m3u8
+#EXTINF:3541, tvg-id="3541 - ESPN 2" tvg-name="ESPN 2 - 3541" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Assistir-ESPN-2-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",ESPN 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/ESPN2/video.m3u8
+#EXTINF:3542, tvg-id="3542 - Universal Channel" tvg-name="Universal Channel - 3542" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-universal-online-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Universal Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/UNIVERSAL/video.m3u8
+#EXTINF:3545, tvg-id="3545 - A&E" tvg-name="A&E - 3545" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-AE-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",A&E
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/AEESD/video.m3u8
+#EXTINF:3548, tvg-id="3548 - TLC" tvg-name="TLC - 3548" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-TLC-online-ao-vivo-344x193.png" group-title="Canais Ao Vivo",TLC
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/TLCSD/video.m3u8
+#EXTINF:3551, tvg-id="3551 - Premiere" tvg-name="Premiere - 3551" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-premiere-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Premiere
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/PREMIERECLUBES/video.m3u8
+#EXTINF:3555, tvg-id="3555 - Premiere 2" tvg-name="Premiere 2 - 3555" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Premiere-2--344x193.png" group-title="Canais Ao Vivo",Premiere 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/PREMIERE2/video.m3u8
+#EXTINF:3556, tvg-id="3556 - E!" tvg-name="E! - 3556" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-e-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",E!
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/ESD/video.m3u8
+#EXTINF:3559, tvg-id="3559 - Comedy Central" tvg-name="Comedy Central - 3559" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-comedy-central-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Comedy Central
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/COMEDYSD/video.m3u8
+#EXTINF:3562, tvg-id="3562 - SBT" tvg-name="SBT - 3562" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Sbt-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",SBT
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/SBT/video.m3u8
+#EXTINF:3563, tvg-id="3563 - Record" tvg-name="Record - 3563" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Record-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Record
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/RECORD/video.m3u8
+#EXTINF:3568, tvg-id="3568 - MTV" tvg-name="MTV - 3568" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-mtv-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",MTV
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/MTV/video.m3u8
+#EXTINF:3569, tvg-id="3569 - UFC" tvg-name="UFC - 3569" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/ufc-ao-vivo-online-344x193.jpeg" group-title="Canais Ao Vivo",UFC
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/COMBATE/video.m3u8
+#EXTINF:3572, tvg-id="3572 - Nick Jr" tvg-name="Nick Jr - 3572" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-nick-jr-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Nick Jr
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/NICKJRSD/video.m3u8
+#EXTINF:3575, tvg-id="3575 - Gloob" tvg-name="Gloob - 3575" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-gloob-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Gloob
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/GLOOBSD/video.m3u8
+#EXTINF:3578, tvg-id="3578 - Band Sports" tvg-name="Band Sports - 3578" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-band-sports-online-ao-vivo-24-horas-344x193.png" group-title="Canais Ao Vivo",Band Sports
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/BANDSPORTS/video.m3u8
+#EXTINF:3579, tvg-id="3579 - ESPN" tvg-name="ESPN - 3579" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Espn-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",ESPN
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/ESPN/video.m3u8
+#EXTINF:3580, tvg-id="3580 - SporTV 3" tvg-name="SporTV 3 - 3580" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv3-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",SporTV 3
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/SPORTV3SD/video.m3u8
+#EXTINF:3583, tvg-id="3583 - SporTV 2" tvg-name="SporTV 2 - 3583" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv2-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",SporTV 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/SPORTV2SD/video.m3u8
+#EXTINF:3586, tvg-id="3586 - GNT" tvg-name="GNT - 3586" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-gnt-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",GNT
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/GNTSD/video.m3u8
+#EXTINF:3589, tvg-id="3589 - Space" tvg-name="Space - 3589" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Space-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Space
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/SPACESD/video.m3u8
+#EXTINF:3592, tvg-id="3592 - Discovery Turbo" tvg-name="Discovery Turbo - 3592" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-turbo-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Discovery Turbo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYTURBOSD/video.m3u8
+#EXTINF:3595, tvg-id="3595 - Discovery Channel" tvg-name="Discovery Channel - 3595" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Discovery Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYSD/video.m3u8
+#EXTINF:3598, tvg-id="3598 - Discovery Home & Health" tvg-name="Discovery Home & Health - 3598" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Discovery-Home-Health-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Discovery Home & Health
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/HOMEHEALTHSD/video.m3u8
+#EXTINF:3601, tvg-id="3601 - Globo RJ" tvg-name="Globo RJ - 3601" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-RJ-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Globo RJ
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/GLOBORJ/video.m3u8
+#EXTINF:3603, tvg-id="3603 - Discovery Kids" tvg-name="Discovery Kids - 3603" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-dicovery-kids-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Discovery Kids
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/DISCOVERYKIDSSD/video.m3u8
+#EXTINF:3606, tvg-id="3606 - Investigação Discovery" tvg-name="Investigação Discovery - 3606" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-id-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Investigação Discovery
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/IDSD/video.m3u8
+#EXTINF:3609, tvg-id="3609 - FX" tvg-name="FX - 3609" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assisitir-fx-ao-vivo-344x193.png" group-title="Canais Ao Vivo",FX
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/FX/video.m3u8
+#EXTINF:3611, tvg-id="3611 - AXN" tvg-name="AXN - 3611" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-axn-ao-vivo-344x193.png" group-title="Canais Ao Vivo",AXN
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/AXNSD/video.m3u8
+#EXTINF:3614, tvg-id="3614 - Telecine Action" tvg-name="Telecine Action - 3614" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-action-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Telecine Action
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/TELECINEACTIONSD/video.m3u8
+#EXTINF:3617, tvg-id="3617 - Telecine Premium" tvg-name="Telecine Premium - 3617" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-premium-344x193.png" group-title="Canais Ao Vivo",Telecine Premium
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/TELECINEPREMIUMSD/video.m3u8
+#EXTINF:3620, tvg-id="3620 - Fox Sports 2" tvg-name="Fox Sports 2 - 3620" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Fox-Sports-2-ao-vivo-1-344x193.png" group-title="Canais Ao Vivo",Fox Sports 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/FOXSPORTS2/video.m3u8
+#EXTINF:3622, tvg-id="3622 - Globo News" tvg-name="Globo News - 3622" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/globo-news-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Globo News
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/GLOBONEWSSD/video.m3u8
+#EXTINF:3625, tvg-id="3625 - Boomerang" tvg-name="Boomerang - 3625" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-Boomerang-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Boomerang
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/BOOMERANGSD/video.m3u8
+#EXTINF:3628, tvg-id="3628 - TNT" tvg-name="TNT - 3628" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-TNT-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",TNT
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/TNTSD/video.m3u8
+#EXTINF:3631, tvg-id="3631 - Warner TV" tvg-name="Warner TV - 3631" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Warner-Ao-vivo-online-grátis-HD-344x193.png" group-title="Canais Ao Vivo",Warner TV
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/WARNERSD/video.m3u8
+#EXTINF:3634, tvg-id="3634 - Globo" tvg-name="Globo - 3634" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-SP-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Globo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/GloboSP/video.m3u8
+#EXTINF:3637, tvg-id="3637 - Syfy" tvg-name="Syfy - 3637" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Syfy-ao-vivo-online-grátis-HD-344x193.png" group-title="Canais Ao Vivo",Syfy
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/SYFYSD/video.m3u8
+#EXTINF:3640, tvg-id="3640 - Fox Channel" tvg-name="Fox Channel - 3640" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-FOX-ao-vivo-online-grátis-HD-344x193.png" group-title="Canais Ao Vivo",Fox Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/FOX/video.m3u8
+#EXTINF:3642, tvg-id="3642 - Sony Channel" tvg-name="Sony Channel - 3642" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sony-ao-vivo-online-24-horas-1-344x193.png" group-title="Canais Ao Vivo",Sony Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/SONYSD/video.m3u8
+#EXTINF:3645, tvg-id="3645 - Cinemax" tvg-name="Cinemax - 3645" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cinemax-Ao-vivo-Online-Grátis-344x193.png" group-title="Canais Ao Vivo",Cinemax
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/CINEMAXSD/video.m3u8
+#EXTINF:3648, tvg-id="3648 - Fox Sports" tvg-name="Fox Sports - 3648" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-fox-sports-online-ao-vivo-1-344x193.png" group-title="Canais Ao Vivo",Fox Sports
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/FOXSPORTS/video.m3u8
+#EXTINF:3650, tvg-id="3650 - Nickelodeon" tvg-name="Nickelodeon - 3650" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Nickelodeon-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Nickelodeon
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/NICKSD/video.m3u8
+#EXTINF:3653, tvg-id="3653 - Cartoon Network" tvg-name="Cartoon Network - 3653" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cartoon-Network-ao-vivo-online-24-horas-344x193.png" group-title="Canais Ao Vivo",Cartoon Network
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/CARTOONSD/video.m3u8
+#EXTINF:3656, tvg-id="3656 - ESPN Brasil" tvg-name="ESPN Brasil - 3656" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-espn-brasil-ao-vivo-online-1-1-344x193.png" group-title="Canais Ao Vivo",ESPN Brasil
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/ESPNBRASIL/video.m3u8
+#EXTINF:3657, tvg-id="3657 - Telecine Pipoca" tvg-name="Telecine Pipoca - 3657" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-pipoca-ao-vivo-344x193.png" group-title="Canais Ao Vivo",Telecine Pipoca
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEPIPOCASD/video.m3u8
+#EXTINF:3660, tvg-id="3660 - Premiere 6" tvg-name="Premiere 6 - 3660" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-premiere6-ao-vivo-online-344x193.png" group-title="Canais Ao Vivo",Premiere 6
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/SPORTV/video.m3u8

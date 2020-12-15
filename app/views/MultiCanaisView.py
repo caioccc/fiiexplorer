@@ -68,7 +68,8 @@ class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):
 
 def playlist_m3u8_multicanais(request):
     uri_m3u8 = request.GET['uri']
-    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
     try:
         req = requests.get(url=uri_m3u8, headers=headers)
         page = BeautifulSoup(req.text, 'html.parser')
@@ -96,7 +97,8 @@ def playlist_m3u8_multicanais(request):
 
 def get_ts_multicanais(request):
     key = request.GET['link']
-    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
     try:
         req = requests.get(url=key, stream=True, timeout=120, headers=headers)
         if req.status_code == 200:
@@ -149,7 +151,8 @@ def gen_lista_multicanais(request):
 
 
 def api_multicanais(request):
-    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
+    headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
     lista_geral = Channel.objects.filter(category__site__name='multicanais', link__m3u8__icontains='.m3u8').distinct()
     entries = []
     for ch in lista_geral:

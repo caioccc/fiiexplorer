@@ -38,7 +38,7 @@ urlpatterns = [
     path('collect-channel-multicanais/<int:pk>', CollectChannelMultiCanais.as_view(),
          name='collect-channel-multicanais'),
     path('collect-multicanais/', CollectAllMultiCanais.as_view(), name='collect-multicanais'),
-    path('', TopCanaisView.as_view(), name='index'),
+    path('', MultiCanaisView.as_view(), name='index'),
     path('multicanais/', MultiCanaisView.as_view(), name='multicanais'),
     path('multicanais/<int:pk>', ViewChannelMultiCanais.as_view(), name='view-channel-multicanais'),
     path('api/multi/playlist.m3u8', playlist_m3u8_multicanais, name='playlist-m3u8-multicanais'),
