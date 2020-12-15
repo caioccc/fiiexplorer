@@ -26,7 +26,8 @@ from app.views.FilmeView import CollectFilmesCanaisMax, ViewFilmCanaisMax, Filme
 from app.views.FutemaxView import FutemaxView, ViewChannelFutemax, playlist_m3u8_futemax, playlist_other_m3u8_futemax, \
     get_ts_futemax
 from app.views.MultiCanaisView import CollectChannelMultiCanais, CollectAllMultiCanais, MultiCanaisView, \
-    ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais, api_multicanais
+    ViewChannelMultiCanais, playlist_m3u8_multicanais, get_ts_multicanais, gen_lista_multicanais, api_multicanais, \
+    gen_lista_estatica
 from app.views.SerieView import CollectSeries, CollectSerie, ViewSerie, SeriesView, playlist_m3u8_series_canaismax, \
     get_ts_series_canaismax, gen_lista_series_canaismax
 from app.views.TopCanaisView import CollectAllTopCanais, TopCanaisView, ViewChannelTopCanais, CollectChannelTopCanais, \
@@ -95,5 +96,7 @@ urlpatterns = [
     path('api/futemax/playlist.m3u8', playlist_m3u8_futemax, name='playlist-m3u8-futemax'),
     path('api/futemax/other/playlist.m3u8', playlist_other_m3u8_futemax, name='playlist-other-m3u8-futemax'),
     path('api/futemax/ts', get_ts_futemax, name='get-ts-futemax'),
+
+    path('lista-estatica.m3u8', gen_lista_estatica, name='lista-estatica'),
 
 ]

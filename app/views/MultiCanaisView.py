@@ -11,7 +11,7 @@ from django.views.generic import DetailView, TemplateView, ListView
 
 from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais, snifferAoVivoGratis
 from app.models import Channel, Site, Link
-from app.utils import clean_title, remove_iv, check_m3u8_req, get_token_multicanais
+from app.utils import clean_title, remove_iv, check_m3u8_req, get_token_multicanais, get_text_type
 
 
 class CollectChannelMultiCanais(DetailView):
@@ -170,3 +170,52 @@ def api_multicanais(request):
                         'uri': str(custom_m3u8),
                         'img_url': str(ch.img_url)})
     return JsonResponse(entries, safe=False)
+
+
+def gen_lista_estatica(request):
+    f = open("lista-estatica.m3u8", "a")
+    f.truncate(0)
+    f.write("#EXTM3U\n")
+    for ch in Channel.objects.filter(category__site__name='multicanais',
+                                     link__m3u8__icontains='.m3u8').distinct():
+        link = ch.link_set.first()
+        title = clean_title(ch)
+        custom_m3u8 = 'http://' + request.META[
+            'HTTP_HOST'] + '/' + 'api/multicanais/playlist.m3u8?uri=' + link.m3u8
+        group_title = 'Multicanais'
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+            link.id,
+            link.id,
+            title,
+            title,
+            link.id,
+            ch.img_url,
+            group_title,
+            title,
+            custom_m3u8))
+    for ch in Channel.objects.filter(category__site__name='topcanais',
+                                     link__m3u8__icontains='.m3u8').distinct():
+        for link in ch.link_set.filter(m3u8__icontains='.m3u8').distinct():
+            str_type = get_text_type(link)
+            group_title = 'Topcanais'
+            if str_type:
+                title = str_type + ' ' + clean_title(ch)
+                custom_m3u8 = 'http://' + request.META[
+                    'HTTP_HOST'] + '/' + 'api/topcanais/other/playlist.m3u8?uri=' + link.m3u8
+            else:
+                title = clean_title(ch)
+                custom_m3u8 = 'http://' + request.META[
+                    'HTTP_HOST'] + '/' + 'api/topcanais/playlist.m3u8?uri=' + link.m3u8
+            f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+                link.id,
+                link.id,
+                title,
+                title,
+                link.id,
+                ch.img_url,
+                group_title,
+                title,
+                custom_m3u8))
+    f.close()
+    fsock = open("lista-estatica.m3u8", "rb")
+    return HttpResponse(fsock, content_type='text')

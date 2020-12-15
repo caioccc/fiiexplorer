@@ -1,0 +1,373 @@
+#EXTM3U
+#EXTINF:3511, tvg-id="3511 - AMC" tvg-name="AMC - 3511" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="Multicanais",AMC
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/AMCSD/video.m3u8
+#EXTINF:3514, tvg-id="3514 - Globo" tvg-name="Globo - 3514" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="Multicanais",Globo
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/GLOBORJ/video.m3u8
+#EXTINF:3517, tvg-id="3517 - Fox Premium" tvg-name="Fox Premium - 3517" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="Multicanais",Fox Premium
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/FOXPREMIUM/video.m3u8
+#EXTINF:3518, tvg-id="3518 - SPORTV" tvg-name="SPORTV - 3518" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="Multicanais",SPORTV
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SPORTVSD/video.m3u8
+#EXTINF:3521, tvg-id="3521 - Combate" tvg-name="Combate - 3521" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="Multicanais",Combate
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/COMBATE/video.m3u8
+#EXTINF:3524, tvg-id="3524 - Telecine Fun" tvg-name="Telecine Fun - 3524" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-Telecine-FUN-ao-vivo-online-344x193.png" group-title="Multicanais",Telecine Fun
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEFUNSD/video.m3u8
+#EXTINF:3527, tvg-id="3527 - Viva" tvg-name="Viva - 3527" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-VIVA-ao-Vivo-Online-Grátis-HD-344x193.png" group-title="Multicanais",Viva
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/VIVASD/video.m3u8
+#EXTINF:3530, tvg-id="3530 - Nat Geo" tvg-name="Nat Geo - 3530" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-natgeo-ao-vivo-online-grátis-344x193.png" group-title="Multicanais",Nat Geo
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/NATGEO/video.m3u8
+#EXTINF:3532, tvg-id="3532 - Food Network" tvg-name="Food Network - 3532" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-Foodnetwork-ao-vivo-grátis-online-344x193.png" group-title="Multicanais",Food Network
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/FOODNETWORKSD/video.m3u8
+#EXTINF:3535, tvg-id="3535 - Multishow" tvg-name="Multishow - 3535" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-multishow-ao-vivo-344x193.png" group-title="Multicanais",Multishow
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/MULTISHOWSD/video.m3u8
+#EXTINF:3538, tvg-id="3538 - Animal Planet" tvg-name="Animal Planet - 3538" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-animal-planet-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Animal Planet
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/ANIMALPLANETSD/video.m3u8
+#EXTINF:3541, tvg-id="3541 - ESPN 2" tvg-name="ESPN 2 - 3541" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Assistir-ESPN-2-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",ESPN 2
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/ESPN2/video.m3u8
+#EXTINF:3542, tvg-id="3542 - Universal Channel" tvg-name="Universal Channel - 3542" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-universal-online-ao-vivo-344x193.png" group-title="Multicanais",Universal Channel
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/UNIVERSAL/video.m3u8
+#EXTINF:3545, tvg-id="3545 - A&E" tvg-name="A&E - 3545" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-AE-ao-vivo-online-344x193.png" group-title="Multicanais",A&E
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/AEESD/video.m3u8
+#EXTINF:3548, tvg-id="3548 - TLC" tvg-name="TLC - 3548" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-TLC-online-ao-vivo-344x193.png" group-title="Multicanais",TLC
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/TLCSD/video.m3u8
+#EXTINF:3551, tvg-id="3551 - Premiere" tvg-name="Premiere - 3551" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-premiere-ao-vivo-online-344x193.png" group-title="Multicanais",Premiere
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/PREMIERECLUBES/video.m3u8
+#EXTINF:3555, tvg-id="3555 - Premiere 2" tvg-name="Premiere 2 - 3555" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Premiere-2--344x193.png" group-title="Multicanais",Premiere 2
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/PREMIERE2/video.m3u8
+#EXTINF:3556, tvg-id="3556 - E!" tvg-name="E! - 3556" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-e-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",E!
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/ESD/video.m3u8
+#EXTINF:3559, tvg-id="3559 - Comedy Central" tvg-name="Comedy Central - 3559" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-comedy-central-ao-vivo-344x193.png" group-title="Multicanais",Comedy Central
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/COMEDYSD/video.m3u8
+#EXTINF:3562, tvg-id="3562 - SBT" tvg-name="SBT - 3562" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Sbt-ao-vivo-online-344x193.png" group-title="Multicanais",SBT
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/SBT/video.m3u8
+#EXTINF:3563, tvg-id="3563 - Record" tvg-name="Record - 3563" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Record-ao-vivo-online-344x193.png" group-title="Multicanais",Record
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/RECORD/video.m3u8
+#EXTINF:3568, tvg-id="3568 - MTV" tvg-name="MTV - 3568" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-mtv-ao-vivo-online-344x193.png" group-title="Multicanais",MTV
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/MTV/video.m3u8
+#EXTINF:3569, tvg-id="3569 - UFC" tvg-name="UFC - 3569" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/ufc-ao-vivo-online-344x193.jpeg" group-title="Multicanais",UFC
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/COMBATE/video.m3u8
+#EXTINF:3572, tvg-id="3572 - Nick Jr" tvg-name="Nick Jr - 3572" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-nick-jr-ao-vivo-online-344x193.png" group-title="Multicanais",Nick Jr
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/NICKJRSD/video.m3u8
+#EXTINF:3575, tvg-id="3575 - Gloob" tvg-name="Gloob - 3575" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-gloob-ao-vivo-online-344x193.png" group-title="Multicanais",Gloob
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/GLOOBSD/video.m3u8
+#EXTINF:3578, tvg-id="3578 - Band Sports" tvg-name="Band Sports - 3578" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-band-sports-online-ao-vivo-24-horas-344x193.png" group-title="Multicanais",Band Sports
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/BANDSPORTS/video.m3u8
+#EXTINF:3579, tvg-id="3579 - ESPN" tvg-name="ESPN - 3579" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Espn-ao-vivo-online-344x193.png" group-title="Multicanais",ESPN
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/ESPN/video.m3u8
+#EXTINF:3580, tvg-id="3580 - SporTV 3" tvg-name="SporTV 3 - 3580" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv3-ao-vivo-online-344x193.png" group-title="Multicanais",SporTV 3
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/SPORTV3SD/video.m3u8
+#EXTINF:3583, tvg-id="3583 - SporTV 2" tvg-name="SporTV 2 - 3583" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv2-ao-vivo-online-344x193.png" group-title="Multicanais",SporTV 2
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/SPORTV2SD/video.m3u8
+#EXTINF:3586, tvg-id="3586 - GNT" tvg-name="GNT - 3586" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-gnt-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",GNT
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/GNTSD/video.m3u8
+#EXTINF:3589, tvg-id="3589 - Space" tvg-name="Space - 3589" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Space-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Space
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/SPACESD/video.m3u8
+#EXTINF:3592, tvg-id="3592 - Discovery Turbo" tvg-name="Discovery Turbo - 3592" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-turbo-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Discovery Turbo
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYTURBOSD/video.m3u8
+#EXTINF:3595, tvg-id="3595 - Discovery Channel" tvg-name="Discovery Channel - 3595" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Discovery Channel
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYSD/video.m3u8
+#EXTINF:3598, tvg-id="3598 - Discovery Home & Health" tvg-name="Discovery Home & Health - 3598" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Discovery-Home-Health-ao-vivo-online-344x193.png" group-title="Multicanais",Discovery Home & Health
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/HOMEHEALTHSD/video.m3u8
+#EXTINF:3601, tvg-id="3601 - Globo RJ" tvg-name="Globo RJ - 3601" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-RJ-ao-vivo-344x193.png" group-title="Multicanais",Globo RJ
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/GLOBORJ/video.m3u8
+#EXTINF:3603, tvg-id="3603 - Discovery Kids" tvg-name="Discovery Kids - 3603" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-dicovery-kids-ao-vivo-344x193.png" group-title="Multicanais",Discovery Kids
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/DISCOVERYKIDSSD/video.m3u8
+#EXTINF:3606, tvg-id="3606 - Investigação Discovery" tvg-name="Investigação Discovery - 3606" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-id-ao-vivo-online-344x193.png" group-title="Multicanais",Investigação Discovery
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/IDSD/video.m3u8
+#EXTINF:3609, tvg-id="3609 - FX" tvg-name="FX - 3609" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assisitir-fx-ao-vivo-344x193.png" group-title="Multicanais",FX
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/FX/video.m3u8
+#EXTINF:3611, tvg-id="3611 - AXN" tvg-name="AXN - 3611" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-axn-ao-vivo-344x193.png" group-title="Multicanais",AXN
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/AXNSD/video.m3u8
+#EXTINF:3614, tvg-id="3614 - Telecine Action" tvg-name="Telecine Action - 3614" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-action-ao-vivo-344x193.png" group-title="Multicanais",Telecine Action
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/TELECINEACTIONSD/video.m3u8
+#EXTINF:3617, tvg-id="3617 - Telecine Premium" tvg-name="Telecine Premium - 3617" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-premium-344x193.png" group-title="Multicanais",Telecine Premium
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/TELECINEPREMIUMSD/video.m3u8
+#EXTINF:3620, tvg-id="3620 - Fox Sports 2" tvg-name="Fox Sports 2 - 3620" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Fox-Sports-2-ao-vivo-1-344x193.png" group-title="Multicanais",Fox Sports 2
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/FOXSPORTS2/video.m3u8
+#EXTINF:3622, tvg-id="3622 - Globo News" tvg-name="Globo News - 3622" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/globo-news-ao-vivo-online-344x193.png" group-title="Multicanais",Globo News
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/GLOBONEWSSD/video.m3u8
+#EXTINF:3625, tvg-id="3625 - Boomerang" tvg-name="Boomerang - 3625" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-Boomerang-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Boomerang
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/BOOMERANGSD/video.m3u8
+#EXTINF:3628, tvg-id="3628 - TNT" tvg-name="TNT - 3628" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-TNT-ao-vivo-online-344x193.png" group-title="Multicanais",TNT
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/TNTSD/video.m3u8
+#EXTINF:3631, tvg-id="3631 - Warner TV" tvg-name="Warner TV - 3631" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Warner-Ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Warner TV
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/WARNERSD/video.m3u8
+#EXTINF:3634, tvg-id="3634 - Globo" tvg-name="Globo - 3634" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-SP-ao-vivo-344x193.png" group-title="Multicanais",Globo
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/GloboSP/video.m3u8
+#EXTINF:3637, tvg-id="3637 - Syfy" tvg-name="Syfy - 3637" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Syfy-ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Syfy
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SYFYSD/video.m3u8
+#EXTINF:3640, tvg-id="3640 - Fox Channel" tvg-name="Fox Channel - 3640" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-FOX-ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Fox Channel
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/FOX/video.m3u8
+#EXTINF:3642, tvg-id="3642 - Sony Channel" tvg-name="Sony Channel - 3642" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sony-ao-vivo-online-24-horas-1-344x193.png" group-title="Multicanais",Sony Channel
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SONYSD/video.m3u8
+#EXTINF:3645, tvg-id="3645 - Cinemax" tvg-name="Cinemax - 3645" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cinemax-Ao-vivo-Online-Grátis-344x193.png" group-title="Multicanais",Cinemax
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/CINEMAXSD/video.m3u8
+#EXTINF:3648, tvg-id="3648 - Fox Sports" tvg-name="Fox Sports - 3648" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-fox-sports-online-ao-vivo-1-344x193.png" group-title="Multicanais",Fox Sports
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/FOXSPORTS/video.m3u8
+#EXTINF:3650, tvg-id="3650 - Nickelodeon" tvg-name="Nickelodeon - 3650" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Nickelodeon-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Nickelodeon
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/NICKSD/video.m3u8
+#EXTINF:3653, tvg-id="3653 - Cartoon Network" tvg-name="Cartoon Network - 3653" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cartoon-Network-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Cartoon Network
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/CARTOONSD/video.m3u8
+#EXTINF:3656, tvg-id="3656 - ESPN Brasil" tvg-name="ESPN Brasil - 3656" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-espn-brasil-ao-vivo-online-1-1-344x193.png" group-title="Multicanais",ESPN Brasil
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/ESPNBRASIL/video.m3u8
+#EXTINF:3657, tvg-id="3657 - Telecine Pipoca" tvg-name="Telecine Pipoca - 3657" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-pipoca-ao-vivo-344x193.png" group-title="Multicanais",Telecine Pipoca
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEPIPOCASD/video.m3u8
+#EXTINF:3660, tvg-id="3660 - Premiere 6" tvg-name="Premiere 6 - 3660" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-premiere6-ao-vivo-online-344x193.png" group-title="Multicanais",Premiere 6
+http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SPORTV/video.m3u8
+#EXTINF:3382, tvg-id="3382 - SD Hertha Berlin x Union Berlin" tvg-name="SD Hertha Berlin x Union Berlin - 3382" tvg-logo="https://topcanais.com/wp-content/uploads/2020/05/Hertha-Berlin-vs-Union-Berlin-364x205.jpg" group-title="Topcanais",SD Hertha Berlin x Union Berlin
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportssd/video.m3u8
+#EXTINF:3383, tvg-id="3383 - HD Hertha Berlin x Union Berlin" tvg-name="HD Hertha Berlin x Union Berlin - 3383" tvg-logo="https://topcanais.com/wp-content/uploads/2020/05/Hertha-Berlin-vs-Union-Berlin-364x205.jpg" group-title="Topcanais",HD Hertha Berlin x Union Berlin
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportshd/video.m3u8
+#EXTINF:3384, tvg-id="3384 - SD ESPN Brasil" tvg-name="SD ESPN Brasil - 3384" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espnbrasil-364x205.jpg" group-title="Topcanais",SD ESPN Brasil
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnbrasilsd/video.m3u8
+#EXTINF:3385, tvg-id="3385 - HD ESPN Brasil" tvg-name="HD ESPN Brasil - 3385" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espnbrasil-364x205.jpg" group-title="Topcanais",HD ESPN Brasil
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnbrasilhd/video.m3u8
+#EXTINF:3386, tvg-id="3386 - SD ESPN Extra" tvg-name="SD ESPN Extra - 3386" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espnextra-364x205.jpg" group-title="Topcanais",SD ESPN Extra
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/espnextrasd/video.m3u8
+#EXTINF:3387, tvg-id="3387 - HD ESPN Extra" tvg-name="HD ESPN Extra - 3387" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espnextra-364x205.jpg" group-title="Topcanais",HD ESPN Extra
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/espnextrahd/video.m3u8
+#EXTINF:3388, tvg-id="3388 - SD ESPN 2" tvg-name="SD ESPN 2 - 3388" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espn2-364x205.jpg" group-title="Topcanais",SD ESPN 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnmaissd/video.m3u8
+#EXTINF:3389, tvg-id="3389 - HD ESPN 2" tvg-name="HD ESPN 2 - 3389" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espn2-364x205.jpg" group-title="Topcanais",HD ESPN 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnmaishd/video.m3u8
+#EXTINF:3390, tvg-id="3390 - ESPN" tvg-name="ESPN - 3390" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espn-364x205.jpg" group-title="Topcanais",ESPN
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnhd1/video.m3u8
+#EXTINF:3391, tvg-id="3391 - ESPN" tvg-name="ESPN - 3391" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/espn-364x205.jpg" group-title="Topcanais",ESPN
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/espn/video.m3u8
+#EXTINF:3392, tvg-id="3392 - SD Fox Sports" tvg-name="SD Fox Sports - 3392" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/fox-disney-1-364x205.png" group-title="Topcanais",SD Fox Sports
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportssd/video.m3u8
+#EXTINF:3393, tvg-id="3393 - SD Fox Sports 2" tvg-name="SD Fox Sports 2 - 3393" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/foxsports2-364x205.jpg" group-title="Topcanais",SD Fox Sports 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxsports2sd/video.m3u8
+#EXTINF:3394, tvg-id="3394 - SD Combate" tvg-name="SD Combate - 3394" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/combate-364x205.jpg" group-title="Topcanais",SD Combate
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatesd/video.m3u8
+#EXTINF:3395, tvg-id="3395 - SD SporTV 3" tvg-name="SD SporTV 3 - 3395" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/sportv3-364x205.jpg" group-title="Topcanais",SD SporTV 3
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv3sd/video.m3u8
+#EXTINF:3396, tvg-id="3396 - HD SporTV 3" tvg-name="HD SporTV 3 - 3396" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/sportv3-364x205.jpg" group-title="Topcanais",HD SporTV 3
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv3hd/video.m3u8
+#EXTINF:3397, tvg-id="3397 - SD Canal Off" tvg-name="SD Canal Off - 3397" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/canaloff-364x205.jpg" group-title="Topcanais",SD Canal Off
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canaloffsd/video.m3u8
+#EXTINF:3398, tvg-id="3398 - HD Canal Off" tvg-name="HD Canal Off - 3398" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/canaloff-364x205.jpg" group-title="Topcanais",HD Canal Off
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canaloffhd/video.m3u8
+#EXTINF:3399, tvg-id="3399 - SD Band Sports" tvg-name="SD Band Sports - 3399" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/bandsports-364x205.jpg" group-title="Topcanais",SD Band Sports
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandsportssd/video.m3u8
+#EXTINF:3400, tvg-id="3400 - HD Band Sports" tvg-name="HD Band Sports - 3400" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/bandsports-364x205.jpg" group-title="Topcanais",HD Band Sports
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandsportshd/video.m3u8
+#EXTINF:3401, tvg-id="3401 - SD Canal Viva" tvg-name="SD Canal Viva - 3401" tvg-logo="https://topcanais.com/wp-content/uploads/2020/04/viva-364x205.jpg" group-title="Topcanais",SD Canal Viva
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/vivasd/video.m3u8
+#EXTINF:3402, tvg-id="3402 - HD Canal Viva" tvg-name="HD Canal Viva - 3402" tvg-logo="https://topcanais.com/wp-content/uploads/2020/04/viva-364x205.jpg" group-title="Topcanais",HD Canal Viva
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/vivahd/video.m3u8
+#EXTINF:3403, tvg-id="3403 - Globo RJ" tvg-name="Globo RJ - 3403" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/globo-1-364x205.jpg" group-title="Topcanais",Globo RJ
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globorj/video.m3u8
+#EXTINF:3404, tvg-id="3404 - SD RedeTV" tvg-name="SD RedeTV - 3404" tvg-logo="https://topcanais.com/wp-content/uploads/2020/02/Redetv-364x205.jpg" group-title="Topcanais",SD RedeTV
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/redetvsd/video.m3u8
+#EXTINF:3405, tvg-id="3405 - Globo" tvg-name="Globo - 3405" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/globo-1-364x205.jpg" group-title="Topcanais",Globo
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globosp/video.m3u8
+#EXTINF:3406, tvg-id="3406 - HD Globo" tvg-name="HD Globo - 3406" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/globo-1-364x205.jpg" group-title="Topcanais",HD Globo
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globosphd/video.m3u8
+#EXTINF:3407, tvg-id="3407 - SD Band" tvg-name="SD Band - 3407" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/band-2-364x205.jpg" group-title="Topcanais",SD Band
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinassd/video.m3u8
+#EXTINF:3408, tvg-id="3408 - HD Band" tvg-name="HD Band - 3408" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/band-2-364x205.jpg" group-title="Topcanais",HD Band
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinashd/video.m3u8
+#EXTINF:3409, tvg-id="3409 - SD SBT" tvg-name="SD SBT - 3409" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/sbt-1-364x205.jpg" group-title="Topcanais",SD SBT
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sbtsd/video.m3u8
+#EXTINF:3410, tvg-id="3410 - HD SBT" tvg-name="HD SBT - 3410" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/sbt-1-364x205.jpg" group-title="Topcanais",HD SBT
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sbthd/video.m3u8
+#EXTINF:3411, tvg-id="3411 - SD TV Record" tvg-name="SD TV Record - 3411" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/recordtv-1-364x205.jpg" group-title="Topcanais",SD TV Record
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/recordsd/video.m3u8
+#EXTINF:3412, tvg-id="3412 - HD TV Record" tvg-name="HD TV Record - 3412" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/recordtv-1-364x205.jpg" group-title="Topcanais",HD TV Record
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/recordhd/video.m3u8
+#EXTINF:3413, tvg-id="3413 - SD TLC" tvg-name="SD TLC - 3413" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/tlc-364x205.jpg" group-title="Topcanais",SD TLC
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tlcsd/video.m3u8
+#EXTINF:3414, tvg-id="3414 - HD TLC" tvg-name="HD TLC - 3414" tvg-logo="https://topcanais.com/wp-content/uploads/2019/09/tlc-364x205.jpg" group-title="Topcanais",HD TLC
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tlchd/video.m3u8
+#EXTINF:3415, tvg-id="3415 - SD Lifetime" tvg-name="SD Lifetime - 3415" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/lifetime-364x205.jpg" group-title="Topcanais",SD Lifetime
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimesd/video.m3u8
+#EXTINF:3416, tvg-id="3416 - HD Lifetime" tvg-name="HD Lifetime - 3416" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/lifetime-364x205.jpg" group-title="Topcanais",HD Lifetime
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimehd/video.m3u8
+#EXTINF:3417, tvg-id="3417 - Rede Minas" tvg-name="Rede Minas - 3417" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/redeminas-364x205.jpg" group-title="Topcanais",Rede Minas
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globomg/video.m3u8
+#EXTINF:3418, tvg-id="3418 - Rede Minas" tvg-name="Rede Minas - 3418" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/redeminas-364x205.jpg" group-title="Topcanais",Rede Minas
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globomg/video.m3u8
+#EXTINF:3419, tvg-id="3419 - SD E! Entertainment" tvg-name="SD E! Entertainment - 3419" tvg-logo="https://topcanais.com/wp-content/uploads/2020/04/e-entertainment-marketing-campaign-1-638-364x205.jpg" group-title="Topcanais",SD E! Entertainment
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/esd/video.m3u8
+#EXTINF:3420, tvg-id="3420 - SD Discovery World" tvg-name="SD Discovery World - 3420" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoveryworld-364x205.jpg" group-title="Topcanais",SD Discovery World
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryworldsd/video.m3u8
+#EXTINF:3421, tvg-id="3421 - HD Discovery World" tvg-name="HD Discovery World - 3421" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoveryworld-364x205.jpg" group-title="Topcanais",HD Discovery World
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryworldhd/video.m3u8
+#EXTINF:3422, tvg-id="3422 - SD Investigação Discovery" tvg-name="SD Investigação Discovery - 3422" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/investigacaodiscovery-364x205.jpg" group-title="Topcanais",SD Investigação Discovery
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/idsd/video.m3u8
+#EXTINF:3423, tvg-id="3423 - HD Investigação Discovery" tvg-name="HD Investigação Discovery - 3423" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/investigacaodiscovery-364x205.jpg" group-title="Topcanais",HD Investigação Discovery
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/idhd/video.m3u8
+#EXTINF:3424, tvg-id="3424 - SD Discovery Science" tvg-name="SD Discovery Science - 3424" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoverycience-364x205.jpg" group-title="Topcanais",SD Discovery Science
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverysciencesd/video.m3u8
+#EXTINF:3425, tvg-id="3425 - HD Discovery Science" tvg-name="HD Discovery Science - 3425" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoverycience-364x205.jpg" group-title="Topcanais",HD Discovery Science
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverysciencehd/video.m3u8
+#EXTINF:3426, tvg-id="3426 - SD Discovery Turbo" tvg-name="SD Discovery Turbo - 3426" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoveryturbo-364x205.jpg" group-title="Topcanais",SD Discovery Turbo
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryturbosd/video.m3u8
+#EXTINF:3427, tvg-id="3427 - HD Discovery Turbo" tvg-name="HD Discovery Turbo - 3427" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoveryturbo-364x205.jpg" group-title="Topcanais",HD Discovery Turbo
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryturbohd/video.m3u8
+#EXTINF:3428, tvg-id="3428 - SD Discovery Civilization" tvg-name="SD Discovery Civilization - 3428" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoverycivilization-364x205.jpg" group-title="Topcanais",SD Discovery Civilization
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverycivilizationsd/video.m3u8
+#EXTINF:3429, tvg-id="3429 - HD Discovery Civilization" tvg-name="HD Discovery Civilization - 3429" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discoverycivilization-364x205.jpg" group-title="Topcanais",HD Discovery Civilization
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverycivilizationhd/video.m3u8
+#EXTINF:3430, tvg-id="3430 - HD Discovery Channel" tvg-name="HD Discovery Channel - 3430" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/discovery-364x205.jpg" group-title="Topcanais",HD Discovery Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryhd/video.m3u8
+#EXTINF:3431, tvg-id="3431 - SD Animal Planet" tvg-name="SD Animal Planet - 3431" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/animalplanet-364x205.jpg" group-title="Topcanais",SD Animal Planet
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/animalplanetsd/video.m3u8
+#EXTINF:3432, tvg-id="3432 - HD Animal Planet" tvg-name="HD Animal Planet - 3432" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/animalplanet-364x205.jpg" group-title="Topcanais",HD Animal Planet
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/animalplanethd/video.m3u8
+#EXTINF:3433, tvg-id="3433 - SD Discovery Theater" tvg-name="SD Discovery Theater - 3433" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/disccoveryteater-364x205.jpg" group-title="Topcanais",SD Discovery Theater
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverytheatersd/video.m3u8
+#EXTINF:3434, tvg-id="3434 - HD Discovery Theater" tvg-name="HD Discovery Theater - 3434" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/disccoveryteater-364x205.jpg" group-title="Topcanais",HD Discovery Theater
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverytheaterhd/video.m3u8
+#EXTINF:3435, tvg-id="3435 - SD Nat Geo Wild" tvg-name="SD Nat Geo Wild - 3435" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/natgeowild-364x205.jpg" group-title="Topcanais",SD Nat Geo Wild
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeowildsd/video.m3u8
+#EXTINF:3436, tvg-id="3436 - Nat Geo Wild" tvg-name="Nat Geo Wild - 3436" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/natgeowild-364x205.jpg" group-title="Topcanais",Nat Geo Wild
+http://localhost:8000/api/topcanais/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeowild/video.m3u8
+#EXTINF:3437, tvg-id="3437 - SD National Geographic" tvg-name="SD National Geographic - 3437" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/natgeo-364x205.jpg" group-title="Topcanais",SD National Geographic
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natsd/video.m3u8
+#EXTINF:3438, tvg-id="3438 - HD National Geographic" tvg-name="HD National Geographic - 3438" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/natgeo-364x205.jpg" group-title="Topcanais",HD National Geographic
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/nathd/video.m3u8
+#EXTINF:3439, tvg-id="3439 - SD H2" tvg-name="SD H2 - 3439" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/h2-364x205.jpg" group-title="Topcanais",SD H2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/h2sd/video.m3u8
+#EXTINF:3440, tvg-id="3440 - HD H2" tvg-name="HD H2 - 3440" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/h2-364x205.jpg" group-title="Topcanais",HD H2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/h2hd/video.m3u8
+#EXTINF:3441, tvg-id="3441 - SD History" tvg-name="SD History - 3441" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/history-364x205.jpg" group-title="Topcanais",SD History
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/historysd/video.m3u8
+#EXTINF:3442, tvg-id="3442 - HD History" tvg-name="HD History - 3442" tvg-logo="https://topcanais.com/wp-content/uploads/2019/07/history-364x205.jpg" group-title="Topcanais",HD History
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/historyhd/video.m3u8
+#EXTINF:3443, tvg-id="3443 - SD Fox Premium 2" tvg-name="SD Fox Premium 2 - 3443" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/foxpremium2-364x205.jpg" group-title="Topcanais",SD Fox Premium 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxpremium2sd/video.m3u8
+#EXTINF:3444, tvg-id="3444 - HD Fox Premium 2" tvg-name="HD Fox Premium 2 - 3444" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/foxpremium2-364x205.jpg" group-title="Topcanais",HD Fox Premium 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxpremium2hd/video.m3u8
+#EXTINF:3445, tvg-id="3445 - SD Fox Premium" tvg-name="SD Fox Premium - 3445" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/foxpremium1-364x205.jpg" group-title="Topcanais",SD Fox Premium
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxpremiumsd/video.m3u8
+#EXTINF:3446, tvg-id="3446 - HD Fox Premium" tvg-name="HD Fox Premium - 3446" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/foxpremium1-364x205.jpg" group-title="Topcanais",HD Fox Premium
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxpremiumhd/video.m3u8
+#EXTINF:3447, tvg-id="3447 - SD FOX Channel" tvg-name="SD FOX Channel - 3447" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/foxchannel-364x205.jpg" group-title="Topcanais",SD FOX Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsd/video.m3u8
+#EXTINF:3448, tvg-id="3448 - HD FOX Channel" tvg-name="HD FOX Channel - 3448" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/foxchannel-364x205.jpg" group-title="Topcanais",HD FOX Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxhd/video.m3u8
+#EXTINF:3449, tvg-id="3449 - SD TNT" tvg-name="SD TNT - 3449" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/tnt-364x205.jpg" group-title="Topcanais",SD TNT
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tntsd/video.m3u8
+#EXTINF:3450, tvg-id="3450 - HD TNT" tvg-name="HD TNT - 3450" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/tnt-364x205.jpg" group-title="Topcanais",HD TNT
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tnthd/video.m3u8
+#EXTINF:3451, tvg-id="3451 - SD TNT Séries" tvg-name="SD TNT Séries - 3451" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/tntseries-364x205.jpg" group-title="Topcanais",SD TNT Séries
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tntseriessd/video.m3u8
+#EXTINF:3452, tvg-id="3452 - HD TNT Séries" tvg-name="HD TNT Séries - 3452" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/tntseries-364x205.jpg" group-title="Topcanais",HD TNT Séries
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tntserieshd/video.m3u8
+#EXTINF:3453, tvg-id="3453 - SD Space" tvg-name="SD Space - 3453" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/space-364x205.jpg" group-title="Topcanais",SD Space
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/spacesd/video.m3u8
+#EXTINF:3454, tvg-id="3454 - HD Space" tvg-name="HD Space - 3454" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/space-364x205.jpg" group-title="Topcanais",HD Space
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/spacehd/video.m3u8
+#EXTINF:3455, tvg-id="3455 - SD Telecine Action" tvg-name="SD Telecine Action - 3455" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecineaction-364x205.jpg" group-title="Topcanais",SD Telecine Action
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/telecineactionsd/video.m3u8
+#EXTINF:3456, tvg-id="3456 - HD Telecine Action" tvg-name="HD Telecine Action - 3456" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecineaction-364x205.jpg" group-title="Topcanais",HD Telecine Action
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecineactionhd/video.m3u8
+#EXTINF:3457, tvg-id="3457 - SD Telecine Fun" tvg-name="SD Telecine Fun - 3457" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinefun-364x205.jpg" group-title="Topcanais",SD Telecine Fun
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcfunsd/video.m3u8
+#EXTINF:3458, tvg-id="3458 - HD Telecine Fun" tvg-name="HD Telecine Fun - 3458" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinefun-364x205.jpg" group-title="Topcanais",HD Telecine Fun
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcfunhd/video.m3u8
+#EXTINF:3459, tvg-id="3459 - SD Telecine Pipoca" tvg-name="SD Telecine Pipoca - 3459" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinepipoca-364x205.jpg" group-title="Topcanais",SD Telecine Pipoca
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepipocasd/video.m3u8
+#EXTINF:3460, tvg-id="3460 - HD Telecine Pipoca" tvg-name="HD Telecine Pipoca - 3460" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinepipoca-364x205.jpg" group-title="Topcanais",HD Telecine Pipoca
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepipocahd/video.m3u8
+#EXTINF:3461, tvg-id="3461 - SD Telecine Premium" tvg-name="SD Telecine Premium - 3461" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinepremium-364x205.jpg" group-title="Topcanais",SD Telecine Premium
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/telecinepremiumsd/video.m3u8
+#EXTINF:3462, tvg-id="3462 - HD Telecine Premium" tvg-name="HD Telecine Premium - 3462" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinepremium-364x205.jpg" group-title="Topcanais",HD Telecine Premium
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepremiumhd/video.m3u8
+#EXTINF:3463, tvg-id="3463 - SD Telecine Touch" tvg-name="SD Telecine Touch - 3463" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinetouch-364x205.jpg" group-title="Topcanais",SD Telecine Touch
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinetouchsd/video.m3u8
+#EXTINF:3464, tvg-id="3464 - HD Telecine Touch" tvg-name="HD Telecine Touch - 3464" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinetouch-364x205.jpg" group-title="Topcanais",HD Telecine Touch
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinetouchhd/video.m3u8
+#EXTINF:3465, tvg-id="3465 - SD Telecine Cult" tvg-name="SD Telecine Cult - 3465" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinecult-364x205.jpg" group-title="Topcanais",SD Telecine Cult
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinecultsd/video.m3u8
+#EXTINF:3466, tvg-id="3466 - HD Telecine Cult" tvg-name="HD Telecine Cult - 3466" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/telecinecult-364x205.jpg" group-title="Topcanais",HD Telecine Cult
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecineculthd/video.m3u8
+#EXTINF:3467, tvg-id="3467 - SD AMC Brasil" tvg-name="SD AMC Brasil - 3467" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/amc-364x205.jpg" group-title="Topcanais",SD AMC Brasil
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/amcsd/video.m3u8
+#EXTINF:3468, tvg-id="3468 - HD AMC Brasil" tvg-name="HD AMC Brasil - 3468" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/amc-364x205.jpg" group-title="Topcanais",HD AMC Brasil
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/amchd/video.m3u8
+#EXTINF:3469, tvg-id="3469 - SD HBO" tvg-name="SD HBO - 3469" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbo-364x205.jpg" group-title="Topcanais",SD HBO
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/hbosd/video.m3u8
+#EXTINF:3470, tvg-id="3470 - HD HBO" tvg-name="HD HBO - 3470" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbo-364x205.jpg" group-title="Topcanais",HD HBO
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbohd/video.m3u8
+#EXTINF:3471, tvg-id="3471 - SD HBO 2" tvg-name="SD HBO 2 - 3471" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbo2-364x205.jpg" group-title="Topcanais",SD HBO 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbo2sd/video.m3u8
+#EXTINF:3472, tvg-id="3472 - HD HBO 2" tvg-name="HD HBO 2 - 3472" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbo2-364x205.jpg" group-title="Topcanais",HD HBO 2
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbo2hd/video.m3u8
+#EXTINF:3473, tvg-id="3473 - SD HBO Plus" tvg-name="SD HBO Plus - 3473" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hboplus-364x205.jpg" group-title="Topcanais",SD HBO Plus
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplussd/video.m3u8
+#EXTINF:3474, tvg-id="3474 - HD HBO Plus" tvg-name="HD HBO Plus - 3474" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hboplus-364x205.jpg" group-title="Topcanais",HD HBO Plus
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplushd/video.m3u8
+#EXTINF:3475, tvg-id="3475 - SD HBO Family" tvg-name="SD HBO Family - 3475" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbofamily-364x205.jpg" group-title="Topcanais",SD HBO Family
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbofamilysd/video.m3u8
+#EXTINF:3476, tvg-id="3476 - HD HBO Family" tvg-name="HD HBO Family - 3476" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbofamily-364x205.jpg" group-title="Topcanais",HD HBO Family
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbofamilyhd/video.m3u8
+#EXTINF:3477, tvg-id="3477 - SD HBO Signature" tvg-name="SD HBO Signature - 3477" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbosignature-364x205.jpg" group-title="Topcanais",SD HBO Signature
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbosignaturesd/video.m3u8
+#EXTINF:3478, tvg-id="3478 - HD HBO Signature" tvg-name="HD HBO Signature - 3478" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/hbosignature-364x205.jpg" group-title="Topcanais",HD HBO Signature
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbosignaturehd/video.m3u8
+#EXTINF:3479, tvg-id="3479 - SD Universal Channel" tvg-name="SD Universal Channel - 3479" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/universaltv-364x205.jpg" group-title="Topcanais",SD Universal Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/universalsd/video.m3u8
+#EXTINF:3480, tvg-id="3480 - HD Universal Channel" tvg-name="HD Universal Channel - 3480" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/universaltv-364x205.jpg" group-title="Topcanais",HD Universal Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/universalhd/video.m3u8
+#EXTINF:3481, tvg-id="3481 - SD Studio Universal" tvg-name="SD Studio Universal - 3481" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/studiouniversal-364x205.jpg" group-title="Topcanais",SD Studio Universal
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/studiouniversalsd/video.m3u8
+#EXTINF:3482, tvg-id="3482 - SD Warner" tvg-name="SD Warner - 3482" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/warner-364x205.jpg" group-title="Topcanais",SD Warner
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/warnerbrosssd/video.m3u8
+#EXTINF:3483, tvg-id="3483 - HD Warner" tvg-name="HD Warner - 3483" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/warner-364x205.jpg" group-title="Topcanais",HD Warner
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/warnerbrosshd/video.m3u8
+#EXTINF:3484, tvg-id="3484 - SD Max" tvg-name="SD Max - 3484" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/max-364x205.jpg" group-title="Topcanais",SD Max
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxsd/video.m3u8
+#EXTINF:3485, tvg-id="3485 - HD Max" tvg-name="HD Max - 3485" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/max-364x205.jpg" group-title="Topcanais",HD Max
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxhd/video.m3u8
+#EXTINF:3486, tvg-id="3486 - SD Max UP" tvg-name="SD Max UP - 3486" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/maxup-364x205.jpg" group-title="Topcanais",SD Max UP
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxupsd/video.m3u8
+#EXTINF:3487, tvg-id="3487 - HD Max UP" tvg-name="HD Max UP - 3487" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/maxup-364x205.jpg" group-title="Topcanais",HD Max UP
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxuphd/video.m3u8
+#EXTINF:3488, tvg-id="3488 - SD MAX Prime" tvg-name="SD MAX Prime - 3488" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/maxprime-364x205.jpg" group-title="Topcanais",SD MAX Prime
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxprimesd/video.m3u8
+#EXTINF:3489, tvg-id="3489 - HD MAX Prime" tvg-name="HD MAX Prime - 3489" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/maxprime-364x205.jpg" group-title="Topcanais",HD MAX Prime
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxprimehd/video.m3u8
+#EXTINF:3490, tvg-id="3490 - SD Cinemax" tvg-name="SD Cinemax - 3490" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/cinemax-364x205.jpg" group-title="Topcanais",SD Cinemax
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cinemaxsd/video.m3u8
+#EXTINF:3491, tvg-id="3491 - HD Cinemax" tvg-name="HD Cinemax - 3491" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/cinemax-364x205.jpg" group-title="Topcanais",HD Cinemax
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cinemaxhd/video.m3u8
+#EXTINF:3492, tvg-id="3492 - SD FX" tvg-name="SD FX - 3492" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/fx-364x205.jpg" group-title="Topcanais",SD FX
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fxsd/video.m3u8
+#EXTINF:3493, tvg-id="3493 - HD FX" tvg-name="HD FX - 3493" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/fx-364x205.jpg" group-title="Topcanais",HD FX
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fxhd/video.m3u8
+#EXTINF:3494, tvg-id="3494 - SD A&E" tvg-name="SD A&E - 3494" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/aee-364x205.jpg" group-title="Topcanais",SD A&E
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/aesd/video.m3u8
+#EXTINF:3495, tvg-id="3495 - HD A&E" tvg-name="HD A&E - 3495" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/aee-364x205.jpg" group-title="Topcanais",HD A&E
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/aehd/video.m3u8
+#EXTINF:3496, tvg-id="3496 - SD Sony" tvg-name="SD Sony - 3496" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/sony-364x205.jpg" group-title="Topcanais",SD Sony
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sonysd/video.m3u8
+#EXTINF:3497, tvg-id="3497 - HD Sony" tvg-name="HD Sony - 3497" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/sony-364x205.jpg" group-title="Topcanais",HD Sony
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sonyhd/video.m3u8
+#EXTINF:3498, tvg-id="3498 - SD AXN" tvg-name="SD AXN - 3498" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/axn-364x205.jpg" group-title="Topcanais",SD AXN
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/axnsd/video.m3u8
+#EXTINF:3499, tvg-id="3499 - HD AXN" tvg-name="HD AXN - 3499" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/axn-364x205.jpg" group-title="Topcanais",HD AXN
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/axnhd/video.m3u8
+#EXTINF:3500, tvg-id="3500 - SD Syfy" tvg-name="SD Syfy - 3500" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/syfy-364x205.jpg" group-title="Topcanais",SD Syfy
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/syfysd/video.m3u8
+#EXTINF:3501, tvg-id="3501 - HD Syfy" tvg-name="HD Syfy - 3501" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/syfy-364x205.jpg" group-title="Topcanais",HD Syfy
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/syfyhd/video.m3u8
+#EXTINF:3502, tvg-id="3502 - SD Curta!" tvg-name="SD Curta! - 3502" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/curta-364x205.jpg" group-title="Topcanais",SD Curta!
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/curtasd/video.m3u8
+#EXTINF:3503, tvg-id="3503 - HD Curta!" tvg-name="HD Curta! - 3503" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/curta-364x205.jpg" group-title="Topcanais",HD Curta!
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/curtahd/video.m3u8
+#EXTINF:3504, tvg-id="3504 - HD Comedy Central" tvg-name="HD Comedy Central - 3504" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/comedycentral-364x205.jpg" group-title="Topcanais",HD Comedy Central
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/comedycentralhd/video.m3u8
+#EXTINF:3505, tvg-id="3505 - SD TCM" tvg-name="SD TCM - 3505" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/tcm-364x205.jpg" group-title="Topcanais",SD TCM
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcmsd/video.m3u8
+#EXTINF:3506, tvg-id="3506 - HD TCM" tvg-name="HD TCM - 3506" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/tcm-364x205.jpg" group-title="Topcanais",HD TCM
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcmhd/video.m3u8
+#EXTINF:3507, tvg-id="3507 - SD Paramount Channel" tvg-name="SD Paramount Channel - 3507" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/paramountchannel-364x205.jpg" group-title="Topcanais",SD Paramount Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/paramountchannelsd/video.m3u8
+#EXTINF:3508, tvg-id="3508 - HD Paramount Channel" tvg-name="HD Paramount Channel - 3508" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/paramountchannel-364x205.jpg" group-title="Topcanais",HD Paramount Channel
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/paramountchannelhd/video.m3u8
+#EXTINF:3509, tvg-id="3509 - SD Lifetime" tvg-name="SD Lifetime - 3509" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/lifetime-364x205.jpg" group-title="Topcanais",SD Lifetime
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimesd/video.m3u8
+#EXTINF:3510, tvg-id="3510 - HD Lifetime" tvg-name="HD Lifetime - 3510" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/lifetime-364x205.jpg" group-title="Topcanais",HD Lifetime
+http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimehd/video.m3u8
