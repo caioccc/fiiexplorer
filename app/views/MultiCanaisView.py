@@ -181,7 +181,7 @@ def gen_lista_estatica(request):
         link = ch.link_set.first()
         title = clean_title(ch)
         custom_m3u8 = 'http://' + request.META[
-            'HTTP_HOST'] + '/' + 'api/multicanais/playlist.m3u8?uri=' + link.m3u8
+            'HTTP_HOST'] + '/' + 'api/multi/playlist.m3u8?uri=' + link.m3u8
         group_title = 'Multicanais'
         f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
             link.id,
