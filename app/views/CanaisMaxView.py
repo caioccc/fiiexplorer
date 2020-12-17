@@ -98,7 +98,8 @@ class ViewChannelCanaisMax(LoginRequiredMixin, DetailView):
 
 
 def playlist_m3u8_canaismax(request):
-    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36}'}
     uri_m3u8 = request.GET['uri']
     try:
         req = requests.get(url=uri_m3u8, headers=headers)
@@ -129,7 +130,8 @@ def playlist_m3u8_canaismax(request):
 
 
 def playlist_other_m3u8_canaismax(request):
-    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36}'}
     uri_m3u8 = request.GET['uri']
     try:
         req = requests.get(url=uri_m3u8, headers=headers)
@@ -164,7 +166,8 @@ def replace_page_str(arr_strings, page_str, request):
 
 def get_ts_canaismax(request):
     key = request.GET['link']
-    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/'}
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36}'}
     try:
         req = requests.get(url=key, stream=True, timeout=60, headers=headers)
         if req.status_code == 200:
@@ -203,5 +206,6 @@ def get_lista_canaismax(request):
                 '',
                 title,
                 custom_m3u8))
+    f.close()
     fsock = open("lista-canaismax.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')

@@ -263,7 +263,9 @@ def save_link_channel_topcanais(canal, id_url):
 
 def save_link_channel(canal, id_url):
     m3u8, swarmId = get_m3u8_and_swarmid(id_url)
-    if m3u8:
+    headers = {'origin': 'https://canaismax.com', 'referer': 'https://canaismax.com/',
+               'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36}'}
+    if check_m3u8_req(m3u8, headers):
         try:
             link = Link()
             link.url = id_url

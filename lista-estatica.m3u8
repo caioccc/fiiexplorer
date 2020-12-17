@@ -1,118 +1,116 @@
 #EXTM3U
-#EXTINF:3511, tvg-id="3511 - AMC" tvg-name="AMC - 3511" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="Multicanais",AMC
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/AMCSD/video.m3u8
-#EXTINF:3514, tvg-id="3514 - Globo" tvg-name="Globo - 3514" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="Multicanais",Globo
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/GLOBORJ/video.m3u8
-#EXTINF:3517, tvg-id="3517 - Fox Premium" tvg-name="Fox Premium - 3517" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="Multicanais",Fox Premium
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/FOXPREMIUM/video.m3u8
-#EXTINF:3518, tvg-id="3518 - SPORTV" tvg-name="SPORTV - 3518" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="Multicanais",SPORTV
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SPORTVSD/video.m3u8
-#EXTINF:3521, tvg-id="3521 - Combate" tvg-name="Combate - 3521" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="Multicanais",Combate
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/COMBATE/video.m3u8
-#EXTINF:3524, tvg-id="3524 - Telecine Fun" tvg-name="Telecine Fun - 3524" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-Telecine-FUN-ao-vivo-online-344x193.png" group-title="Multicanais",Telecine Fun
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEFUNSD/video.m3u8
-#EXTINF:3527, tvg-id="3527 - Viva" tvg-name="Viva - 3527" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-VIVA-ao-Vivo-Online-Grátis-HD-344x193.png" group-title="Multicanais",Viva
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/VIVASD/video.m3u8
-#EXTINF:3530, tvg-id="3530 - Nat Geo" tvg-name="Nat Geo - 3530" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-natgeo-ao-vivo-online-grátis-344x193.png" group-title="Multicanais",Nat Geo
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/NATGEO/video.m3u8
-#EXTINF:3532, tvg-id="3532 - Food Network" tvg-name="Food Network - 3532" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-Foodnetwork-ao-vivo-grátis-online-344x193.png" group-title="Multicanais",Food Network
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/FOODNETWORKSD/video.m3u8
-#EXTINF:3535, tvg-id="3535 - Multishow" tvg-name="Multishow - 3535" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-multishow-ao-vivo-344x193.png" group-title="Multicanais",Multishow
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/MULTISHOWSD/video.m3u8
-#EXTINF:3538, tvg-id="3538 - Animal Planet" tvg-name="Animal Planet - 3538" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-animal-planet-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Animal Planet
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/ANIMALPLANETSD/video.m3u8
-#EXTINF:3541, tvg-id="3541 - ESPN 2" tvg-name="ESPN 2 - 3541" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Assistir-ESPN-2-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",ESPN 2
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/ESPN2/video.m3u8
-#EXTINF:3542, tvg-id="3542 - Universal Channel" tvg-name="Universal Channel - 3542" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-universal-online-ao-vivo-344x193.png" group-title="Multicanais",Universal Channel
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/UNIVERSAL/video.m3u8
-#EXTINF:3545, tvg-id="3545 - A&E" tvg-name="A&E - 3545" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-AE-ao-vivo-online-344x193.png" group-title="Multicanais",A&E
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/AEESD/video.m3u8
-#EXTINF:3548, tvg-id="3548 - TLC" tvg-name="TLC - 3548" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-TLC-online-ao-vivo-344x193.png" group-title="Multicanais",TLC
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/TLCSD/video.m3u8
-#EXTINF:3551, tvg-id="3551 - Premiere" tvg-name="Premiere - 3551" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-premiere-ao-vivo-online-344x193.png" group-title="Multicanais",Premiere
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/PREMIERECLUBES/video.m3u8
-#EXTINF:3555, tvg-id="3555 - Premiere 2" tvg-name="Premiere 2 - 3555" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Premiere-2--344x193.png" group-title="Multicanais",Premiere 2
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/PREMIERE2/video.m3u8
-#EXTINF:3556, tvg-id="3556 - E!" tvg-name="E! - 3556" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-e-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",E!
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/ESD/video.m3u8
-#EXTINF:3559, tvg-id="3559 - Comedy Central" tvg-name="Comedy Central - 3559" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-comedy-central-ao-vivo-344x193.png" group-title="Multicanais",Comedy Central
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/COMEDYSD/video.m3u8
-#EXTINF:3562, tvg-id="3562 - SBT" tvg-name="SBT - 3562" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Sbt-ao-vivo-online-344x193.png" group-title="Multicanais",SBT
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/SBT/video.m3u8
-#EXTINF:3563, tvg-id="3563 - Record" tvg-name="Record - 3563" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Record-ao-vivo-online-344x193.png" group-title="Multicanais",Record
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/RECORD/video.m3u8
-#EXTINF:3568, tvg-id="3568 - MTV" tvg-name="MTV - 3568" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-mtv-ao-vivo-online-344x193.png" group-title="Multicanais",MTV
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/MTV/video.m3u8
-#EXTINF:3569, tvg-id="3569 - UFC" tvg-name="UFC - 3569" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/ufc-ao-vivo-online-344x193.jpeg" group-title="Multicanais",UFC
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/COMBATE/video.m3u8
-#EXTINF:3572, tvg-id="3572 - Nick Jr" tvg-name="Nick Jr - 3572" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-nick-jr-ao-vivo-online-344x193.png" group-title="Multicanais",Nick Jr
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/NICKJRSD/video.m3u8
-#EXTINF:3575, tvg-id="3575 - Gloob" tvg-name="Gloob - 3575" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-gloob-ao-vivo-online-344x193.png" group-title="Multicanais",Gloob
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/GLOOBSD/video.m3u8
-#EXTINF:3578, tvg-id="3578 - Band Sports" tvg-name="Band Sports - 3578" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-band-sports-online-ao-vivo-24-horas-344x193.png" group-title="Multicanais",Band Sports
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/BANDSPORTS/video.m3u8
-#EXTINF:3579, tvg-id="3579 - ESPN" tvg-name="ESPN - 3579" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Espn-ao-vivo-online-344x193.png" group-title="Multicanais",ESPN
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/ESPN/video.m3u8
-#EXTINF:3580, tvg-id="3580 - SporTV 3" tvg-name="SporTV 3 - 3580" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv3-ao-vivo-online-344x193.png" group-title="Multicanais",SporTV 3
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/SPORTV3SD/video.m3u8
-#EXTINF:3583, tvg-id="3583 - SporTV 2" tvg-name="SporTV 2 - 3583" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv2-ao-vivo-online-344x193.png" group-title="Multicanais",SporTV 2
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/SPORTV2SD/video.m3u8
-#EXTINF:3586, tvg-id="3586 - GNT" tvg-name="GNT - 3586" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-gnt-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",GNT
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/GNTSD/video.m3u8
-#EXTINF:3589, tvg-id="3589 - Space" tvg-name="Space - 3589" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Space-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Space
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/SPACESD/video.m3u8
-#EXTINF:3592, tvg-id="3592 - Discovery Turbo" tvg-name="Discovery Turbo - 3592" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-turbo-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Discovery Turbo
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYTURBOSD/video.m3u8
-#EXTINF:3595, tvg-id="3595 - Discovery Channel" tvg-name="Discovery Channel - 3595" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Discovery Channel
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYSD/video.m3u8
-#EXTINF:3598, tvg-id="3598 - Discovery Home & Health" tvg-name="Discovery Home & Health - 3598" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Discovery-Home-Health-ao-vivo-online-344x193.png" group-title="Multicanais",Discovery Home & Health
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/HOMEHEALTHSD/video.m3u8
-#EXTINF:3601, tvg-id="3601 - Globo RJ" tvg-name="Globo RJ - 3601" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-RJ-ao-vivo-344x193.png" group-title="Multicanais",Globo RJ
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/GLOBORJ/video.m3u8
-#EXTINF:3603, tvg-id="3603 - Discovery Kids" tvg-name="Discovery Kids - 3603" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-dicovery-kids-ao-vivo-344x193.png" group-title="Multicanais",Discovery Kids
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/DISCOVERYKIDSSD/video.m3u8
-#EXTINF:3606, tvg-id="3606 - Investigação Discovery" tvg-name="Investigação Discovery - 3606" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-id-ao-vivo-online-344x193.png" group-title="Multicanais",Investigação Discovery
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/IDSD/video.m3u8
-#EXTINF:3609, tvg-id="3609 - FX" tvg-name="FX - 3609" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assisitir-fx-ao-vivo-344x193.png" group-title="Multicanais",FX
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/FX/video.m3u8
-#EXTINF:3611, tvg-id="3611 - AXN" tvg-name="AXN - 3611" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-axn-ao-vivo-344x193.png" group-title="Multicanais",AXN
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/AXNSD/video.m3u8
-#EXTINF:3614, tvg-id="3614 - Telecine Action" tvg-name="Telecine Action - 3614" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-action-ao-vivo-344x193.png" group-title="Multicanais",Telecine Action
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/TELECINEACTIONSD/video.m3u8
-#EXTINF:3617, tvg-id="3617 - Telecine Premium" tvg-name="Telecine Premium - 3617" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-premium-344x193.png" group-title="Multicanais",Telecine Premium
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/TELECINEPREMIUMSD/video.m3u8
-#EXTINF:3620, tvg-id="3620 - Fox Sports 2" tvg-name="Fox Sports 2 - 3620" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Fox-Sports-2-ao-vivo-1-344x193.png" group-title="Multicanais",Fox Sports 2
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/FOXSPORTS2/video.m3u8
-#EXTINF:3622, tvg-id="3622 - Globo News" tvg-name="Globo News - 3622" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/globo-news-ao-vivo-online-344x193.png" group-title="Multicanais",Globo News
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/GLOBONEWSSD/video.m3u8
-#EXTINF:3625, tvg-id="3625 - Boomerang" tvg-name="Boomerang - 3625" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-Boomerang-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Boomerang
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/BOOMERANGSD/video.m3u8
-#EXTINF:3628, tvg-id="3628 - TNT" tvg-name="TNT - 3628" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-TNT-ao-vivo-online-344x193.png" group-title="Multicanais",TNT
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/TNTSD/video.m3u8
-#EXTINF:3631, tvg-id="3631 - Warner TV" tvg-name="Warner TV - 3631" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Warner-Ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Warner TV
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/WARNERSD/video.m3u8
-#EXTINF:3634, tvg-id="3634 - Globo" tvg-name="Globo - 3634" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-SP-ao-vivo-344x193.png" group-title="Multicanais",Globo
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/GloboSP/video.m3u8
-#EXTINF:3637, tvg-id="3637 - Syfy" tvg-name="Syfy - 3637" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Syfy-ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Syfy
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SYFYSD/video.m3u8
-#EXTINF:3640, tvg-id="3640 - Fox Channel" tvg-name="Fox Channel - 3640" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-FOX-ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Fox Channel
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/FOX/video.m3u8
-#EXTINF:3642, tvg-id="3642 - Sony Channel" tvg-name="Sony Channel - 3642" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sony-ao-vivo-online-24-horas-1-344x193.png" group-title="Multicanais",Sony Channel
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SONYSD/video.m3u8
-#EXTINF:3645, tvg-id="3645 - Cinemax" tvg-name="Cinemax - 3645" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cinemax-Ao-vivo-Online-Grátis-344x193.png" group-title="Multicanais",Cinemax
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/CINEMAXSD/video.m3u8
-#EXTINF:3648, tvg-id="3648 - Fox Sports" tvg-name="Fox Sports - 3648" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-fox-sports-online-ao-vivo-1-344x193.png" group-title="Multicanais",Fox Sports
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.esporteflix.com/FOXSPORTS/video.m3u8
-#EXTINF:3650, tvg-id="3650 - Nickelodeon" tvg-name="Nickelodeon - 3650" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Nickelodeon-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Nickelodeon
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/NICKSD/video.m3u8
-#EXTINF:3653, tvg-id="3653 - Cartoon Network" tvg-name="Cartoon Network - 3653" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cartoon-Network-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Cartoon Network
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/CARTOONSD/video.m3u8
-#EXTINF:3656, tvg-id="3656 - ESPN Brasil" tvg-name="ESPN Brasil - 3656" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-espn-brasil-ao-vivo-online-1-1-344x193.png" group-title="Multicanais",ESPN Brasil
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.multicanais.tv/ESPNBRASIL/video.m3u8
-#EXTINF:3657, tvg-id="3657 - Telecine Pipoca" tvg-name="Telecine Pipoca - 3657" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-pipoca-ao-vivo-344x193.png" group-title="Multicanais",Telecine Pipoca
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEPIPOCASD/video.m3u8
-#EXTINF:3660, tvg-id="3660 - Premiere 6" tvg-name="Premiere 6 - 3660" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-premiere6-ao-vivo-online-344x193.png" group-title="Multicanais",Premiere 6
-http://localhost:8000/api/multicanais/playlist.m3u8?uri=https://live.netcanais.com/SPORTV/video.m3u8
+#EXTINF:3661, tvg-id="3661 - AMC" tvg-name="AMC - 3661" tvg-logo="https://multicanais.com/wp-content/uploads/2020/06/amc-ao-vivo-249x140.jpg" group-title="Multicanais",AMC
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/AMCSD/video.m3u8
+#EXTINF:3664, tvg-id="3664 - Globo" tvg-name="Globo - 3664" tvg-logo="https://multicanais.com/wp-content/uploads/2020/05/globo-Ao-vivo-Hoje-344x193.png" group-title="Multicanais",Globo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/GLOBORJ/video.m3u8
+#EXTINF:3667, tvg-id="3667 - Fox Premium" tvg-name="Fox Premium - 3667" tvg-logo="https://multicanais.com/wp-content/uploads/2019/12/Assistir-FOX-Premium-ao-vivo-online-hd-grátis-344x193.png" group-title="Multicanais",Fox Premium
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/FOXPREMIUM/video.m3u8
+#EXTINF:3668, tvg-id="3668 - SPORTV" tvg-name="SPORTV - 3668" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv-ao-vivo-online-1-344x193.png" group-title="Multicanais",SPORTV
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/SPORTVSD/video.m3u8
+#EXTINF:3671, tvg-id="3671 - Combate" tvg-name="Combate - 3671" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-combate-online-ao-vivo-24-horas-1-344x193.png" group-title="Multicanais",Combate
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/COMBATE/video.m3u8
+#EXTINF:3674, tvg-id="3674 - Telecine Fun" tvg-name="Telecine Fun - 3674" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-Telecine-FUN-ao-vivo-online-344x193.png" group-title="Multicanais",Telecine Fun
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/TELECINEFUNSD/video.m3u8
+#EXTINF:3677, tvg-id="3677 - Viva" tvg-name="Viva - 3677" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-VIVA-ao-Vivo-Online-Grátis-HD-344x193.png" group-title="Multicanais",Viva
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/VIVASD/video.m3u8
+#EXTINF:3680, tvg-id="3680 - Nat Geo" tvg-name="Nat Geo - 3680" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/assistir-natgeo-ao-vivo-online-grátis-344x193.png" group-title="Multicanais",Nat Geo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/NATGEO/video.m3u8
+#EXTINF:3682, tvg-id="3682 - Food Network" tvg-name="Food Network - 3682" tvg-logo="https://multicanais.com/wp-content/uploads/2019/07/Assisitir-Foodnetwork-ao-vivo-grátis-online-344x193.png" group-title="Multicanais",Food Network
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/FOODNETWORKSD/video.m3u8
+#EXTINF:3685, tvg-id="3685 - Multishow" tvg-name="Multishow - 3685" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-multishow-ao-vivo-344x193.png" group-title="Multicanais",Multishow
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/MULTISHOWSD/video.m3u8
+#EXTINF:3688, tvg-id="3688 - Animal Planet" tvg-name="Animal Planet - 3688" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-animal-planet-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Animal Planet
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/ANIMALPLANETSD/video.m3u8
+#EXTINF:3691, tvg-id="3691 - ESPN 2" tvg-name="ESPN 2 - 3691" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/Assistir-ESPN-2-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",ESPN 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/ESPN2/video.m3u8
+#EXTINF:3692, tvg-id="3692 - Universal Channel" tvg-name="Universal Channel - 3692" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-universal-online-ao-vivo-344x193.png" group-title="Multicanais",Universal Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/UNIVERSAL/video.m3u8
+#EXTINF:3695, tvg-id="3695 - A&E" tvg-name="A&E - 3695" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-AE-ao-vivo-online-344x193.png" group-title="Multicanais",A&E
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/AEESD/video.m3u8
+#EXTINF:3698, tvg-id="3698 - TLC" tvg-name="TLC - 3698" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-TLC-online-ao-vivo-344x193.png" group-title="Multicanais",TLC
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/TLCSD/video.m3u8
+#EXTINF:3701, tvg-id="3701 - Premiere" tvg-name="Premiere - 3701" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-premiere-ao-vivo-online-344x193.png" group-title="Multicanais",Premiere
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/PREMIERECLUBES/video.m3u8
+#EXTINF:3705, tvg-id="3705 - E!" tvg-name="E! - 3705" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-e-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",E!
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/ESD/video.m3u8
+#EXTINF:3708, tvg-id="3708 - Comedy Central" tvg-name="Comedy Central - 3708" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-comedy-central-ao-vivo-344x193.png" group-title="Multicanais",Comedy Central
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/COMEDYSD/video.m3u8
+#EXTINF:3711, tvg-id="3711 - SBT" tvg-name="SBT - 3711" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Sbt-ao-vivo-online-344x193.png" group-title="Multicanais",SBT
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/SBT/video.m3u8
+#EXTINF:3712, tvg-id="3712 - Record" tvg-name="Record - 3712" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Record-ao-vivo-online-344x193.png" group-title="Multicanais",Record
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/RECORD/video.m3u8
+#EXTINF:3717, tvg-id="3717 - Band" tvg-name="Band - 3717" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Band-Ao-vivo-online-344x193.png" group-title="Multicanais",Band
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/BAND/video.m3u8
+#EXTINF:3719, tvg-id="3719 - History" tvg-name="History - 3719" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-history-ao-vivo-online-344x193.png" group-title="Multicanais",History
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/HISTORY/video.m3u8
+#EXTINF:3720, tvg-id="3720 - MTV" tvg-name="MTV - 3720" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-mtv-ao-vivo-online-344x193.png" group-title="Multicanais",MTV
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/MTV/video.m3u8
+#EXTINF:3722, tvg-id="3722 - UFC" tvg-name="UFC - 3722" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/ufc-ao-vivo-online-344x193.jpeg" group-title="Multicanais",UFC
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/COMBATE/video.m3u8
+#EXTINF:3725, tvg-id="3725 - Gloob" tvg-name="Gloob - 3725" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-gloob-ao-vivo-online-344x193.png" group-title="Multicanais",Gloob
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/GLOOBSD/video.m3u8
+#EXTINF:3728, tvg-id="3728 - Band Sports" tvg-name="Band Sports - 3728" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-band-sports-online-ao-vivo-24-horas-344x193.png" group-title="Multicanais",Band Sports
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/BANDSPORTS/video.m3u8
+#EXTINF:3729, tvg-id="3729 - ESPN" tvg-name="ESPN - 3729" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Espn-ao-vivo-online-344x193.png" group-title="Multicanais",ESPN
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/ESPN/video.m3u8
+#EXTINF:3730, tvg-id="3730 - SporTV 3" tvg-name="SporTV 3 - 3730" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv3-ao-vivo-online-344x193.png" group-title="Multicanais",SporTV 3
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/SPORTV3SD/video.m3u8
+#EXTINF:3733, tvg-id="3733 - SporTV 2" tvg-name="SporTV 2 - 3733" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sportv2-ao-vivo-online-344x193.png" group-title="Multicanais",SporTV 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/SPORTV2SD/video.m3u8
+#EXTINF:3736, tvg-id="3736 - GNT" tvg-name="GNT - 3736" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-gnt-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",GNT
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/GNTSD/video.m3u8
+#EXTINF:3739, tvg-id="3739 - Space" tvg-name="Space - 3739" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Space-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Space
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/SPACESD/video.m3u8
+#EXTINF:3742, tvg-id="3742 - Discovery Turbo" tvg-name="Discovery Turbo - 3742" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-turbo-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Discovery Turbo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYTURBOSD/video.m3u8
+#EXTINF:3745, tvg-id="3745 - Discovery Channel" tvg-name="Discovery Channel - 3745" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-discovery-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Discovery Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/DISCOVERYSD/video.m3u8
+#EXTINF:3748, tvg-id="3748 - Discovery Home & Health" tvg-name="Discovery Home & Health - 3748" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Discovery-Home-Health-ao-vivo-online-344x193.png" group-title="Multicanais",Discovery Home & Health
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/HOMEHEALTHSD/video.m3u8
+#EXTINF:3751, tvg-id="3751 - Globo RJ" tvg-name="Globo RJ - 3751" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-RJ-ao-vivo-344x193.png" group-title="Multicanais",Globo RJ
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/GLOBORJ/video.m3u8
+#EXTINF:3753, tvg-id="3753 - Discovery Kids" tvg-name="Discovery Kids - 3753" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-dicovery-kids-ao-vivo-344x193.png" group-title="Multicanais",Discovery Kids
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/DISCOVERYKIDSSD/video.m3u8
+#EXTINF:3756, tvg-id="3756 - FX" tvg-name="FX - 3756" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assisitir-fx-ao-vivo-344x193.png" group-title="Multicanais",FX
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/FX/video.m3u8
+#EXTINF:3758, tvg-id="3758 - AXN" tvg-name="AXN - 3758" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-axn-ao-vivo-344x193.png" group-title="Multicanais",AXN
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/AXNSD/video.m3u8
+#EXTINF:3761, tvg-id="3761 - Telecine Action" tvg-name="Telecine Action - 3761" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-action-ao-vivo-344x193.png" group-title="Multicanais",Telecine Action
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/TELECINEACTIONSD/video.m3u8
+#EXTINF:3764, tvg-id="3764 - Telecine Premium" tvg-name="Telecine Premium - 3764" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-premium-344x193.png" group-title="Multicanais",Telecine Premium
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/TELECINEPREMIUMSD/video.m3u8
+#EXTINF:3767, tvg-id="3767 - Fox Sports 2" tvg-name="Fox Sports 2 - 3767" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Fox-Sports-2-ao-vivo-1-344x193.png" group-title="Multicanais",Fox Sports 2
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/FOXSPORTS2/video.m3u8
+#EXTINF:3769, tvg-id="3769 - Globo News" tvg-name="Globo News - 3769" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/globo-news-ao-vivo-online-344x193.png" group-title="Multicanais",Globo News
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/GLOBONEWSSD/video.m3u8
+#EXTINF:3772, tvg-id="3772 - Boomerang" tvg-name="Boomerang - 3772" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-Boomerang-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Boomerang
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/BOOMERANGSD/video.m3u8
+#EXTINF:3775, tvg-id="3775 - TNT" tvg-name="TNT - 3775" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-TNT-ao-vivo-online-344x193.png" group-title="Multicanais",TNT
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/TNTSD/video.m3u8
+#EXTINF:3778, tvg-id="3778 - Warner TV" tvg-name="Warner TV - 3778" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Warner-Ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Warner TV
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/WARNERSD/video.m3u8
+#EXTINF:3781, tvg-id="3781 - Globo" tvg-name="Globo - 3781" tvg-logo="https://multicanais.com/wp-content/uploads/2020/01/Globo-SP-ao-vivo-344x193.png" group-title="Multicanais",Globo
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/GloboSP/video.m3u8
+#EXTINF:3784, tvg-id="3784 - Syfy" tvg-name="Syfy - 3784" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Syfy-ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Syfy
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/SYFYSD/video.m3u8
+#EXTINF:3787, tvg-id="3787 - Fox Channel" tvg-name="Fox Channel - 3787" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-FOX-ao-vivo-online-grátis-HD-344x193.png" group-title="Multicanais",Fox Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/FOX/video.m3u8
+#EXTINF:3789, tvg-id="3789 - Sony Channel" tvg-name="Sony Channel - 3789" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-sony-ao-vivo-online-24-horas-1-344x193.png" group-title="Multicanais",Sony Channel
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/SONYSD/video.m3u8
+#EXTINF:3792, tvg-id="3792 - Cinemax" tvg-name="Cinemax - 3792" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cinemax-Ao-vivo-Online-Grátis-344x193.png" group-title="Multicanais",Cinemax
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/CINEMAXSD/video.m3u8
+#EXTINF:3795, tvg-id="3795 - Fox Sports" tvg-name="Fox Sports - 3795" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-fox-sports-online-ao-vivo-1-344x193.png" group-title="Multicanais",Fox Sports
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.multicanais.tv/FOXSPORTS/video.m3u8
+#EXTINF:3797, tvg-id="3797 - Nickelodeon" tvg-name="Nickelodeon - 3797" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Nickelodeon-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Nickelodeon
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.futebolfree.com/NICKSD/video.m3u8
+#EXTINF:3800, tvg-id="3800 - Cartoon Network" tvg-name="Cartoon Network - 3800" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/Assistir-Cartoon-Network-ao-vivo-online-24-horas-344x193.png" group-title="Multicanais",Cartoon Network
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/CARTOONSD/video.m3u8
+#EXTINF:3803, tvg-id="3803 - ESPN Brasil" tvg-name="ESPN Brasil - 3803" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-espn-brasil-ao-vivo-online-1-1-344x193.png" group-title="Multicanais",ESPN Brasil
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/ESPNBRASIL/video.m3u8
+#EXTINF:3804, tvg-id="3804 - Telecine Pipoca" tvg-name="Telecine Pipoca - 3804" tvg-logo="https://multicanais.com/wp-content/uploads/2019/04/assistir-telecine-pipoca-ao-vivo-344x193.png" group-title="Multicanais",Telecine Pipoca
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.esporteflix.com/TELECINEPIPOCASD/video.m3u8
+#EXTINF:3807, tvg-id="3807 - Premiere 6" tvg-name="Premiere 6 - 3807" tvg-logo="https://multicanais.com/wp-content/uploads/2019/05/assistir-premiere6-ao-vivo-online-344x193.png" group-title="Multicanais",Premiere 6
+http://localhost:8000/api/multi/playlist.m3u8?uri=https://live.netcanais.com/SPORTV/video.m3u8
 #EXTINF:3382, tvg-id="3382 - SD Hertha Berlin x Union Berlin" tvg-name="SD Hertha Berlin x Union Berlin - 3382" tvg-logo="https://topcanais.com/wp-content/uploads/2020/05/Hertha-Berlin-vs-Union-Berlin-364x205.jpg" group-title="Topcanais",SD Hertha Berlin x Union Berlin
 http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportssd/video.m3u8
 #EXTINF:3383, tvg-id="3383 - HD Hertha Berlin x Union Berlin" tvg-name="HD Hertha Berlin x Union Berlin - 3383" tvg-logo="https://topcanais.com/wp-content/uploads/2020/05/Hertha-Berlin-vs-Union-Berlin-364x205.jpg" group-title="Topcanais",HD Hertha Berlin x Union Berlin
@@ -371,3 +369,205 @@ http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.
 http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimesd/video.m3u8
 #EXTINF:3510, tvg-id="3510 - HD Lifetime" tvg-name="HD Lifetime - 3510" tvg-logo="https://topcanais.com/wp-content/uploads/2019/08/lifetime-364x205.jpg" group-title="Topcanais",HD Lifetime
 http://localhost:8000/api/topcanais/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimehd/video.m3u8
+#EXTINF:3812, tvg-id="3812 - Globo Rio" tvg-name="Globo Rio - 3812" tvg-logo="https://cdn.canaismax.com/assistir-globo-rj-ao-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNjZjdkNzMyZDk0NDY0ZTczZGFiNzU1ZDdmZThiYmIucG5n" group-title="Canaismax",Globo Rio
+http://localhost:8000/api/max/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/globorjhd/video.m3u8
+#EXTINF:3814, tvg-id="3814 - Globo SP" tvg-name="Globo SP - 3814" tvg-logo="https://cdn.canaismax.com/assistir-globo-sp-ao-vivo-24-horas-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWMyYjA5NjViZWNiMjE0NjcwYzQ2NjlkMGVmYmQ3NDUucG5n" group-title="Canaismax",Globo SP
+http://localhost:8000/api/max/playlist.m3u8?uri=https://abr-h.eu-central-1.edge.mycdn.live/live/globo/playlist.m3u8
+#EXTINF:3819, tvg-id="3819 - Band HD" tvg-name="Band HD - 3819" tvg-logo="https://cdn.canaismax.com/assistir-band-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTcwMjJmOWZlOGRmMDM3ZjY2Y2U0NGI3MGU1NzU1NDkucG5n" group-title="Canaismax",Band HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinassd/video.m3u8
+#EXTINF:3822, tvg-id="3822 - A Fazenda 2020" tvg-name="A Fazenda 2020 - 3822" tvg-logo="https://cdn.canaismax.com/assistir-a-fazenda-2020-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM4ZTllMjhjYTdkMWVkNWRjYzQ2YTI0MTU3NmUwNjIucG5n" group-title="Canaismax",A Fazenda 2020
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/afazendasd/video.m3u8
+#EXTINF:3824, tvg-id="3824 - Rede Record" tvg-name="Rede Record - 3824" tvg-logo="https://cdn.canaismax.com/assistir-record-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTRiYmVlNzkzNmJmODM0OGYzMDY4ZjRkYmYyYTZkODgucG5n" group-title="Canaismax",Rede Record
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/recordsd/video.m3u8
+#EXTINF:3827, tvg-id="3827 - SBT HD" tvg-name="SBT HD - 3827" tvg-logo="https://cdn.canaismax.com/assistir-sbt-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTZkZDdjMTg1YmZlNjQ0OGM1NTBmOTg2NDlmMzI0ZWYucG5n" group-title="Canaismax",SBT HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sbtsd/video.m3u8
+#EXTINF:3828, tvg-id="3828 - Viva" tvg-name="Viva - 3828" tvg-logo="https://cdn.canaismax.com/assistir-canal-viva-ao-vivo-24-online-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTk5NDBhNDE5ZDMwMzJhOTkxZDE3YTY1YTg2NTdlZTAucG5n" group-title="Canaismax",Viva
+http://localhost:8000/api/max/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/vivahd/video.m3u8
+#EXTINF:3830, tvg-id="3830 - MTV" tvg-name="MTV - 3830" tvg-logo="https://cdn.canaismax.com/assistir-mtv-gratis-em-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzczMTczMGVhMmQ3NjVhYjY0ZTFkNjkzYjc0ZmE5M2MucG5n" group-title="Canaismax",MTV
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/mtvsd/video.m3u8
+#EXTINF:3832, tvg-id="3832 - FOX Premium 1 HD" tvg-name="FOX Premium 1 HD - 3832" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmU0ODI3ZTZlZTVjOWZjYzk4YTY2NmRiMmY2M2IxYzMucG5n" group-title="Canaismax",FOX Premium 1 HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxpremiumsd/video.m3u8
+#EXTINF:3835, tvg-id="3835 - Fox Sports" tvg-name="Fox Sports - 3835" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTQ1OTg1YWJhNTAyZGRiNGUwMTAwMTZhNzk5ZWU1ZGEucG5n" group-title="Canaismax",Fox Sports
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxsportssd/video.m3u8
+#EXTINF:3840, tvg-id="3840 - Fox Sports 2" tvg-name="Fox Sports 2 - 3840" tvg-logo="https://cdn.canaismax.com/assistir-fox-sports-2-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmIwZDk0NzgxMzMyNzcxMzVlODE2ZWRmOTMyNTUxNzAucG5n" group-title="Canaismax",Fox Sports 2
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/foxsports2sd/video.m3u8
+#EXTINF:3842, tvg-id="3842 - ESPN Brasil HD" tvg-name="ESPN Brasil HD - 3842" tvg-logo="https://cdn.canaismax.com/assistir-espn-brasil-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjc2NjI4YTFjMzk0MGYzOTgxYmRjZDJlYTIyM2MyNjUucG5n" group-title="Canaismax",ESPN Brasil HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnbrasilsd/video.m3u8
+#EXTINF:3846, tvg-id="3846 - DAZN" tvg-name="DAZN - 3846" tvg-logo="https://cdn.canaismax.com/assistir-dazn-ao-vivo-canal-dazn-hd-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGUzNzg3ZDNkZjI5OTQ0NTFkMzBhZGZjMzYwZTdlYjUucG5n" group-title="Canaismax",DAZN
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/livefc04sd/video.m3u8
+#EXTINF:3849, tvg-id="3849 - Multishow HD" tvg-name="Multishow HD - 3849" tvg-logo="https://cdn.canaismax.com/assistir-multishow-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzM1NDM4OWVkZTc1OTBiNjliOTBmMjlhYTNiZjQ2NDcucG5n" group-title="Canaismax",Multishow HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/multishowsd/video.m3u8
+#EXTINF:3853, tvg-id="3853 - UFC 253" tvg-name="UFC 253 - 3853" tvg-logo="https://cdn.canaismax.com/assistir-israel-adesanya-x-paulo-borrachinha-ao-vivo-pelo-ufc-253-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTg0Y2EyOWNlYzY2ZTI4YmU3OTViZWZjNGIxOWRkZDYuanBlZw==" group-title="Canaismax",UFC 253
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatesd/video.m3u8
+#EXTINF:3856, tvg-id="3856 - RedeTV!" tvg-name="RedeTV! - 3856" tvg-logo="https://cdn.canaismax.com/assistir-redetv-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzRmYWMwMTI1MTNiZDRmMDAyZDgzZDFkMzY1YmRlMmMucG5n" group-title="Canaismax",RedeTV!
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/redetvsd/video.m3u8
+#EXTINF:3860, tvg-id="3860 - SporTV HD" tvg-name="SporTV HD - 3860" tvg-logo="https://cdn.canaismax.com/assistir-sportv-ao-vivo-hd-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjE4Y2FmOGM1NGIzNDI2YmYxMjdhYWFkZDIxMWM2MjAucG5n" group-title="Canaismax",SporTV HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportvsd/video.m3u8
+#EXTINF:3862, tvg-id="3862 - SporTV2 HD" tvg-name="SporTV2 HD - 3862" tvg-logo="https://cdn.canaismax.com/assistir-sportv-2-ao-vivo-24-horas-hd-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWE4YmRhMjJjNzE3Mjc0ZjgyMTEzN2VhYjA5YzA3YjYucG5n" group-title="Canaismax",SporTV2 HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv2sd/video.m3u8
+#EXTINF:3865, tvg-id="3865 - SporTV3 HD" tvg-name="SporTV3 HD - 3865" tvg-logo="https://cdn.canaismax.com/assistir-sportv-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2NkNWJkZTA2MmExOWUwNDRjYmVlYjU5MGM4ZDMzNjUucG5n" group-title="Canaismax",SporTV3 HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/sportv3sd/video.m3u8
+#EXTINF:3869, tvg-id="3869 - Combate" tvg-name="Combate - 3869" tvg-logo="https://cdn.canaismax.com/assistir-canal-ufc-combate-vivo-online-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWQwZjE3ZDNlNWQ4MTUxNjg1M2Y3ZDdlNjU4NDdiZGUucG5n" group-title="Canaismax",Combate
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/combatesd/video.m3u8
+#EXTINF:3870, tvg-id="3870 - ESPN" tvg-name="ESPN - 3870" tvg-logo="https://cdn.canaismax.com/assistir-espn-vivo-online-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjcyYTQ2NTEyODcxMGQ3Njc4MTRjMzY0NzBhM2FiM2MucG5n" group-title="Canaismax",ESPN
+http://localhost:8000/api/max/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnhd1/video.m3u8
+#EXTINF:3872, tvg-id="3872 - ESPN 2 HD" tvg-name="ESPN 2 HD - 3872" tvg-logo="https://cdn.canaismax.com/assistir-espn-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTYzYzQ0ZTM2YmMwZmM3MzQ1ZWZiNTAyZTJjYjZkZWUucG5n" group-title="Canaismax",ESPN 2 HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/espnmaissd/video.m3u8
+#EXTINF:3875, tvg-id="3875 - Espn Extra" tvg-name="Espn Extra - 3875" tvg-logo="https://cdn.canaismax.com/assistir-espn-extra-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODY1YjU1ZDA0Mzk3YWJkZDYyNTY2NGU3YTliMGI0YTcucG5n" group-title="Canaismax",Espn Extra
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/espnextrasd/video.m3u8
+#EXTINF:3876, tvg-id="3876 - Globo Nordeste" tvg-name="Globo Nordeste - 3876" tvg-logo="https://cdn.canaismax.com/assistir-globo-nordeste-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2Y2ZGY4MmNlMWQxMzU0ZTZhZDRlYjQzNmQ1NmNjYzYucG5n" group-title="Canaismax",Globo Nordeste
+http://localhost:8000/api/max/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/globonordeste/video.m3u8
+#EXTINF:3878, tvg-id="3878 - Globo MG" tvg-name="Globo MG - 3878" tvg-logo="https://cdn.canaismax.com/assistir-globo-minas-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjFiM2NhMDhiNTI0MzY4ODk4YTQzZTZmNTM4YTY3YjYucG5n" group-title="Canaismax",Globo MG
+http://localhost:8000/api/max/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/globominas/video.m3u8
+#EXTINF:3881, tvg-id="3881 - TLC" tvg-name="TLC - 3881" tvg-logo="https://cdn.canaismax.com/assistir-tlc-ao-vivo-gratis-em-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDA5MmFhN2Q2ZDhmYjUyYzgzODAzZGEyNDllYzU2NTIucG5n" group-title="Canaismax",TLC
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tlcsd/video.m3u8
+#EXTINF:3882, tvg-id="3882 - Discovery Home & Health HD" tvg-name="Discovery Home & Health HD - 3882" tvg-logo="https://cdn.canaismax.com/assistir-discovery-home-and-health-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTcwODc5ODhhODczYjNmMGQ2ZjlhMTc5ZTQzMTVhODQucG5n" group-title="Canaismax",Discovery Home & Health HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/homehealthsd/video.m3u8
+#EXTINF:3885, tvg-id="3885 - GNT HD" tvg-name="GNT HD - 3885" tvg-logo="https://cdn.canaismax.com/assistir-gnt-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZlNTcxZDllZDU3ODg5MWMzZjBmOWFmMzI0MWE0OTIucG5n" group-title="Canaismax",GNT HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gntsd/video.m3u8
+#EXTINF:3887, tvg-id="3887 - Globo News" tvg-name="Globo News - 3887" tvg-logo="https://cdn.canaismax.com/assistir-globonews-ao-vivo-hd-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjI5MTZhMjczNmEyODc2ZDk3ZWY1NzBlZjA1ZDdkZmYucG5n" group-title="Canaismax",Globo News
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/globonewssd/video.m3u8
+#EXTINF:3889, tvg-id="3889 - Universal TV HD" tvg-name="Universal TV HD - 3889" tvg-logo="https://cdn.canaismax.com/assistir-universal-tv-hd-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDExYmNjMjJhZDQ1YzI2MDE5NDQ4MWM0N2E1MzY5YzkucG5n" group-title="Canaismax",Universal TV HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/universalsd/video.m3u8
+#EXTINF:3892, tvg-id="3892 - Warner HD" tvg-name="Warner HD - 3892" tvg-logo="https://cdn.canaismax.com/assistir-warner-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWUwNGVjZjZkMjNlZjY3MzVhNjE5YjU0ZTllYWQxZGMucG5n" group-title="Canaismax",Warner HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/warnerbrosssd/video.m3u8
+#EXTINF:3894, tvg-id="3894 - Sony Channel HD" tvg-name="Sony Channel HD - 3894" tvg-logo="https://cdn.canaismax.com/assistir-canal-sony-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGY4ZDYyNmFkZjI1YTI3MTUyZTZkNDNjNDAzMzRkMWMucG5n" group-title="Canaismax",Sony Channel HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sonysd/video.m3u8
+#EXTINF:3895, tvg-id="3895 - Fox HD" tvg-name="Fox HD - 3895" tvg-logo="https://cdn.canaismax.com/assistir-fox-hd-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIxYjk4NGFiYWE3MTM4MjgxMzE3MjgzNTRlNjFkMmUucG5n" group-title="Canaismax",Fox HD
+http://localhost:8000/api/max/playlist.m3u8?uri=https://abr-h.eu-central-1.edge.mycdn.live/live/2b95d1f09b8b66c5c43622a4d9ec9a04/playlist.m3u8
+#EXTINF:3898, tvg-id="3898 - Megapix HD" tvg-name="Megapix HD - 3898" tvg-logo="https://cdn.canaismax.com/assistir-megapix-hd-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZGU4MDBjYWI3OTA1MzMwMWQ1ODllY2NhYmI3MzAwMjIucG5n" group-title="Canaismax",Megapix HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/megapixsd/video.m3u8
+#EXTINF:3902, tvg-id="3902 - TNT HD" tvg-name="TNT HD - 3902" tvg-logo="https://cdn.canaismax.com/assistir-canal-tnt-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMmEwN2MzNDM0MTViNzZiZjMwMmZkYmVhMzk3NDI4ZWQucG5n" group-title="Canaismax",TNT HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tntsd/video.m3u8
+#EXTINF:3904, tvg-id="3904 - Cinemax HD" tvg-name="Cinemax HD - 3904" tvg-logo="https://cdn.canaismax.com/assistir-cinemax-hd-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE4MTRkMjRkODFlYWFiMmQxMGRiMTk0YWU3YjhiYTcucG5n" group-title="Canaismax",Cinemax HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/cinemaxsd/video.m3u8
+#EXTINF:3907, tvg-id="3907 - HBO" tvg-name="HBO - 3907" tvg-logo="https://cdn.canaismax.com/assistir-hbo-ao-vivo-hd-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWE3NmQzZjliNDBhY2VhYjAwYTdlYTY1ZDRmODU2ODcucG5n" group-title="Canaismax",HBO
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/hbosd/video.m3u8
+#EXTINF:3909, tvg-id="3909 - HBO2 HD" tvg-name="HBO2 HD - 3909" tvg-logo="https://cdn.canaismax.com/assistir-hbo-2-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTRiOWI1NGI3YzQ5MjNkYTNjMGYzNTM3YmFmODk0ZDIucG5n" group-title="Canaismax",HBO2 HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbo2sd/video.m3u8
+#EXTINF:3911, tvg-id="3911 - HBO Plus HD" tvg-name="HBO Plus HD - 3911" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-hd-ao-vivo-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTg0MWI1YTRmMDAyYzQ0OGIwNGY2ZWM2MTM4ZDY1MzMucG5n" group-title="Canaismax",HBO Plus HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplussd/video.m3u8
+#EXTINF:3913, tvg-id="3913 - HBO Plus" tvg-name="HBO Plus - 3913" tvg-logo="https://cdn.canaismax.com/assistir-hbo-plus-ao-vivo-24-horas-online-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTg1NjI4YzY3NmFjNDdjNTg3MmQyNDhhM2RkYjZmOGEucG5n" group-title="Canaismax",HBO Plus
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hboplussd/video.m3u8
+#EXTINF:3915, tvg-id="3915 - HBO Family" tvg-name="HBO Family - 3915" tvg-logo="https://cdn.canaismax.com/assistir-hbo-family-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDlkZWE4YWM0NjgyYTNmMzRmZTQxYmMwZjI4MzJhNDYucG5n" group-title="Canaismax",HBO Family
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbofamilysd/video.m3u8
+#EXTINF:3917, tvg-id="3917 - HBO Signature HD" tvg-name="HBO Signature HD - 3917" tvg-logo="https://cdn.canaismax.com/assistir-hbo-signature-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTNhYWRjMDkxMDM0OGZjZjQzZGVmOTQ4NGU1ZjBmYzQucG5n" group-title="Canaismax",HBO Signature HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbosignaturesd/video.m3u8
+#EXTINF:3918, tvg-id="3918 - HBO Mundi" tvg-name="HBO Mundi - 3918" tvg-logo="https://cdn.canaismax.com/assistir-hbo-mundi-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTdhNjA2MDlkMzYwNzFkMjI1ZWFlNDIxNTE3NzM5MDEucG5n" group-title="Canaismax",HBO Mundi
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbomundisd/video.m3u8
+#EXTINF:3920, tvg-id="3920 - HBO Xtreme" tvg-name="HBO Xtreme - 3920" tvg-logo="https://cdn.canaismax.com/assistir-hbo-xtreme-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMGUwNTExNGQ3ZjBiY2RiYzZiNTM3MjE5ZTQyZjJmN2IucG5n" group-title="Canaismax",HBO Xtreme
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/sextremesd/video.m3u8
+#EXTINF:3923, tvg-id="3923 - MaxPrime" tvg-name="MaxPrime - 3923" tvg-logo="https://cdn.canaismax.com/assistir-maxprime-ao-vivo-em-hd-sem-travar/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjBkZGQyMDNlYTQzZGExNGJkODcwNzNkYTNjYWY2OTkucG5n" group-title="Canaismax",MaxPrime
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maxprimesd/video.m3u8
+#EXTINF:3924, tvg-id="3924 - HBO Pop" tvg-name="HBO Pop - 3924" tvg-logo="https://cdn.canaismax.com/assistir-hbo-pop-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2M0ZjBjZTM3ZjMyNTBmNDY4NGNjNDkyMjFkNGU0MTkucG5n" group-title="Canaismax",HBO Pop
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/hbopopsd/video.m3u8
+#EXTINF:3928, tvg-id="3928 - Telecine Premium HD" tvg-name="Telecine Premium HD - 3928" tvg-logo="https://cdn.canaismax.com/assistir-telecine-premium-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYzOWJkMTc5NTI2NzQ3MGQ4ZDhkZmQ1OTdkZjBhZGYucG5n" group-title="Canaismax",Telecine Premium HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/telecinepremiumsd/video.m3u8
+#EXTINF:3930, tvg-id="3930 - Telecine Action HD" tvg-name="Telecine Action HD - 3930" tvg-logo="https://cdn.canaismax.com/assistir-telecine-action-ao-vivo-24-hora-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWMzNThhMmIwNjFmYTViODkzY2VhNTQzZGY4YWRjMWEucG5n" group-title="Canaismax",Telecine Action HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/telecineactionsd/video.m3u8
+#EXTINF:3931, tvg-id="3931 - Telecine Touch HD" tvg-name="Telecine Touch HD - 3931" tvg-logo="https://cdn.canaismax.com/assistir-telecine-touch-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODk5YjVmNWYwOGEwYjc2NTllY2Q3ZGRiZWZkNjk3ODUucG5n" group-title="Canaismax",Telecine Touch HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinetouchsd/video.m3u8
+#EXTINF:3933, tvg-id="3933 - Telecine Fun HD" tvg-name="Telecine Fun HD - 3933" tvg-logo="https://cdn.canaismax.com/assistir-telecine-fun-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWNhMTc5ZmJiZWRhMDc3ZTU2ZGRhN2NjZDEzYjgzNmIucG5n" group-title="Canaismax",Telecine Fun HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcfunsd/video.m3u8
+#EXTINF:3936, tvg-id="3936 - Telecine Pipoca HD" tvg-name="Telecine Pipoca HD - 3936" tvg-logo="https://cdn.canaismax.com/assistir-telecine-pipoca-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzUxNmJiMzk2ODY3ZTJjYmU0MTJkOTJmM2EwMTY0OTYucG5n" group-title="Canaismax",Telecine Pipoca HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinepipocasd/video.m3u8
+#EXTINF:3938, tvg-id="3938 - Telecine Cult HD" tvg-name="Telecine Cult HD - 3938" tvg-logo="https://cdn.canaismax.com/assistir-telecine-cult-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDk2NGJlY2FhMGNiZWFlMDBiMmI1N2MyOGY4MTVjZDIucG5n" group-title="Canaismax",Telecine Cult HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/telecinecultsd/video.m3u8
+#EXTINF:3939, tvg-id="3939 - TCM" tvg-name="TCM - 3939" tvg-logo="https://cdn.canaismax.com/assistir-tcm-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM0YjRmYmFlODg4MDk4NjliYTkwMTNlZGYxMmFmOTQucG5n" group-title="Canaismax",TCM
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tcmsd/video.m3u8
+#EXTINF:3942, tvg-id="3942 - Space HD" tvg-name="Space HD - 3942" tvg-logo="https://cdn.canaismax.com/assistir-canal-space-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjUzMTE0YTNmYzBiN2JkMWU2MjkwMjc4YTgxN2NkYTgucG5n" group-title="Canaismax",Space HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/spacesd/video.m3u8
+#EXTINF:3944, tvg-id="3944 - AXN HD" tvg-name="AXN HD - 3944" tvg-logo="https://cdn.canaismax.com/assistir-canal-axn-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTIyYjY5MmRhZmJjMGM2Yzk2ZTk5MTIwYWZhMWQwYzgucG5n" group-title="Canaismax",AXN HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/axnsd/video.m3u8
+#EXTINF:3946, tvg-id="3946 - Investigação Discovery" tvg-name="Investigação Discovery - 3946" tvg-logo="https://cdn.canaismax.com/assistir-investigacao-discovery-ao-vivo-discovery-id-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzNlYzNhMzQ1MDViMzNhNjM0YTZiZWY2NTUwNjViOWMucG5n" group-title="Canaismax",Investigação Discovery
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/idsd/video.m3u8
+#EXTINF:3948, tvg-id="3948 - FX HD" tvg-name="FX HD - 3948" tvg-logo="https://cdn.canaismax.com/assistir-fx-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmFmMzA5MzYwNWJhNjgyZjQwZDgxOGJhNzA3ODZhY2MucG5n" group-title="Canaismax",FX HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fxsd/video.m3u8
+#EXTINF:3951, tvg-id="3951 - A&E" tvg-name="A&E - 3951" tvg-logo="https://cdn.canaismax.com/assistir-ae-hd-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTYzZDEyNjg3MzRmYjQ3ZDI1NzBhMmNkZjRkMTBlNDUucG5n" group-title="Canaismax",A&E
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/aesd/video.m3u8
+#EXTINF:3952, tvg-id="3952 - Lifetime" tvg-name="Lifetime - 3952" tvg-logo="https://cdn.canaismax.com/assistir-lifetime-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNDYzMDlkZDVmZTFlNDMzNWQ0YjAzYjIyMTA5NmY3YzQucG5n" group-title="Canaismax",Lifetime
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/lifetimesd/video.m3u8
+#EXTINF:3954, tvg-id="3954 - Studio Universal" tvg-name="Studio Universal - 3954" tvg-logo="https://cdn.canaismax.com/assistir-studio-universal-online-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvN2I2Yjg2ZmEzMTE2ZDFiY2ZhOTg0ZTY1Yzg2ZDNjMzIucG5n" group-title="Canaismax",Studio Universal
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/studiouniversalsd/video.m3u8
+#EXTINF:3955, tvg-id="3955 - Curta!" tvg-name="Curta! - 3955" tvg-logo="https://cdn.canaismax.com/assistir-curta-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTVhNTI4YWYwOWYwNjExNTMwZjcwNGI2NjFiNTZkMDcucG5n" group-title="Canaismax",Curta!
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/curtasd/video.m3u8
+#EXTINF:3958, tvg-id="3958 - Syfy" tvg-name="Syfy - 3958" tvg-logo="https://cdn.canaismax.com/assistir-syfy-ao-vivo-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMTMxNTM5NWVhOGE0MmI3ZmRiM2M4ZmY5ZjRkYzAxODAucG5n" group-title="Canaismax",Syfy
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/syfysd/video.m3u8
+#EXTINF:3959, tvg-id="3959 - FOX Premium 2 HD" tvg-name="FOX Premium 2 HD - 3959" tvg-logo="https://cdn.canaismax.com/assistir-fox-premium-2-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNWE1YmQ2ZmI3ZjJlNjBlZmVhYTdiNjlkMzYzZjNhYWUucG5n" group-title="Canaismax",FOX Premium 2 HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/foxpremiumsd/video.m3u8
+#EXTINF:3961, tvg-id="3961 - Discovery Channel HD" tvg-name="Discovery Channel HD - 3961" tvg-logo="https://cdn.canaismax.com/assistir-discovery-channel-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZWZlZjA1NGY5OGUyMGRkOTliZWY3YWFkMmRmMWE1MjIucG5n" group-title="Canaismax",Discovery Channel HD
+http://localhost:8000/api/max/playlist.m3u8?uri=https://abr-h.eu-central-1.edge.mycdn.live/live/2bffe8e99bded440c9a326cd6751a23d/playlist.m3u8
+#EXTINF:3965, tvg-id="3965 - Animal Planet" tvg-name="Animal Planet - 3965" tvg-logo="https://cdn.canaismax.com/assistir-animal-planet-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjZiZGVhYjQyODZjOWExMDBiYjAwMzYyYjE4YTYwZDYucG5n" group-title="Canaismax",Animal Planet
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/animalplanetsd/video.m3u8
+#EXTINF:3967, tvg-id="3967 - National Geographic HD" tvg-name="National Geographic HD - 3967" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGVlMjViNzI0YTRiYTVlZmJmZDZkMDdlYjU5MWMxNzkucG5n" group-title="Canaismax",National Geographic HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natsd/video.m3u8
+#EXTINF:3969, tvg-id="3969 - National Geographic Wild HD" tvg-name="National Geographic Wild HD - 3969" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-wild-ao-vivo-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNmM0MDljODUxZjVmOTljNzRjYzY2NzdjOGZhZjcyYjEucG5n" group-title="Canaismax",National Geographic Wild HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeowildsd/video.m3u8
+#EXTINF:3970, tvg-id="3970 - Discovery Civilization" tvg-name="Discovery Civilization - 3970" tvg-logo="https://cdn.canaismax.com/assistir-discovery-civilization-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODlkNGMwMGNjMGFiYzY1Mzk4MjU4MGRmZjhhMTM1MzAucG5n" group-title="Canaismax",Discovery Civilization
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverycivilizationsd/video.m3u8
+#EXTINF:3972, tvg-id="3972 - Discovery Science" tvg-name="Discovery Science - 3972" tvg-logo="https://cdn.canaismax.com/assistir-discovery-science-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvY2NhMzE5NmZlNmU1MmNjMzM0NDMyZDJjZDM3YjdmNjQucG5n" group-title="Canaismax",Discovery Science
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverysciencesd/video.m3u8
+#EXTINF:3974, tvg-id="3974 - Discovery Theater HD" tvg-name="Discovery Theater HD - 3974" tvg-logo="https://cdn.canaismax.com/assistir-discovery-theater-hd-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTVhMjc2YzUyNjE3MmViMDIzNjQwZjI2NTFmNDY5NzUucG5n" group-title="Canaismax",Discovery Theater HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverytheatersd/video.m3u8
+#EXTINF:3978, tvg-id="3978 - History HD" tvg-name="History HD - 3978" tvg-logo="https://cdn.canaismax.com/assistir-history-channel-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDM3ZDhkZTc4ZDJjNjFlNmVkNGZhMDFjNDNiMDJkOGMucG5n" group-title="Canaismax",History HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/historysd/video.m3u8
+#EXTINF:3980, tvg-id="3980 - History 2" tvg-name="History 2 - 3980" tvg-logo="https://cdn.canaismax.com/assistir-history-2-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzgwNzM0NzBjNTU2YjEyZmUxNTQ5OTgzYTNiMTRhNWMucG5n" group-title="Canaismax",History 2
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/history2sd/video.m3u8
+#EXTINF:3983, tvg-id="3983 - Gloob HD" tvg-name="Gloob HD - 3983" tvg-logo="https://cdn.canaismax.com/assistir-gloob-hd-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNTczYjg5NTEwZjVjMTY5NTQ1ZjVlNjY5Mjg3ZWZiMTEucG5n" group-title="Canaismax",Gloob HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/gloobsd/video.m3u8
+#EXTINF:3985, tvg-id="3985 - Discovery Kids" tvg-name="Discovery Kids - 3985" tvg-logo="https://cdn.canaismax.com/assistir-discovery-kids-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOWE0OGJhMTIyNzk4Y2ZiMjk4ZDJjZjc4ZDE1OGM5YzkucG5n" group-title="Canaismax",Discovery Kids
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoverykidssd/video.m3u8
+#EXTINF:3989, tvg-id="3989 - Cartoon Network" tvg-name="Cartoon Network - 3989" tvg-logo="https://cdn.canaismax.com/assistir-cartoon-network-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDI0Nzk5NjBhNTk0YTAxODlmMWYyZTgyNTVmMjQ0OTEucG5n" group-title="Canaismax",Cartoon Network
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/cartoonnetworksd/video.m3u8
+#EXTINF:3991, tvg-id="3991 - Disney XD" tvg-name="Disney XD - 3991" tvg-logo="https://cdn.canaismax.com/assistir-disney-xd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWNhYzQwODU0YWUwZGM2MTMyMzg3MDNkNDdjOGM5MmYucG5n" group-title="Canaismax",Disney XD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneyxdsd/video.m3u8
+#EXTINF:3992, tvg-id="3992 - Disney Junior" tvg-name="Disney Junior - 3992" tvg-logo="https://cdn.canaismax.com/assistir-disney-junior-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOTMzYzk3ODA0NDQyOGViYTIzYTU4Mzk2OTNjYjA2ZmIucG5n" group-title="Canaismax",Disney Junior
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneyjuniorsd/video.m3u8
+#EXTINF:3994, tvg-id="3994 - Nickelodeon HD" tvg-name="Nickelodeon HD - 3994" tvg-logo="https://cdn.canaismax.com/assistir-nickelodeon-nick-ao-vivo-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZTM3MThhMmM5N2IyMDljNzg1YzFkNGUxNDIzMGE0ZTMucG5n" group-title="Canaismax",Nickelodeon HD
+http://localhost:8000/api/max/playlist.m3u8?uri=https://abr-h.eu-central-1.edge.mycdn.live/live/e2e42a07550863f8b67f5eb252581f6d/playlist.m3u8
+#EXTINF:3997, tvg-id="3997 - Nick Jr." tvg-name="Nick Jr. - 3997" tvg-logo="https://cdn.canaismax.com/assistir-nick-jr-ao-vivo-hd-24-horas-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmNmOGIyMzA3NTY0MmNlY2UyNGI5MWIyMjg3ZDUwMDYucG5n" group-title="Canaismax",Nick Jr.
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/nickjrsd/video.m3u8
+#EXTINF:3998, tvg-id="3998 - Disney Channel HD" tvg-name="Disney Channel HD - 3998" tvg-logo="https://cdn.canaismax.com/assistir-disney-channel-ao-vivo-hd-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGE2ZTk5OGE4YzRkMTIxYjI2NDQzODk2YTJmNDYyMjYucG5n" group-title="Canaismax",Disney Channel HD
+http://localhost:8000/api/max/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/disneychannelhd/video.m3u8
+#EXTINF:3999, tvg-id="3999 - TV Rá Tim Bum!" tvg-name="TV Rá Tim Bum! - 3999" tvg-logo="https://cdn.canaismax.com/assistir-tv-ra-tim-bum-ao-vivo-online-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNjE4ZmI4NThkNTlkMTczYjI4NjE4MDIxMDQ1ZWZkM2MucG5n" group-title="Canaismax",TV Rá Tim Bum!
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/ratimbumsd/video.m3u8
+#EXTINF:4002, tvg-id="4002 - Tooncast" tvg-name="Tooncast - 4002" tvg-logo="https://cdn.canaismax.com/assistir-tooncast-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWQ3M2U2ODMzNzk0MjQwNWYxMDk1NzgwYzJhMjFlMjcucG5n" group-title="Canaismax",Tooncast
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tooncastsd/video.m3u8
+#EXTINF:4004, tvg-id="4004 - Boomerang" tvg-name="Boomerang - 4004" tvg-logo="https://cdn.canaismax.com/assistir-boomerang-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYzMzNjAyMDFjMDBmNzY2MjEzZWNkYjlmNGZmN2RiZjUucG5n" group-title="Canaismax",Boomerang
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/boomerangsd/video.m3u8
+#EXTINF:4005, tvg-id="4005 - Nat Geo Kids HD" tvg-name="Nat Geo Kids HD - 4005" tvg-logo="https://cdn.canaismax.com/assistir-nat-geo-kids-hd-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDZlOTcwOTM1YjgyYzRkN2I4MmE4ZjZlMTcwNjNlNDEucG5n" group-title="Canaismax",Nat Geo Kids HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/natgeokidssd/video.m3u8
+#EXTINF:4007, tvg-id="4007 - Mais Globosat HD" tvg-name="Mais Globosat HD - 4007" tvg-logo="https://cdn.canaismax.com/assistir-mais-globosat-hd-ao-vivo-24-horas-gratis-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjNjM2FjNGQ0YWNkNGRlMzI0YjVjYzhhNDQ2MzE1ZGIucG5n" group-title="Canaismax",Mais Globosat HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/maisglobosatsd/video.m3u8
+#EXTINF:4010, tvg-id="4010 - E!" tvg-name="E! - 4010" tvg-logo="https://cdn.canaismax.com/assistir-canal-e-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYmRkZWMzODg2MzljY2UzMjVmMWJlYTk4MjMwYTBmM2YucG5n" group-title="Canaismax",E!
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/esd/video.m3u8
+#EXTINF:4011, tvg-id="4011 - Paramount Channel" tvg-name="Paramount Channel - 4011" tvg-logo="https://cdn.canaismax.com/assistir-paramount-channel-ao-vivo-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2U4MzEwNGUwMWE5OWJiOTc0NjIzNGZjNjkwYjJlNzYucG5n" group-title="Canaismax",Paramount Channel
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/paramountchannelsd/video.m3u8
+#EXTINF:4014, tvg-id="4014 - TNT Séries" tvg-name="TNT Séries - 4014" tvg-logo="https://cdn.canaismax.com/assistir-tnt-series-gratis-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMzljZWE4YjE5NjU0NmM2MWNhM2Y5OGZlNjkxNTdhZDAucG5n" group-title="Canaismax",TNT Séries
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/tntseriessd/video.m3u8
+#EXTINF:4015, tvg-id="4015 - TBS HD" tvg-name="TBS HD - 4015" tvg-logo="https://cdn.canaismax.com/assistir-tbs-hd-ao-vivo-gratis-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZjU4MTdmN2QyM2U0Njc1MjJmM2NhN2E4NzhhNDUzYmMucG5n" group-title="Canaismax",TBS HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/tbssd/video.m3u8
+#EXTINF:4018, tvg-id="4018 - Discovery World HD" tvg-name="Discovery World HD - 4018" tvg-logo="https://cdn.canaismax.com/assistir-discovery-world-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODM5ZDBmMzYxZDczNzcwNWQ2NjMzZDQzM2Q0NWJmNTUucG5n" group-title="Canaismax",Discovery World HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryworldsd/video.m3u8
+#EXTINF:4019, tvg-id="4019 - Off" tvg-name="Off - 4019" tvg-logo="https://cdn.canaismax.com/assistir-canal-off-ao-vivo-24-horas-hd/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYWQ4ZDE2NGFlNThmMTMxYWFjMTMyMjc4ZDAyMDBmOGMucG5n" group-title="Canaismax",Off
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/canaloffsd/video.m3u8
+#EXTINF:4021, tvg-id="4021 - WooHoo" tvg-name="WooHoo - 4021" tvg-logo="https://cdn.canaismax.com/assistir-woohoo-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvOGIzZjQyMmU5MGYxY2JiNWRmOGY5ZDU1ZDczODBkOGUucG5n" group-title="Canaismax",WooHoo
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/woohoosd/video.m3u8
+#EXTINF:4023, tvg-id="4023 - Discovery Turbo" tvg-name="Discovery Turbo - 4023" tvg-logo="https://cdn.canaismax.com/assistir-discovery-turbo-ao-vivo-24-horas-online/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvYjYxODIyYmUxYzEyYWVlYTcxNTUyOGU0OWJlY2ZjNzAucG5n" group-title="Canaismax",Discovery Turbo
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/discoveryturbosd/video.m3u8
+#EXTINF:4025, tvg-id="4025 - Band Sports HD" tvg-name="Band Sports HD - 4025" tvg-logo="https://cdn.canaismax.com/assistir-band-sports-hd-online-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvODljODJhYzdiNDgxOTBkNDJjMjAyMDU3Yjk5YjM1NGIucG5n" group-title="Canaismax",Band Sports HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/bandsportssd/video.m3u8
+#EXTINF:4026, tvg-id="4026 - FishTV" tvg-name="FishTV - 4026" tvg-logo="https://cdn.canaismax.com/assistir-fishtv-ao-vivo-gratis-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZmRjN2JiMDM0OTNmZDEzOTIxYmE1NzUwYTg0NjI5OTAucG5n" group-title="Canaismax",FishTV
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/fishtvsd/video.m3u8
+#EXTINF:4032, tvg-id="4032 - BBB" tvg-name="BBB - 4032" tvg-logo="https://cdn.canaismax.com/assistir-bbb-2021-ao-vivo-em-hd-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMDkwY2U5ZTVmY2FjMGVkZGZlZDRjNWNmM2E4NGZkYzMucG5n" group-title="Canaismax",BBB
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/multishowsd/video.m3u8
+#EXTINF:4035, tvg-id="4035 - Premiere Clubes HD" tvg-name="Premiere Clubes HD - 4035" tvg-logo="https://cdn.canaismax.com/assistir-premiere-clubes-hd-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvZDU5MzMxMmMyODJiNDM0MmY1OWIxYzU0YjI1YzQyNmIucG5n" group-title="Canaismax",Premiere Clubes HD
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/premiere1sd/video.m3u8
+#EXTINF:4036, tvg-id="4036 - Premiere 3 HD" tvg-name="Premiere 3 HD - 4036" tvg-logo="https://cdn.canaismax.com/assistir-premiere-3-ao-vivo-online-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvM2ZiOWViNzM3OGFlM2M5ZWFjY2ZiMDkyZTkyMWM0MTkucG5n" group-title="Canaismax",Premiere 3 HD
+http://localhost:8000/api/max/playlist.m3u8?uri=https://newedge.eu-central-1.edge.mycdn.live/live/futemax1/playlist.m3u8
+#EXTINF:4037, tvg-id="4037 - Premiere 7" tvg-name="Premiere 7 - 4037" tvg-logo="https://cdn.canaismax.com/assistir-premiere-7-ao-vivo-online-24-horas-gratis/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvMWRiY2U0MTVhZGJmZDgxNGQ5NmQxYjVkYTRmMDY4ZGMucG5n" group-title="Canaismax",Premiere 7
+http://localhost:8000/api/max/playlist.m3u8?uri=https://newedge.eu-central-1.edge.mycdn.live/live/futemax2/playlist.m3u8
+#EXTINF:4038, tvg-id="4038 - Record News" tvg-name="Record News - 4038" tvg-logo="https://cdn.canaismax.com/assistir-record-news-ao-vivo-gratis-24-horas/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNzkwZDljN2MxODI2MDc0YWJhODQyZGYzMTMwYmU2MDQucG5n" group-title="Canaismax",Record News
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/live/recordnewssd/video.m3u8
+#EXTINF:4042, tvg-id="4042 - MasterChef 14/07/2020" tvg-name="MasterChef 14/07/2020 - 4042" tvg-logo="https://cdn.canaismax.com/assistir-masterchef-14072020-ao-vivo-estreia-online-band/fit/130/98/no/1/aHR0cHM6Ly9jYW5haXNtYXguY29tL2ltZy9jYW5haXMvNGY0YjMxZTc4NTg4MmIwZTFkY2Y2MzdhMmIzNWYwMTgucG5n" group-title="Canaismax",MasterChef 14/07/2020
+http://localhost:8000/api/max/other/playlist.m3u8?uri=https://geralorigin.eu-central-1.edge.mycdn.live/mylive/bandcampinassd/video.m3u8

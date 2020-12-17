@@ -216,6 +216,27 @@ def gen_lista_estatica(request):
                 group_title,
                 title,
                 custom_m3u8))
+    for ch in Channel.objects.filter(category__site__name='canaismax', link__m3u8__icontains='.m3u8').distinct():
+        links = ch.link_set.filter(m3u8__icontains='sd/')
+        title = clean_title(ch)
+        if len(links) > 0:
+            link = links[0]
+            custom_m3u8 = 'http://' + request.META[
+                'HTTP_HOST'] + '/' + 'api/max/other/playlist.m3u8?uri=' + str(link.m3u8)
+        else:
+            link = ch.link_set.first()
+            custom_m3u8 = 'http://' + request.META['HTTP_HOST'] + '/' + 'api/max/playlist.m3u8?uri=' + str(link.m3u8)
+        f.write('#EXTINF:{}, tvg-id="{} - {}" tvg-name="{} - {}" tvg-logo="{}" group-title="{}",{}\n{}\n'.format(
+            link.id,
+            link.id,
+            title,
+            title,
+            link.id,
+            ch.img_url,
+            'Canaismax',
+            title,
+            custom_m3u8))
+
     f.close()
     fsock = open("lista-estatica.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
