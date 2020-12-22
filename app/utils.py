@@ -457,7 +457,7 @@ def request_json():
 
 def check_m3u8_req(uri, headers):
     try:
-        req = requests.head(uri, headers=headers, timeout=10)
+        req = requests.get(uri, headers=headers, timeout=2)
         if req.status_code == 200:
             return True
         return False
