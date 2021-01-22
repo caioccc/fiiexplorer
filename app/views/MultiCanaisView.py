@@ -3,12 +3,14 @@ from threading import Thread
 
 import requests
 from bs4 import BeautifulSoup
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
-from django.http import HttpResponse, HttpResponseNotFound, JsonResponse
+from django.http import HttpResponse, HttpResponseNotFound, JsonResponse, HttpResponseRedirect
 from django.shortcuts import redirect
-from django.views.generic import DetailView, TemplateView, ListView
+from django.views.generic import DetailView, TemplateView, ListView, FormView
 
+from app.forms import SelectMulticanais
 from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais, snifferAoVivoGratis
 from app.models import Channel, Site, Link
 from app.utils import clean_title, remove_iv, check_m3u8_req, get_token_multicanais, get_text_type
@@ -240,3 +242,38 @@ def gen_lista_estatica(request):
     f.close()
     fsock = open("lista-estatica.m3u8", "rb")
     return HttpResponse(fsock, content_type='text')
+
+
+class SelectMulti(FormView):
+    form_class = SelectMulticanais
+    template_name = 'select-multicanais.html'
+    success_url = '/multicanais/multichannel'
+
+    def form_valid(self, form):
+        items = form.cleaned_data['channel']
+        if len(items) > 0:
+            url = str(self.get_success_url()) + '?ids='
+            for item in items:
+                url += str(item.id) + ','
+            return HttpResponseRedirect(url)
+        else:
+            messages.error(self.request, 'Selecione ao menos 1 canal')
+            return super(SelectMulti, self).form_invalid(form)
+
+
+class Multichannel(LoginRequiredMixin, TemplateView):
+    login_url = '/admin/login/'
+    template_name = 'multichannel-multicanais.html'
+
+    def get_context_data(self, **kwargs):
+        ids = self.request.GET['ids'].split(',')
+        li_ids = ids[:len(ids) - 1]
+        channels = []
+        for id in li_ids:
+            chan = Channel.objects.get(pk=id)
+            channels.append(chan)
+        kwargs['channels'] = channels
+        return kwargs
+
+    def get(self, request, *args, **kwargs):
+        return super(Multichannel, self).get(request, *args, **kwargs)

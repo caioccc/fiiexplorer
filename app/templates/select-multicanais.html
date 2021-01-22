@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load filters %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-6">
+            <a href="{% url 'multicanais' %}"
+               class="btn btn-default">Voltar</a>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-xs-12">
+            <form method="post" action="">
+                {% csrf_token %}
+                 {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Selecionar</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

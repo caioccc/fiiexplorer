@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
+from django.forms import SelectMultiple
+
+from app.models import Channel
 
 
 class BaseForm(forms.Form):
@@ -13,3 +16,7 @@ class BaseForm(forms.Form):
                 field.widget.attrs['class'] = 'form-control telefone'
             if field_name == 'numero' or field_name == 'number':
                 field.widget.attrs['class'] = 'form-control numero'
+
+
+class SelectMulticanais(forms.Form):
+    channel = forms.ModelMultipleChoiceField(queryset=Channel.objects.filter(category__site__name='multicanais',link__m3u8__icontains='.m3u8').distinct(), widget=SelectMultiple(attrs={'size': 30}))
