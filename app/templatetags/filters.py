@@ -2,6 +2,8 @@ import datetime
 
 from django import template
 
+from app.utils import check_m3u8_req
+
 register = template.Library()
 
 
@@ -18,6 +20,12 @@ def times(number):
     if number:
         return range(int(number))
     return None
+
+
+@register.filter
+def is_m3u8_valid(link):
+    headers = {'origin': 'https://futemax.live', 'referer': 'https://futemax.live/'}
+    return check_m3u8_req(link['m3u8'], headers=headers)
 
 
 @register.filter

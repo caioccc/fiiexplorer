@@ -67,32 +67,7 @@
             width: '640px',
             height: "360px",
             mediacontrol: {seekbar: "#900", buttons: "#FFFFFF"},
-            plugins: [HlsjsPlayback, LevelSelector, ClapprStats],
-            clapprStats: {
-                onReport: (metrics) => {
-                    metrics.timers.startup = getSecondsString(metrics.timers.startup / 1000);
-                    metrics.timers.watch = getSecondsString(metrics.timers.watch / 1000);
-                    metrics.timers.pause = getSecondsString(metrics.timers.pause / 1000);
-                    metrics.timers.buffering = getSecondsString(metrics.timers.buffering / 1000);
-                    metrics.timers.session = getSecondsString(metrics.timers.session / 1000);
-                    metrics.timers.latency = getSecondsString(metrics.timers.latency / 1000);
-                    metrics.extra.bufferingPercentage = metrics.extra.bufferingPercentage.toFixed(2) + '%';
-                    metrics.extra.watchedPercentage = metrics.extra.watchedPercentage.toFixed(2) + '%';
-                    metrics.extra.buffersize = getSecondsString(metrics.extra.buffersize / 1000);
-                    metrics.extra.duration = getSecondsString(metrics.extra.duration / 1000);
-                    metrics.extra.currentTime = getSecondsString(metrics.extra.currentTime / 1000);
-                    metrics.extra.bandwidth = getReadableFileSizeString(metrics.extra.bandwidth);
-
-                    console.table(metrics.timers);
-                    console.table(metrics.extra);
-                },
-                uriToMeasureLatency: '{% static 'img/1x1.png' %}',
-                urisToMeasureBandwidth: [
-                    {url: '{% static 'img/test100k.db' %}', timeout: 3000},
-                    {url: '{% static 'img/test1Mb.db' %}', timeout: 6000}
-                ],
-                runBandwidthTestEvery: 10
-            },
+            plugins: [HlsjsPlayback, LevelSelector,],
             playback: {
                 hlsjsConfig: {
                     liveSyncDurationCount: 7,

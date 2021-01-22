@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.views.generic import TemplateView, ListView
 
 from app.models import Channel
-from app.utils import remove_iv, get_page_bs4, get_img_url
+from app.utils import remove_iv, get_page_bs4, get_img_url, check_m3u8_req
 
 
 # class SnifferAoVivoGratis(TemplateView):
@@ -130,12 +130,13 @@ class ViewChannelFutemax(LoginRequiredMixin, TemplateView):
             for atag in a_links:
                 uri = atag['data-url']
                 m3u8, swarmId = self.get_m3u8(uri)
-                links.append(
-                    {
-                        'm3u8': m3u8,
-                        'swarmId': swarmId
-                    }
-                )
+                if check_m3u8_req(m3u8, headers=self.headers):
+                    links.append(
+                        {
+                            'm3u8': m3u8,
+                            'swarmId': swarmId
+                        }
+                    )
         return links
 
     def get_context_data(self, *, object_list=None, **kwargs):
