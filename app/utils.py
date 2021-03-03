@@ -310,19 +310,24 @@ def get_source_script_aovivogratis(uri):
                 return unpacked
     return ''
 
+def get_uri_stream_multicanais(string):
+    md5_pos = string.index('md5')
+    new_str = string[:md5_pos]+'&'+string[md5_pos:]
+    return new_str
 
 def get_token_multicanais(canal):
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
-    req = requests.post('https://esporteone.com/app/stream/get_token.php', {'canal': canal}, headers=headers)
+    req = requests.post('https://esporteone.com/get_token.php', {'canal': canal}, headers=headers)
+    # req = requests.post('https://esporteone.com/app/stream/get_token.php', {'canal': canal}, headers=headers)
     if req.status_code == 200:
-        return req.json()['token']
+        return get_uri_stream_multicanais(req.json()['stream'])
     else:
         return None
 
 
 def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
     # arr_sites = ['assistirbbb.com', 'multicanais.org', 'mundobbb.com']
-    arr_sites = ['esporteone.com',]
+    arr_sites = ['esporteone.com', 'multicanais.com', ]
     string_canal_id = '.php?canal='
     string_referer = 'player.php?id='
     uri = str(id_url)
@@ -333,11 +338,17 @@ def get_m3u8_multicanais(id_url, select_server='tvfolha.com'):
             name_channel = uri[index_prefix + len(string_canal_id):len(id_url)]
             referer = uri[index_referer + len(string_referer):]
             headers = {'origin': 'https://esporteone.com', 'referer': str(referer),
+                       'accept': 'application/json',
+                       "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+                       "content-type": "application/x-www-form-urlencoded", "sec-fetch-dest": "empty",
+                       "sec-fetch-mode": "cors", "sec-fetch-site": "cross-site",
+                       'Host': 'cdn.esporteone.com',
                        'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
             select_server = random.choice(arr_sites)
+            m3u8_uri = get_token_multicanais(name_channel)
             # token = get_token_multicanais(name_channel)
             # m3u8_uri = "https://live." + str(select_server) + "/" + name_channel + "/video.m3u8?token=" + str(token)
-            m3u8_uri = "http://cdn." + str(select_server) + "/" + name_channel + "/video.m3u8"
+            # m3u8_uri = "http://cdn." + str(select_server) + "/" + name_channel + "/video.m3u8"
             # i = 0
             # while i < 3:
             #     if check_m3u8_req(m3u8_uri, headers=headers):
@@ -466,12 +477,12 @@ def request_json():
 
 def check_m3u8_req(uri, headers):
     try:
-        req = requests.get(uri, headers=headers, timeout=2)
+        req = requests.get(uri, headers=headers, timeout=2, verify=False)
         if req.status_code == 200:
             return True
         return False
     except (Exception,):
-        print('Break ao checar m3u8')
+        print('BREAK m3u8')
         return False
 
 

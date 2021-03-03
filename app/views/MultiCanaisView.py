@@ -71,9 +71,21 @@ class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):
 def playlist_m3u8_multicanais(request):
     uri_m3u8 = request.GET['uri']
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com',
+               'Accept': '*/*',
+               'Host': ' cdn.esporteone.com',
+               'Accept-Encoding': 'gzip, deflate, br',
+               'Accept-Language': 'pt-BR, pt;q=0.9, en-US;q=0.8, en;q=0.7',
+               'Cache-Control': 'no-cache',
+               'Connection': 'keep - alive',
+               'Sec-Fetch-Dest': 'empty',
+               'Sec-Fetch-Mode': 'cors',
+               'Sec-Fetch-Site': 'same-site',
                'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
     try:
-        req = requests.get(url=uri_m3u8, headers=headers)
+        md5 = request.GET['md5']
+        expires = request.GET['expires']
+        uri_m3u8 = uri_m3u8 + '&md5=' + md5 + '&expires=' + expires
+        req = requests.get(url=uri_m3u8, headers=headers, verify=False)
         page = BeautifulSoup(req.text, 'html.parser')
         page_str = str(page.contents[0])
         arr_strings = list(set(remove_iv(re.findall("([^\s]+.ts)", page_str))))
@@ -100,9 +112,18 @@ def playlist_m3u8_multicanais(request):
 def get_ts_multicanais(request):
     key = request.GET['link']
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com',
+               'Accept': '*/*',
+               'Host': ' cdn.esporteone.com',
+               'Accept-Encoding': 'gzip, deflate, br',
+               'Accept-Language': 'pt-BR, pt;q=0.9, en-US;q=0.8, en;q=0.7',
+               'Cache-Control': 'no-cache',
+               'Connection': 'keep - alive',
+               'Sec-Fetch-Dest': 'empty',
+               'Sec-Fetch-Mode': 'cors',
+               'Sec-Fetch-Site': 'same-site',
                'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
     try:
-        req = requests.get(url=key, stream=True, timeout=120, headers=headers)
+        req = requests.get(url=key, stream=True, timeout=120, headers=headers, verify=False)
         if req.status_code == 200:
             return HttpResponse(
                 content=req.content,
