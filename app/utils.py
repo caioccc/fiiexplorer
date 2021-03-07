@@ -1,4 +1,5 @@
 import datetime
+import json
 import re
 
 import requests
@@ -315,9 +316,16 @@ def get_uri_stream_multicanais(string):
     new_str = string[:md5_pos]+'&'+string[md5_pos:]
     return new_str
 
+
+def get_ip_req():
+    req_ip = requests.get('https://jsonip.com/?callback=?')
+    ip = json.loads(req_ip.text[2:-2])
+    return ip['ip']
+
 def get_token_multicanais(canal):
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
-    req = requests.post('https://token.esporteone.com/getAuth.php', {'canal': canal, 'ip': '191.242.204.84'}, headers=headers)
+    ip = get_ip_req()
+    req = requests.post('https://token.esporteone.com/getAuth.php', {'canal': canal, 'ip': ip}, headers=headers)
     # req = requests.post('https://esporteone.com/app/stream/get_token.php', {'canal': canal}, headers=headers)
     if req.status_code == 200:
         return get_uri_stream_multicanais(req.json()['url'])
