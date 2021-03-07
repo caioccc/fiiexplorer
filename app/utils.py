@@ -317,10 +317,10 @@ def get_uri_stream_multicanais(string):
 
 def get_token_multicanais(canal):
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
-    req = requests.post('https://esporteone.com/get_token.php', {'canal': canal}, headers=headers)
+    req = requests.post('https://token.esporteone.com/getAuth.php', {'canal': canal, 'ip': '191.242.204.84'}, headers=headers)
     # req = requests.post('https://esporteone.com/app/stream/get_token.php', {'canal': canal}, headers=headers)
     if req.status_code == 200:
-        return get_uri_stream_multicanais(req.json()['stream'])
+        return get_uri_stream_multicanais(req.json()['url'])
     else:
         return None
 
