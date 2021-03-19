@@ -119,8 +119,13 @@ def exists_m3u8_saved(m3u8):
     return False
 
 
-def save_link_channel_multicanais(canal, id_url, select_server='tvfolha.com'):
-    m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
+def save_link_channel_multicanais(canal, id_url, select_server):
+    if select_server == 'BBB':
+        m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
+        if 'BBB' not in m3u8:
+            m3u8 = None
+    else:
+        m3u8 = get_m3u8_multicanais(id_url, select_server=select_server)
     # if m3u8 and not exists_m3u8_saved(m3u8):
     if m3u8:
         try:
@@ -311,9 +316,10 @@ def get_source_script_aovivogratis(uri):
                 return unpacked
     return ''
 
+
 def get_uri_stream_multicanais(string):
     md5_pos = string.index('md5')
-    new_str = string[:md5_pos]+'&'+string[md5_pos:]
+    new_str = string[:md5_pos] + '&' + string[md5_pos:]
     return new_str
 
 
@@ -321,6 +327,7 @@ def get_ip_req():
     req_ip = requests.get('https://jsonip.com/?callback=?')
     ip = json.loads(req_ip.text[2:-2])
     return ip['ip']
+
 
 def get_token_multicanais(canal):
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}

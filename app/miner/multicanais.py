@@ -34,7 +34,10 @@ class CustomMiner(Miner):
                                         ch.save()
                                         print(title, '-', len(ids))
                                         for id_url in ids:
-                                            save_link_channel_multicanais(ch, id_url, None)
+                                            if 'BBB' in ch.title:
+                                                save_link_channel_multicanais(ch, id_url, select_server='BBB')
+                                            else:
+                                                save_link_channel_multicanais(ch, id_url, None)
 
 
     def make_ids_multicanais(self, atags, title):

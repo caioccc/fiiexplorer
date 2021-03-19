@@ -235,10 +235,13 @@ def mineChannelMultiCanais(pk=None):
                     if len(ids) > 0:
                         if len(ids) == 1:
                             save_link_channel_multicanais(canal, ids[0], None)
-                            save_link_channel_multicanais(canal, ids[0], 'futebolonlineaovivo.com')
+                            # save_link_channel_multicanais(canal, ids[0], 'futebolonlineaovivo.com')
                         else:
                             for id_url in ids:
-                                save_link_channel_multicanais(canal, id_url, None)
+                                if 'BBB' in canal.title:
+                                    save_link_channel_multicanais(canal, id_url, select_server='BBB')
+                                else:
+                                    save_link_channel_multicanais(canal, id_url, None)
         logging.debug('FINALIZOU A BUSCA MULTICANAIS CANAL: ' + url)
         time.sleep(check_new_minig_requests_delay)
 
