@@ -156,7 +156,7 @@ def mineAllMultiCanais():
                 site.save()
                 logging.debug('FINALIZOU A BUSCA MULTICANAIS!')
                 time.sleep(60)
-        time.sleep(check_new_minig_requests_delay)
+        time.sleep(540)
 
 
 def mineSeriePk(pk=None):
