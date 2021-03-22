@@ -31,9 +31,6 @@ class CollectAllMultiCanais(TemplateView):
     template_name = 'multicanais.html'
 
     def get(self, request, *args, **kwargs):
-        site = Site.objects.get(name='multicanais')
-        site.done = False
-        site.save()
         Thread(target=mineAllMultiCanais).start()
         return redirect('/')
 

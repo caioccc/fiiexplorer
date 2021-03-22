@@ -25,6 +25,8 @@
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/MultiCanaisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MultiCanaisView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +273,8 @@
       <workItem from="1615809574908" duration="6000" />
       <workItem from="1616172698657" duration="2453000" />
       <workItem from="1616238704756" duration="606000" />
-      <workItem from="1616272005119" duration="143000" />
+      <workItem from="1616272005119" duration="199000" />
+      <workItem from="1616425589839" duration="1018000" />
     </task>
     <servers />
   </component>
@@ -302,26 +305,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609969076356" />
-    <state width="1105" height="220" key="GridCell.Tab.0.bottom" timestamp="1616175154786">
+    <state width="1323" height="312" key="GridCell.Tab.0.bottom" timestamp="1616426568216">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1105" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616175154786" />
-    <state width="1105" height="220" key="GridCell.Tab.0.center" timestamp="1616175154786">
+    <state width="1323" height="312" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616426568216" />
+    <state width="1323" height="312" key="GridCell.Tab.0.center" timestamp="1616426568216">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1105" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616175154786" />
-    <state width="1105" height="220" key="GridCell.Tab.0.left" timestamp="1616175154786">
+    <state width="1323" height="312" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616426568216" />
+    <state width="1323" height="312" key="GridCell.Tab.0.left" timestamp="1616426568216">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1105" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616175154786" />
-    <state width="1105" height="220" key="GridCell.Tab.0.right" timestamp="1616175154786">
+    <state width="1323" height="312" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616426568216" />
+    <state width="1323" height="312" key="GridCell.Tab.0.right" timestamp="1616426568216">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1105" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616175154786" />
+    <state width="1323" height="312" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616426568216" />
     <state width="1105" height="220" key="GridCell.Tab.1.bottom" timestamp="1616175154787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

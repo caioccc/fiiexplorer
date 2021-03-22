@@ -146,17 +146,12 @@ def mineAllTopCanais():
 def mineAllMultiCanais():
     while True:
         NAME = 'multicanais'
-        site = Site.objects.get(name=NAME)
-        if not site.done:
-            miner = miners[NAME]()
-            logging.debug('INICIOU A BUSCA MULTICANAIS!')
-            result = miner.mine()
-            if result:
-                site.done = True
-                site.save()
-                logging.debug('FINALIZOU A BUSCA MULTICANAIS!')
-                time.sleep(60)
-        time.sleep(540)
+        miner = miners[NAME]()
+        logging.debug('INICIOU A BUSCA MULTICANAIS!')
+        result = miner.mine()
+        if result:
+            logging.debug('FINALIZOU A BUSCA MULTICANAIS!')
+        time.sleep(600)
 
 
 def mineSeriePk(pk=None):
@@ -243,7 +238,7 @@ def mineChannelMultiCanais(pk=None):
                                 else:
                                     save_link_channel_multicanais(canal, id_url, None)
         logging.debug('FINALIZOU A BUSCA MULTICANAIS CANAL: ' + url)
-        time.sleep(check_new_minig_requests_delay)
+        time.sleep(600)
 
 
 def mineFilmeOneCanaisMax(pk=None):
