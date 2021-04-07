@@ -332,7 +332,9 @@ def get_ip_req():
 def get_token_multicanais(canal):
     headers = {'origin': 'https://esporteone.com', 'referer': 'https://esporteone.com'}
     ip = get_ip_req()
-    req = requests.post('https://token.esporteone.com/getAuth.php', {'canal': canal, 'ip': ip}, headers=headers)
+    #url_token = 'https://token.esporteone.com/getAuth.php'
+    url_token = 'https://drm.multicanais.com/getAuth.php'
+    req = requests.post(url_token, {'canal': canal, 'ip': ip}, headers=headers)
     # req = requests.post('https://esporteone.com/app/stream/get_token.php', {'canal': canal}, headers=headers)
     if req.status_code == 200:
         return get_uri_stream_multicanais(req.json()['url'])
