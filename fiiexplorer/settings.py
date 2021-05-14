@@ -26,6 +26,9 @@ SECRET_KEY = '@v=&5vscb6n__paxj#moh#6ze%*_viw+op7w_!=im6kvrr%d)x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# DATA_UPLOAD_MAX_MEMORY_SIZE = 20621440
+# DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000
+
 ALLOWED_HOSTS = ['*']
 
 # Application definition

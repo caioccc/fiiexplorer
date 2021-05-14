@@ -215,30 +215,33 @@ def mineChannelTopCanais(pk=None):
         time.sleep(check_new_minig_requests_delay)
 
 
+def mineMulticanal(pk=None):
+    canal = Channel.objects.get(pk=pk)
+    url = canal.url_site
+    logging.debug('INICIOU A BUSCA MULTICANAIS CANAL: ' + url)
+    second_page = get_page_bs4(url)
+    if second_page:
+        div_links = second_page.find('div', attrs={'class': 'links'})
+        if div_links:
+            atags = div_links.find_all("a")
+            if len(atags) > 0:
+                ids = make_ids_multicanais(atags)
+                if len(ids) > 0:
+                    if len(ids) == 1:
+                        save_link_channel_multicanais(canal, ids[0], None)
+                    else:
+                        ids = ids[0:2]
+                        for id_url in ids:
+                            if 'BBB' in canal.title:
+                                save_link_channel_multicanais(canal, id_url, select_server='BBB')
+                            else:
+                                save_link_channel_multicanais(canal, id_url, None)
+    logging.debug('FINALIZOU A BUSCA MULTICANAIS CANAL: ' + url)
+
+
 def mineChannelMultiCanais(pk=None):
     while True:
-        canal = Channel.objects.get(pk=pk)
-        url = canal.url_site
-        logging.debug('INICIOU A BUSCA MULTICANAIS CANAL: ' + url)
-        second_page = get_page_bs4(url)
-        if second_page:
-            div_links = second_page.find('div', attrs={'class': 'links'})
-            if div_links:
-                atags = div_links.find_all("a")
-                if len(atags) > 0:
-                    ids = make_ids_multicanais(atags)
-                    if len(ids) > 0:
-                        if len(ids) == 1:
-                            save_link_channel_multicanais(canal, ids[0], None)
-                            # save_link_channel_multicanais(canal, ids[0], 'futebolonlineaovivo.com')
-                        else:
-                            for id_url in ids:
-                                if 'BBB' in canal.title:
-                                    save_link_channel_multicanais(canal, id_url, select_server='BBB')
-                                else:
-                                    save_link_channel_multicanais(canal, id_url, None)
-        logging.debug('FINALIZOU A BUSCA MULTICANAIS CANAL: ' + url)
-        time.sleep(600)
+        mineMulticanal(pk=pk)
 
 
 def mineFilmeOneCanaisMax(pk=None):

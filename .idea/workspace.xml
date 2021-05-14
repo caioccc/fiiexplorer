@@ -24,8 +24,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2d553ad5-fab8-4993-bfc8-c412613f4220" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/miner/explorer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/miner/explorer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/view-channel-multicanais.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/view-channel-multicanais.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/MultiCanaisView.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MultiCanaisView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fiiexplorer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fiiexplorer/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,65 +304,64 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="516" y="306" width="490" height="422" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1615131817950" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1609969076356">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609969076356" />
-    <state width="1323" height="312" key="GridCell.Tab.0.bottom" timestamp="1617808164835">
+    <state width="1323" height="290" key="GridCell.Tab.0.bottom" timestamp="1621008177787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1323" height="312" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1617808164835" />
-    <state width="1323" height="312" key="GridCell.Tab.0.center" timestamp="1617808164835">
+    <state width="1323" height="290" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1621008177787" />
+    <state width="1323" height="290" key="GridCell.Tab.0.center" timestamp="1621008177787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1323" height="312" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1617808164835" />
-    <state width="1323" height="312" key="GridCell.Tab.0.left" timestamp="1617808164835">
+    <state width="1323" height="290" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1621008177787" />
+    <state width="1323" height="290" key="GridCell.Tab.0.left" timestamp="1621008177787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1323" height="312" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1617808164835" />
-    <state width="1323" height="312" key="GridCell.Tab.0.right" timestamp="1617808164835">
+    <state width="1323" height="290" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1621008177787" />
+    <state width="1323" height="290" key="GridCell.Tab.0.right" timestamp="1621008177787">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="263" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944606" />
-    <state width="1323" height="312" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1617808164835" />
-    <state width="1105" height="220" key="GridCell.Tab.1.bottom" timestamp="1616175154787">
+    <state width="1323" height="290" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1621008177787" />
+    <state width="1323" height="300" key="GridCell.Tab.1.bottom" timestamp="1621007037140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944595" />
-    <state width="1105" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616175154787" />
-    <state width="1105" height="220" key="GridCell.Tab.1.center" timestamp="1616175154787">
+    <state width="1323" height="300" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1621007037140" />
+    <state width="1323" height="300" key="GridCell.Tab.1.center" timestamp="1621007037140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="220" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944595" />
-    <state width="1105" height="220" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1616175154787" />
-    <state width="1105" height="220" key="GridCell.Tab.1.left" timestamp="1616175154787">
+    <state width="1323" height="300" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1621007037140" />
+    <state width="1323" height="300" key="GridCell.Tab.1.left" timestamp="1621007037136">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="220" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944595" />
-    <state width="1105" height="220" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1616175154787" />
-    <state width="1105" height="220" key="GridCell.Tab.1.right" timestamp="1616175154787">
+    <state width="1323" height="300" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1621007037136" />
+    <state width="1323" height="300" key="GridCell.Tab.1.right" timestamp="1621007037140">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="220" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1614809944595" />
-    <state width="1105" height="220" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1616175154787" />
-    <state x="184" y="8" key="SettingsEditor" timestamp="1614805398709">
+    <state width="1323" height="300" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1621007037140" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1621005889000">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1614805398709" />
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1621005889000" />
     <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1614806793876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1614806793876" />
-    <state x="312" y="79" width="741" height="624" key="find.popup" timestamp="1611342561987">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="312" y="79" width="741" height="624" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1611342561987" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app/views/MultiCanaisView.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties exception="BaseException" />

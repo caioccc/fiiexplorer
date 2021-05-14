@@ -1,3 +1,4 @@
+import os
 import re
 from threading import Thread
 
@@ -11,10 +12,9 @@ from django.shortcuts import redirect
 from django.views.generic import DetailView, TemplateView, ListView, FormView
 
 from app.forms import SelectMulticanais
-from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais, snifferAoVivoGratis
-from app.models import Channel, Site, Link
-from app.utils import clean_title, remove_iv, check_m3u8_req, get_token_multicanais, get_text_type
-
+from app.miner.explorer import mineChannelMultiCanais, mineAllMultiCanais, mineMulticanal
+from app.models import Channel
+from app.utils import clean_title, remove_iv, check_m3u8_req, get_text_type
 
 class CollectChannelMultiCanais(DetailView):
     template_name = 'index.html'
@@ -61,6 +61,9 @@ class ViewChannelMultiCanais(LoginRequiredMixin, DetailView):
     context_object_name = 'canal'
 
     def get_context_data(self, *, object_list=None, **kwargs):
+        canal = self.get_object()
+        canal.link_set.all().delete()
+        mineMulticanal(pk=canal.pk)
         kwargs['SITE_URL'] = 'http://' + self.request.META['HTTP_HOST'] + '/'
         return super(ViewChannelMultiCanais, self).get_context_data(object_list=object_list, **kwargs)
 
@@ -78,32 +81,26 @@ def playlist_m3u8_multicanais(request):
                'Sec-Fetch-Mode': 'cors',
                'Sec-Fetch-Site': 'same-site',
                'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
-    try:
-        md5 = request.GET['md5']
-        expires = request.GET['expires']
-        uri_m3u8 = uri_m3u8 + '&md5=' + md5 + '&expires=' + expires
-        req = requests.get(url=uri_m3u8, headers=headers, verify=False)
-        page = BeautifulSoup(req.text, 'html.parser')
-        page_str = str(page.contents[0])
-        arr_strings = list(set(remove_iv(re.findall("([^\s]+.ts)", page_str))))
-        if len(arr_strings) > 0:
-            index_ = str(uri_m3u8).index('video.m3u8')
-            prefix = uri_m3u8[:index_]
-            for i in range(len(arr_strings)):
-                new_uri = prefix + arr_strings[i]
-                page_str = page_str.replace(arr_strings[i],
-                                            'http://' + request.META['HTTP_HOST'] + '/api/multi/ts?link=' + str(
-                                                new_uri))
-        return HttpResponse(
-            content=page_str,
-            status=req.status_code,
-            content_type=req.headers['Content-Type']
-        )
-    except (requests.exceptions.ConnectionError,):
-        print('erro ao connectar')
-        return HttpResponseNotFound()
-    except (Exception,):
-        return HttpResponseNotFound("hello")
+    md5 = request.GET['md5']
+    expires = request.GET['expires']
+    uri_m3u8 = uri_m3u8 + '&md5=' + md5 + '&expires=' + expires
+    req = requests.get(url=uri_m3u8, headers=headers, verify=False)
+    page = BeautifulSoup(req.text, 'html.parser')
+    page_str = str(page.contents[0])
+    arr_strings = list(set(remove_iv(re.findall("([^\s]+.ts)", page_str))))
+    if len(arr_strings) > 0:
+        index_ = str(uri_m3u8).index('video.m3u8')
+        prefix = uri_m3u8[:index_]
+        for i in range(len(arr_strings)):
+            new_uri = prefix + arr_strings[i]
+            page_str = page_str.replace(arr_strings[i],
+                                        'http://' + request.META['HTTP_HOST'] + '/api/multi/ts?link=' + str(
+                                            new_uri))
+    return HttpResponse(
+        content=page_str,
+        status=req.status_code,
+        content_type=req.headers['Content-Type']
+    )
 
 
 def get_ts_multicanais(request):
@@ -119,17 +116,14 @@ def get_ts_multicanais(request):
                'Sec-Fetch-Mode': 'cors',
                'Sec-Fetch-Site': 'same-site',
                'User-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36'}
-    try:
-        req = requests.get(url=key, stream=True, timeout=120, headers=headers, verify=False)
-        if req.status_code == 200:
-            return HttpResponse(
-                content=req.content,
-                status=req.status_code,
-                content_type=req.headers['Content-Type']
-            )
-        else:
-            return HttpResponseNotFound("hello")
-    except (Exception,):
+    req = requests.get(url=key, stream=True, timeout=30, headers=headers, verify=False)
+    if req.status_code == 200:
+        return HttpResponse(
+            content=req.content,
+            status=req.status_code,
+            content_type=req.headers['Content-Type']
+        )
+    else:
         return HttpResponseNotFound("hello")
 
 
